@@ -1,0 +1,258 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f5ef"><meta name="apple-mobile-web-app-capable" content="yes"><title>Flip & Learn</title><style>*{box-sizing:border-box}body{margin:0;background:#f7f5ef;color:#223a35;font:17px system-ui,sans-serif}main{max-width:720px;margin:auto;padding:32px 22px}header{display:flex;align-items:center;justify-content:space-between}h1{font-size:26px;letter-spacing:-1px;margin:0}.badge{font-size:12px;background:#e6eadb;padding:8px 12px;border-radius:30px}p{color:#68766e}label{font-size:12px;font-weight:700;letter-spacing:1.5px}select{display:block;width:100%;margin:10px 0 24px;border:1px solid #cbd1c5;border-radius:12px;background:white;padding:15px;color:#223a35;font:inherit}.meta{display:flex;justify-content:space-between;font-size:13px;margin-bottom:12px;color:#68766e}#card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:25px;width:100%;min-height:320px;padding:35px;border:1px solid #dae0d5;border-radius:24px;background:#fff;box-shadow:0 12px 35px #223a3509;color:inherit;cursor:pointer;transition:background .2s;text-align:center}#card.answer{background:#e4eddc}#side{text-transform:uppercase;font:700 11px system-ui;letter-spacing:2px;color:#688063}#text{font:500 clamp(23px,4vw,32px)/1.4 system-ui;max-width:560px}#hint{font:13px system-ui;color:#73816e}.nav{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:10px;margin-top:20px}button.control{border:1px solid #cbd1c5;border-radius:12px;background:transparent;color:#223a35;padding:15px 8px;font:600 15px system-ui;cursor:pointer}button.primary{background:#294d40;color:white;border-color:#294d40}button:focus-visible,select:focus-visible{outline:3px solid #d28c44;outline-offset:4px}footer{display:flex;justify-content:space-between;align-items:center;margin-top:24px}footer button{font:14px system-ui;border:0;background:none;color:#365d4a;cursor:pointer;padding:10px}footer span{font-size:12px;color:#788176}@media(max-width:450px){main{padding-top:24px}.badge{font-size:10px}#card{min-height:350px;padding:24px}footer span{max-width:150px;text-align:right}}body{background:linear-gradient(145deg,#d8f3e5,#e7ddff);color:#25464a}main{min-height:100dvh;display:flex;flex-direction:column;max-width:900px;padding: max(16px,env(safe-area-inset-top)) 16px max(16px,env(safe-area-inset-bottom))}#card{flex:1;min-height:240px;background:#fffdf5;border:3px solid #9bcdb7}#text{font-size:clamp(26px,5vw,48px);font-weight:750}#reward{background:#f9cf70;color:#3c3520;border:0;border-radius:16px;padding:14px;font:700 18px system-ui;margin-top:10px}#party{position:fixed;inset:0;background:#e5f7dbf5;display:grid;place-content:center;text-align:center;z-index:9;font-size:32px;font-weight:bold}#party[hidden],#reward[hidden]{display:none}#fox{width:190px;margin:auto;animation:dance .45s ease-in-out infinite alternate}@keyframes dance{from{transform:translateY(0) rotate(-15deg)}to{transform:translateY(-30px) rotate(15deg)}}@media(prefers-reduced-motion:reduce){#fox{animation:none}} </style></head><body><main><header><h1>Flip & Learn Plus<span style="color:#c99452"> ✦</span></h1><span class="badge">GRADES 5–6</span></header><p>More subjects. Same simple practice.</p><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="hint"></span></button><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer></main><div id="party" hidden role="status"><svg id="fox" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M45 130 Q0 90 22 65 Q75 75 80 130" fill="#e88b43"/><ellipse cx="100" cy="145" rx="42" ry="43" fill="#e88b43"/><path d="M48 78 L38 15 L86 48 L114 48 L162 15 L152 78" fill="#e88b43" stroke="#9a4d32" stroke-width="4"/><ellipse cx="100" cy="85" rx="66" ry="48" fill="#e88b43"/><path d="M40 86 Q70 78 100 112 Q130 78 160 86 Q150 130 100 134 Q50 130 40 86" fill="#fff1d3"/><ellipse cx="75" cy="79" rx="9" ry="13" fill="#283b40"/><ellipse cx="125" cy="79" rx="9" ry="13" fill="#283b40"/><ellipse cx="100" cy="106" rx="10" ry="7" fill="#283b40"/><path d="M92 117 Q100 125 108 117" fill="none" stroke="#283b40" stroke-width="3"/><ellipse cx="78" cy="180" rx="17" ry="10" fill="#9a4d32"/><ellipse cx="122" cy="180" rx="17" ry="10" fill="#9a4d32"/></svg><div>Fantastic! ★</div></div><script>
+const decks={};function add(name,rows){decks[name]=rows.trim().split('\n').map(r=>r.split('|'))}
+add('Science facts',`What is the basic unit of living things?|A cell.
+What is photosynthesis?|Plants use sunlight, water, and carbon dioxide to make sugar, releasing oxygen.
+What do roots do?|Absorb water and minerals and anchor a plant.
+What is a vertebrate?|An animal with a backbone.
+What is an invertebrate?|An animal without a backbone.
+What is an adaptation?|An inherited characteristic that helps an organism survive and reproduce.
+What do lungs do?|Take in oxygen and remove carbon dioxide.
+What does the heart do?|Pumps blood throughout the body.
+What is an ecosystem?|Living things and their nonliving environment interacting.
+What is a producer?|An organism that makes its own food.
+What is a consumer?|An organism that gets energy by eating other organisms.
+What is a decomposer?|An organism that breaks down dead material and waste.
+What do food-chain arrows show?|The direction energy moves, from food to eater.
+What is a food web?|A network of connected food chains.
+What is a habitat?|The place an organism lives.
+What powers most ecosystems?|The Sun.
+What is matter?|Anything that has mass and takes up space.
+What are three common states of matter?|Solid, liquid, and gas.
+Mass versus weight?|Mass measures matter; weight measures gravity’s pull.
+What is a physical change?|A change that does not make a new substance, such as melting ice.
+What is a chemical change?|A change producing new substances, such as rusting.
+What is conduction?|Heat transfer through direct contact.
+What is a force?|A push or pull.
+What is gravity?|Attraction between objects with mass.
+What is friction?|A force resisting surfaces sliding past each other.
+How do you find average speed?|Distance ÷ time.
+What do balanced forces do?|Leave motion unchanged: still, or constant speed and direction.
+What is an electrical conductor?|A material that lets current flow easily, such as copper.
+What is an electrical insulator?|A material that resists current, such as rubber.
+What does a simple circuit need?|An energy source and a closed conducting path.
+What causes day and night?|Earth’s rotation.
+What causes seasons?|Earth’s tilted axis as Earth orbits the Sun.
+Why does the Moon show phases?|We see different amounts of its sunlit half as it orbits Earth.
+What are the three main rock types?|Igneous, sedimentary, and metamorphic.
+Weathering versus erosion?|Weathering breaks rock down; erosion moves it.
+What are tectonic plates?|Slowly moving pieces of Earth’s rigid outer layer.`);
+add('Measurement units',`Inches in 1 foot?|12 inches.
+Feet in 1 yard?|3 feet.
+Inches in 1 yard?|36 inches.
+Feet in 1 mile?|5,280 feet.
+Yards in 1 mile?|1,760 yards.
+Millimeters in 1 centimeter?|10 millimeters.
+Centimeters in 1 meter?|100 centimeters.
+Millimeters in 1 meter?|1,000 millimeters.
+Meters in 1 kilometer?|1,000 meters.
+Ounces in 1 pound?|16 ounces.
+Pounds in 1 U.S. ton?|2,000 pounds.
+Milligrams in 1 gram?|1,000 milligrams.
+Grams in 1 kilogram?|1,000 grams.
+Teaspoons in 1 tablespoon?|3 teaspoons.
+Tablespoons in 1 U.S. cup?|16 tablespoons.
+Fluid ounces in 1 U.S. cup?|8 fluid ounces.
+Cups in 1 U.S. pint?|2 cups.
+Pints in 1 U.S. quart?|2 pints.
+Quarts in 1 U.S. gallon?|4 quarts.
+Cups in 1 U.S. gallon?|16 cups.
+Milliliters in 1 liter?|1,000 milliliters.
+Seconds in 1 minute?|60 seconds.
+Minutes in 1 hour?|60 minutes.
+Seconds in 1 hour?|3,600 seconds.
+Hours in 1 day?|24 hours.
+Days in 1 week?|7 days.
+Months in 1 year?|12 months.
+Days in a regular year?|365 days.
+Days in a leap year?|366 days.
+What units measure perimeter?|Length units, such as feet or meters.
+What units measure area?|Square units, such as cm² or ft².
+What units measure volume?|Cubic units, liters, or milliliters.
+Square inches in 1 square foot?|144 square inches: 12 × 12.
+Cubic centimeters in 1 milliliter?|1 cm³ = 1 mL.
+Larger units to smaller units?|Multiply by the conversion factor.
+Smaller units to larger units?|Divide by the conversion factor.
+Ounce versus fluid ounce?|An ounce measures weight; a fluid ounce measures volume.`);
+add('Metric → English',`1 millimeter in inches?|Approximately 0.039 inches.
+1 centimeter in inches?|Approximately 0.394 inches.
+2.54 centimeters in inches?|Exactly 1 inch.
+30.48 centimeters in feet?|Exactly 1 foot.
+1 meter in feet?|Approximately 3.28 feet.
+1 meter in inches?|Approximately 39.37 inches.
+1 meter in yards?|Approximately 1.09 yards.
+1 kilometer in miles?|Approximately 0.62 miles.
+5 kilometers in miles?|Approximately 3.11 miles.
+10 kilometers in miles?|Approximately 6.21 miles.
+1 gram in ounces?|Approximately 0.035 ounces.
+28.35 grams in ounces?|Approximately 1 ounce.
+454 grams in pounds?|Approximately 1 pound.
+1 kilogram in pounds?|Approximately 2.2 pounds.
+5 kilograms in pounds?|Approximately 11 pounds.
+1 metric ton in pounds?|Approximately 2,205 pounds.
+5 milliliters in U.S. teaspoons?|Approximately 1 teaspoon.
+15 milliliters in U.S. tablespoons?|Approximately 1 tablespoon.
+30 milliliters in U.S. fluid ounces?|Approximately 1 fluid ounce.
+237 milliliters in U.S. cups?|Approximately 1 cup.
+473 milliliters in U.S. pints?|Approximately 1 pint.
+946 milliliters in U.S. quarts?|Approximately 1 quart.
+1 liter in U.S. quarts?|Approximately 1.06 quarts.
+1 liter in U.S. cups?|Approximately 4.23 cups.
+3.785 liters in U.S. gallons?|Approximately 1 gallon.
+0°C in Fahrenheit?|32°F.
+10°C in Fahrenheit?|50°F.
+20°C in Fahrenheit?|68°F.
+30°C in Fahrenheit?|86°F.
+100°C in Fahrenheit?|212°F.
+Convert Celsius to Fahrenheit?|Multiply by 1.8, then add 32.`);
+add('Periodic table',`What is the periodic table?|A chart organizing elements by atomic number.
+What is an element?|A pure substance made of one type of atom.
+What is an atom?|The smallest unit retaining an element’s chemical identity.
+What does atomic number tell you?|The number of protons in an atom.
+What is a chemical symbol?|A one- or two-letter abbreviation for an element.
+What are horizontal rows called?|Periods.
+What are vertical columns called?|Groups or families.
+Why are elements in a group similar?|Their outer electron arrangements usually give them similar chemical properties.
+Where are most metals?|On the left and in the center.
+Where are most nonmetals?|On the right; hydrogen is on the left.
+What are metalloids?|Elements with some metal and some nonmetal properties.
+What are noble gases?|Group 18 elements, which usually react very little.`);
+[['Hydrogen','H',1],['Helium','He',2],['Lithium','Li',3],['Carbon','C',6],['Nitrogen','N',7],['Oxygen','O',8],['Neon','Ne',10],['Sodium','Na',11],['Magnesium','Mg',12],['Aluminum','Al',13],['Silicon','Si',14],['Chlorine','Cl',17],['Potassium','K',19],['Calcium','Ca',20],['Iron','Fe',26],['Copper','Cu',29],['Silver','Ag',47],['Gold','Au',79]].forEach(([n,s,a])=>decks['Periodic table'].push([`${n}: symbol and atomic number?`,`${s} — atomic number ${a}.`]));
+add('Algebra practice',`What is a solution?|A number that makes an equation true.
+What is the main rule for solving equations?|Do the same operation to both sides.
+What undoes addition?|Subtraction.
+What undoes subtraction?|Addition.
+What undoes multiplication?|Division by the same nonzero number.
+What undoes division?|Multiplication by the same nonzero number.
+Solve x + 5 = 12.|x = 7. Subtract 5 from both sides.
+Solve x − 4 = 9.|x = 13. Add 4 to both sides.
+Solve 3x = 18.|x = 6. Divide both sides by 3.
+Solve x ÷ 4 = 5.|x = 20. Multiply both sides by 4.
+Solve 2x + 4 = 14.|x = 5. Subtract 4, then divide by 2.
+How do you check a solution?|Substitute it into the original equation and check both sides are equal.`);
+add('Math terms',`Sum|The answer to addition: 4 + 3 = 7.
+Difference|The answer to subtraction: 9 − 5 = 4.
+Product|The answer to multiplication: 3 × 4 = 12.
+Quotient|The answer to division: 12 ÷ 3 = 4.
+Factor|A number multiplied by another to make a product. 3 and 4 are factors of 12.
+Multiple|A number made by multiplying by a whole number: 5, 10, 15 are multiples of 5.
+Remainder|The amount left in whole-number division: 14 ÷ 4 is 3 remainder 2.
+Variable|A letter representing a number, such as x.
+Constant|A fixed value: 3 in x + 3.
+Coefficient|A number multiplying a variable: 5 in 5x.
+Term|A part separated by addition or subtraction: 3x and 7 in 3x + 7.
+Expression|Numbers, variables, or operations representing a value: 2x + 5.
+Equation|A statement that two expressions are equal: 2x + 5 = 13.
+Solution|A value making an equation true: x = 4 solves 2x + 5 = 13.
+Evaluate|Find the value. If x = 3, then 2x + 1 = 7.
+Inequality|A comparison using <, >, ≤, or ≥.
+Equivalent|Having the same value: 1/2 and 2/4.
+Inverse operations|Operations that undo each other.
+Numerator|The top number in a fraction: 3 in 3/4.
+Denominator|The bottom number: how many equal parts make one whole.
+Percent|A number out of 100: 25% = 1/4.
+Ratio|A comparison of quantities: 2 red to 3 blue is 2:3.
+Prime number|A whole number greater than 1 with exactly two positive factors: 1 and itself.
+Composite number|A whole number greater than 1 with more than two positive factors.
+Exponent|Tells how many times to use a base as a factor: 2³ = 2 × 2 × 2.
+Absolute value|Distance from zero: the absolute value of −5 is 5.
+Distributive property|3(x + 2) = 3x + 6.
+Commutative property|Changing order preserves a sum or product: 3 + 5 = 5 + 3.
+Associative property|Changing grouping preserves a sum or product.
+Order of operations|Parentheses, exponents, multiplication/division left to right, then addition/subtraction left to right.`);
+add('Scientific results',`Scientific question|A question you can investigate with observations or experiments.
+Hypothesis|A possible explanation that can be tested.
+Prediction|What you expect to happen.
+Experiment|A procedure testing a hypothesis or question.
+Variable|Something that can change in an investigation.
+Independent variable|The factor deliberately changed.
+Dependent variable|The result measured.
+Controlled variables|Factors kept the same.
+Control group|A comparison group receiving standard conditions or no treatment.
+Observation|Information gathered with senses or tools.
+Measurement|A number and unit, such as 15 centimeters.
+Data|Collected observations and measurements.
+Qualitative data|Descriptions, such as color or texture.
+Quantitative data|Numbers, such as height or time.
+Results|What happened, shown through observations and data.
+Graph|A visual display of data.
+Trend|A general pattern in data.
+Evidence|Data supporting or challenging an explanation.
+Conclusion|An answer based on results.
+Repeated trials|Performing a test more than once to check consistency.
+Mean (average)|Add values and divide by the number of values.
+Accuracy|Closeness to the true or accepted value.
+Precision|Closeness of repeated measurements to each other.
+Inference|An explanation based on observations and prior knowledge.
+Do results prove a hypothesis forever?|No. Results can support or fail to support it; one experiment does not establish it for all situations.`);
+add('Weather & temperature',`What is weather?|Atmospheric conditions at a place and time.
+What is temperature?|A measure of how hot or cold something is.
+What measures temperature?|A thermometer.
+Common temperature scales?|Celsius (°C) and Fahrenheit (°F).
+Water’s freezing temperature?|About 0°C or 32°F under ordinary conditions.
+Water’s boiling temperature at sea level?|About 100°C or 212°F.
+Daily high temperature?|The highest temperature recorded that day.
+Daily low temperature?|The lowest temperature recorded that day.
+How do you find temperature range?|High minus low: 75°F − 50°F = 25°F.
+How do you average readings?|Add the readings and divide by their count.
+What is precipitation?|Rain, snow, sleet, or hail falling from clouds.
+What measures rainfall?|A rain gauge.
+What is humidity?|The amount of water vapor in air.
+Does 100% relative humidity mean rain?|No. It means air is saturated at its current temperature.
+What is dew point?|The temperature air must cool to become saturated.
+How do clouds form?|Water vapor condenses into droplets or forms ice crystals, often as rising air cools.
+What is air pressure?|Force air exerts per unit area.
+What measures air pressure?|A barometer.
+What can falling pressure suggest?|An approaching system with clouds, wind, or precipitation.
+What does high pressure often bring?|Clearer, drier weather; conditions vary.
+What causes wind?|Differences in air pressure.
+What measures wind speed?|An anemometer.
+What does a wind vane measure?|The direction wind comes from.
+What is wind chill?|How cold it feels as wind increases heat loss from exposed skin.
+What is heat index?|How hot it feels when temperature and humidity are combined.
+What is a cold front?|An advancing cold air mass replacing warmer air.
+What is a warm front?|An advancing warm air mass replacing colder air.
+What is a forecast?|A prediction based on observations and scientific models.
+What is climate?|Long-term weather patterns, commonly described using 30 years of data.
+Does one cold day show climate cooling?|No. Climate trends require many years of measurements.`);
+add('Water facts',`Water’s chemical formula?|H₂O.
+What atoms make a water molecule?|Two hydrogen atoms and one oxygen atom.
+Water’s three states?|Solid ice, liquid water, and gaseous water vapor.
+Fresh water’s freezing temperature?|About 0°C or 32°F at ordinary pressure.
+Boiling temperature at sea level?|About 100°C or 212°F.
+What is melting?|Ice becoming liquid water.
+What is freezing?|Liquid water becoming ice.
+What is evaporation?|Liquid water becoming vapor at its surface.
+Must water boil to evaporate?|No. Evaporation happens below boiling temperature.
+What is condensation?|Vapor becoming liquid droplets.
+What is sublimation?|Ice becoming vapor directly.
+Can you see water vapor?|No. Visible white mist is tiny liquid droplets.
+What is the water cycle?|Water’s continuous movement between Earth’s surface and atmosphere.
+What powers evaporation in the water cycle?|Energy from the Sun.
+What is precipitation?|Rain, snow, sleet, or hail falling from clouds.
+What is runoff?|Water flowing over land into streams, lakes, and oceans.
+What is groundwater?|Water in spaces and cracks in soil and rock beneath the surface.
+What is an aquifer?|Rock or sediment that stores and transmits groundwater.
+What is transpiration?|Plants releasing water vapor, mainly through leaves.
+How much of Earth’s surface is water?|About 71%.
+How much of Earth’s water is salty?|About 97%; about 3% is fresh.
+Where is most fresh water stored?|Ice sheets and glaciers.
+Why does ice float?|It is less dense than liquid water.
+What happens when water freezes?|Its volume expands.
+What is surface tension?|Molecular attraction making the surface resist stretching or breaking.
+What does dissolve mean?|Mix evenly into a liquid at the particle level.
+Can water dissolve everything?|No. Oil, for example, does not dissolve in water.
+What is desalination?|Removing dissolved salts from salt water.
+Is clear water always safe to drink?|No. Invisible germs or harmful chemicals may be present.
+Why do bodies need water?|To regulate temperature, transport nutrients, and remove waste.`);
+decks["Fractions & decimals"]=[["What is an equivalent fraction?", "A fraction with the same value: 1/2 = 2/4."], ["How do you add fractions with the same denominator?", "Add numerators and keep the denominator: 2/7 + 3/7 = 5/7."], ["How do you add fractions with different denominators?", "Find a common denominator first: 1/2 + 1/3 = 3/6 + 2/6 = 5/6."], ["How do you multiply fractions?", "Multiply numerators and denominators: 2/3 \u00d7 3/4 = 6/12 = 1/2."], ["How do you divide by a nonzero fraction?", "Multiply by its reciprocal: 1/2 \u00f7 1/4 = 1/2 \u00d7 4 = 2."], ["What is a mixed number?", "A whole number plus a fraction: 2 1/3."], ["What is 0.75 as a fraction?", "3/4."], ["What is 1/5 as a decimal?", "0.2."], ["How do you add decimals?", "Align decimal points, then add."], ["Which is greater: 0.6 or 0.56?", "0.6, because 0.60 > 0.56."]];
+decks["Percent & ratios"]=[["What does percent mean?", "Out of 100."], ["What is 50% as a fraction?", "1/2."], ["What is 25% as a decimal?", "0.25."], ["How do you find 10% of a number?", "Divide by 10."], ["What is 20% of 60?", "12: 0.20 \u00d7 60."], ["What is 70% of 44?", "30.8: 0.70 \u00d7 44."], ["What is a unit rate?", "A rate for one unit, such as $3 per notebook."], ["Three notebooks cost $12. Cost per notebook?", "$4: 12 \u00f7 3."], ["Simplify the ratio 6:9.", "2:3. Divide both terms by 3."], ["A $40 item is 25% off. Sale price?", "$30. The discount is $10."]];
+decks["Geometry"]=[["What is perimeter?", "The distance around a shape."], ["Rectangle perimeter formula?", "P = 2 \u00d7 (length + width)."], ["Rectangle area formula?", "A = length \u00d7 width."], ["Triangle area formula?", "A = base \u00d7 perpendicular height \u00f7 2."], ["Rectangular prism volume formula?", "V = length \u00d7 width \u00d7 height."], ["How many degrees in a right angle?", "90\u00b0."], ["What is an acute angle?", "An angle greater than 0\u00b0 and less than 90\u00b0."], ["What is an obtuse angle?", "An angle greater than 90\u00b0 and less than 180\u00b0."], ["How many degrees in a triangle\u2019s interior angles?", "180\u00b0."], ["What is a radius?", "A segment from a circle\u2019s center to its edge."], ["What is a diameter?", "A segment across a circle through its center; twice the radius."], ["What are parallel lines?", "Lines in the same plane that never meet."]];
+decks["Space & astronomy"]=[["What is a star?", "A glowing ball of hot plasma powered by nuclear fusion."], ["What star is closest to Earth?", "The Sun."], ["How many planets orbit the Sun?", "Eight."], ["Name the planets in order from the Sun.", "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune."], ["What is an orbit?", "The path an object follows around another because of gravity."], ["What is a light-year?", "The distance light travels in one year."], ["What galaxy contains our solar system?", "The Milky Way."], ["What is an asteroid?", "A small rocky or metallic object orbiting the Sun."], ["What is a solar eclipse?", "The Moon passes between Earth and the Sun, blocking our view of some or all of the Sun."], ["What is a lunar eclipse?", "The Moon passes into Earth\u2019s shadow."]];
+decks["Human body"]=[["What does the skeleton do?", "Supports the body, protects organs, and works with muscles for movement."], ["What connects muscles to bones?", "Tendons."], ["What connects bones to other bones?", "Ligaments."], ["What is the brain\u2019s role?", "Processes information and coordinates body functions."], ["What carries messages between brain and body?", "Nerves."], ["What do red blood cells transport?", "Oxygen, mainly using hemoglobin."], ["What is digestion?", "Breaking food into substances the body can absorb and use."], ["Where are most nutrients absorbed?", "The small intestine."], ["What do kidneys do?", "Filter blood, balance water and salts, and produce urine."], ["What is the body\u2019s largest organ?", "The skin."]];
+decks["World geography"]=[["What is a continent?", "One of Earth\u2019s large land divisions."], ["Name the seven continents.", "Africa, Antarctica, Asia, Australia, Europe, North America, South America."], ["What is the equator?", "The imaginary line at 0\u00b0 latitude."], ["What does latitude measure?", "Position north or south of the equator, in degrees."], ["What does longitude measure?", "Position east or west of the prime meridian, in degrees."], ["What is the prime meridian?", "The reference line at 0\u00b0 longitude."], ["What is the largest ocean?", "The Pacific Ocean."], ["What is a peninsula?", "Land surrounded by water on three sides."], ["What is an island?", "Land surrounded by water."], ["What does a map scale show?", "How distances on a map relate to real distances."]];
+decks["History & civics"]=[["What is a primary source?", "Original evidence from the time or event, such as a diary or photograph."], ["What is a secondary source?", "An account interpreting primary sources or earlier research."], ["What is a timeline?", "Events arranged in chronological order."], ["What does chronological mean?", "In order of time."], ["What is archaeology?", "Studying past human life through physical remains."], ["What is a civilization?", "A complex society with organized institutions, often including cities."], ["What is a constitution?", "A set of fundamental rules for government."], ["Name the three branches of the U.S. federal government.", "Legislative, executive, and judicial."], ["What is the legislative branch\u2019s main role?", "Making laws."], ["What are checks and balances?", "Powers that let branches limit one another."]];
+decks["Grammar & language"]=[["What is a noun?", "A word naming a person, place, thing, or idea."], ["What is a verb?", "A word expressing an action or state of being."], ["What is an adjective?", "A word describing a noun or pronoun."], ["What is an adverb?", "A word modifying a verb, adjective, or another adverb."], ["What is a pronoun?", "A word that takes the place of a noun, such as she or they."], ["What is a synonym?", "A word with the same or a similar meaning."], ["What is an antonym?", "A word with an opposite meaning."], ["What is a complete sentence?", "A group of words expressing a complete thought with a subject and predicate."], ["What is a prefix?", "A word part added to the beginning, such as un- in unhappy."], ["What is a suffix?", "A word part added to the end, such as -ful in helpful."]];
+decks["Reading & writing"]=[["What is the main idea?", "The central point of a text."], ["What is a supporting detail?", "Information explaining or supporting the main idea."], ["What is a summary?", "A brief account of the most important ideas."], ["What is a theme?", "A central message or insight in a work."], ["What is a simile?", "A comparison using like or as: quiet as a mouse."], ["What is a metaphor?", "A comparison describing one thing as another: the classroom was a zoo."], ["What is personification?", "Giving human qualities to something nonhuman."], ["What is a claim?", "A statement the writer asks the reader to accept."], ["What is textual evidence?", "Specific information from a text supporting an answer."], ["What is revision?", "Improving writing\u2019s ideas, organization, or wording."]];
+const subject=document.getElementById('subject'),card=document.getElementById('card'),txt=document.getElementById('text'),side=document.getElementById('side'),hint=document.getElementById('hint'),flip=document.getElementById('flip');const all=Object.entries(decks).flatMap(([name,rows])=>rows.map(r=>[...r,name]));subject.add(new Option(`All subjects · ${all.length} cards`,'All subjects'));for(const [name,rows] of Object.entries(decks))subject.add(new Option(`${name} · ${rows.length}`,name));let list=[],i=0,back=false;function render(){document.getElementById("reward").hidden=!back;const r=list[i];txt.textContent=r[back?1:0];side.textContent=back?'Back · Answer':'Front · Question';hint.textContent=back?'Tap to see the question':'Think of your answer, then tap';card.classList.toggle('answer',back);flip.textContent=back?'Show question':'Show answer';card.setAttribute('aria-label',(back?'Answer: ':'Question: ')+r[back?1:0]+'. Tap to flip.');document.getElementById('count').textContent=`${i+1} / ${list.length}`;document.getElementById('category').textContent=r[2]||subject.value}function load(){list=subject.value==='All subjects'?[...all]:decks[subject.value].map(r=>[...r,subject.value]);i=0;back=false;render()}function turn(){back=!back;render()}function move(n){i=(i+n+list.length)%list.length;back=false;render()}subject.onchange=load;card.onclick=flip.onclick=turn;document.getElementById('prev').onclick=()=>move(-1);document.getElementById('next').onclick=()=>move(1);document.getElementById('shuffle').onclick=()=>{for(let j=list.length-1;j>0;j--){let k=Math.floor(Math.random()*(j+1));[list[j],list[k]]=[list[k],list[j]]}i=0;back=false;render()};document.addEventListener('keydown',e=>{if(e.target.tagName==='SELECT')return;if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1);if(e.code==='Space'&&e.target===document.body){e.preventDefault();turn()}});load();
+let celebrating=false;document.getElementById('reward').onclick=()=>{if(!back||celebrating)return;celebrating=true;const party=document.getElementById('party');party.hidden=false;try{localStorage.setItem('flipCorrect',String(Number(localStorage.getItem('flipCorrect')||0)+1))}catch(e){}setTimeout(()=>{party.hidden=true;celebrating=false;move(1)},1700)};
+</script></body></html>
