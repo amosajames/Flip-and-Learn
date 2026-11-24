@@ -36,14 +36,19 @@
 #raceCard{background:#f2f7ed;padding:12px;border-radius:8px;margin-bottom:10px}
 .raceButtons{display:flex;flex-wrap:wrap;gap:6px}
 #triviaRace [hidden]{display:none!important}
-</style></head><body><main><header><h1>Flip & Learn V8.7<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">Trivia Race · 3 players</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
+</style><style>
+.fullExplanation:not([hidden]){margin:8px 0;background:#fffdf6;border:1px solid #c5d6cc;border-radius:10px}
+.fullExplanation[hidden]{display:none}
+.fullExplanation summary{color:#244c3f;font-weight:700;cursor:pointer;padding:12px}
+.fullExplanation p{margin:0;padding:0 12px 12px;line-height:1.5}
+</style></head><body><main><header><h1>Flip & Learn V8.8<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">Trivia Race · 3 players</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><details id="fullExplanation" class="fullExplanation" hidden><summary>Full explanation</summary><p id="fullExplanationText"></p></details><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
   <h2 id="raceTitle">Trivia Race</h2>
   <p>Take turns on one device. Say your answer before you reveal it. First to 20 correct answers wins.</p>
   <div id="raceAnimals"></div>
   <p id="raceTurn" role="status"></p>
   <section id="raceCard">
     <strong id="raceQuestion"></strong>
-    <div id="raceAnswer" hidden><p id="raceShortAnswer"></p><p id="raceExplanation"></p></div>
+    <div id="raceAnswer" hidden><p id="raceShortAnswer"></p><p id="raceExplanation"></p><details id="raceFullExplanation" class="fullExplanation" hidden><summary>Full explanation</summary><p id="raceFullExplanationText"></p></details></div>
   </section>
   <div class="raceButtons">
     <button type="button" id="raceReveal" class="control primary">Reveal answer</button>
@@ -80,6 +85,51 @@ const workedExamples = [
     [/^A feed contains (\d+) mol\/s of reactant A and undergoes (\d+)% conversion/, (a,b) => `Of every 100 moles fed in, ${b} are used. Multiply the feed rate, ${a} moles per second, by ${b} ÷ 100.`],
     [/^Revenue is \$(\d+) and total cost is \$(\d+)\./, (a,b) => `Start with the money earned ($${a}) and subtract the money spent ($${b}). A negative result means a loss.`],
 ];
+
+const fullNotes = {
+  "who is athena in greek mythology?": "In one Athenian founding myth, Athena and Poseidon competed to become the city’s patron. Athena offered an olive tree, a source of food and oil. The story connects the goddess to Athens and to a crop important to life in the region.",
+  "who is thor in norse mythology?": "Thor carries the hammer Mjölnir and travels in a chariot pulled by goats. One tradition connects the thunder and lightning of a storm with his hammer, turning a familiar natural event into a story about a god.",
+  "what is pegasus?": "In a Greek myth, Bellerophon rides Pegasus to fight the Chimera, a fire-breathing monster. The winged horse gives the hero a way to approach the creature from the air.",
+  "who is amaterasu in japanese tradition?": "In one account, Amaterasu hides in a cave and the world goes dark. The other deities use a mirror to help draw her out. The story connects her return with the return of sunlight.",
+  "what is an equivalent fraction?": "Cut a pizza into two equal slices and take one. If you then cut each half into two pieces, you have two of the four pieces and still have exactly the same amount of pizza.",
+  "what is 0.75 as a fraction?": "The digits 75 are in the hundredths place, so write 75/100. Divide the top and bottom by 25 to simplify it to 3/4.",
+  "what is 50% as a fraction?": "Percent means out of 100. Write 50% as 50/100, then divide both numbers by 50 to get 1/2.",
+  "what is a variable in algebra?": "A letter can stand for an unknown number or for a value that changes. In x + 3 = 7 it stands for one unknown. In y = 2x it can take many values, and each gives a corresponding result for y.",
+  "what is gravity?": "If you drop a ball, Earth pulls it downward. The Moon is also pulled toward Earth, but its sideways motion keeps it falling around Earth in an orbit.",
+  "what is friction?": "Your shoes push backward against the ground as you walk. Friction lets the ground push you forward. On smooth ice there is less grip, so your feet can slip instead.",
+  "what is photosynthesis?": "Plants use energy from light to turn water and carbon dioxide into sugars. They can use the sugars to grow or store them for later, and they release oxygen along the way.",
+  "what is an orbit?": "A satellite is pulled toward Earth by gravity. If it also moves sideways fast enough, it can keep falling without hitting the surface. Its path keeps curving around Earth.",
+  "what is kinetic energy?": "Two bikes can have the same mass but different kinetic energy. In everyday physics, doubling the speed quadruples that energy, which helps explain why a faster bike takes more work to stop.",
+  "what is the difference between kinetic and potential energy?": "A ball held above the ground has gravitational potential energy because of its height. When you drop it, that energy decreases as the ball speeds up and gains kinetic energy.",
+  "what is a metaphor?": "If a writer says a busy classroom was a zoo, the reader imagines noise and movement. The comparison helps the reader feel what the classroom was like in a few words.",
+  "what is the effect of an extended metaphor?": "A writer might describe a friendship as a garden, then talk about planting trust and pulling out misunderstandings like weeds. Carrying the comparison through several lines helps the ideas build on one another.",
+  "what is an algorithm?": "A recipe gives steps in an order that others can follow to reach the same result. A computer algorithm works similarly, with instructions specific enough for a computer to carry out.",
+  "what is a loop used for?": "Suppose a program needs to print the names of all 30 students. A loop can repeat one print instruction for each name and stop after the last name.",
+  "what is a loop?": "A loop repeats a set of instructions. One loop might repeat five times, while another might keep going until a condition changes, such as a timer reaching zero.",
+  "what is a circuit breaker in distributed software?": "Imagine a service repeatedly calling another service that is already overloaded. A circuit breaker pauses those calls for a time and lets the caller fail quickly or use a fallback, giving the overloaded service a chance to recover.",
+  "what is population density?": "Two towns can each have 10,000 residents, but the one covering 10 square miles has twice the density of one covering 20. The average tells you how concentrated the population is across the whole area.",
+  "what is the difference between latitude and longitude?": "Latitude tells you how far north or south a place is from the equator. Longitude tells you how far east or west it is from the prime meridian. Together they can pinpoint a location.",
+  "what is federalism?": "In the United States, the national government can coin money, states generally manage their public school systems, and both levels can collect taxes. Federalism describes how powers are divided or shared between levels of government.",
+  "what is the purpose of a census?": "A complete count helps governments plan for schools, roads, and other services. In the United States, the count also helps determine how many voting seats each state receives in the House.",
+  "what is the difference between nominal and real interest rates?": "If your savings earn 5% while prices rise 3%, the account balance grows 5%, but your purchasing power grows only about 2%. The real rate estimates that change in purchasing power.",
+  "what did archaeologists find beneath petra’s treasury in jordan in 2024?": "A research team working with Jordanian authorities found a burial chamber containing the remains of 12 people. The location matters because the team can study the burial in relation to the monument above it and to other sites in Petra.",
+  "why did an ancient city like petra need channels and reservoirs?": "Rainfall could be brief and uneven. Channels directed water to places where it could be stored, helping a large settlement and trading center survive in a dry region.",
+  "what did laser mapping reveal about ancient maya settlements near el mirador in guatemala?": "The surveys mapped raised routes within sites and between separate settlements. The size and reach of the network give researchers clues about how communities organized labor and traveled across the region.",
+  "what did wall graffiti in pompeii reveal about politics just before mount vesuvius erupted?": "Political messages survived on public walls alongside everyday writing. This gives historians direct evidence of what residents saw on the street before the eruption in AD 79.",
+  "what familiar bread did vietnamese cooks adapt to make bánh mì?": "The baguette came to Vietnam during French colonial rule. Vietnamese cooks adapted it into a sandwich with local flavors, often including pickled vegetables and fresh herbs. The sandwich shows how a food can change as it moves between places.",
+  "what is a match cut?": "A filmmaker might cut from the shape of a wheel to a record spinning in a different place. The shared shape or motion makes the transition feel natural and can suggest a connection between the scenes.",
+  "what is improvisation in theater?": "An actor might invent a line in response to something another performer just said. Each performer listens for what the others establish and adds something the group can build on.",
+  "why does salt help melt ice on roads?": "Salt dissolves in the thin layer of liquid water on the ice. The resulting brine freezes at a lower temperature than pure water. In extreme cold, road salt becomes much less effective.",
+  "what does a pulley help you do?": "A pulley attached to a ceiling changes a downward pull into an upward lift. Setups with multiple rope sections supporting a load can reduce how hard you pull, but you need to pull more rope."
+};
+function renderFullExplanation(id, row) {
+    const disclosure = document.getElementById(id);
+    const detail = row && Object.hasOwn(fullNotes,row[0].trim().toLowerCase())
+        ? fullNotes[row[0].trim().toLowerCase()] : '';
+    disclosure.open = false;
+    disclosure.hidden = !detail;
+    document.getElementById(id+'Text').textContent = detail;
+}
 
 function plainExplanation([question, answer]) {
     const note = plainNotes[question.trim().toLowerCase()];
@@ -350,6 +400,7 @@ const explanation=document.getElementById('plainExplanation');
 const note=back&&r?plainExplanation(r):'';
 explanation.textContent=note;
 explanation.hidden=!note;
+renderFullExplanation('fullExplanation', back && r);
 if(!r){
     back=false;
     txt.textContent='No questions available for this selection.';
@@ -1133,6 +1184,7 @@ const race = (() => {
         ui.Correct.hidden = phase !== 'answer';
         ui.Miss.hidden = phase !== 'answer';
         ui.Answer.hidden = phase !== 'answer';
+        renderFullExplanation('raceFullExplanation', phase === 'answer' && deck[index]);
         if (ended) return;
         const row = deck[index];
         ui.Question.textContent = row[0];
