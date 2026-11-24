@@ -36,7 +36,7 @@
 #raceCard{background:#f2f7ed;padding:12px;border-radius:8px;margin-bottom:10px}
 .raceButtons{display:flex;flex-wrap:wrap;gap:6px}
 #triviaRace [hidden]{display:none!important}
-</style></head><body><main><header><h1>Flip & Learn V8.4<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">Trivia Race · 3 players</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
+</style></head><body><main><header><h1>Flip & Learn V8.5<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">Trivia Race · 3 players</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
   <h2 id="raceTitle">Trivia Race</h2>
   <p>Take turns on one device. Say your answer before you reveal it. First to 20 correct answers wins.</p>
   <div id="raceAnimals"></div>
@@ -496,6 +496,26 @@ const triviaBanks = {
       "What canal opened in 1914 and connects the Atlantic and Pacific oceans?",
       "The Panama Canal.",
       "Ships use locks to move between the ocean entrances and an inland lake above sea level."
+    ],
+    [
+      "Which city hosted the 2015 climate conference that produced the Paris Agreement?",
+      "Paris, France.",
+      "Countries agreed to submit their own climate plans and update them over time."
+    ],
+    [
+      "What did the Montreal Protocol target?",
+      "Chemicals that damage the ozone layer.",
+      "Countries agreed to phase out many chemicals used in products such as refrigerants and aerosol sprays."
+    ],
+    [
+      "What did the 1948 Universal Declaration of Human Rights set out?",
+      "A shared statement of basic human rights.",
+      "The United Nations adopted it as a common standard that includes freedoms such as expression and religion."
+    ],
+    [
+      "Which international organization replaced the League of Nations after World War II?",
+      "The United Nations.",
+      "It took on a similar goal of international cooperation and established new bodies such as the Security Council."
     ]
   ],
   "Movies": [
@@ -558,6 +578,26 @@ const triviaBanks = {
       "What is a practical effect in a movie?",
       "An effect made physically during filming.",
       "A crew can make falling snow with a machine on set or use a miniature building in a shot."
+    ],
+    [
+      "What is a match cut?",
+      "A cut that links two shots through a shared shape, movement, or idea.",
+      "A spinning wheel might cut to a spinning record. The visual similarity connects two different scenes."
+    ],
+    [
+      "What is a movie’s score?",
+      "Music written for the film.",
+      "A composer can use a recurring melody to help the audience recognize a character or idea."
+    ],
+    [
+      "What does a cinematographer help determine?",
+      "How a film looks through the camera.",
+      "Working with the director, the cinematographer helps choose the lighting, lenses, and camera movement."
+    ],
+    [
+      "What movie technique makes actors on a soundstage appear to be in a different place by replacing a colored backdrop?",
+      "Chroma keying.",
+      "Software can remove a green background and replace it with a skyline, a landscape, or a fictional setting."
     ]
   ],
   "Politics & Civics": [
@@ -620,6 +660,26 @@ const triviaBanks = {
       "What does it mean to ratify an agreement?",
       "To give it formal approval.",
       "People may negotiate and sign an agreement first, then complete a separate approval step."
+    ],
+    [
+      "What is proportional representation meant to do?",
+      "Give groups a share of seats roughly in proportion to their votes.",
+      "In many systems, a party that receives about a third of the vote can expect roughly a third of the seats, subject to election rules."
+    ],
+    [
+      "What is a public budget?",
+      "A government’s plan for revenue and spending.",
+      "It estimates where money will come from and sets out how much to spend on services and other priorities."
+    ],
+    [
+      "What is a vote of no confidence?",
+      "A vote on whether a government still has the legislature’s support.",
+      "In parliamentary systems, losing such a vote can lead to a new government or an election, depending on the country’s rules."
+    ],
+    [
+      "What do tariffs apply to?",
+      "Goods crossing a border, usually imports.",
+      "An import tariff adds a charge when a product enters a country. That can change what it costs to buy or sell."
     ]
   ],
   "Entertainment": [
@@ -682,6 +742,26 @@ const triviaBanks = {
       "Which instrument family does the saxophone belong to?",
       "The woodwinds.",
       "It has a metal body, but a vibrating reed makes its sound."
+    ],
+    [
+      "What is call and response in music?",
+      "A phrase followed by an answering phrase.",
+      "A singer might sing a line and the audience or band might answer it."
+    ],
+    [
+      "What is a reprise in a musical?",
+      "A song or theme that returns later in the show.",
+      "The same melody may take on a new meaning after the characters have changed."
+    ],
+    [
+      "What does a comic strip’s gutter refer to?",
+      "The space between panels.",
+      "Readers fill in what happened between the moments pictured on either side."
+    ],
+    [
+      "What is a leitmotif?",
+      "A short musical idea associated with a character, place, or theme.",
+      "When the tune returns, it can remind you of a character even before they appear."
     ]
   ],
   "Science & Nature": [
@@ -744,6 +824,26 @@ const triviaBanks = {
       "Why can a hot-air balloon rise?",
       "Warm air inside the balloon is less dense than the cooler air around it.",
       "The surrounding air pushes upward strongly enough to lift the balloon when its total weight is low enough."
+    ],
+    [
+      "Why do hummingbirds need to eat so often?",
+      "Hovering and rapid flight use a lot of energy.",
+      "Nectar supplies sugar for quick energy, and tiny insects supply other nutrients."
+    ],
+    [
+      "Why does salt help melt ice on roads?",
+      "It lowers the freezing point of water.",
+      "Once some salt dissolves in liquid water on the ice, the salty mixture can stay liquid below water’s normal freezing point."
+    ],
+    [
+      "Why can a gecko stick to a wall?",
+      "Its toe pads use millions of microscopic hairs to increase contact.",
+      "Very weak attractions add up when enough tiny hairs get close to a surface."
+    ],
+    [
+      "Why does an echo take longer to return from a more distant wall?",
+      "The sound has farther to travel there and back.",
+      "The sound travels at roughly the same speed in the same air, so a longer trip takes more time."
     ]
   ],
   "Sports & Inventions": [
@@ -806,6 +906,88 @@ const triviaBanks = {
       "What invention lets divers carry breathable gas with them underwater?",
       "Scuba gear.",
       "A regulator delivers gas from a tank at a pressure suitable for breathing at the diver’s depth."
+    ],
+    [
+      "Why is a soccer team awarded a corner kick?",
+      "The defending team last touched the ball before it crossed its own goal line without a goal.",
+      "The attacking team restarts play from the corner of the field."
+    ],
+    [
+      "What does a bicycle helmet’s foam do during an impact?",
+      "It crushes to absorb some of the impact energy.",
+      "Crushing helps slow the head over a slightly longer time, reducing the force of the stop."
+    ],
+    [
+      "What invention uses a magnetic needle to help find direction?",
+      "A magnetic compass.",
+      "The needle lines up with Earth’s magnetic field, showing magnetic north and south."
+    ],
+    [
+      "How many innings are scheduled in a standard Major League Baseball game?",
+      "Nine innings.",
+      "Each inning gives both teams a turn to bat, though the home team can skip its final turn if it is already ahead."
+    ]
+  ],
+  "World History": [
+    [
+      "How did South Africa’s 1994 election change who could choose the national government?",
+      "South Africans of all races could vote in the country’s first fully democratic national election.",
+      "Under apartheid, most Black South Africans had been excluded from national elections. The 1994 vote led to a government headed by Nelson Mandela."
+    ],
+    [
+      "What changed when Egypt nationalized the Suez Canal Company in 1956?",
+      "Egypt took control of the company that ran the canal.",
+      "The decision transferred control from a foreign-dominated company to Egypt and triggered an international crisis."
+    ],
+    [
+      "What did China’s economic reforms beginning in 1978 change about its relationship with the global economy?",
+      "China began opening more of its economy to foreign trade and investment.",
+      "The reforms proceeded gradually and included experiments with market incentives and special economic zones."
+    ],
+    [
+      "How did India respond to its 1991 balance-of-payments crisis?",
+      "It eased many rules on private industry and opened more of the economy to trade and investment.",
+      "India faced a shortage of foreign currency. Its reforms included removing licensing requirements in many industries and reducing trade barriers."
+    ],
+    [
+      "What changed for women voters under New Zealand’s 1893 Electoral Act?",
+      "Women gained the right to vote in parliamentary elections.",
+      "New Zealand became the first self-governing country to extend the parliamentary vote to women."
+    ],
+    [
+      "How did the 1868 Meiji Restoration change who governed Japan?",
+      "Power shifted away from the Tokugawa shogunate to a new government organized around the emperor.",
+      "The new leadership centralized government and pursued changes including industrial development and a national army."
+    ],
+    [
+      "How did Mexico’s 1938 oil expropriation change control of its petroleum industry?",
+      "The government took over the assets of foreign oil companies operating in Mexico.",
+      "President Lázaro Cárdenas ordered the expropriation. The state oil company Pemex was established that year."
+    ],
+    [
+      "What economic change did East and West Germany make in July 1990 before reunification?",
+      "East Germany adopted the West German deutsche mark.",
+      "Monetary union put both economies on the same currency three months before political reunification."
+    ],
+    [
+      "What did the 1944 Bretton Woods conference create to help countries manage economic crises and rebuild?",
+      "It laid the groundwork for the International Monetary Fund and the World Bank.",
+      "The IMF was designed to support monetary cooperation and help countries with external payments problems. The Bank initially helped finance reconstruction."
+    ],
+    [
+      "How did Ghana’s independence in 1957 change its government?",
+      "Ghana gained independence from Britain and took responsibility for its own national government.",
+      "The former Gold Coast became Ghana under Prime Minister Kwame Nkrumah. It became a republic in 1960."
+    ],
+    [
+      "What changed when Brazil’s 1988 Constitution took effect?",
+      "It strengthened the framework for democratic government and expanded civil and social rights.",
+      "After military rule, the new constitution set out rights including access to health care, providing the basis for a national public health system."
+    ],
+    [
+      "What change did Vietnam’s Đổi Mới reforms introduce in 1986?",
+      "Vietnam began a gradual shift toward a more market-oriented economy.",
+      "Reforms expanded room for private activity and trade while the government retained an important role in the economy."
     ]
   ]
 };
