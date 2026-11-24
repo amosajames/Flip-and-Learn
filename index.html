@@ -24,7 +24,36 @@
 @keyframes victory-falcon{0%,100%{transform:none}17%{transform:translate(-8px,-8px) rotate(-8deg) scale(1,1.03)}35%{transform:translate(-15px,-22px) rotate(-10deg) scale(0.95,1.07)}58%{transform:translate(16px,-2px) rotate(14deg) scale(1.03,0.96)}78%{transform:translate(20px,-11px) rotate(4deg) scale(0.98,1.05)}}
 #party #fox[data-pet="15"]{--victory:victory-phoenix}
 @keyframes victory-phoenix{0%,100%{transform:none}16%{transform:translate(0px,3px) rotate(0deg) scale(1.09,0.87)}34%{transform:translate(-7px,-10px) rotate(-7deg) scale(0.97,1.06)}54%{transform:translate(0px,-25px) rotate(0deg) scale(1.07,1.1)}70%{transform:translate(9px,-19px) rotate(8deg) scale(1.04,1.06)}86%{transform:translate(3px,-5px) rotate(2deg) scale(1,1)}}
-}</style></head><body><main><header><h1>Flip & Learn V8.2<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><script src="flip-v8-art.js"></script><script>
+}</style><style>
+#triviaRace{width:min(94vw,640px);max-height:90dvh;overflow:auto;border:1px solid #c5d6cc;border-radius:18px;padding:clamp(12px,4vw,26px);background:#fffdf6;color:#203b35}
+#triviaRace::backdrop{background:#172a27ba}
+#triviaRace h2{margin:0}
+#raceAnimals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+.raceAnimal{display:grid;gap:4px;text-align:center;border:2px solid transparent;border-radius:8px;padding:3px;font-size:.8rem;overflow-wrap:anywhere}
+.raceAnimal.active{border-color:#47816d;background:#eaf4ec}
+#raceAnimals svg,#raceAnimals img{display:block;width:100%;height:clamp(55px,17vw,110px);object-fit:contain}
+#raceTurn{font-weight:700}
+#raceCard{background:#f2f7ed;padding:12px;border-radius:8px;margin-bottom:10px}
+.raceButtons{display:flex;flex-wrap:wrap;gap:6px}
+#triviaRace [hidden]{display:none!important}
+</style></head><body><main><header><h1>Flip & Learn V8.4<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">Trivia Race · 3 players</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
+  <h2 id="raceTitle">Trivia Race</h2>
+  <p>Take turns on one device. Say your answer before you reveal it. First to 20 correct answers wins.</p>
+  <div id="raceAnimals"></div>
+  <p id="raceTurn" role="status"></p>
+  <section id="raceCard">
+    <strong id="raceQuestion"></strong>
+    <div id="raceAnswer" hidden><p id="raceShortAnswer"></p><p id="raceExplanation"></p></div>
+  </section>
+  <div class="raceButtons">
+    <button type="button" id="raceReveal" class="control primary">Reveal answer</button>
+    <button type="button" id="raceCorrect" class="control primary" hidden>Correct</button>
+    <button type="button" id="raceMiss" class="control" hidden>Missed</button>
+    <button type="button" id="raceReplay" class="control primary" hidden>Play again</button>
+    <button type="button" id="raceClose" class="control">Close</button>
+  </div>
+</dialog>
+<script src="flip-v8-art.js"></script><script>
 const plainNotes = Object.assign(Object.create(null), {"what is the basic unit of living things?": "Think of a cell as a tiny living building block. Some living things are made of just one.", "what is an adaptation?": "For example, thick fur can help an animal stay warm in a cold habitat.", "what is an ecosystem?": "In a pond, fish, plants, and tiny living things interact with each other and depend on water and sunlight.", "what is a decomposer?": "Fungi can break down fallen leaves, returning nutrients to the soil.", "mass versus weight?": "You’d weigh less on the Moon because gravity pulls on you less there. Your mass stays the same.", "what is conduction?": "A metal spoon warms up where it touches hot soup, and heat spreads through the spoon.", "what is friction?": "Rub your palms together. The drag you feel as they slide past each other is friction.", "how do you find average speed?": "A trip of 60 miles in 2 hours works out to 30 miles per hour on average.", "what do balanced forces do?": "Two equally strong pulls on opposite ends of a rope cancel each other out.", "what does a simple circuit need?": "Think of the circuit as a loop. Opening a switch makes a gap so current can’t flow.", "what causes seasons?": "When your half of Earth tilts toward the Sun, daylight lasts longer and the sunlight hits more directly.", "why does the moon show phases?": "The Sun usually lights half the Moon. As the Moon moves around Earth, our view of that lit half changes.", "what is the periodic table?": "Think of it as a chart that puts elements with similar behavior in the same columns.", "what is a chemical symbol?": "The symbol works like a short name. For example, O is the symbol for oxygen.", "what is a variable in a scientific investigation?": "If you test how light affects a plant, the amount of light is a variable because you can change it.", "control group": "If one set of plants gets a new fertilizer, a set grown the usual way gives you something to compare it with.", "qualitative data": "A description like “the leaves turned yellow” tells you what you observed without measuring it with a number.", "trend": "If temperatures generally climb over a week, that’s a trend, even if one day is cooler.", "mean (average)": "Add the numbers and divide by how many you added. For 2, 4, and 6, that’s 12 divided by 3.", "how do clouds form?": "As moist air cools, some water vapor becomes tiny droplets or ice crystals. A cloud is a collection of those droplets or crystals.", "what is wind chill?": "Wind carries warmth away from your skin faster, so the same air temperature can feel colder.", "what is condensation?": "Think of the drops that form on the outside of a cold glass. Water vapor in the nearby air cools into liquid drops.", "what is an aquifer?": "Think of water filling the spaces in sand or cracks in rock below ground.", "what does dissolve mean?": "Stir sugar into water and its particles spread through the water, even after you can no longer see the grains.", "triangle area formula?": "A triangle takes up half the area of a rectangle with the same base and height.", "what does latitude measure?": "Think of latitude as how far up or down you are from the equator on a globe.", "what does longitude measure?": "Think of longitude as how far east or west you are from the line that passes through Greenwich, England.", "what does a map scale show?": "A scale might tell you that one centimeter on the map stands for one kilometer in real life.", "what is a primary source?": "A letter written by a person who witnessed an event is a primary source for their experience.", "what is a secondary source?": "A historian’s book explaining an event using old letters and records is a secondary source.", "what are checks and balances?": "For example, Congress can pass a bill and the president can veto it. Congress can override that veto with enough votes.", "what is a noun?": "In “The dog ran,” the word “dog” names an animal, so it’s a noun.", "what is a verb?": "In “The dog ran,” the word “ran” tells you what the dog did.", "what is an adjective?": "In “a red kite,” the word “red” tells you more about the kite.", "what is an adverb?": "In “She ran quickly,” the word “quickly” tells you how she ran.", "what is a complete sentence?": "“The dog barked” expresses a whole thought. It tells you who did something and what they did.", "what is a supporting detail?": "If the main idea is that walking is good exercise, a detail could explain how walking helps your heart.", "what is a theme?": "In a story about friends who make up after a fight, forgiveness could be the theme.", "what is a metaphor?": "“The classroom was a zoo” compares a noisy room to a zoo without saying “like” or “as.”", "what is personification?": "“The wind whispered” gives the wind something people do.", "what is textual evidence?": "If you say a character is nervous, you can point to a line that says her hands were shaking.", "solve 3x + 7 = 28.": "Take 7 from both sides to get 3x = 21. Divide by 3 to get x = 7.", "a $80 jacket is discounted 25%, then taxed 10%. final price?": "Take $20 off the $80 price. Then add 10% of the $60 sale price, which is $6.", "find the slope through (2, 3) and (6, 11).": "The line rises by 8 while moving 4 units right. Divide 8 by 4.", "a circle has radius 7 cm. what is its area?": "Multiply the radius by itself to get 49, then multiply by π.", "what is 3/4 divided by 2/5?": "Flip 2/5 to make 5/2, then multiply 3/4 by 5/2.", "two dice are rolled. probability of a sum of 7?": "Six of the 36 equally likely rolls add up to 7, from 1 + 6 through 6 + 1. Six out of 36 is one sixth.", "why does ice float on liquid water?": "Water molecules spread out into a more open pattern as they freeze. The same amount of water takes up more room as ice.", "what happens to acceleration if force doubles and mass stays constant?": "Think of giving the same cart twice as much push. Its speed changes twice as fast.", "how does natural selection change a population?": "If a trait helps more individuals leave offspring, those offspring can pass it on, making it more common over generations.", "why does a metal spoon feel colder than wood at the same temperature?": "Metal carries heat away from your skin faster, so your hand cools faster when it touches metal.", "why did the american colonists object to taxation without representation?": "The colonists were being taxed by a Parliament in which they had no elected voice.", "how did the printing press help spread the reformation?": "Printers could make many copies of a pamphlet, so the same argument could reach readers in many towns.", "how did industrialization encourage urbanization?": "When factories needed workers, people moved closer to those jobs. Cities grew around the factories.", "identify the literary device: the wind whispered through the trees.": "Whispering is something a person can do. The sentence gives that action to the wind.", "identify the dependent clause: although it rained, we played outside.": "“Although it rained” leaves you waiting to hear what happened despite the rain.", "what is the difference between denotation and connotation?": "“Cheap” and “inexpensive” can both mean low-priced. “Cheap” can also suggest poor quality.", "what is a rain shadow?": "Moist air often drops rain on one side of a mountain. Air reaching the other side is drier.", "why can a map projection distort country sizes?": "Try flattening an orange peel without tearing or stretching it. A map faces a similar problem when it flattens the globe.", "solve x² − 5x + 6 = 0.": "Factor the left side into (x − 2)(x − 3). The product is zero if either part is zero.", "find the hypotenuse of a right triangle with legs 9 and 12.": "Square the two shorter sides and add: 81 + 144 = 225. Then take the square root.", "simplify (2x³)(4x²).": "Multiply 2 and 4 to get 8. The two powers together have five copies of x, so write x⁵.", "solve 2x + y = 10 and x − y = 2.": "Add the equations to cancel y and get 3x = 12. Put x = 4 into either equation to get y = 2.", "what is the vertex of y = (x − 3)² + 2?": "At x = 3 the squared part is zero. The graph reaches its lowest point at y = 2.", "what is the difference between kinetic and potential energy?": "A bicycle rolling downhill has energy from its motion. At the top of the hill it has stored energy because of its height.", "why does a satellite in orbit not simply fall to earth?": "Gravity keeps pulling it down, but the satellite moves sideways fast enough that Earth curves away beneath its path.", "what is a false dilemma?": "“You’re either with us or against us” leaves out choices such as agreeing with only part of the plan.", "why can rapid urbanization strain infrastructure?": "A city can add new residents faster than it can build roads, housing, schools, or water systems.", "what is the first law for a closed system, with work positive out?": "Think of the system’s energy like a balance. Heat entering adds energy, and doing work on the outside uses some of that energy.", "what is the reynolds number for pipe flow?": "The number compares the tendency of moving fluid to keep moving with the effect of its internal friction.", "what is the significance of the biot number?": "It tells you whether heat moves through the object faster or slower than it exchanges heat with the surroundings.", "what is effective stress in saturated soil?": "In saturated soil, part of the load is carried by water in the pores. The rest is carried by contact between soil grains.", "what is the purpose of a load combination?": "A structure can face several loads at once. The combinations specify which ones to check together and how much weight to give each.", "what is the difference between ultimate and serviceability limit states?": "A floor can be strong enough to support everyone but still bounce enough to be uncomfortable.", "what does kirchhoff’s current law state?": "Picture a junction in a wire. Whatever current flows in must flow out.", "what is the nyquist sampling criterion for a bandlimited baseband signal?": "Taking too few measurements can make a fast-changing signal look like a slower one.", "what is mach number?": "Mach 2 means flying twice as fast as sound travels in the surrounding air.", "what is the steady-state mole balance for a species in a reactor?": "If the amount inside stays steady, whatever flows in or is made must balance whatever flows out or is used up.", "what does relative volatility quantify?": "If one substance enters the vapor much more readily than another, distillation can separate them more easily.", "what is the time complexity of binary search on a sorted array?": "Think of looking for a word in a sorted dictionary. Each comparison lets you discard about half of the pages still in play.", "what is a race condition?": "Two workers might both read the same account balance before either updates it. The final result can depend on whose update finishes last.", "what is a deadlock?": "Imagine two people each holding a key the other needs and both refusing to let go. Neither can proceed.", "what does the rank-nullity theorem state?": "Inputs that get sent to zero account for one part of the input space. The independent directions you can still reach account for the rest.", "what is the general solution of y′ = ky?": "This describes something whose rate of change stays proportional to how much is there, such as idealized growth at a fixed percentage.", "what is the role of atp synthase?": "Think of a tiny turbine. The flow of ions turns it and helps it make ATP, a molecule cells use for energy.", "what is genetic drift?": "If a storm randomly kills many individuals, the survivors may carry a different mix of genes just by chance.", "what is the purpose of a negative control?": "If a sample that should give no signal lights up anyway, you know the test may be reacting to something else.", "what is net present value?": "Future dollars are converted to today’s dollars so you can compare the costs and benefits on the same footing.", "what is marginal cost?": "If making the next loaf costs another $2, then $2 is the marginal cost for that loaf.", "what is opportunity cost?": "If you spend the afternoon working a shift, the time you would have spent at the beach is part of what you gave up, if that was your next best option.", "what is the difference between nominal and real interest rates?": "If your savings grow 5% while prices rise 3%, your buying power grows by roughly 2%.", "what is adverse selection?": "If buyers can’t tell good used cars from bad ones, they may offer too little to attract sellers of good cars.", "what is historiography?": "It asks how earlier historians explained an event and why their accounts may differ.", "what is spatial autocorrelation?": "When nearby places tend to have similar values, you may see clusters, like groups of nearby neighborhoods with similar rents.", "what is the modifiable areal unit problem?": "Redrawing district boundaries can change each district’s average even when nobody moves.", "what is a confidence interval in frequentist statistics?": "Imagine repeating the study again and again. A 95% method would make intervals that capture the true value about 95% of the time.", "what does judicial review mean in u.s. constitutional law?": "Courts can ask whether a law or government action fits the rules set by the Constitution.", "what is the distinction between procedural and substantive due process?": "One asks whether the government used a fair process. The other asks whether there are constitutional limits on the action itself.", "what is federalism?": "In the U.S., the federal and state governments share governing power. Some responsibilities belong mainly to one level.", "what are actus reus and mens rea?": "One term refers to what a person did. The other refers to the mental state the offense requires.", "why distinguish motive from intent?": "Intent is what a person meant to do. Motive is why they wanted to do it.", "what is an injunction?": "For example, a court could order someone to stop an action while a dispute is resolved.", "what distinguishes compensatory and punitive damages?": "One payment is meant to make up for a loss. The other is meant to punish especially serious misconduct.", "what is consideration under traditional u.s. common law?": "If one person promises to paint a fence and the other promises to pay, each promise is part of the exchange.", "what is an easement?": "Think of a driveway crossing one lot that a neighbor has the right to use.", "what is limited liability?": "An owner can generally lose what they invested without becoming personally responsible for every company debt.", "what is a fiduciary duty of loyalty?": "Someone entrusted with another person’s interests must put those interests ahead of their own in that role.", "what is the distinction between jurisdiction to prescribe and enforce?": "A country’s power to make a rule and its power to act on that rule in a particular place are separate questions.", "under the u.s. federal rules of evidence, what is hearsay?": "If someone repeats an out-of-court statement to prove the statement was true, that raises a hearsay question.", "what is subject-matter jurisdiction?": "Ask whether this court can hear this kind of case, such as a bankruptcy case.", "what is personal jurisdiction?": "Ask whether this court has authority over the person or organization involved.", "does u.s. copyright protect ideas themselves?": "Two writers can start from the same idea for a detective story. Copyright can protect the particular words each writer uses.", "what is the basic function of a trademark?": "A trademark helps shoppers recognize the source of a product, such as a brand name on a shoe.", "how does attorney-client privilege differ from professional confidentiality?": "The courtroom privilege covers certain confidential legal communications. The professional duty covers a wider range of information about the work.", "what is the distinction between emic and etic approaches?": "The emic view asks what a practice means to people within the tradition. The etic view applies an outside framework to study it.", "what is textual criticism?": "A scholar might compare copies of a text to work out where a word was added or changed over time.", "why avoid treating a religion as homogeneous?": "People within the same tradition may worship differently, speak different languages, or disagree about what a teaching means.", "what is lived religion?": "It looks at what people do in daily life, such as observing a holiday at home or sharing a meal after a service.", "what is a mythological motif?": "A repeated story element, such as a hero receiving a magic object, can appear in very different stories.", "what is euhemerism?": "A scholar might ask whether stories about a god grew out of stories about a real ruler.", "why is provenance important in folklore research?": "Knowing who told a story and where it was recorded gives clues about what it meant in that setting.", "why avoid assuming similar myths share one origin?": "People in different places can come up with similar stories independently. Similarity is a reason to investigate, not proof of contact.", "what is oral history?": "An interview with someone who remembers an event can preserve a firsthand account in their own words.", "why compare independent historical sources?": "If two witnesses recorded the same detail without copying each other, that detail has stronger support.", "what is an inference?": "If a character comes inside dripping wet and carrying an umbrella, you can infer it was raining.", "what is a watershed?": "Picture rain falling on different hillsides and all draining into the same river.", "what is population density?": "Divide the number of people by the area they live in. A million people in a small city means more people per square mile.", "what is pseudocode?": "You could write “ask for a name, then say hello” to plan the program before choosing any programming language.", "what is a pilgrimage?": "It’s a journey to a place that holds spiritual or religious meaning for the traveler.", "what was the silk road?": "Merchants used many linked routes to carry goods between regions. Ideas, languages, and beliefs traveled along those routes too.", "what is archival selection bias?": "If records about wealthy families survive more often, an archive can give you an uneven picture of who lived there.", "how should an historian handle contradictory eyewitness accounts?": "Compare what each witness could see, when they wrote their account, and what other evidence backs it up.", "what is dramatic irony?": "In a mystery, the audience might see a trap being set while the character walks toward it unaware.", "what is a dependent clause?": "“Because it rained” has a subject and verb, but you still need another part to finish the thought.", "what is a concessive argument?": "You can admit that a plan is expensive while still making the case that its benefits are worth the cost.", "what does a map legend explain?": "Think of it as the map’s key. A blue line might mean a stream and a dashed line might mean a trail.", "what is a drainage divide?": "Rain on one side of a ridge may drain into one river, while rain on the other side drains into a different river.", "why does a mercator map exaggerate polar areas?": "On this map, places near the poles are stretched much more than places near the equator.", "what is an isotope?": "Think of atoms of the same element with different numbers of neutrons. They keep the same number of protons.", "what is the role of ribosomes?": "Ribosomes read instructions and link amino acids together to make proteins.", "why predefine a statistical analysis plan?": "Deciding how you’ll compare results ahead of time reduces the temptation to choose a method just because it gives the result you wanted.", "what is a negative control?": "A sample expected to give no response helps you spot background noise or contamination.", "what is momentum in classical mechanics?": "A heavy cart moving at the same speed as a light cart has more momentum.", "why report measurement uncertainty?": "If a ruler only has marks every millimeter, the result should show the limits of how precisely you could read it.", "what is a loop used for?": "A loop can repeat the same instruction for each item in a list, like printing every student’s name.", "what is a python list index for the first element?": "Python starts counting positions at zero. In a list of names, names[0] picks the first name.", "what does linearizability require?": "Each operation should appear to take effect at one instant between when it starts and when it finishes.", "why use parameterized sql queries?": "The database receives the query and values separately. It treats input as data even if it contains characters used in SQL commands.", "what does an emic approach emphasize?": "It asks how a custom looks to the people who practice it and what meaning they give it.", "what is reflexivity in religious studies fieldwork?": "Researchers think about how their own assumptions and presence affect what people tell them and how they interpret it.", "why can different accounts of the same myth disagree?": "Stories can change as they’re retold in different places, time periods, and languages.", "why are triangles used in many truss structures?": "Push on a triangle with fixed side lengths and its angles stay put. A four-sided frame can skew without changing the lengths of its sides.", "what is a design constraint?": "A design might have to fit through a doorway, stay under a budget, or weigh less than a set amount.", "what is a factor of safety in a simple strength calculation?": "In a simple comparison, if capacity is twice the expected demand, the factor of safety is 2.", "what is fatigue failure?": "A paper clip can snap after you bend it back and forth repeatedly, even when one bend does little visible damage.", "what is a finite element convergence study?": "Divide the model into smaller pieces and solve again. Check whether the result you care about changes less as the pieces get smaller.", "why document design assumptions?": "If someone later changes the load, material, or conditions, they can check whether your reasoning still applies.", "what distinguishes binding from persuasive precedent?": "A court has to follow precedent that binds it. It can learn from decisions by other courts without being required to follow them.", "why check subsequent treatment of a judicial opinion?": "A later decision may have overturned or narrowed the rule you want to quote.", "what is the perimeter of a rectangle?": "Add one long side and one short side, then double that total to count all four sides.", "what is the slope of a nonvertical line?": "Think “rise over run.” If you go up 6 units while moving right 3 units, the slope is 2.", "what is the discriminant of ax² + bx + c = 0?": "Given real coefficients, its sign tells you whether there are two distinct real roots, one repeated real root, or no real roots.", "when is a square matrix invertible?": "A nonzero determinant means the transformation can be undone. A zero determinant means it has squashed some direction and lost information.", "what is uniform convergence of functions on a set?": "Once you go far enough in the sequence, every point meets the same error limit at once.", "why distinguish confidence intervals from prediction intervals?": "A confidence interval can estimate the average height of plants. A prediction interval for one future plant also has to allow for how much individual plants vary.", "can sound travel through empty space?": "Sound travels when particles bump or pull on their neighbors. Empty space has no particles to pass the vibration along.", "what is an algorithm?": "Think of a recipe. Follow its steps in order to make the dish.", "what is a variable?": "Think of a labeled box. A variable named score could start at 0 and later hold 10.", "what does an if statement do?": "A program might say “if the score reaches 10, play a sound.” Below 10 it skips that instruction.", "what is debugging?": "If a character jumps in the wrong direction, you can trace which instruction caused it and fix that instruction.", "python: print(3 + 4 * 2)": "Four times two is 8. Then add 3 to get 11.", "python: what is len(\"cat\")?": "Python counts one character for each of c, a, and t.", "what is a loop?": "A loop lets you say “clap three times” with one instruction for clapping.", "what is acceleration?": "A car accelerates when its speed or direction changes. Turning at a steady speed still changes its velocity.", "what happens to pressure when the same force acts on a smaller area?": "Think of a thumbtack. The same push is concentrated onto a much smaller area at the tip.", "python: list(range(3))": "range(3) starts at zero and stops just before 3.", "python: what is 17 % 5?": "Three groups of five make 15, leaving a remainder of 2.", "python: what is 5 > 3 and 2 > 4?": "The first comparison is true and the second is false. “And” needs both to be true.", "what is the relationship between frequency and period?": "Frequency tells you how many cycles fit in a second. Period tells you how long one cycle takes.", "python: print([2, 4, 6][1])": "Python counts positions from zero. Index 1 points to the second number.", "python: what does // do with integers?": "It rounds the quotient down. For example, 7 // 3 is 2 and −7 // 3 is −3.", "why use a function?": "You can put the steps for drawing a square in one function, then call it each time you need another square.", "what is kinetic energy?": "Doubling the speed gives an object four times as much energy of motion when its mass stays the same.", "python: print(sum(range(5)))": "range(5) gives 0 through 4. Adding those five numbers gives 10.", "what is an off-by-one error?": "A loop that runs four times when you meant it to run five has an off-by-one error.", "what is impulse?": "A longer push can change momentum more than a quick push of the same strength.", "what is centripetal acceleration?": "Even at a steady speed, a turning object changes direction. Its acceleration points toward the center of the circle.", "python: what is [x*x for x in range(4)]?": "Python goes through 0, 1, 2, and 3, and squares each number.", "javascript: what is 3 === \"3\"?": "Strict equality checks the type as well as the value. The first 3 is a number and the second is text.", "what is recursion?": "Think of counting down: say the current number, then call the same function with a smaller number until you reach zero.", "what is snell’s law?": "A light ray can bend when it passes from air into water. The rule relates the two angles to how light travels in each material.", "what is the ideal gas law?": "It connects pressure, space, temperature, and how much gas there is. In a sealed container of fixed size, warming the gas raises the pressure.", "python: what is the time complexity of scanning a list of n elements?": "If you have twice as many items, you have roughly twice as much work because you check each one.", "what is a stack?": "Think of a pile of plates. The plate you put on top last is the first one you take off.", "sql: what does where do?": "WHERE score > 80 keeps only the rows whose score is above 80.", "what is the energy of a photon?": "A higher-frequency photon, such as blue light compared with red light, carries more energy.", "what is a unit test?": "You could give an addition function 2 and 3 and check that it returns 5.", "what is the time-independent schrödinger equation?": "The equation finds quantum states with a definite energy. Applying the energy operator to such a state gives the same state multiplied by its energy.", "what is a hash collision?": "Think of different names being assigned the same locker number. The system still needs a way to tell them apart.", "what is a database transaction’s atomicity?": "In a transfer between accounts, the debit and credit must both go through or both be undone.", "what is a stable sort?": "If two students have the same score, a stable sort keeps them in the order they were listed.", "what does noether’s theorem relate?": "If the rules stay the same over time, energy is conserved. This is one example of the link between a symmetry and a conserved quantity.", "what is the bias-variance tradeoff?": "An overly simple model can miss a real pattern. An overly flexible one can learn quirks that disappear when it sees new data.", "why perform a mesh convergence study?": "Make the cells smaller and compare the result you care about. If it changes less each time, that suggests the grid is having less effect.", "how are independent standard uncertainties combined for a sum?": "For independent uncertainties of 3 and 4 units, square them, add to get 25, then take the square root to get 5.", "what does the courant number characterize?": "If something travels half a grid cell in one time step, the Courant number is 0.5.", "what is idempotency in an api operation?": "Pressing “mark as read” twice leaves the message in the same state as pressing it once.", "what is a circuit breaker in distributed software?": "If a service keeps failing, the caller can pause requests so the failures don’t tie up the rest of the system.", "square inches in 1 square foot?": "A one-foot square measures 12 inches on each side. Count 12 rows of 12 one-inch squares.", "ounce versus fluid ounce?": "The ounce on a bag of flour measures weight. The fluid ounce on a measuring cup measures how much space a liquid takes up.", "where are most metals?": "As a rule of thumb, look on the left or in the middle of the table for metals. Hydrogen is an exception on the left.", "prime number": "For example, 7 can only be divided evenly by 1 and 7, so it’s prime. Eight also divides evenly by 2 and 4.", "distributive property": "For 3 × (10 + 2), multiply each part by 3. Then add 30 and 6.", "do results prove a hypothesis forever?": "One result supports an idea under the conditions you tested. A later test with different conditions may give a different result.", "where is most fresh water stored?": "Most of Earth’s fresh water is frozen in glaciers and ice sheets rather than flowing in rivers and lakes.", "how do you multiply fractions?": "Multiply the two top numbers to count the parts, and the two bottom numbers to find the size of each part.", "what is 1/5 as a decimal?": "Divide 1 by 5. One fifth is the same as two tenths, so the decimal is 0.2.", "what is 50% as a fraction?": "Half of 100 is 50. So 50 out of 100 is the same share as 1 out of 2.", "what is 70% of 44?": "Find 10% by moving the decimal one place left, from 44 to 4.4. Seven groups of 4.4 make 30.8.", "a $40 item is 25% off. sale price?": "One quarter of $40 is $10. Take that amount off the price.", "what is an obtuse angle?": "Think of a door opened farther than a square corner, but less than a straight line.", "what are parallel lines?": "Railroad tracks are a useful picture: the two rails stay the same distance apart along a straight stretch.", "what is the prime meridian?": "This line is the starting point for measuring how far east or west a place is on a globe.", "what is an antonym?": "“Hot” and “cold” are antonyms because their meanings are opposite.", "what is a prefix?": "In “rewrite,” re- comes at the beginning and means “again.”", "what is a suffix?": "In “helpful,” -ful comes at the end and changes the word to mean “giving help.”", "what distinguishes dramatic irony from situational irony?": "Dramatic irony is knowing a character is walking into a trap. Situational irony is when the outcome itself goes against what you’d expect.", "why does increasing temperature often speed up a chemical reaction?": "Warmer particles move faster. More of their collisions have enough energy for the reaction to happen.", "how do meiosis and fertilization maintain chromosome number?": "Egg and sperm cells each carry half the usual number of chromosomes. Fertilization brings the two sets together.", "what is the ph of a solution with hydrogen ion concentration 10⁻³ m?": "The exponent is negative 3. The pH scale takes the negative of that base-10 logarithm, giving 3.", "what was the significance of brown v. board of education?": "The decision said separating children by race in public schools violated equal protection.", "what is a concessive clause?": "In “Although I was tired, I kept going,” the first part admits something that makes the second part surprising.", "what is the euler buckling load for a pinned-pinned column?": "A long thin column bends sideways under less compressive load than a shorter or stiffer one.", "what is darcy’s law for saturated flow?": "Water flows faster when there is a bigger drop in water head over the same distance, a wider flow area, or soil that lets it through more easily.", "what is the transfer function of an ideal rc low-pass filter?": "Slow changes mostly get through. Rapid changes are reduced because the capacitor takes time to charge and discharge.", "what is the condition for continuous-time asymptotic stability of a finite-dimensional lti state matrix?": "In the unforced system, the negative real parts mean that disturbances die away over time.", "what is dynamic pressure?": "It describes the pressure associated with the air’s motion. At the same density, doubling the speed gives four times the dynamic pressure.", "what is the prandtl number?": "It compares how quickly motion spreads through a fluid with how quickly heat spreads through it.", "what is focalization in narrative theory?": "Ask whose eyes or awareness guide the scene. Two characters might describe the same event very differently.", "what is intertextuality?": "A story can borrow a line or echo a scene from another work, adding meaning for readers who recognize the connection.", "a buyer accepts an offer but materially changes its terms in a common-law transaction. what is the usual effect?": "Changing an important term, such as the price, usually puts a new proposal on the table.", "what is the general purpose of expectation damages?": "The idea is to give the injured party the value they would have received if the agreement had been carried out.", "what are the usual elements of negligence?": "Ask four questions: Was care owed? Did someone fall short? Did that cause the problem? Was there legally recognized harm?", "a driver runs a red light but causes no injury. is ordinary negligence liability established solely by that fact?": "Breaking a traffic rule can show careless conduct. A negligence claim also generally needs harm that the conduct caused.", "what is comparative negligence?": "If both people contributed to the harm, a court may assign each a share of fault. The effect on payment depends on the rules that apply.", "what is customary international law?": "A repeated practice can count toward a rule when states follow it because they accept it as legally required or permitted.", "what does federal rule of evidence 403 permit?": "A judge can weigh what the evidence helps prove against risks such as unfair prejudice or confusion.", "what is summary judgment under federal civil procedure?": "If there is no real disagreement over facts that could change the result, the judge can decide the legal issue without a trial.", "what is a conflict of interest?": "For example, representing two clients who want opposite outcomes can make it hard to serve both loyally.", "what is comparative religion?": "A scholar could compare how different traditions mark coming-of-age ceremonies and ask what those practices mean in each community.", "why distinguish theology from religious studies?": "Theology may ask what a tradition teaches about God. Religious studies can ask how people interpret and practice those teachings in different settings.", "what is methodological agnosticism?": "A scholar can study what a belief means to people while setting aside whether the belief is true.", "why distinguish myth from falsehood in scholarship?": "In religious studies and folklore, the term can refer to a story that explains origins or expresses values important to a community.", "what is a structuralist approach to myth?": "This approach looks for patterns beneath the plot, such as repeated contrasts between nature and culture.", "why distinguish living sacred traditions from literary retellings?": "A story told within a religious community may have a ceremonial role or rules about who can share it. A published retelling can serve a different purpose.", "why select a projected coordinate system before measuring planar area?": "A flat map has to stretch parts of Earth. A projection designed to preserve area helps keep those stretches from changing area comparisons.", "why seek informed consent before recording a religious ritual?": "A person may agree to talk with a researcher without agreeing to be recorded. Asking first gives them a chance to set limits.", "why does motif similarity alone not establish historical transmission?": "Similar ideas can arise in different places. Dates and evidence of contact help test whether one story influenced another.", "why identify a specific community when discussing indigenous sacred narratives?": "One community’s rules for sharing a story may differ from another’s, even when the stories seem similar.", "why should historians corroborate primary sources?": "Two firsthand accounts can disagree or leave things out. Compare them with each other and with other evidence before drawing a conclusion.", "what is binary search’s worst-case time complexity on a sorted array?": "Think of looking for a word in a sorted dictionary. Each comparison lets you discard about half of the pages still in play.", "what is parameterized sql used for?": "The database receives the query and values separately. It treats input as data even if it contains characters used in SQL commands.", "what is the first law of thermodynamics with work positive out?": "Think of the system’s energy like a balance. Heat entering adds energy, and doing work on the outside uses some of that energy.", "what is consideration in common-law contract formation?": "If one person promises to paint a fence and the other promises to pay, each promise is part of the exchange."});
 const workedExamples = [
     [/^(\d+) \+ (\d+) = \?$/, (a,b) => `Start at ${a} and count up ${b} more.`],
@@ -437,6 +466,36 @@ const triviaBanks = {
       "What was the name of the first artificial satellite placed in Earth orbit?",
       "Sputnik 1.",
       "The Soviet Union launched the little radio-transmitting satellite in 1957, at the beginning of the Space Age."
+    ],
+    [
+      "Which ocean did the Titanic cross on its maiden voyage?",
+      "The Atlantic Ocean.",
+      "It was traveling from Europe toward New York when it struck an iceberg in 1912."
+    ],
+    [
+      "What city was buried by Mount Vesuvius in AD 79?",
+      "Pompeii.",
+      "Volcanic material covered streets and buildings. Excavations later revealed much about daily Roman life."
+    ],
+    [
+      "What ship carried Charles Darwin on the voyage that helped shape his ideas about evolution?",
+      "HMS Beagle.",
+      "Darwin observed animals, plants, and landscapes during the voyage, including in the Galápagos Islands."
+    ],
+    [
+      "Which city received the Statue of Liberty from France?",
+      "New York City.",
+      "France gave the statue to the United States. It was dedicated in New York Harbor in 1886."
+    ],
+    [
+      "What event began when people stormed the Bastille in 1789?",
+      "The storming was an early turning point in the French Revolution.",
+      "The Bastille was a prison and a symbol of royal authority. July 14 became France’s national holiday."
+    ],
+    [
+      "What canal opened in 1914 and connects the Atlantic and Pacific oceans?",
+      "The Panama Canal.",
+      "Ships use locks to move between the ocean entrances and an inland lake above sea level."
     ]
   ],
   "Movies": [
@@ -469,6 +528,36 @@ const triviaBanks = {
       "What is stop-motion animation?",
       "Animation made by moving objects a little between photographs.",
       "Play those photos in order and the small changes make a puppet or object look like it is moving on its own."
+    ],
+    [
+      "What is a movie’s aspect ratio?",
+      "The width of the image compared with its height.",
+      "A wider aspect ratio can fit more of a landscape across the screen."
+    ],
+    [
+      "What is a close-up in filmmaking?",
+      "A shot framed tightly around a subject.",
+      "A close-up of someone’s face makes small changes in expression easy to see."
+    ],
+    [
+      "What do actors record during ADR?",
+      "Replacement or additional dialogue after filming.",
+      "An actor can rerecord a line in a studio when the original words were hard to hear over set noise."
+    ],
+    [
+      "What does a clapperboard help synchronize?",
+      "Picture and sound.",
+      "The camera sees the clap and the microphone hears it, giving editors a point to line up both recordings."
+    ],
+    [
+      "Who wrote the novel on which The Lord of the Rings films are based?",
+      "J. R. R. Tolkien.",
+      "The films follow a journey through Middle-earth, the world Tolkien created in his books."
+    ],
+    [
+      "What is a practical effect in a movie?",
+      "An effect made physically during filming.",
+      "A crew can make falling snow with a machine on set or use a miniature building in a shot."
     ]
   ],
   "Politics & Civics": [
@@ -501,6 +590,36 @@ const triviaBanks = {
       "Which U.S. constitutional amendment set the voting age at 18 for citizens?",
       "The Twenty-Sixth Amendment.",
       "Ratified in 1971, it bars denying the vote to citizens who are at least 18 because of their age."
+    ],
+    [
+      "What does it mean for an election to have a runoff?",
+      "An additional vote is held to decide the winner.",
+      "A runoff can happen when the first round produces no candidate who meets the required threshold."
+    ],
+    [
+      "In the U.S., which federal branch includes the Supreme Court?",
+      "The judicial branch.",
+      "Federal courts hear cases and interpret laws and the Constitution."
+    ],
+    [
+      "What is a coalition government?",
+      "A government formed by parties working together.",
+      "When no party has enough seats to govern alone, several parties may agree to share power."
+    ],
+    [
+      "What is the purpose of a census?",
+      "To count the population and collect information about it.",
+      "In the United States, the population count helps determine how many House seats each state receives."
+    ],
+    [
+      "What does an abstention mean in a vote?",
+      "A voter chooses to cast neither a yes nor a no vote.",
+      "At a meeting, a member might formally abstain when an issue comes up for a decision."
+    ],
+    [
+      "What does it mean to ratify an agreement?",
+      "To give it formal approval.",
+      "People may negotiate and sign an agreement first, then complete a separate approval step."
     ]
   ],
   "Entertainment": [
@@ -533,6 +652,36 @@ const triviaBanks = {
       "What does an encore usually mean at a concert?",
       "An extra performance after the planned program.",
       "After the audience applauds, performers sometimes return to play one more song."
+    ],
+    [
+      "What is a concept album?",
+      "An album organized around a shared idea, story, or theme.",
+      "The songs can fit together like chapters in a book."
+    ],
+    [
+      "What is a punchline?",
+      "The line that delivers a joke’s payoff.",
+      "A setup leads the audience to expect one thing, and the punchline can surprise them."
+    ],
+    [
+      "What does a conductor do in an orchestra?",
+      "Guides the musicians through the performance.",
+      "Hand movements can show when to start, how fast to play, or when to get louder."
+    ],
+    [
+      "What is improvisation in theater?",
+      "Creating dialogue or action as the performance happens.",
+      "The performers listen to each other and build the scene together in real time."
+    ],
+    [
+      "What is a bass line in music?",
+      "A sequence of low notes that supports the rhythm and harmony.",
+      "It can give a song a steady groove underneath the melody."
+    ],
+    [
+      "Which instrument family does the saxophone belong to?",
+      "The woodwinds.",
+      "It has a metal body, but a vibrating reed makes its sound."
     ]
   ],
   "Science & Nature": [
@@ -565,6 +714,36 @@ const triviaBanks = {
       "What distinguishes a mushroom from most of the fungus that grows it?",
       "A mushroom is the fungus’s spore-producing structure.",
       "Much of the fungus can be a hidden network of tiny threads in soil or wood."
+    ],
+    [
+      "What planet is home to the giant volcano Olympus Mons?",
+      "Mars.",
+      "Olympus Mons is a broad shield volcano that rises far above the surrounding plains."
+    ],
+    [
+      "Why can you sometimes see your breath on a cold day?",
+      "Water vapor from your breath condenses into tiny droplets.",
+      "The droplets form when warm, moist air from your lungs meets colder outside air."
+    ],
+    [
+      "What produces most of the light in a firefly’s glow?",
+      "A chemical reaction inside its body.",
+      "Fireflies turn chemical energy into light, which many species use to send signals."
+    ],
+    [
+      "Why does a cut apple turn brown?",
+      "Enzymes in the cut surface react with oxygen.",
+      "Cutting exposes the inside to air. Lemon juice can slow the browning."
+    ],
+    [
+      "What part of a bee usually carries pollen from flower to flower?",
+      "Its body hairs, among other structures.",
+      "Pollen can stick to the bee while it feeds and rub off on the next flower it visits."
+    ],
+    [
+      "Why can a hot-air balloon rise?",
+      "Warm air inside the balloon is less dense than the cooler air around it.",
+      "The surrounding air pushes upward strongly enough to lift the balloon when its total weight is low enough."
     ]
   ],
   "Sports & Inventions": [
@@ -597,6 +776,36 @@ const triviaBanks = {
       "What problem does a bicycle’s gear system help solve?",
       "It lets you trade pedaling force for distance per turn.",
       "A low gear moves you a shorter distance per pedal turn, which makes climbing a hill easier."
+    ],
+    [
+      "How many points is a touchdown worth in American football?",
+      "Six.",
+      "After scoring a touchdown, the team can try for additional points."
+    ],
+    [
+      "What does love mean in tennis scoring?",
+      "Zero.",
+      "If the score is 30–love, one player has 30 and the other has zero."
+    ],
+    [
+      "What does a pulley help you do?",
+      "Change the direction of a pull or, in some setups, lift with less force.",
+      "With a fixed pulley, pulling a rope down can lift a load up."
+    ],
+    [
+      "What kind of energy does a solar panel turn into electricity?",
+      "Energy from light.",
+      "In a photovoltaic panel, light hitting the cells helps create an electric current."
+    ],
+    [
+      "What does a seat belt do during a sudden stop?",
+      "Holds a passenger back as the vehicle slows down.",
+      "Without a restraint, the passenger’s body tends to keep moving forward."
+    ],
+    [
+      "What invention lets divers carry breathable gas with them underwater?",
+      "Scuba gear.",
+      "A regulator delivers gas from a tank at a pressure suitable for breathing at the diver’s depth."
     ]
   ]
 };
@@ -635,4 +844,98 @@ load=function(){
 subject.onchange=load;
 level.onchange=()=>{syncSubjects();load();};
 syncSubjects();load();
+
+// Advance to the next trivia deck at the end of a subject.
+const moveBeforeTrivia = move;
+const orderedTriviaSubjects = Object.keys(triviaBanks).map(name => 'Trivia · '+name);
+move = function(step) {
+    if (step === 1 && triviaSubjects.has(subject.value) && i === list.length-1) {
+        const next = orderedTriviaSubjects.indexOf(subject.value)+1;
+        if (next > 0 && next < orderedTriviaSubjects.length) {
+            subject.value=orderedTriviaSubjects[next];
+            load();
+        }
+        return;
+    }
+    moveBeforeTrivia(step);
+};
+const raceDialog = document.getElementById('triviaRace');
+const raceOpen = document.getElementById('raceOpen');
+const race = (() => {
+    const goal = 20;
+    const animalGrades = [4, 5, 6];
+    const artGrowth = [0, 50, 150, 300];
+    const ui = Object.fromEntries(
+        ['Animals','Turn','Card','Question','Answer','ShortAnswer','Explanation','Reveal','Correct','Miss','Replay','Close']
+            .map(key => [key, document.getElementById('race'+key)])
+    );
+    let players, deck, turn, index, phase;
+    function render() {
+        const current = players[turn];
+        const ended = phase === 'won' || phase === 'finished';
+        ui.Animals.innerHTML = players.map((player, number) => {
+            const growth = player.score >= goal ? 3 : player.score >= 14 ? 2 : player.score >= 7 ? 1 : 0;
+            return '<div class="raceAnimal'+(number===turn && phase!=='finished'?' active':'')+'">'+
+                animal(player.grade, artGrowth[growth])+
+                '<strong>Player '+(number+1)+' · '+pets[player.grade][0]+'</strong>'+
+                '<span>'+stages[growth]+' · '+player.score+'/'+goal+'</span></div>';
+        }).join('');
+        ui.Turn.textContent = phase === 'won'
+            ? 'Player '+(turn+1)+' wins! Their '+pets[current.grade][0]+' is fully grown.'
+            : phase === 'finished'
+                ? 'Deck complete. No animal reached full growth this round.'
+                : 'Player '+(turn+1)+'’s turn · '+deck[index][2];
+        ui.Card.hidden = ended;
+        ui.Replay.hidden = !ended;
+        ui.Reveal.hidden = phase !== 'question';
+        ui.Correct.hidden = phase !== 'answer';
+        ui.Miss.hidden = phase !== 'answer';
+        ui.Answer.hidden = phase !== 'answer';
+        if (ended) return;
+        const row = deck[index];
+        ui.Question.textContent = row[0];
+        ui.ShortAnswer.textContent = phase === 'answer' ? row[1] : '';
+        ui.Explanation.textContent = phase === 'answer' ? plainExplanation(row) : '';
+    }
+    function start() {
+        players = animalGrades.map(grade => ({grade, score:0}));
+        deck = Object.keys(triviaBanks).flatMap(category => {
+            const cards = triviaSubjects.get('Trivia · '+category).slice();
+            for (let i=cards.length-1; i>0; i--) {
+                const j=Math.floor(Math.random()*(i+1));
+                [cards[i],cards[j]]=[cards[j],cards[i]];
+            }
+            return cards;
+        });
+        turn=0;
+        index=0;
+        phase='question';
+        render();
+    }
+    function score(correct) {
+        if (phase !== 'answer') return;
+        if (correct) players[turn].score++;
+        if (players[turn].score === goal) phase='won';
+        else if (++index === deck.length) phase='finished';
+        else {
+            turn=(turn+1)%players.length;
+            phase='question';
+        }
+        render();
+        (ui.Reveal.hidden?ui.Replay:ui.Reveal).focus();
+    }
+    ui.Reveal.onclick = () => {
+        if (phase !== 'question') return;
+        phase='answer';
+        render();
+        ui.Correct.focus();
+    };
+    ui.Correct.onclick = () => score(true);
+    ui.Miss.onclick = () => score(false);
+    ui.Replay.onclick = () => {start();ui.Reveal.focus();};
+    ui.Close.onclick = () => raceDialog.close();
+    raceDialog.addEventListener('keydown', event => event.stopPropagation());
+    return {start};
+})();
+raceOpen.onclick = () => {race.start();raceDialog.showModal();};
 </script></body></html>
