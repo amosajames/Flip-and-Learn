@@ -41,7 +41,7 @@
 .fullExplanation[hidden]{display:none}
 .fullExplanation summary{color:#244c3f;font-weight:700;cursor:pointer;padding:12px}
 .fullExplanation p{margin:0;padding:0 12px 12px;line-height:1.5}
-</style></head><body><main><header><h1>Flip & Learn V8.15<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">Trivia Race · 3 players</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><details id="fullExplanation" class="fullExplanation" hidden><summary>Full explanation</summary><p id="fullExplanationText"></p></details><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
+</style></head><body><main><header><h1>Flip & Learn V8.17<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">Trivia Race · 3 players</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><details id="fullExplanation" class="fullExplanation" hidden><summary>Full explanation</summary><p id="fullExplanationText"></p></details><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
   <h2 id="raceTitle">Trivia Race</h2>
   <p>Take turns on one device. Say your answer before you reveal it. First to 20 correct answers wins.</p>
   <div id="raceAnimals"></div>
@@ -3534,6 +3534,248 @@ const expandedStudyDecks = new Map(Object.entries({
       "What is a megacity commonly defined as?",
       "An urban area of at least 10 million people."
     ]
+  ],
+  "Law": [
+    [
+      "What is a law?",
+      "A rule recognized and enforced by a government."
+    ],
+    [
+      "What does a judge do in a trial?",
+      "Manages the legal proceedings and rules on legal issues; in some trials also decides facts."
+    ],
+    [
+      "Who is the plaintiff in a civil lawsuit?",
+      "The party who starts the lawsuit."
+    ],
+    [
+      "Who is the defendant in a civil lawsuit?",
+      "The party being sued."
+    ],
+    [
+      "What does a civil complaint do?",
+      "It starts a lawsuit by stating the plaintiff’s allegations and what they want the court to do."
+    ],
+    [
+      "What is discovery in a lawsuit?",
+      "A process for the parties to obtain information and evidence before trial."
+    ],
+    [
+      "What is a deposition?",
+      "Testimony given under oath outside the courtroom before trial."
+    ],
+    [
+      "What is a subpoena?",
+      "A legal order to testify, provide documents, or both."
+    ],
+    [
+      "What does an appeal ask a higher court to review?",
+      "A decision made by a lower court."
+    ],
+    [
+      "What is a statute?",
+      "A written law passed by a legislature."
+    ],
+    [
+      "What is a statute of limitations?",
+      "A law setting a time limit for bringing a claim or charge."
+    ],
+    [
+      "What is a civil settlement?",
+      "An agreement that resolves a dispute, often without a trial."
+    ],
+    [
+      "What does a mediator do?",
+      "Helps people in a dispute try to reach an agreement."
+    ],
+    [
+      "What does an arbitrator do?",
+      "Hears a dispute and makes a decision outside a court trial."
+    ],
+    [
+      "What is an indictment in U.S. federal criminal law?",
+      "A formal criminal charge issued by a grand jury."
+    ],
+    [
+      "What does it mean for a witness to testify under oath?",
+      "The witness formally promises to tell the truth."
+    ],
+    [
+      "What is restitution in a criminal case generally meant to do?",
+      "Require payment or other compensation for losses caused by an offense."
+    ],
+    [
+      "What does judicial review mean in U.S. constitutional law?",
+      "Courts may assess whether government action is consistent with the Constitution."
+    ],
+    [
+      "What is the distinction between procedural and substantive due process?",
+      "Procedural due process concerns fair procedures; substantive due process concerns certain limits on government action itself."
+    ],
+    [
+      "What is federalism?",
+      "The constitutional allocation of authority between federal and state governments."
+    ],
+    [
+      "A city restricts speech solely because officials dislike its viewpoint. What issue arises?",
+      "Viewpoint discrimination under the First Amendment; such restrictions are generally unconstitutional, subject to context."
+    ],
+    [
+      "What are actus reus and mens rea?",
+      "The prohibited act or omission and the required mental state, respectively."
+    ],
+    [
+      "What is the prosecution's burden at a criminal trial?",
+      "Proof beyond a reasonable doubt of each element of the charged offense."
+    ],
+    [
+      "How does an attempt differ from a completed offense?",
+      "Attempt generally requires the requisite intent and conduct sufficiently advancing the crime; tests vary by jurisdiction."
+    ],
+    [
+      "Why distinguish motive from intent?",
+      "Motive explains why someone acts; intent concerns the mental state required by the offense."
+    ],
+    [
+      "What is the usual burden of proof in ordinary U.S. civil litigation?",
+      "Preponderance of the evidence, subject to exceptions."
+    ],
+    [
+      "What is an injunction?",
+      "A court order requiring or prohibiting specified conduct."
+    ],
+    [
+      "What distinguishes compensatory and punitive damages?",
+      "Compensatory damages address loss; punitive damages punish and deter qualifying misconduct where permitted."
+    ],
+    [
+      "A buyer accepts an offer but materially changes its terms in a common-law transaction. What is the usual effect?",
+      "A counteroffer rather than acceptance, subject to exceptions and applicable law."
+    ],
+    [
+      "What is the general purpose of expectation damages?",
+      "To place the injured party in the position performance would have produced, subject to limitations."
+    ],
+    [
+      "What is mitigation of damages?",
+      "The injured party generally cannot recover losses reasonably avoidable without undue burden or risk."
+    ],
+    [
+      "What are the usual elements of negligence?",
+      "Duty, breach, factual and legal causation, and damages."
+    ],
+    [
+      "A driver runs a red light but causes no injury. Is ordinary negligence liability established solely by that fact?",
+      "No. A negligence claim generally also requires causation and legally recognized harm."
+    ],
+    [
+      "What is comparative negligence?",
+      "A system allocating responsibility for harm based on fault; rules vary by state."
+    ],
+    [
+      "What is an easement?",
+      "A nonpossessory right to use another person's land for a specified purpose."
+    ],
+    [
+      "What is a fee simple absolute?",
+      "An estate of potentially indefinite duration with broad ownership rights."
+    ],
+    [
+      "What is adverse possession?",
+      "Acquisition of title through possession satisfying statutory and common-law requirements, which vary by state."
+    ],
+    [
+      "What is limited liability?",
+      "Owners generally are not personally liable for entity debts solely because of ownership, subject to exceptions."
+    ],
+    [
+      "What is a fiduciary duty of loyalty?",
+      "An obligation to act loyally for the beneficiary or entity rather than improperly favor personal interests."
+    ],
+    [
+      "What is the business judgment rule?",
+      "A doctrine generally protecting qualifying informed, good-faith business decisions from judicial second-guessing; details vary."
+    ],
+    [
+      "What is a treaty?",
+      "An international agreement governed by international law between parties with treaty-making capacity."
+    ],
+    [
+      "What is customary international law?",
+      "General practice accepted as law (opinio juris)."
+    ],
+    [
+      "What is the distinction between jurisdiction to prescribe and enforce?",
+      "Authority to make applicable rules versus authority to compel compliance."
+    ],
+    [
+      "Under the U.S. Federal Rules of Evidence, what is hearsay?",
+      "An out-of-court statement offered to prove the truth of the matter asserted, subject to exclusions and exceptions."
+    ],
+    [
+      "What is relevance under Federal Rule of Evidence 401?",
+      "Evidence tending to make a consequential fact more or less probable."
+    ],
+    [
+      "What does Federal Rule of Evidence 403 permit?",
+      "Exclusion of relevant evidence when its probative value is substantially outweighed by specified dangers or considerations."
+    ],
+    [
+      "What is subject-matter jurisdiction?",
+      "A court's authority to hear the type of dispute presented."
+    ],
+    [
+      "What is personal jurisdiction?",
+      "A court's authority over a party, subject to applicable law and constitutional limits."
+    ],
+    [
+      "What is summary judgment under federal civil procedure?",
+      "Judgment where no genuine dispute of material fact exists and the movant is entitled to judgment as a matter of law."
+    ],
+    [
+      "Does U.S. copyright protect ideas themselves?",
+      "No. It protects qualifying original expression, not ideas themselves."
+    ],
+    [
+      "What is the basic function of a trademark?",
+      "To identify and distinguish the source of goods or services."
+    ],
+    [
+      "What does a U.S. patent generally grant?",
+      "A limited right to exclude others from specified uses of the claimed invention, not necessarily a right to practice it."
+    ],
+    [
+      "How does attorney-client privilege differ from professional confidentiality?",
+      "Privilege concerns protected communications in legal proceedings; ethical confidentiality generally covers a broader range of representation-related information."
+    ],
+    [
+      "What is a conflict of interest?",
+      "A situation in which competing duties or interests create a risk of impaired representation; applicable rules determine consent and prohibition."
+    ],
+    [
+      "May a lawyer knowingly offer false evidence?",
+      "Generally no; duties of candor and remedial obligations depend on applicable professional rules."
+    ],
+    [
+      "What is the role of a jury in a U.S. criminal jury trial?",
+      "To decide factual issues and whether guilt is proven under the applicable instructions."
+    ],
+    [
+      "What does the U.S. Fifth Amendment protection against double jeopardy generally prohibit?",
+      "Repeated prosecution or punishment for the same offense by the same sovereign, subject to exceptions."
+    ],
+    [
+      "What is consideration in common-law contract formation?",
+      "A bargained-for exchange of legal value, subject to jurisdictional rules."
+    ],
+    [
+      "What distinguishes binding from persuasive precedent?",
+      "Binding precedent must be followed by the relevant court; persuasive authority may influence it."
+    ],
+    [
+      "Why check subsequent treatment of a judicial opinion?",
+      "To determine whether it remains good law for the proposition cited."
+    ]
   ]
 }));
 Object.assign(fullNotes, {
@@ -3561,6 +3803,18 @@ Object.assign(fullNotes, {
   "what is the khalsa in sikh tradition?": "Guru Gobind Singh established the Khalsa in 1699 as a community with a shared discipline and identity.",
   "what is a menorah?": "The seven-branch Temple menorah and the nine-light Hanukkah lamp are related symbols with different uses.",
   "what is the bhagavad gita?": "It forms part of the Mahabharata and discusses duty, action, and devotion."
+});
+Object.assign(fullNotes, {
+  "who is the plaintiff in a civil lawsuit?": "A person suing to recover the cost of a damaged bicycle would be the plaintiff. The person or business they sue would be the defendant.",
+  "what does a civil complaint do?": "A complaint might describe a broken agreement and ask the court to order payment.",
+  "what is discovery in a lawsuit?": "Parties may request documents, send written questions, or take depositions subject to court rules.",
+  "what is a deposition?": "A lawyer can ask a witness questions while a court reporter records the answers.",
+  "what does an appeal ask a higher court to review?": "An appeal commonly asks whether the lower court made a legal error. It usually uses the existing record.",
+  "what is a statute of limitations?": "The deadline depends on the type of case and the law that applies. The date the clock starts can also vary.",
+  "what does a mediator do?": "The mediator can help the parties talk through options. The parties decide whether to accept a settlement.",
+  "what does an arbitrator do?": "The agreement or applicable law determines whether the decision is binding and how it can be reviewed.",
+  "what is an indictment in u.s. federal criminal law?": "An indictment allows a prosecution to go forward. Guilt must still be determined later through the court process.",
+  "what is restitution in a criminal case generally meant to do?": "For example, a court may order repayment to a victim for a documented financial loss when the law allows it."
 });
 const syncBeforeExpandedStudy = syncSubjects;
 syncSubjects = function() {
@@ -3598,4 +3852,3427 @@ load = function() {
 subject.onchange = load;
 level.onchange = () => {syncSubjects();load();};
 syncSubjects();load();
+
+const studyQuestionFloor = 60;
+const studyTopUps = new Map(Object.entries({
+  "Science": [
+    [
+      "What is the periodic table?",
+      "A chart organizing elements by atomic number.",
+      "Periodic table"
+    ],
+    [
+      "What is an element?",
+      "A pure substance made of one type of atom.",
+      "Periodic table"
+    ],
+    [
+      "What is an atom?",
+      "The smallest unit retaining an element’s chemical identity.",
+      "Periodic table"
+    ],
+    [
+      "What does atomic number tell you?",
+      "The number of protons in an atom.",
+      "Periodic table"
+    ],
+    [
+      "What is a chemical symbol?",
+      "A one- or two-letter abbreviation for an element.",
+      "Periodic table"
+    ],
+    [
+      "What are horizontal rows called?",
+      "Periods.",
+      "Periodic table"
+    ],
+    [
+      "What are vertical columns called?",
+      "Groups or families.",
+      "Periodic table"
+    ],
+    [
+      "Why are elements in a group similar?",
+      "Their outer electron arrangements usually give them similar chemical properties.",
+      "Periodic table"
+    ],
+    [
+      "Where are most metals?",
+      "On the left and in the center.",
+      "Periodic table"
+    ],
+    [
+      "Where are most nonmetals?",
+      "On the right; hydrogen is on the left.",
+      "Periodic table"
+    ],
+    [
+      "What are metalloids?",
+      "Elements with some metal and some nonmetal properties.",
+      "Periodic table"
+    ],
+    [
+      "What are noble gases?",
+      "Group 18 elements, which usually react very little.",
+      "Periodic table"
+    ],
+    [
+      "Hydrogen: symbol and atomic number?",
+      "H — atomic number 1.",
+      "Periodic table"
+    ],
+    [
+      "Helium: symbol and atomic number?",
+      "He — atomic number 2.",
+      "Periodic table"
+    ],
+    [
+      "Lithium: symbol and atomic number?",
+      "Li — atomic number 3.",
+      "Periodic table"
+    ],
+    [
+      "Carbon: symbol and atomic number?",
+      "C — atomic number 6.",
+      "Periodic table"
+    ],
+    [
+      "Nitrogen: symbol and atomic number?",
+      "N — atomic number 7.",
+      "Periodic table"
+    ],
+    [
+      "Oxygen: symbol and atomic number?",
+      "O — atomic number 8.",
+      "Periodic table"
+    ],
+    [
+      "Neon: symbol and atomic number?",
+      "Ne — atomic number 10.",
+      "Periodic table"
+    ],
+    [
+      "Sodium: symbol and atomic number?",
+      "Na — atomic number 11.",
+      "Periodic table"
+    ],
+    [
+      "Magnesium: symbol and atomic number?",
+      "Mg — atomic number 12.",
+      "Periodic table"
+    ],
+    [
+      "Aluminum: symbol and atomic number?",
+      "Al — atomic number 13.",
+      "Periodic table"
+    ],
+    [
+      "Silicon: symbol and atomic number?",
+      "Si — atomic number 14.",
+      "Periodic table"
+    ],
+    [
+      "Chlorine: symbol and atomic number?",
+      "Cl — atomic number 17.",
+      "Periodic table"
+    ],
+    [
+      "Potassium: symbol and atomic number?",
+      "K — atomic number 19.",
+      "Periodic table"
+    ],
+    [
+      "Calcium: symbol and atomic number?",
+      "Ca — atomic number 20.",
+      "Periodic table"
+    ],
+    [
+      "Iron: symbol and atomic number?",
+      "Fe — atomic number 26.",
+      "Periodic table"
+    ],
+    [
+      "Copper: symbol and atomic number?",
+      "Cu — atomic number 29.",
+      "Periodic table"
+    ],
+    [
+      "Silver: symbol and atomic number?",
+      "Ag — atomic number 47.",
+      "Periodic table"
+    ],
+    [
+      "Gold: symbol and atomic number?",
+      "Au — atomic number 79.",
+      "Periodic table"
+    ],
+    [
+      "What is the basic unit of living things?",
+      "A cell.",
+      "Science facts"
+    ],
+    [
+      "What is photosynthesis?",
+      "Plants use sunlight, water, and carbon dioxide to make sugar, releasing oxygen.",
+      "Science facts"
+    ],
+    [
+      "What do roots do?",
+      "Absorb water and minerals and anchor a plant.",
+      "Science facts"
+    ],
+    [
+      "What is a vertebrate?",
+      "An animal with a backbone.",
+      "Science facts"
+    ],
+    [
+      "What is an invertebrate?",
+      "An animal without a backbone.",
+      "Science facts"
+    ],
+    [
+      "What is an adaptation?",
+      "An inherited characteristic that helps an organism survive and reproduce.",
+      "Science facts"
+    ],
+    [
+      "What do lungs do?",
+      "Take in oxygen and remove carbon dioxide.",
+      "Science facts"
+    ],
+    [
+      "What does the heart do?",
+      "Pumps blood throughout the body.",
+      "Science facts"
+    ],
+    [
+      "What is an ecosystem?",
+      "Living things and their nonliving environment interacting.",
+      "Science facts"
+    ],
+    [
+      "What is a producer?",
+      "An organism that makes its own food.",
+      "Science facts"
+    ],
+    [
+      "What is a consumer?",
+      "An organism that gets energy by eating other organisms.",
+      "Science facts"
+    ],
+    [
+      "What is a decomposer?",
+      "An organism that breaks down dead material and waste.",
+      "Science facts"
+    ],
+    [
+      "What do food-chain arrows show?",
+      "The direction energy moves, from food to eater.",
+      "Science facts"
+    ],
+    [
+      "What is a food web?",
+      "A network of connected food chains.",
+      "Science facts"
+    ],
+    [
+      "What is a habitat?",
+      "The place an organism lives.",
+      "Science facts"
+    ],
+    [
+      "What powers most ecosystems?",
+      "The Sun.",
+      "Science facts"
+    ],
+    [
+      "What is matter?",
+      "Anything that has mass and takes up space.",
+      "Science facts"
+    ],
+    [
+      "What are three common states of matter?",
+      "Solid, liquid, and gas.",
+      "Science facts"
+    ],
+    [
+      "Mass versus weight?",
+      "Mass measures matter; weight measures gravity’s pull.",
+      "Science facts"
+    ],
+    [
+      "What is a physical change?",
+      "A change that does not make a new substance, such as melting ice.",
+      "Science facts"
+    ],
+    [
+      "What is a chemical change?",
+      "A change producing new substances, such as rusting.",
+      "Science facts"
+    ],
+    [
+      "What is conduction?",
+      "Heat transfer through direct contact.",
+      "Science facts"
+    ],
+    [
+      "What is a force?",
+      "A push or pull.",
+      "Science facts"
+    ],
+    [
+      "What is gravity?",
+      "Attraction between objects with mass.",
+      "Science facts"
+    ],
+    [
+      "What is friction?",
+      "A force resisting surfaces sliding past each other.",
+      "Science facts"
+    ],
+    [
+      "How do you find average speed?",
+      "Distance ÷ time.",
+      "Science facts"
+    ],
+    [
+      "What do balanced forces do?",
+      "Leave motion unchanged: still, or constant speed and direction.",
+      "Science facts"
+    ],
+    [
+      "What is an electrical conductor?",
+      "A material that lets current flow easily, such as copper.",
+      "Science facts"
+    ],
+    [
+      "What is an electrical insulator?",
+      "A material that resists current, such as rubber.",
+      "Science facts"
+    ],
+    [
+      "What does a simple circuit need?",
+      "An energy source and a closed conducting path.",
+      "Science facts"
+    ],
+    [
+      "What causes day and night?",
+      "Earth’s rotation.",
+      "Science facts"
+    ],
+    [
+      "What causes seasons?",
+      "Earth’s tilted axis as Earth orbits the Sun.",
+      "Science facts"
+    ],
+    [
+      "Why does the Moon show phases?",
+      "We see different amounts of its sunlit half as it orbits Earth.",
+      "Science facts"
+    ],
+    [
+      "What are the three main rock types?",
+      "Igneous, sedimentary, and metamorphic.",
+      "Science facts"
+    ],
+    [
+      "Weathering versus erosion?",
+      "Weathering breaks rock down; erosion moves it.",
+      "Science facts"
+    ],
+    [
+      "What are tectonic plates?",
+      "Slowly moving pieces of Earth’s rigid outer layer.",
+      "Science facts"
+    ],
+    [
+      "Scientific question",
+      "A question you can investigate with observations or experiments.",
+      "Scientific results"
+    ],
+    [
+      "Hypothesis",
+      "A possible explanation that can be tested.",
+      "Scientific results"
+    ],
+    [
+      "Prediction",
+      "What you expect to happen.",
+      "Scientific results"
+    ],
+    [
+      "Experiment",
+      "A procedure testing a hypothesis or question.",
+      "Scientific results"
+    ],
+    [
+      "What is a variable in a scientific investigation?",
+      "Something that can change in an investigation.",
+      "Scientific results"
+    ],
+    [
+      "Independent variable",
+      "The factor deliberately changed.",
+      "Scientific results"
+    ],
+    [
+      "Dependent variable",
+      "The result measured.",
+      "Scientific results"
+    ],
+    [
+      "Controlled variables",
+      "Factors kept the same.",
+      "Scientific results"
+    ],
+    [
+      "Control group",
+      "A comparison group receiving standard conditions or no treatment.",
+      "Scientific results"
+    ],
+    [
+      "Observation",
+      "Information gathered with senses or tools.",
+      "Scientific results"
+    ],
+    [
+      "Measurement",
+      "A number and unit, such as 15 centimeters.",
+      "Scientific results"
+    ],
+    [
+      "Data",
+      "Collected observations and measurements.",
+      "Scientific results"
+    ],
+    [
+      "Qualitative data",
+      "Descriptions, such as color or texture.",
+      "Scientific results"
+    ],
+    [
+      "Quantitative data",
+      "Numbers, such as height or time.",
+      "Scientific results"
+    ],
+    [
+      "Results",
+      "What happened, shown through observations and data.",
+      "Scientific results"
+    ],
+    [
+      "Graph",
+      "A visual display of data.",
+      "Scientific results"
+    ],
+    [
+      "Trend",
+      "A general pattern in data.",
+      "Scientific results"
+    ],
+    [
+      "Evidence",
+      "Data supporting or challenging an explanation.",
+      "Scientific results"
+    ],
+    [
+      "Conclusion",
+      "An answer based on results.",
+      "Scientific results"
+    ],
+    [
+      "Repeated trials",
+      "Performing a test more than once to check consistency.",
+      "Scientific results"
+    ],
+    [
+      "Mean (average)",
+      "Add values and divide by the number of values.",
+      "Scientific results"
+    ],
+    [
+      "Accuracy",
+      "Closeness to the true or accepted value.",
+      "Scientific results"
+    ],
+    [
+      "Precision",
+      "Closeness of repeated measurements to each other.",
+      "Scientific results"
+    ],
+    [
+      "Inference",
+      "An explanation based on observations and prior knowledge.",
+      "Scientific results"
+    ],
+    [
+      "Do results prove a hypothesis forever?",
+      "No. Results can support or fail to support it; one experiment does not establish it for all situations.",
+      "Scientific results"
+    ],
+    [
+      "Water’s chemical formula?",
+      "H₂O.",
+      "Water facts"
+    ],
+    [
+      "What atoms make a water molecule?",
+      "Two hydrogen atoms and one oxygen atom.",
+      "Water facts"
+    ],
+    [
+      "Water’s three states?",
+      "Solid ice, liquid water, and gaseous water vapor.",
+      "Water facts"
+    ],
+    [
+      "Fresh water’s freezing temperature?",
+      "About 0°C or 32°F at ordinary pressure.",
+      "Water facts"
+    ],
+    [
+      "Boiling temperature at sea level?",
+      "About 100°C or 212°F.",
+      "Water facts"
+    ],
+    [
+      "What is melting?",
+      "Ice becoming liquid water.",
+      "Water facts"
+    ],
+    [
+      "What is freezing?",
+      "Liquid water becoming ice.",
+      "Water facts"
+    ],
+    [
+      "What is evaporation?",
+      "Liquid water becoming vapor at its surface.",
+      "Water facts"
+    ],
+    [
+      "Must water boil to evaporate?",
+      "No. Evaporation happens below boiling temperature.",
+      "Water facts"
+    ],
+    [
+      "What is condensation?",
+      "Vapor becoming liquid droplets.",
+      "Water facts"
+    ],
+    [
+      "What is sublimation?",
+      "Ice becoming vapor directly.",
+      "Water facts"
+    ],
+    [
+      "Can you see water vapor?",
+      "No. Visible white mist is tiny liquid droplets.",
+      "Water facts"
+    ],
+    [
+      "What is the water cycle?",
+      "Water’s continuous movement between Earth’s surface and atmosphere.",
+      "Water facts"
+    ],
+    [
+      "What powers evaporation in the water cycle?",
+      "Energy from the Sun.",
+      "Water facts"
+    ],
+    [
+      "What is precipitation?",
+      "Rain, snow, sleet, or hail falling from clouds.",
+      "Water facts"
+    ],
+    [
+      "What is runoff?",
+      "Water flowing over land into streams, lakes, and oceans.",
+      "Water facts"
+    ],
+    [
+      "What is groundwater?",
+      "Water in spaces and cracks in soil and rock beneath the surface.",
+      "Water facts"
+    ],
+    [
+      "What is an aquifer?",
+      "Rock or sediment that stores and transmits groundwater.",
+      "Water facts"
+    ],
+    [
+      "What is transpiration?",
+      "Plants releasing water vapor, mainly through leaves.",
+      "Water facts"
+    ],
+    [
+      "How much of Earth’s surface is water?",
+      "About 71%.",
+      "Water facts"
+    ],
+    [
+      "How much of Earth’s water is salty?",
+      "About 97%; about 3% is fresh.",
+      "Water facts"
+    ],
+    [
+      "Where is most fresh water stored?",
+      "Ice sheets and glaciers.",
+      "Water facts"
+    ],
+    [
+      "Why does ice float?",
+      "It is less dense than liquid water.",
+      "Water facts"
+    ],
+    [
+      "What happens when water freezes?",
+      "Its volume expands.",
+      "Water facts"
+    ],
+    [
+      "What is surface tension?",
+      "Molecular attraction making the surface resist stretching or breaking.",
+      "Water facts"
+    ],
+    [
+      "What does dissolve mean?",
+      "Mix evenly into a liquid at the particle level.",
+      "Water facts"
+    ],
+    [
+      "Can water dissolve everything?",
+      "No. Oil, for example, does not dissolve in water.",
+      "Water facts"
+    ],
+    [
+      "What is desalination?",
+      "Removing dissolved salts from salt water.",
+      "Water facts"
+    ],
+    [
+      "Is clear water always safe to drink?",
+      "No. Invisible germs or harmful chemicals may be present.",
+      "Water facts"
+    ],
+    [
+      "Why do bodies need water?",
+      "To regulate temperature, transport nutrients, and remove waste.",
+      "Water facts"
+    ],
+    [
+      "What is weather?",
+      "Atmospheric conditions at a place and time.",
+      "Weather & temperature"
+    ],
+    [
+      "What is temperature?",
+      "A measure of how hot or cold something is.",
+      "Weather & temperature"
+    ],
+    [
+      "What measures temperature?",
+      "A thermometer.",
+      "Weather & temperature"
+    ],
+    [
+      "Common temperature scales?",
+      "Celsius (°C) and Fahrenheit (°F).",
+      "Weather & temperature"
+    ],
+    [
+      "Water’s freezing temperature?",
+      "About 0°C or 32°F under ordinary conditions.",
+      "Weather & temperature"
+    ],
+    [
+      "Water’s boiling temperature at sea level?",
+      "About 100°C or 212°F.",
+      "Weather & temperature"
+    ],
+    [
+      "Daily high temperature?",
+      "The highest temperature recorded that day.",
+      "Weather & temperature"
+    ],
+    [
+      "Daily low temperature?",
+      "The lowest temperature recorded that day.",
+      "Weather & temperature"
+    ],
+    [
+      "How do you find temperature range?",
+      "High minus low: 75°F − 50°F = 25°F.",
+      "Weather & temperature"
+    ],
+    [
+      "How do you average readings?",
+      "Add the readings and divide by their count.",
+      "Weather & temperature"
+    ],
+    [
+      "What measures rainfall?",
+      "A rain gauge.",
+      "Weather & temperature"
+    ],
+    [
+      "What is humidity?",
+      "The amount of water vapor in air.",
+      "Weather & temperature"
+    ],
+    [
+      "Does 100% relative humidity mean rain?",
+      "No. It means air is saturated at its current temperature.",
+      "Weather & temperature"
+    ],
+    [
+      "What is dew point?",
+      "The temperature air must cool to become saturated.",
+      "Weather & temperature"
+    ],
+    [
+      "How do clouds form?",
+      "Water vapor condenses into droplets or forms ice crystals, often as rising air cools.",
+      "Weather & temperature"
+    ],
+    [
+      "What is air pressure?",
+      "Force air exerts per unit area.",
+      "Weather & temperature"
+    ],
+    [
+      "What measures air pressure?",
+      "A barometer.",
+      "Weather & temperature"
+    ],
+    [
+      "What can falling pressure suggest?",
+      "An approaching system with clouds, wind, or precipitation.",
+      "Weather & temperature"
+    ],
+    [
+      "What does high pressure often bring?",
+      "Clearer, drier weather; conditions vary.",
+      "Weather & temperature"
+    ],
+    [
+      "What causes wind?",
+      "Differences in air pressure.",
+      "Weather & temperature"
+    ],
+    [
+      "What measures wind speed?",
+      "An anemometer.",
+      "Weather & temperature"
+    ],
+    [
+      "What does a wind vane measure?",
+      "The direction wind comes from.",
+      "Weather & temperature"
+    ],
+    [
+      "What is wind chill?",
+      "How cold it feels as wind increases heat loss from exposed skin.",
+      "Weather & temperature"
+    ],
+    [
+      "What is heat index?",
+      "How hot it feels when temperature and humidity are combined.",
+      "Weather & temperature"
+    ],
+    [
+      "What is a cold front?",
+      "An advancing cold air mass replacing warmer air.",
+      "Weather & temperature"
+    ],
+    [
+      "What is a warm front?",
+      "An advancing warm air mass replacing colder air.",
+      "Weather & temperature"
+    ],
+    [
+      "What is a forecast?",
+      "A prediction based on observations and scientific models.",
+      "Weather & temperature"
+    ],
+    [
+      "What is climate?",
+      "Long-term weather patterns, commonly described using 30 years of data.",
+      "Weather & temperature"
+    ],
+    [
+      "Does one cold day show climate cooling?",
+      "No. Climate trends require many years of measurements.",
+      "Weather & temperature"
+    ],
+    [
+      "What does the skeleton do?",
+      "Supports the body, protects organs, and works with muscles for movement.",
+      "Human body"
+    ],
+    [
+      "What connects muscles to bones?",
+      "Tendons.",
+      "Human body"
+    ],
+    [
+      "What connects bones to other bones?",
+      "Ligaments.",
+      "Human body"
+    ],
+    [
+      "What is the brain’s role?",
+      "Processes information and coordinates body functions.",
+      "Human body"
+    ],
+    [
+      "What carries messages between brain and body?",
+      "Nerves.",
+      "Human body"
+    ],
+    [
+      "What do red blood cells transport?",
+      "Oxygen, mainly using hemoglobin.",
+      "Human body"
+    ],
+    [
+      "What is digestion?",
+      "Breaking food into substances the body can absorb and use.",
+      "Human body"
+    ],
+    [
+      "Where are most nutrients absorbed?",
+      "The small intestine.",
+      "Human body"
+    ],
+    [
+      "What do kidneys do?",
+      "Filter blood, balance water and salts, and produce urine.",
+      "Human body"
+    ],
+    [
+      "What is the body’s largest organ?",
+      "The skin.",
+      "Human body"
+    ],
+    [
+      "What is a star?",
+      "A glowing ball of hot plasma powered by nuclear fusion.",
+      "Space & astronomy"
+    ],
+    [
+      "What star is closest to Earth?",
+      "The Sun.",
+      "Space & astronomy"
+    ],
+    [
+      "How many planets orbit the Sun?",
+      "Eight.",
+      "Space & astronomy"
+    ],
+    [
+      "Name the planets in order from the Sun.",
+      "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.",
+      "Space & astronomy"
+    ],
+    [
+      "What is an orbit?",
+      "The path an object follows around another because of gravity.",
+      "Space & astronomy"
+    ],
+    [
+      "What is a light-year?",
+      "The distance light travels in one year.",
+      "Space & astronomy"
+    ],
+    [
+      "What galaxy contains our solar system?",
+      "The Milky Way.",
+      "Space & astronomy"
+    ],
+    [
+      "What is an asteroid?",
+      "A small rocky or metallic object orbiting the Sun.",
+      "Space & astronomy"
+    ],
+    [
+      "What is a solar eclipse?",
+      "The Moon passes between Earth and the Sun, blocking our view of some or all of the Sun.",
+      "Space & astronomy"
+    ],
+    [
+      "What is a lunar eclipse?",
+      "The Moon passes into Earth’s shadow.",
+      "Space & astronomy"
+    ],
+    [
+      "What part of a plant usually absorbs water from soil?",
+      "Roots.",
+      "Science"
+    ],
+    [
+      "Why does ice float on liquid water?",
+      "Its crystal structure makes it less dense than liquid water.",
+      "Science"
+    ],
+    [
+      "Why do seasons occur?",
+      "Earth’s tilted axis changes sunlight angle and day length during its orbit.",
+      "Science"
+    ],
+    [
+      "What happens to acceleration if force doubles and mass stays constant?",
+      "Acceleration doubles (F = ma).",
+      "Science"
+    ],
+    [
+      "Why are antibiotics ineffective against viruses?",
+      "Viruses lack the bacterial structures and processes antibiotics target.",
+      "Science"
+    ],
+    [
+      "How does natural selection change a population?",
+      "Heritable traits that improve reproductive success tend to become more common.",
+      "Science"
+    ],
+    [
+      "Why does a metal spoon feel colder than wood at the same temperature?",
+      "Metal conducts heat away from your hand faster.",
+      "Science"
+    ],
+    [
+      "What is an isotope?",
+      "Atoms of the same element with different neutron counts.",
+      "Science"
+    ],
+    [
+      "Why does increasing temperature often speed up a chemical reaction?",
+      "More collisions have enough energy to overcome activation energy.",
+      "Science"
+    ],
+    [
+      "How do meiosis and fertilization maintain chromosome number?",
+      "Meiosis halves it; fertilization restores the diploid number.",
+      "Science"
+    ],
+    [
+      "What is the difference between kinetic and potential energy?",
+      "Kinetic energy is energy of motion; potential energy is stored due to position or configuration.",
+      "Science"
+    ],
+    [
+      "What is the pH of a solution with hydrogen ion concentration 10⁻³ M?",
+      "3, approximately.",
+      "Science"
+    ],
+    [
+      "Why does a satellite in orbit not simply fall to Earth?",
+      "It continually falls under gravity while moving sideways fast enough to keep missing Earth.",
+      "Science"
+    ],
+    [
+      "What is the role of ribosomes?",
+      "They synthesize proteins using messenger RNA instructions.",
+      "Science"
+    ],
+    [
+      "What is a confidence interval in frequentist statistics?",
+      "An interval produced by a procedure with specified long-run coverage.",
+      "Science"
+    ],
+    [
+      "What is a falsifiable hypothesis?",
+      "A hypothesis that could be contradicted by possible observations.",
+      "Science"
+    ],
+    [
+      "What is competitive enzyme inhibition in the simple Michaelis–Menten model?",
+      "An inhibitor competes with substrate, increasing apparent Km without changing Vmax.",
+      "Science"
+    ],
+    [
+      "Why predefine a statistical analysis plan?",
+      "To reduce selective analysis and improve interpretability.",
+      "Science"
+    ],
+    [
+      "What is a negative control?",
+      "A condition expected not to produce the target effect, used to detect background or contamination.",
+      "Science"
+    ]
+  ],
+  "History": [
+    [
+      "What is a primary source?",
+      "Original evidence from the time or event, such as a diary or photograph.",
+      "History & civics"
+    ],
+    [
+      "What is a secondary source?",
+      "An account interpreting primary sources or earlier research.",
+      "History & civics"
+    ],
+    [
+      "What is a timeline?",
+      "Events arranged in chronological order.",
+      "History & civics"
+    ],
+    [
+      "What does chronological mean?",
+      "In order of time.",
+      "History & civics"
+    ],
+    [
+      "What is archaeology?",
+      "Studying past human life through physical remains.",
+      "History & civics"
+    ],
+    [
+      "What is a civilization?",
+      "A complex society with organized institutions, often including cities.",
+      "History & civics"
+    ],
+    [
+      "What is a constitution?",
+      "A set of fundamental rules for government.",
+      "History & civics"
+    ],
+    [
+      "Name the three branches of the U.S. federal government.",
+      "Legislative, executive, and judicial.",
+      "History & civics"
+    ],
+    [
+      "What is the legislative branch’s main role?",
+      "Making laws.",
+      "History & civics"
+    ],
+    [
+      "What are checks and balances?",
+      "Powers that let branches limit one another.",
+      "History & civics"
+    ],
+    [
+      "What is oral history?",
+      "Recorded recollections of people about past events.",
+      "History"
+    ],
+    [
+      "Why compare independent historical sources?",
+      "To corroborate claims and identify differences in perspective.",
+      "History"
+    ],
+    [
+      "What is historical context?",
+      "The circumstances and conditions surrounding an event.",
+      "History"
+    ],
+    [
+      "What did the Declaration of Independence announce in 1776?",
+      "The thirteen colonies declared independence from Great Britain.",
+      "History"
+    ],
+    [
+      "What is an artifact?",
+      "An object made or used by people in the past.",
+      "History"
+    ],
+    [
+      "What did ancient Egyptians use hieroglyphs for?",
+      "Writing.",
+      "History"
+    ],
+    [
+      "Why did the American colonists object to taxation without representation?",
+      "They had no elected representatives in the British Parliament imposing those taxes.",
+      "History"
+    ],
+    [
+      "How did the printing press help spread the Reformation?",
+      "It enabled religious arguments and translations to circulate widely and cheaply.",
+      "History"
+    ],
+    [
+      "What was the significance of the Magna Carta of 1215?",
+      "It established that the English king was subject to certain legal limits.",
+      "History"
+    ],
+    [
+      "How did industrialization encourage urbanization?",
+      "Factory jobs drew workers from rural areas into cities.",
+      "History"
+    ],
+    [
+      "What was a major purpose of the Marshall Plan?",
+      "To support European economic recovery after World War II.",
+      "History"
+    ],
+    [
+      "How did the Thirteenth and Fourteenth Amendments differ?",
+      "The Thirteenth abolished slavery except as punishment for crime; the Fourteenth established citizenship and equal protection guarantees.",
+      "History"
+    ],
+    [
+      "What was the Silk Road?",
+      "A network of trade routes connecting regions of Asia, Europe and Africa.",
+      "History"
+    ],
+    [
+      "What was the significance of the Haitian Revolution?",
+      "It ended slavery in the French colony and led to Haitian independence in 1804.",
+      "History"
+    ],
+    [
+      "What was the Industrial Revolution?",
+      "A transition toward mechanized production and factory-based industry.",
+      "History"
+    ],
+    [
+      "How did the Treaty of Versailles contribute to instability in Germany?",
+      "Reparations, territorial losses and political resentment contributed to instability, alongside other factors.",
+      "History"
+    ],
+    [
+      "What distinguished the Cold War from a direct war between superpowers?",
+      "The US and USSR competed through alliances, arms races and proxy conflicts without direct full-scale war against each other.",
+      "History"
+    ],
+    [
+      "How did the Haitian Revolution challenge colonial systems?",
+      "Enslaved people overthrew French colonial rule and established an independent state.",
+      "History"
+    ],
+    [
+      "What was the significance of Brown v. Board of Education?",
+      "The US Supreme Court ruled racial segregation in public schools unconstitutional.",
+      "History"
+    ],
+    [
+      "Why should historians corroborate primary sources?",
+      "Sources may be biased, incomplete or mistaken; comparison helps assess reliability.",
+      "History"
+    ],
+    [
+      "What did the Fourteenth Amendment establish about citizenship?",
+      "People born or naturalized in the United States and subject to its jurisdiction are citizens.",
+      "History"
+    ],
+    [
+      "What was the Marshall Plan?",
+      "A U.S. economic assistance program for European recovery after World War II.",
+      "History"
+    ],
+    [
+      "What is historiography?",
+      "Study of how history is written and interpreted.",
+      "History"
+    ],
+    [
+      "What is source provenance?",
+      "The origin, authorship and transmission history of a source.",
+      "History"
+    ],
+    [
+      "Why distinguish a primary source from a secondary source?",
+      "Primary sources provide direct evidence of the subject studied; secondary sources interpret evidence.",
+      "History"
+    ],
+    [
+      "What is archival selection bias?",
+      "Distortion caused when preserved or accessible records are unrepresentative of past events.",
+      "History"
+    ],
+    [
+      "How should an historian handle contradictory eyewitness accounts?",
+      "Assess provenance, timing, incentives, corroboration and uncertainty rather than simply averaging accounts.",
+      "History"
+    ]
+  ],
+  "English": [
+    [
+      "What is a noun?",
+      "A word naming a person, place, thing, or idea.",
+      "Grammar & language"
+    ],
+    [
+      "What is a verb?",
+      "A word expressing an action or state of being.",
+      "Grammar & language"
+    ],
+    [
+      "What is an adjective?",
+      "A word describing a noun or pronoun.",
+      "Grammar & language"
+    ],
+    [
+      "What is an adverb?",
+      "A word modifying a verb, adjective, or another adverb.",
+      "Grammar & language"
+    ],
+    [
+      "What is a pronoun?",
+      "A word that takes the place of a noun, such as she or they.",
+      "Grammar & language"
+    ],
+    [
+      "What is a synonym?",
+      "A word with the same or a similar meaning.",
+      "Grammar & language"
+    ],
+    [
+      "What is an antonym?",
+      "A word with an opposite meaning.",
+      "Grammar & language"
+    ],
+    [
+      "What is a complete sentence?",
+      "A group of words expressing a complete thought with a subject and predicate.",
+      "Grammar & language"
+    ],
+    [
+      "What is a prefix?",
+      "A word part added to the beginning, such as un- in unhappy.",
+      "Grammar & language"
+    ],
+    [
+      "What is a suffix?",
+      "A word part added to the end, such as -ful in helpful.",
+      "Grammar & language"
+    ],
+    [
+      "What is the main idea?",
+      "The central point of a text.",
+      "Reading & writing"
+    ],
+    [
+      "What is a supporting detail?",
+      "Information explaining or supporting the main idea.",
+      "Reading & writing"
+    ],
+    [
+      "What is a summary?",
+      "A brief account of the most important ideas.",
+      "Reading & writing"
+    ],
+    [
+      "What is a theme?",
+      "A central message or insight in a work.",
+      "Reading & writing"
+    ],
+    [
+      "What is a simile?",
+      "A comparison using like or as: quiet as a mouse.",
+      "Reading & writing"
+    ],
+    [
+      "What is a metaphor?",
+      "A comparison describing one thing as another: the classroom was a zoo.",
+      "Reading & writing"
+    ],
+    [
+      "What is personification?",
+      "Giving human qualities to something nonhuman.",
+      "Reading & writing"
+    ],
+    [
+      "What is a claim?",
+      "A statement the writer asks the reader to accept.",
+      "Reading & writing"
+    ],
+    [
+      "What is textual evidence?",
+      "Specific information from a text supporting an answer.",
+      "Reading & writing"
+    ],
+    [
+      "What is revision?",
+      "Improving writing’s ideas, organization, or wording.",
+      "Reading & writing"
+    ],
+    [
+      "What is a thesis statement?",
+      "A statement expressing the central claim of a piece of writing.",
+      "English"
+    ],
+    [
+      "What is an inference?",
+      "A conclusion drawn from evidence and reasoning.",
+      "English"
+    ],
+    [
+      "Identify the adjective: The small bird sings.",
+      "small",
+      "English"
+    ],
+    [
+      "Identify the verb: The river flows.",
+      "flows",
+      "English"
+    ],
+    [
+      "What is a synonym for rapid?",
+      "Fast or quick.",
+      "English"
+    ],
+    [
+      "Identify the literary device: The wind whispered through the trees.",
+      "Personification.",
+      "English"
+    ],
+    [
+      "Correct: Neither of the students were ready.",
+      "Neither of the students was ready.",
+      "English"
+    ],
+    [
+      "What distinguishes dramatic irony from situational irony?",
+      "Dramatic irony involves knowledge the audience has but a character lacks; situational irony involves an unexpected outcome.",
+      "English"
+    ],
+    [
+      "Identify the dependent clause: Although it rained, we played outside.",
+      "Although it rained.",
+      "English"
+    ],
+    [
+      "What is the difference between denotation and connotation?",
+      "Denotation is literal meaning; connotation is an associated feeling or idea.",
+      "English"
+    ],
+    [
+      "What makes a narrator unreliable?",
+      "Reasons to doubt the accuracy or completeness of the narrator’s account.",
+      "English"
+    ],
+    [
+      "What is dramatic irony?",
+      "The audience knows something a character does not.",
+      "English"
+    ],
+    [
+      "What is a dependent clause?",
+      "A clause that cannot stand alone as a complete sentence.",
+      "English"
+    ],
+    [
+      "What is a syllogism?",
+      "A deductive argument with premises leading to a conclusion.",
+      "English"
+    ],
+    [
+      "Identify the rhetorical device: We shall fight, we shall endure, we shall prevail.",
+      "Anaphora: repetition at the beginning of successive clauses.",
+      "English"
+    ],
+    [
+      "What is a false dilemma?",
+      "An argument that presents only two choices when more exist.",
+      "English"
+    ],
+    [
+      "What is the effect of an extended metaphor?",
+      "It develops a comparison across multiple lines or passages to deepen meaning.",
+      "English"
+    ],
+    [
+      "What is a concessive clause?",
+      "A clause acknowledging a contrasting circumstance, often introduced by although or even though.",
+      "English"
+    ],
+    [
+      "What is an unreliable narrator?",
+      "A narrator whose account gives readers reason to doubt its accuracy or interpretation.",
+      "English"
+    ],
+    [
+      "What is focalization in narrative theory?",
+      "The perspective through which narrative information is filtered.",
+      "English"
+    ],
+    [
+      "What is intertextuality?",
+      "Relationships between a text and other texts.",
+      "English"
+    ],
+    [
+      "What is a concessive argument?",
+      "An argument that acknowledges a counterpoint before qualifying or defending a claim.",
+      "English"
+    ],
+    [
+      "Why use parallel structure in technical instructions?",
+      "It makes equivalent steps easier to recognize and follow.",
+      "English"
+    ],
+    [
+      "What does a conjunction connect?",
+      "Words, phrases, or clauses.",
+      "English"
+    ],
+    [
+      "What is a preposition?",
+      "A word showing a relationship, such as location or time, in a phrase.",
+      "English"
+    ],
+    [
+      "What is a proper noun?",
+      "The name of a specific person, place, or thing, usually capitalized in English.",
+      "English"
+    ],
+    [
+      "What does an apostrophe show in a contraction?",
+      "Where letters were left out.",
+      "English"
+    ],
+    [
+      "What does a question mark signal at the end of a sentence?",
+      "A direct question.",
+      "English"
+    ],
+    [
+      "What is dialogue in a story?",
+      "Words spoken by characters.",
+      "English"
+    ],
+    [
+      "What is a story’s setting?",
+      "The time and place in which it happens.",
+      "English"
+    ],
+    [
+      "What is a protagonist?",
+      "A central character whose actions or experiences drive the story.",
+      "English"
+    ],
+    [
+      "What is an antagonist?",
+      "A person or force that opposes the protagonist.",
+      "English"
+    ],
+    [
+      "What does point of view determine in narration?",
+      "Whose perspective tells or shapes the story.",
+      "English"
+    ],
+    [
+      "What is a plot?",
+      "The connected events of a narrative.",
+      "English"
+    ],
+    [
+      "What is foreshadowing?",
+      "A clue that hints at something that will happen later.",
+      "English"
+    ],
+    [
+      "What is an alliteration?",
+      "The repetition of an initial sound in nearby words.",
+      "English"
+    ],
+    [
+      "What is onomatopoeia?",
+      "A word whose sound imitates what it describes, such as buzz.",
+      "English"
+    ],
+    [
+      "What is hyperbole?",
+      "Deliberate exaggeration for emphasis or effect.",
+      "English"
+    ],
+    [
+      "What does paraphrasing involve?",
+      "Expressing the same meaning in your own words.",
+      "English"
+    ],
+    [
+      "What is a transition word used for?",
+      "Showing how one idea relates to another.",
+      "English"
+    ],
+    [
+      "What is the purpose of proofreading?",
+      "Finding and correcting surface errors such as spelling and punctuation.",
+      "English"
+    ]
+  ],
+  "Physics": [
+    [
+      "What pulls a falling apple toward Earth?",
+      "Gravity.",
+      "Physics"
+    ],
+    [
+      "Can sound travel through empty space?",
+      "No; sound needs matter to travel through.",
+      "Physics"
+    ],
+    [
+      "What happens when light hits a mirror?",
+      "It reflects.",
+      "Physics"
+    ],
+    [
+      "A toy travels 9 meters in 3 seconds. Average speed?",
+      "3 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 16 meters in 4 seconds. Average speed?",
+      "4 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 25 meters in 5 seconds. Average speed?",
+      "5 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 36 meters in 6 seconds. Average speed?",
+      "6 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 49 meters in 7 seconds. Average speed?",
+      "7 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 64 meters in 8 seconds. Average speed?",
+      "8 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 18 meters in 2 seconds. Average speed?",
+      "9 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 30 meters in 3 seconds. Average speed?",
+      "10 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 44 meters in 4 seconds. Average speed?",
+      "11 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 60 meters in 5 seconds. Average speed?",
+      "12 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 78 meters in 6 seconds. Average speed?",
+      "13 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 98 meters in 7 seconds. Average speed?",
+      "14 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 120 meters in 8 seconds. Average speed?",
+      "15 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 32 meters in 2 seconds. Average speed?",
+      "16 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 51 meters in 3 seconds. Average speed?",
+      "17 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 72 meters in 4 seconds. Average speed?",
+      "18 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 95 meters in 5 seconds. Average speed?",
+      "19 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 120 meters in 6 seconds. Average speed?",
+      "20 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 147 meters in 7 seconds. Average speed?",
+      "21 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 176 meters in 8 seconds. Average speed?",
+      "22 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 46 meters in 2 seconds. Average speed?",
+      "23 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 72 meters in 3 seconds. Average speed?",
+      "24 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 100 meters in 4 seconds. Average speed?",
+      "25 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 130 meters in 5 seconds. Average speed?",
+      "26 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 162 meters in 6 seconds. Average speed?",
+      "27 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 196 meters in 7 seconds. Average speed?",
+      "28 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 232 meters in 8 seconds. Average speed?",
+      "29 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 60 meters in 2 seconds. Average speed?",
+      "30 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 93 meters in 3 seconds. Average speed?",
+      "31 m/s",
+      "Physics · practice"
+    ],
+    [
+      "A toy travels 128 meters in 4 seconds. Average speed?",
+      "32 m/s",
+      "Physics · practice"
+    ],
+    [
+      "What force opposes sliding surfaces?",
+      "Friction.",
+      "Physics"
+    ],
+    [
+      "What is friction?",
+      "A force opposing relative sliding or attempted sliding.",
+      "Physics"
+    ],
+    [
+      "Why does a shadow form?",
+      "An object blocks light.",
+      "Physics"
+    ],
+    [
+      "What kind of energy does a moving ball have?",
+      "Kinetic energy.",
+      "Physics"
+    ],
+    [
+      "What is the unit of force?",
+      "Newton (N).",
+      "Physics"
+    ],
+    [
+      "What is average speed?",
+      "Total distance divided by elapsed time.",
+      "Physics"
+    ],
+    [
+      "What is an electrical conductor?",
+      "A material through which electric charge moves readily.",
+      "Physics"
+    ],
+    [
+      "What is acceleration?",
+      "Change in velocity per unit time.",
+      "Physics"
+    ],
+    [
+      "What is the SI unit of energy?",
+      "Joule (J).",
+      "Physics"
+    ],
+    [
+      "What happens to pressure when the same force acts on a smaller area?",
+      "Pressure increases: P = F/A.",
+      "Physics"
+    ],
+    [
+      "A 3 kg object accelerates at 3 m/s². Net force?",
+      "9 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 4 kg object accelerates at 4 m/s². Net force?",
+      "16 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 5 kg object accelerates at 5 m/s². Net force?",
+      "25 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 6 kg object accelerates at 6 m/s². Net force?",
+      "36 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 7 kg object accelerates at 7 m/s². Net force?",
+      "49 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 8 kg object accelerates at 8 m/s². Net force?",
+      "64 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 9 kg object accelerates at 2 m/s². Net force?",
+      "18 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 10 kg object accelerates at 3 m/s². Net force?",
+      "30 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 11 kg object accelerates at 4 m/s². Net force?",
+      "44 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 12 kg object accelerates at 5 m/s². Net force?",
+      "60 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 13 kg object accelerates at 6 m/s². Net force?",
+      "78 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 14 kg object accelerates at 7 m/s². Net force?",
+      "98 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 15 kg object accelerates at 8 m/s². Net force?",
+      "120 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 16 kg object accelerates at 2 m/s². Net force?",
+      "32 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 17 kg object accelerates at 3 m/s². Net force?",
+      "51 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 18 kg object accelerates at 4 m/s². Net force?",
+      "72 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 19 kg object accelerates at 5 m/s². Net force?",
+      "95 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 20 kg object accelerates at 6 m/s². Net force?",
+      "120 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 21 kg object accelerates at 7 m/s². Net force?",
+      "147 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 22 kg object accelerates at 8 m/s². Net force?",
+      "176 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 23 kg object accelerates at 2 m/s². Net force?",
+      "46 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 24 kg object accelerates at 3 m/s². Net force?",
+      "72 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 25 kg object accelerates at 4 m/s². Net force?",
+      "100 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 26 kg object accelerates at 5 m/s². Net force?",
+      "130 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 27 kg object accelerates at 6 m/s². Net force?",
+      "162 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 28 kg object accelerates at 7 m/s². Net force?",
+      "196 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 29 kg object accelerates at 8 m/s². Net force?",
+      "232 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 30 kg object accelerates at 2 m/s². Net force?",
+      "60 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 31 kg object accelerates at 3 m/s². Net force?",
+      "93 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "A 32 kg object accelerates at 4 m/s². Net force?",
+      "128 N (F = ma)",
+      "Physics · practice"
+    ],
+    [
+      "What is momentum in classical mechanics?",
+      "Mass multiplied by velocity.",
+      "Physics"
+    ],
+    [
+      "What is Newton’s second law?",
+      "Net force equals mass times acceleration for constant mass.",
+      "Physics"
+    ],
+    [
+      "What is the relationship between frequency and period?",
+      "T = 1/f.",
+      "Physics"
+    ],
+    [
+      "What is the law of reflection?",
+      "Angle of incidence equals angle of reflection, measured from the normal.",
+      "Physics"
+    ],
+    [
+      "What is momentum?",
+      "p = mv in classical mechanics.",
+      "Physics"
+    ],
+    [
+      "What is kinetic energy?",
+      "KE = ½mv².",
+      "Physics"
+    ],
+    [
+      "What is Ohm’s law for an ohmic resistor?",
+      "V = IR.",
+      "Physics"
+    ],
+    [
+      "What is impulse?",
+      "Integral of force over time; equals change in momentum.",
+      "Physics"
+    ],
+    [
+      "What is centripetal acceleration?",
+      "v²/r for circular motion.",
+      "Physics"
+    ],
+    [
+      "What is wave speed?",
+      "v = fλ.",
+      "Physics"
+    ],
+    [
+      "A 3 Ω ohmic resistor carries 3 A. Voltage?",
+      "9 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 4 Ω ohmic resistor carries 4 A. Voltage?",
+      "16 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 5 Ω ohmic resistor carries 5 A. Voltage?",
+      "25 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 6 Ω ohmic resistor carries 6 A. Voltage?",
+      "36 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 7 Ω ohmic resistor carries 7 A. Voltage?",
+      "49 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 8 Ω ohmic resistor carries 8 A. Voltage?",
+      "64 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 9 Ω ohmic resistor carries 2 A. Voltage?",
+      "18 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 10 Ω ohmic resistor carries 3 A. Voltage?",
+      "30 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 11 Ω ohmic resistor carries 4 A. Voltage?",
+      "44 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 12 Ω ohmic resistor carries 5 A. Voltage?",
+      "60 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 13 Ω ohmic resistor carries 6 A. Voltage?",
+      "78 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 14 Ω ohmic resistor carries 7 A. Voltage?",
+      "98 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 15 Ω ohmic resistor carries 8 A. Voltage?",
+      "120 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 16 Ω ohmic resistor carries 2 A. Voltage?",
+      "32 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 17 Ω ohmic resistor carries 3 A. Voltage?",
+      "51 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 18 Ω ohmic resistor carries 4 A. Voltage?",
+      "72 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 19 Ω ohmic resistor carries 5 A. Voltage?",
+      "95 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 20 Ω ohmic resistor carries 6 A. Voltage?",
+      "120 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 21 Ω ohmic resistor carries 7 A. Voltage?",
+      "147 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 22 Ω ohmic resistor carries 8 A. Voltage?",
+      "176 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 23 Ω ohmic resistor carries 2 A. Voltage?",
+      "46 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 24 Ω ohmic resistor carries 3 A. Voltage?",
+      "72 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 25 Ω ohmic resistor carries 4 A. Voltage?",
+      "100 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 26 Ω ohmic resistor carries 5 A. Voltage?",
+      "130 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 27 Ω ohmic resistor carries 6 A. Voltage?",
+      "162 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 28 Ω ohmic resistor carries 7 A. Voltage?",
+      "196 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 29 Ω ohmic resistor carries 8 A. Voltage?",
+      "232 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 30 Ω ohmic resistor carries 2 A. Voltage?",
+      "60 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 31 Ω ohmic resistor carries 3 A. Voltage?",
+      "93 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "A 32 Ω ohmic resistor carries 4 A. Voltage?",
+      "128 V (V = IR)",
+      "Physics · practice"
+    ],
+    [
+      "What is the SI unit of electric charge?",
+      "Coulomb (C).",
+      "Physics"
+    ],
+    [
+      "What is Snell’s law?",
+      "n₁ sin θ₁ = n₂ sin θ₂.",
+      "Physics"
+    ],
+    [
+      "What is the ideal gas law?",
+      "PV = nRT.",
+      "Physics"
+    ],
+    [
+      "What is the period of a small-angle simple pendulum?",
+      "2π√(L/g).",
+      "Physics"
+    ],
+    [
+      "What is the energy of a photon?",
+      "E = hf.",
+      "Physics"
+    ],
+    [
+      "What is the electric field of a point charge in vacuum?",
+      "Magnitude k|q|/r²; radial direction depends on sign.",
+      "Physics"
+    ],
+    [
+      "What is the first law of thermodynamics with work positive out?",
+      "ΔU = Q − W.",
+      "Physics"
+    ],
+    [
+      "State Gauss’s law for electricity.",
+      "Closed-surface electric flux equals enclosed charge divided by ε₀.",
+      "Physics"
+    ],
+    [
+      "What is the time-independent Schrödinger equation?",
+      "Hψ = Eψ.",
+      "Physics"
+    ],
+    [
+      "What is the Lagrangian for a conservative mechanical system?",
+      "L = T − V.",
+      "Physics"
+    ],
+    [
+      "What is the canonical partition function?",
+      "Z = Σ exp(−βEᵢ), β = 1/(kBT).",
+      "Physics"
+    ],
+    [
+      "What is Gauss's law for electricity?",
+      "Net electric flux through a closed surface equals enclosed charge divided by vacuum permittivity.",
+      "Physics"
+    ],
+    [
+      "What is a gauge transformation of electromagnetic potentials?",
+      "A → A + ∇χ; φ → φ − ∂χ/∂t, leaving fields invariant.",
+      "Physics"
+    ],
+    [
+      "What does Noether’s theorem relate?",
+      "Continuous differentiable symmetries of the action to conserved quantities.",
+      "Physics"
+    ],
+    [
+      "What is a density operator for a pure state?",
+      "ρ = |ψ⟩⟨ψ|.",
+      "Physics"
+    ],
+    [
+      "What is a Hermitian operator's key spectral property?",
+      "Its eigenvalues are real.",
+      "Physics"
+    ],
+    [
+      "Why perform a mesh convergence study?",
+      "To estimate sensitivity to spatial discretization and assess numerical convergence.",
+      "Physics"
+    ],
+    [
+      "How are independent standard uncertainties combined for a sum?",
+      "Root sum of squares.",
+      "Physics"
+    ],
+    [
+      "What does the Courant number characterize?",
+      "The ratio of physical advection distance per time step to grid spacing.",
+      "Physics"
+    ],
+    [
+      "Why report measurement uncertainty?",
+      "It communicates the precision and limitations of a measured result.",
+      "Physics"
+    ]
+  ],
+  "Coding": [
+    [
+      "What is an algorithm?",
+      "A sequence of steps to solve a problem.",
+      "Coding"
+    ],
+    [
+      "What is a bug?",
+      "An error in a program.",
+      "Coding"
+    ],
+    [
+      "What does repeat 3 times: clap do?",
+      "Claps three times.",
+      "Coding"
+    ],
+    [
+      "What is pseudocode?",
+      "An informal description of an algorithm using readable steps.",
+      "Coding"
+    ],
+    [
+      "What is an input?",
+      "Data supplied to a program.",
+      "Coding"
+    ],
+    [
+      "What is an output?",
+      "A result produced by a program.",
+      "Coding"
+    ],
+    [
+      "What is a Boolean value?",
+      "A value representing true or false.",
+      "Coding"
+    ],
+    [
+      "What is a loop used for?",
+      "Repeating instructions.",
+      "Coding"
+    ],
+    [
+      "What is a variable?",
+      "A named way to store or refer to a value.",
+      "Coding"
+    ],
+    [
+      "What does an if statement do?",
+      "Runs code when a condition is true.",
+      "Coding"
+    ],
+    [
+      "What is debugging?",
+      "Finding and fixing errors.",
+      "Coding"
+    ],
+    [
+      "Python: print(3 + 4 * 2)",
+      "11, because multiplication comes first.",
+      "Coding"
+    ],
+    [
+      "Python: what is len(\"cat\")?",
+      "3.",
+      "Coding"
+    ],
+    [
+      "What is a loop?",
+      "A construct that repeats instructions.",
+      "Coding"
+    ],
+    [
+      "Python: list(range(3))",
+      "[0, 1, 2].",
+      "Coding"
+    ],
+    [
+      "Python: what is 17 % 5?",
+      "2.",
+      "Coding"
+    ],
+    [
+      "Python: what is 5 > 3 and 2 > 4?",
+      "False.",
+      "Coding"
+    ],
+    [
+      "What is a Python list index for the first element?",
+      "0.",
+      "Coding"
+    ],
+    [
+      "Python: print([2, 4, 6][1])",
+      "4.",
+      "Coding"
+    ],
+    [
+      "Python: what does // do with integers?",
+      "Floor division.",
+      "Coding"
+    ],
+    [
+      "Why use a function?",
+      "To encapsulate reusable behavior.",
+      "Coding"
+    ],
+    [
+      "Python: print(sum(range(5)))",
+      "10.",
+      "Coding"
+    ],
+    [
+      "JavaScript: what is typeof 42?",
+      "\"number\".",
+      "Coding"
+    ],
+    [
+      "What is an off-by-one error?",
+      "A boundary or count error of one.",
+      "Coding"
+    ],
+    [
+      "Python: what is [x*x for x in range(4)]?",
+      "[0, 1, 4, 9].",
+      "Coding"
+    ],
+    [
+      "JavaScript: what is 3 === \"3\"?",
+      "false.",
+      "Coding"
+    ],
+    [
+      "What is recursion?",
+      "A function solving a problem by calling itself on subproblems.",
+      "Coding"
+    ],
+    [
+      "What is the time complexity of binary search on a sorted array?",
+      "O(log n).",
+      "Coding"
+    ],
+    [
+      "Python: what is the time complexity of scanning a list of n elements?",
+      "O(n).",
+      "Coding"
+    ],
+    [
+      "What is a stack?",
+      "A last-in, first-out data structure.",
+      "Coding"
+    ],
+    [
+      "SQL: what does WHERE do?",
+      "Filters rows by a condition.",
+      "Coding"
+    ],
+    [
+      "What is binary search’s worst-case time complexity on a sorted array?",
+      "O(log n).",
+      "Coding"
+    ],
+    [
+      "Python: why use a set for membership checks?",
+      "Average O(1) membership for typical hashable keys.",
+      "Coding"
+    ],
+    [
+      "What is a unit test?",
+      "A test of an isolated unit of behavior.",
+      "Coding"
+    ],
+    [
+      "What is a hash collision?",
+      "Distinct keys map to the same hash value or bucket.",
+      "Coding"
+    ],
+    [
+      "What is a database transaction’s atomicity?",
+      "All operations commit together or none do.",
+      "Coding"
+    ],
+    [
+      "What is a stable sort?",
+      "Equal-key elements retain their original relative order.",
+      "Coding"
+    ],
+    [
+      "What is Dijkstra’s algorithm’s key edge-weight assumption?",
+      "Nonnegative edge weights.",
+      "Coding"
+    ],
+    [
+      "What is a race condition?",
+      "Behavior that depends on the relative timing of concurrent operations.",
+      "Coding"
+    ],
+    [
+      "What is the bias-variance tradeoff?",
+      "A tradeoff between systematic prediction error and sensitivity to training data.",
+      "Coding"
+    ],
+    [
+      "What is a linearizable operation?",
+      "One appearing atomic at a point between invocation and response.",
+      "Coding"
+    ],
+    [
+      "What is reverse-mode automatic differentiation useful for?",
+      "Efficient gradients of scalar outputs with many inputs.",
+      "Coding"
+    ],
+    [
+      "What does linearizability require?",
+      "Operations appear to take effect atomically between invocation and response, respecting real-time order.",
+      "Coding"
+    ],
+    [
+      "What is idempotency in an API operation?",
+      "Repeating the same operation has the same intended effect as performing it once.",
+      "Coding"
+    ],
+    [
+      "What is parameterized SQL used for?",
+      "Separating query structure from data to reduce SQL injection risk.",
+      "Coding"
+    ],
+    [
+      "What is a circuit breaker in distributed software?",
+      "A mechanism that temporarily stops calls to a failing dependency to limit cascading failures.",
+      "Coding"
+    ],
+    [
+      "Why use parameterized SQL queries?",
+      "They separate data from SQL syntax and help prevent SQL injection.",
+      "Coding"
+    ],
+    [
+      "What is a string in programming?",
+      "A sequence of text characters.",
+      "Coding"
+    ],
+    [
+      "What is an integer in programming?",
+      "A whole number that can be positive, negative, or zero.",
+      "Coding"
+    ],
+    [
+      "What is a list in Python?",
+      "An ordered collection whose items can be added, removed, or changed.",
+      "Coding"
+    ],
+    [
+      "What is a dictionary in Python?",
+      "A collection that maps keys to values.",
+      "Coding"
+    ],
+    [
+      "What is a parameter in a function definition?",
+      "A named input the function can use when it is called.",
+      "Coding"
+    ],
+    [
+      "What does a return statement provide to the caller?",
+      "A result from the function, when supplied.",
+      "Coding"
+    ],
+    [
+      "What does a code comment do?",
+      "Explains the code to readers without acting as an instruction to the computer.",
+      "Coding"
+    ],
+    [
+      "What does an else block do?",
+      "Runs when the associated if condition is false, subject to any intervening conditions.",
+      "Coding"
+    ],
+    [
+      "What is an infinite loop?",
+      "A loop whose stopping condition is never reached.",
+      "Coding"
+    ],
+    [
+      "Why use descriptive variable names?",
+      "They help readers recognize what values represent.",
+      "Coding"
+    ],
+    [
+      "What is a queue in computer science?",
+      "A collection normally served in first-in, first-out order.",
+      "Coding"
+    ],
+    [
+      "What is version control used for?",
+      "Tracking changes to files so people can compare, share, or restore versions.",
+      "Coding"
+    ],
+    [
+      "What is a computer program’s data type?",
+      "A category that describes a value and helps determine which operations apply to it.",
+      "Coding"
+    ],
+    [
+      "What is a default argument?",
+      "A value a function uses when the caller leaves the corresponding argument out.",
+      "Coding"
+    ],
+    [
+      "What is a compiler commonly used for?",
+      "Translating source code into another form for execution or further processing.",
+      "Coding"
+    ],
+    [
+      "What is a test case?",
+      "An input or situation with an expected behavior used to check a program.",
+      "Coding"
+    ],
+    [
+      "What is the purpose of a base case in a recursive function?",
+      "It gives recursion a point at which to stop making further calls.",
+      "Coding"
+    ],
+    [
+      "What is a CSV file commonly used to store?",
+      "Tabular data as rows of separated values.",
+      "Coding"
+    ]
+  ],
+  "Engineering": [
+    [
+      "Why are triangles used in many truss structures?",
+      "A triangle with fixed side lengths resists changes in shape.",
+      "Engineering"
+    ],
+    [
+      "What is a design constraint?",
+      "A limit or requirement a design must satisfy.",
+      "Engineering"
+    ],
+    [
+      "What is a factor of safety in a simple strength calculation?",
+      "Capacity divided by demand, using consistent definitions.",
+      "Engineering"
+    ],
+    [
+      "What is fatigue failure?",
+      "Failure caused by repeated loading, potentially below static strength.",
+      "Engineering"
+    ],
+    [
+      "What is a finite element convergence study?",
+      "Checking how computed results change with mesh refinement or approximation order.",
+      "Engineering"
+    ],
+    [
+      "Why document design assumptions?",
+      "To enable review, traceability and assessment of whether conclusions remain valid.",
+      "Engineering"
+    ],
+    [
+      "What is the first law for a closed system, with work positive out?",
+      "ΔU = Q − W.",
+      "Mechanical engineering"
+    ],
+    [
+      "What is effective stress in saturated soil?",
+      "σ′ = σ − u, where u is pore water pressure.",
+      "Civil engineering"
+    ],
+    [
+      "What is the impedance of an ideal capacitor?",
+      "Z = 1/(jωC).",
+      "Electrical engineering"
+    ],
+    [
+      "What is the ideal rocket equation?",
+      "Δv = ve ln(m0/mf).",
+      "Aerospace engineering"
+    ],
+    [
+      "What is the steady-state mole balance for a species in a reactor?",
+      "In − out + generation = 0.",
+      "Chemical engineering"
+    ],
+    [
+      "What is the Reynolds number for pipe flow?",
+      "Re = ρVD/μ; ratio of inertial to viscous effects.",
+      "Mechanical engineering"
+    ],
+    [
+      "What is the maximum bending moment for a simply supported beam with central load P?",
+      "PL/4.",
+      "Civil engineering"
+    ],
+    [
+      "What does Kirchhoff’s current law state?",
+      "The algebraic sum of currents at a node is zero.",
+      "Electrical engineering"
+    ],
+    [
+      "What is Mach number?",
+      "Speed divided by local speed of sound.",
+      "Aerospace engineering"
+    ],
+    [
+      "What is the Arrhenius equation?",
+      "k = A exp(−Ea/RT).",
+      "Chemical engineering"
+    ],
+    [
+      "What is the Euler buckling load for a pinned-pinned column?",
+      "Pcr = π²EI/L², for an ideal slender elastic column.",
+      "Mechanical engineering"
+    ],
+    [
+      "What is Darcy’s law for saturated flow?",
+      "Q = k i A, in magnitude.",
+      "Civil engineering"
+    ],
+    [
+      "What is the Nyquist sampling criterion for a bandlimited baseband signal?",
+      "Sample at greater than twice the highest frequency for ideal reconstruction.",
+      "Electrical engineering"
+    ],
+    [
+      "What is the circular orbital speed at radius r?",
+      "v = √(μ/r).",
+      "Aerospace engineering"
+    ],
+    [
+      "What is the ideal CSTR volume for a single reaction?",
+      "V = F_A0 X/(−r_A), evaluated at outlet conditions.",
+      "Chemical engineering"
+    ],
+    [
+      "What is the von Mises stress for uniaxial tension σ?",
+      "|σ|.",
+      "Mechanical engineering"
+    ],
+    [
+      "What is the purpose of a load combination?",
+      "To evaluate combined actions using prescribed factors and combinations.",
+      "Civil engineering"
+    ],
+    [
+      "What is the transfer function of an ideal RC low-pass filter?",
+      "H(s) = 1/(1+sRC).",
+      "Electrical engineering"
+    ],
+    [
+      "What is dynamic pressure?",
+      "q = ½ρV².",
+      "Aerospace engineering"
+    ],
+    [
+      "What is the Prandtl number?",
+      "Pr = ν/α, momentum diffusivity divided by thermal diffusivity.",
+      "Chemical engineering"
+    ],
+    [
+      "What is the significance of the Biot number?",
+      "It compares internal conduction resistance to surface convection resistance; Bi = hLc/k.",
+      "Mechanical engineering"
+    ],
+    [
+      "What is the difference between ultimate and serviceability limit states?",
+      "Ultimate concerns failure or instability; serviceability concerns usability, deflection and vibration.",
+      "Civil engineering"
+    ],
+    [
+      "What is the condition for continuous-time asymptotic stability of a finite-dimensional LTI state matrix?",
+      "All eigenvalues have strictly negative real parts.",
+      "Electrical engineering"
+    ],
+    [
+      "What does a positive static margin imply for conventional longitudinal static stability?",
+      "A restoring pitching tendency under the usual sign conventions.",
+      "Aerospace engineering"
+    ],
+    [
+      "What does relative volatility quantify?",
+      "The ratio of vapor-liquid equilibrium K-values of two components.",
+      "Chemical engineering"
+    ],
+    [
+      "An ideal Carnot engine operates between 410 K and 300 K. Find its maximum efficiency.",
+      "26.83% (1 − Tc/Th)",
+      "Mechanical engineering · practice"
+    ],
+    [
+      "A simply supported beam of span 3 m carries a central point load of 3 kN. Find maximum bending moment.",
+      "2.25 kN·m (PL/4)",
+      "Civil engineering · practice"
+    ],
+    [
+      "A 3 Ω resistor carries 3 A DC. Find power dissipated.",
+      "27 W (I²R)",
+      "Electrical engineering · practice"
+    ],
+    [
+      "Air density is 1.2 kg/m³ and airspeed is 15 m/s. Find dynamic pressure.",
+      "135.0 Pa (½ρV²)",
+      "Aerospace engineering · practice"
+    ],
+    [
+      "A feed contains 30 mol/s of reactant A and undergoes 30% conversion of A. Find A consumed per second.",
+      "9 mol/s",
+      "Chemical engineering · practice"
+    ],
+    [
+      "An ideal Carnot engine operates between 420 K and 300 K. Find its maximum efficiency.",
+      "28.57% (1 − Tc/Th)",
+      "Mechanical engineering · practice"
+    ],
+    [
+      "A simply supported beam of span 4 m carries a central point load of 4 kN. Find maximum bending moment.",
+      "4 kN·m (PL/4)",
+      "Civil engineering · practice"
+    ],
+    [
+      "A 4 Ω resistor carries 4 A DC. Find power dissipated.",
+      "64 W (I²R)",
+      "Electrical engineering · practice"
+    ],
+    [
+      "Air density is 1.2 kg/m³ and airspeed is 20 m/s. Find dynamic pressure.",
+      "240.0 Pa (½ρV²)",
+      "Aerospace engineering · practice"
+    ],
+    [
+      "A feed contains 40 mol/s of reactant A and undergoes 40% conversion of A. Find A consumed per second.",
+      "16 mol/s",
+      "Chemical engineering · practice"
+    ],
+    [
+      "An ideal Carnot engine operates between 430 K and 300 K. Find its maximum efficiency.",
+      "30.23% (1 − Tc/Th)",
+      "Mechanical engineering · practice"
+    ],
+    [
+      "A simply supported beam of span 5 m carries a central point load of 5 kN. Find maximum bending moment.",
+      "6.25 kN·m (PL/4)",
+      "Civil engineering · practice"
+    ],
+    [
+      "A 5 Ω resistor carries 5 A DC. Find power dissipated.",
+      "125 W (I²R)",
+      "Electrical engineering · practice"
+    ],
+    [
+      "Air density is 1.2 kg/m³ and airspeed is 25 m/s. Find dynamic pressure.",
+      "375.0 Pa (½ρV²)",
+      "Aerospace engineering · practice"
+    ],
+    [
+      "A feed contains 50 mol/s of reactant A and undergoes 50% conversion of A. Find A consumed per second.",
+      "25 mol/s",
+      "Chemical engineering · practice"
+    ],
+    [
+      "An ideal Carnot engine operates between 440 K and 300 K. Find its maximum efficiency.",
+      "31.82% (1 − Tc/Th)",
+      "Mechanical engineering · practice"
+    ],
+    [
+      "A simply supported beam of span 6 m carries a central point load of 6 kN. Find maximum bending moment.",
+      "9 kN·m (PL/4)",
+      "Civil engineering · practice"
+    ],
+    [
+      "A 6 Ω resistor carries 6 A DC. Find power dissipated.",
+      "216 W (I²R)",
+      "Electrical engineering · practice"
+    ],
+    [
+      "Air density is 1.2 kg/m³ and airspeed is 30 m/s. Find dynamic pressure.",
+      "540.0 Pa (½ρV²)",
+      "Aerospace engineering · practice"
+    ],
+    [
+      "A feed contains 60 mol/s of reactant A and undergoes 60% conversion of A. Find A consumed per second.",
+      "36 mol/s",
+      "Chemical engineering · practice"
+    ],
+    [
+      "An ideal Carnot engine operates between 450 K and 300 K. Find its maximum efficiency.",
+      "33.33% (1 − Tc/Th)",
+      "Mechanical engineering · practice"
+    ],
+    [
+      "A simply supported beam of span 7 m carries a central point load of 7 kN. Find maximum bending moment.",
+      "12.25 kN·m (PL/4)",
+      "Civil engineering · practice"
+    ],
+    [
+      "A 7 Ω resistor carries 7 A DC. Find power dissipated.",
+      "343 W (I²R)",
+      "Electrical engineering · practice"
+    ],
+    [
+      "Air density is 1.2 kg/m³ and airspeed is 35 m/s. Find dynamic pressure.",
+      "735.0 Pa (½ρV²)",
+      "Aerospace engineering · practice"
+    ],
+    [
+      "A feed contains 70 mol/s of reactant A and undergoes 70% conversion of A. Find A consumed per second.",
+      "49 mol/s",
+      "Chemical engineering · practice"
+    ],
+    [
+      "An ideal Carnot engine operates between 460 K and 300 K. Find its maximum efficiency.",
+      "34.78% (1 − Tc/Th)",
+      "Mechanical engineering · practice"
+    ],
+    [
+      "A simply supported beam of span 8 m carries a central point load of 8 kN. Find maximum bending moment.",
+      "16 kN·m (PL/4)",
+      "Civil engineering · practice"
+    ],
+    [
+      "A 8 Ω resistor carries 8 A DC. Find power dissipated.",
+      "512 W (I²R)",
+      "Electrical engineering · practice"
+    ],
+    [
+      "Air density is 1.2 kg/m³ and airspeed is 40 m/s. Find dynamic pressure.",
+      "960.0 Pa (½ρV²)",
+      "Aerospace engineering · practice"
+    ],
+    [
+      "A feed contains 80 mol/s of reactant A and undergoes 80% conversion of A. Find A consumed per second.",
+      "64 mol/s",
+      "Chemical engineering · practice"
+    ]
+  ],
+  "Computer science": [
+    [
+      "What is the time complexity of binary search on a sorted array?",
+      "O(log n).",
+      "Computer science"
+    ],
+    [
+      "What is a race condition?",
+      "Behavior depends on timing or interleaving of concurrent operations.",
+      "Computer science"
+    ],
+    [
+      "What does a consistent heuristic guarantee in standard A* graph search?",
+      "With usual nonnegative costs, optimal paths can be found without reopening closed nodes.",
+      "Computer science"
+    ],
+    [
+      "What is the difference between NP-hard and NP-complete?",
+      "NP-complete problems are both NP-hard and in NP.",
+      "Computer science"
+    ],
+    [
+      "What is a deadlock?",
+      "Processes wait indefinitely for resources held by one another.",
+      "Computer science"
+    ],
+    [
+      "What is an algorithm?",
+      "A sequence of steps to solve a problem.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a bug?",
+      "An error in a program.",
+      "Computer science foundations"
+    ],
+    [
+      "What does repeat 3 times: clap do?",
+      "Claps three times.",
+      "Computer science foundations"
+    ],
+    [
+      "What is pseudocode?",
+      "An informal description of an algorithm using readable steps.",
+      "Computer science foundations"
+    ],
+    [
+      "What is an input?",
+      "Data supplied to a program.",
+      "Computer science foundations"
+    ],
+    [
+      "What is an output?",
+      "A result produced by a program.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a Boolean value?",
+      "A value representing true or false.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a loop used for?",
+      "Repeating instructions.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a variable?",
+      "A named way to store or refer to a value.",
+      "Computer science foundations"
+    ],
+    [
+      "What does an if statement do?",
+      "Runs code when a condition is true.",
+      "Computer science foundations"
+    ],
+    [
+      "What is debugging?",
+      "Finding and fixing errors.",
+      "Computer science foundations"
+    ],
+    [
+      "Python: print(3 + 4 * 2)",
+      "11, because multiplication comes first.",
+      "Computer science foundations"
+    ],
+    [
+      "Python: what is len(\"cat\")?",
+      "3.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a loop?",
+      "A construct that repeats instructions.",
+      "Computer science foundations"
+    ],
+    [
+      "Python: list(range(3))",
+      "[0, 1, 2].",
+      "Computer science foundations"
+    ],
+    [
+      "Python: what is 17 % 5?",
+      "2.",
+      "Computer science foundations"
+    ],
+    [
+      "Python: what is 5 > 3 and 2 > 4?",
+      "False.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a Python list index for the first element?",
+      "0.",
+      "Computer science foundations"
+    ],
+    [
+      "Python: print([2, 4, 6][1])",
+      "4.",
+      "Computer science foundations"
+    ],
+    [
+      "Python: what does // do with integers?",
+      "Floor division.",
+      "Computer science foundations"
+    ],
+    [
+      "Why use a function?",
+      "To encapsulate reusable behavior.",
+      "Computer science foundations"
+    ],
+    [
+      "Python: print(sum(range(5)))",
+      "10.",
+      "Computer science foundations"
+    ],
+    [
+      "JavaScript: what is typeof 42?",
+      "\"number\".",
+      "Computer science foundations"
+    ],
+    [
+      "What is an off-by-one error?",
+      "A boundary or count error of one.",
+      "Computer science foundations"
+    ],
+    [
+      "Python: what is [x*x for x in range(4)]?",
+      "[0, 1, 4, 9].",
+      "Computer science foundations"
+    ],
+    [
+      "JavaScript: what is 3 === \"3\"?",
+      "false.",
+      "Computer science foundations"
+    ],
+    [
+      "What is recursion?",
+      "A function solving a problem by calling itself on subproblems.",
+      "Computer science foundations"
+    ],
+    [
+      "What is the time complexity of binary search on a sorted array?",
+      "O(log n).",
+      "Computer science foundations"
+    ],
+    [
+      "Python: what is the time complexity of scanning a list of n elements?",
+      "O(n).",
+      "Computer science foundations"
+    ],
+    [
+      "What is a stack?",
+      "A last-in, first-out data structure.",
+      "Computer science foundations"
+    ],
+    [
+      "SQL: what does WHERE do?",
+      "Filters rows by a condition.",
+      "Computer science foundations"
+    ],
+    [
+      "What is binary search’s worst-case time complexity on a sorted array?",
+      "O(log n).",
+      "Computer science foundations"
+    ],
+    [
+      "Python: why use a set for membership checks?",
+      "Average O(1) membership for typical hashable keys.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a unit test?",
+      "A test of an isolated unit of behavior.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a hash collision?",
+      "Distinct keys map to the same hash value or bucket.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a database transaction’s atomicity?",
+      "All operations commit together or none do.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a stable sort?",
+      "Equal-key elements retain their original relative order.",
+      "Computer science foundations"
+    ],
+    [
+      "What is Dijkstra’s algorithm’s key edge-weight assumption?",
+      "Nonnegative edge weights.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a race condition?",
+      "Behavior that depends on the relative timing of concurrent operations.",
+      "Computer science foundations"
+    ],
+    [
+      "What is the bias-variance tradeoff?",
+      "A tradeoff between systematic prediction error and sensitivity to training data.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a linearizable operation?",
+      "One appearing atomic at a point between invocation and response.",
+      "Computer science foundations"
+    ],
+    [
+      "What is reverse-mode automatic differentiation useful for?",
+      "Efficient gradients of scalar outputs with many inputs.",
+      "Computer science foundations"
+    ],
+    [
+      "What does linearizability require?",
+      "Operations appear to take effect atomically between invocation and response, respecting real-time order.",
+      "Computer science foundations"
+    ],
+    [
+      "What is idempotency in an API operation?",
+      "Repeating the same operation has the same intended effect as performing it once.",
+      "Computer science foundations"
+    ],
+    [
+      "What is parameterized SQL used for?",
+      "Separating query structure from data to reduce SQL injection risk.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a circuit breaker in distributed software?",
+      "A mechanism that temporarily stops calls to a failing dependency to limit cascading failures.",
+      "Computer science foundations"
+    ],
+    [
+      "Why use parameterized SQL queries?",
+      "They separate data from SQL syntax and help prevent SQL injection.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a string in programming?",
+      "A sequence of text characters.",
+      "Computer science foundations"
+    ],
+    [
+      "What is an integer in programming?",
+      "A whole number that can be positive, negative, or zero.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a list in Python?",
+      "An ordered collection whose items can be added, removed, or changed.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a dictionary in Python?",
+      "A collection that maps keys to values.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a parameter in a function definition?",
+      "A named input the function can use when it is called.",
+      "Computer science foundations"
+    ],
+    [
+      "What does a return statement provide to the caller?",
+      "A result from the function, when supplied.",
+      "Computer science foundations"
+    ],
+    [
+      "What does a code comment do?",
+      "Explains the code to readers without acting as an instruction to the computer.",
+      "Computer science foundations"
+    ],
+    [
+      "What does an else block do?",
+      "Runs when the associated if condition is false, subject to any intervening conditions.",
+      "Computer science foundations"
+    ],
+    [
+      "What is an infinite loop?",
+      "A loop whose stopping condition is never reached.",
+      "Computer science foundations"
+    ],
+    [
+      "Why use descriptive variable names?",
+      "They help readers recognize what values represent.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a queue in computer science?",
+      "A collection normally served in first-in, first-out order.",
+      "Computer science foundations"
+    ],
+    [
+      "What is version control used for?",
+      "Tracking changes to files so people can compare, share, or restore versions.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a computer program’s data type?",
+      "A category that describes a value and helps determine which operations apply to it.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a default argument?",
+      "A value a function uses when the caller leaves the corresponding argument out.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a compiler commonly used for?",
+      "Translating source code into another form for execution or further processing.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a test case?",
+      "An input or situation with an expected behavior used to check a program.",
+      "Computer science foundations"
+    ],
+    [
+      "What is the purpose of a base case in a recursive function?",
+      "It gives recursion a point at which to stop making further calls.",
+      "Computer science foundations"
+    ],
+    [
+      "What is a CSV file commonly used to store?",
+      "Tabular data as rows of separated values.",
+      "Computer science foundations"
+    ]
+  ],
+  "Biological sciences": [
+    [
+      "What is the role of ATP synthase?",
+      "It couples ion flow down an electrochemical gradient to ATP synthesis.",
+      "Biological sciences"
+    ],
+    [
+      "What is competitive inhibition in ideal Michaelis–Menten kinetics?",
+      "Apparent Km increases; Vmax is unchanged.",
+      "Biological sciences"
+    ],
+    [
+      "What is genetic drift?",
+      "Random changes in allele frequencies.",
+      "Biological sciences"
+    ],
+    [
+      "What is the purpose of a negative control?",
+      "To detect background effects or contamination in the absence of the tested factor.",
+      "Biological sciences"
+    ],
+    [
+      "What is allosteric regulation?",
+      "Binding at a regulatory site changes protein activity.",
+      "Biological sciences"
+    ],
+    [
+      "What is the role of a cell membrane?",
+      "It separates the inside of the cell from its surroundings and helps regulate what crosses.",
+      "Biological sciences"
+    ],
+    [
+      "What is the role of a ribosome?",
+      "It assembles amino acids into proteins using instructions carried by messenger RNA.",
+      "Biological sciences"
+    ],
+    [
+      "What is the main role of mitochondria in many eukaryotic cells?",
+      "They produce much of the cell’s ATP through cellular respiration.",
+      "Biological sciences"
+    ],
+    [
+      "What kind of information is encoded in DNA?",
+      "Hereditary information used to build and regulate living organisms.",
+      "Biological sciences"
+    ],
+    [
+      "What is a chromosome?",
+      "A structure made of DNA and associated proteins that carries genes.",
+      "Biological sciences"
+    ],
+    [
+      "What is an allele?",
+      "One of the possible versions of a genetic sequence at a particular location.",
+      "Biological sciences"
+    ],
+    [
+      "What does a genotype describe?",
+      "An organism’s genetic makeup, often for a particular set of genes.",
+      "Biological sciences"
+    ],
+    [
+      "What does a phenotype describe?",
+      "Observable traits that can reflect genes, environment, or both.",
+      "Biological sciences"
+    ],
+    [
+      "What happens to chromosome number during meiosis?",
+      "It is reduced by half in the cells produced.",
+      "Biological sciences"
+    ],
+    [
+      "What does mitosis separate into two nuclei?",
+      "Duplicated chromosomes.",
+      "Biological sciences"
+    ],
+    [
+      "What is the job of an enzyme?",
+      "To speed up a chemical reaction without being consumed by it.",
+      "Biological sciences"
+    ],
+    [
+      "What is the substrate of an enzyme?",
+      "A molecule the enzyme acts on.",
+      "Biological sciences"
+    ],
+    [
+      "What is osmosis?",
+      "The movement of water across a selectively permeable membrane in response to a difference in water potential.",
+      "Biological sciences"
+    ],
+    [
+      "What is active transport across a membrane?",
+      "Moving substances using energy, often against an existing gradient.",
+      "Biological sciences"
+    ],
+    [
+      "What is homeostasis?",
+      "Maintaining relatively stable internal conditions despite external change.",
+      "Biological sciences"
+    ],
+    [
+      "What provides the raw variation on which natural selection acts?",
+      "Heritable differences among individuals.",
+      "Biological sciences"
+    ],
+    [
+      "What is a niche in ecology?",
+      "The way an organism uses resources and interacts with its environment.",
+      "Biological sciences"
+    ],
+    [
+      "What is a population in ecology?",
+      "Individuals of the same species living in a defined area.",
+      "Biological sciences"
+    ],
+    [
+      "What is a community in ecology?",
+      "The populations of different species that live and interact in an area.",
+      "Biological sciences"
+    ],
+    [
+      "What is carrying capacity?",
+      "The population size an environment can support over time under given conditions.",
+      "Biological sciences"
+    ],
+    [
+      "What is a mutualistic relationship?",
+      "An interaction in which both partners benefit.",
+      "Biological sciences"
+    ],
+    [
+      "What is parasitism?",
+      "An interaction in which one organism benefits at a host’s expense.",
+      "Biological sciences"
+    ],
+    [
+      "What is a pathogen?",
+      "An agent capable of causing disease.",
+      "Biological sciences"
+    ],
+    [
+      "What does an antibody recognize?",
+      "A specific target or part of a target called an antigen.",
+      "Biological sciences"
+    ],
+    [
+      "What is the role of xylem in vascular plants?",
+      "It transports water and dissolved minerals, mainly from roots upward.",
+      "Biological sciences"
+    ],
+    [
+      "What is the role of phloem in vascular plants?",
+      "It moves sugars and other dissolved substances between parts of the plant.",
+      "Biological sciences"
+    ],
+    [
+      "What do stomata help a plant regulate?",
+      "Gas exchange and water loss.",
+      "Biological sciences"
+    ],
+    [
+      "What process enables a plant embryo to begin growing from a seed?",
+      "Germination.",
+      "Biological sciences"
+    ],
+    [
+      "What is dormancy in a seed?",
+      "A state in which germination is delayed until certain conditions are met.",
+      "Biological sciences"
+    ],
+    [
+      "What is a biological control group used for?",
+      "Providing a comparison for evaluating the effect of a treatment.",
+      "Biological sciences"
+    ],
+    [
+      "What is a species’ scientific name typically made up of?",
+      "A genus name and a specific epithet.",
+      "Biological sciences"
+    ],
+    [
+      "What is the main function of hemoglobin?",
+      "Carrying oxygen in red blood cells.",
+      "Biological sciences"
+    ],
+    [
+      "What does a lymph node help do?",
+      "Filter lymph and provide a place for immune cells to respond.",
+      "Biological sciences"
+    ],
+    [
+      "What is a neuron specialized to transmit?",
+      "Signals to other cells.",
+      "Biological sciences"
+    ],
+    [
+      "What is a synapse?",
+      "A junction at which one cell sends a signal to another.",
+      "Biological sciences"
+    ],
+    [
+      "What is an endocrine hormone?",
+      "A chemical signal released into the bloodstream to act on target cells.",
+      "Biological sciences"
+    ],
+    [
+      "What is a neuron’s axon generally used for?",
+      "Carrying electrical signals away from the cell body.",
+      "Biological sciences"
+    ],
+    [
+      "What is an organelle?",
+      "A specialized structure performing a function within a cell.",
+      "Biological sciences"
+    ],
+    [
+      "What is a pathogen’s host?",
+      "The organism it infects or lives in.",
+      "Biological sciences"
+    ],
+    [
+      "What does biodiversity describe?",
+      "The variety of life, including variation among genes, species, or ecosystems.",
+      "Biological sciences"
+    ],
+    [
+      "What is ecological succession?",
+      "A change in the species and structure of a community over time.",
+      "Biological sciences"
+    ],
+    [
+      "What is an invasive species?",
+      "An introduced species whose spread causes or is likely to cause harm in the new environment.",
+      "Biological sciences"
+    ],
+    [
+      "What is a decomposer’s role in nutrient cycling?",
+      "Breaking down dead material and making nutrients available again.",
+      "Biological sciences"
+    ],
+    [
+      "What do root hairs help plants absorb?",
+      "Water and dissolved minerals.",
+      "Biological sciences"
+    ],
+    [
+      "What cellular process makes an RNA copy of a DNA sequence?",
+      "Transcription.",
+      "Biological sciences"
+    ],
+    [
+      "What cellular process uses an RNA message to make a protein?",
+      "Translation.",
+      "Biological sciences"
+    ],
+    [
+      "What is a mutation?",
+      "A change in a genetic sequence.",
+      "Biological sciences"
+    ],
+    [
+      "What does a cell use ATP for?",
+      "Transferring usable energy to processes such as movement and transport.",
+      "Biological sciences"
+    ],
+    [
+      "What is a planktonic organism?",
+      "An organism that drifts in water with limited ability to swim against currents.",
+      "Biological sciences"
+    ],
+    [
+      "What is an autotroph?",
+      "An organism that makes organic material using light or chemical energy.",
+      "Biological sciences"
+    ],
+    [
+      "What is a heterotroph?",
+      "An organism that obtains organic material from other organisms or their products.",
+      "Biological sciences"
+    ],
+    [
+      "What is a microbe?",
+      "A microscopic organism, such as a bacterium or many types of fungi.",
+      "Biological sciences"
+    ],
+    [
+      "What structure distinguishes most plant cells from most animal cells on the outside of the membrane?",
+      "A cell wall.",
+      "Biological sciences"
+    ],
+    [
+      "What does a vaccine train the immune system to recognize?",
+      "An antigen associated with a pathogen or another target of immunity.",
+      "Biological sciences"
+    ],
+    [
+      "What is a scientific model in biology?",
+      "A simplified representation used to explain or predict how a biological system behaves.",
+      "Biological sciences"
+    ]
+  ]
+}));
+studyTopUps.get('History').push(...triviaSubjects.get('Trivia · World History'));
+const sharedLawQuestions = expandedStudyDecks.get('Law').map(([question,answer]) =>
+    [question,answer,'Law foundations']
+);
+const loadBeforeStudyFloor = load;
+load = function() {
+    loadBeforeStudyFloor();
+    const name = subject.value;
+    const available = name.startsWith('Law · ') || name === 'Law and legal studies'
+        ? sharedLawQuestions : studyTopUps.get(name);
+    if (!available || list.length >= studyQuestionFloor) return;
+    const seen = new Set(list.map(([question]) => question.trim().toLowerCase()));
+    for (const row of available) {
+        const key = row[0].trim().toLowerCase();
+        if (seen.has(key)) continue;
+        list.push(row);
+        seen.add(key);
+        if (list.length >= studyQuestionFloor) break;
+    }
+    i=0;back=false;render();
+};
+subject.onchange=load;
+level.onchange=()=>{syncSubjects();load();};
 </script></body></html>
