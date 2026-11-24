@@ -36,7 +36,7 @@
 #raceCard{background:#f2f7ed;padding:12px;border-radius:8px;margin-bottom:10px}
 .raceButtons{display:flex;flex-wrap:wrap;gap:6px}
 #triviaRace [hidden]{display:none!important}
-</style></head><body><main><header><h1>Flip & Learn V8.5<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">Trivia Race · 3 players</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
+</style></head><body><main><header><h1>Flip & Learn V8.7<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">Trivia Race · 3 players</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
   <h2 id="raceTitle">Trivia Race</h2>
   <p>Take turns on one device. Say your answer before you reveal it. First to 20 correct answers wins.</p>
   <div id="raceAnimals"></div>
@@ -988,6 +988,66 @@ const triviaBanks = {
       "What change did Vietnam’s Đổi Mới reforms introduce in 1986?",
       "Vietnam began a gradual shift toward a more market-oriented economy.",
       "Reforms expanded room for private activity and trade while the government retained an important role in the economy."
+    ],
+    [
+      "What familiar bread did Vietnamese cooks adapt to make bánh mì?",
+      "The French baguette.",
+      "The bread arrived during French colonial rule, and Vietnamese cooks made it their own."
+    ],
+    [
+      "Where did Singapore move many street-food vendors in the 1970s?",
+      "Purpose-built hawker centres.",
+      "The move gave vendors better facilities and brought food from different communities together in one place."
+    ],
+    [
+      "Which European traders are often credited with bringing a frying technique that influenced Japanese tempura?",
+      "The Portuguese.",
+      "Japanese cooks developed their own style, using a light batter for seafood and vegetables."
+    ],
+    [
+      "Which four countries jointly nominated couscous traditions for UNESCO recognition?",
+      "Algeria, Mauritania, Morocco, and Tunisia.",
+      "Their joint nomination shows how a food tradition can cross borders and still have local variations."
+    ],
+    [
+      "What drink helped make coffeehouses places to meet and talk in Türkiye?",
+      "Turkish coffee.",
+      "Serving it became a tradition of hospitality and a reason for people to spend time together."
+    ],
+    [
+      "What crop failed at the start of Ireland’s Great Famine in the 1840s?",
+      "The potato.",
+      "Blight destroyed a staple food many families depended on, and the famine drove many people to leave Ireland."
+    ],
+    [
+      "What did archaeologists find beneath Petra’s Treasury in Jordan in 2024?",
+      "A tomb containing the remains of 12 people.",
+      "The burial shows how much a famous monument can still reveal about the people who used it."
+    ],
+    [
+      "Why did an ancient city like Petra need channels and reservoirs?",
+      "To collect and store water.",
+      "Saving water helped people live and trade in an area with little rainfall."
+    ],
+    [
+      "Whose mummy was revealed when Egyptian archaeologists opened a stone coffin on live television in 2019?",
+      "An ancient Egyptian high priest.",
+      "Linen wrappings and an image of the goddess Isis give clues to how Egyptians prepared some of their dead for burial."
+    ],
+    [
+      "What did laser mapping reveal about ancient Maya settlements near El Mirador in Guatemala?",
+      "Raised roads connecting settlements.",
+      "The roads show that communities hidden by forest today were once linked to each other."
+    ],
+    [
+      "How does airborne lidar help archaeologists map sites in a forest?",
+      "It uses laser pulses to measure the shape of the ground.",
+      "Some pulses reach the ground through gaps in the leaves, helping researchers spot features that are hard to see from above."
+    ],
+    [
+      "What did wall graffiti in Pompeii reveal about politics just before Mount Vesuvius erupted?",
+      "People were campaigning for a local election.",
+      "Messages painted on walls show that Roman towns used public spaces to promote candidates."
     ]
   ]
 };
