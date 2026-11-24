@@ -41,7 +41,7 @@
 .fullExplanation[hidden]{display:none}
 .fullExplanation summary{color:#244c3f;font-weight:700;cursor:pointer;padding:12px}
 .fullExplanation p{margin:0;padding:0 12px 12px;line-height:1.5}
-</style></head><body><main><header><h1>Flip & Learn V8.12<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">Trivia Race · 3 players</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><details id="fullExplanation" class="fullExplanation" hidden><summary>Full explanation</summary><p id="fullExplanationText"></p></details><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
+</style></head><body><main><header><h1>Flip & Learn V8.15<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">Trivia Race · 3 players</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><details id="fullExplanation" class="fullExplanation" hidden><summary>Full explanation</summary><p id="fullExplanationText"></p></details><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
   <h2 id="raceTitle">Trivia Race</h2>
   <p>Take turns on one device. Say your answer before you reveal it. First to 20 correct answers wins.</p>
   <div id="raceAnimals"></div>
@@ -642,6 +642,226 @@ const triviaBanks = {
       "Which international organization replaced the League of Nations after World War II?",
       "The United Nations.",
       "It took on a similar goal of international cooperation and established new bodies such as the Security Council."
+    ],
+    [
+      "What agreement formally ended the war between Germany and the Allied powers after World War I?",
+      "The Treaty of Versailles.",
+      ""
+    ],
+    [
+      "What international event did Berlin host in 1936?",
+      "The Summer Olympics.",
+      ""
+    ],
+    [
+      "What was the name of the first space station launched into orbit?",
+      "Salyut 1.",
+      ""
+    ],
+    [
+      "What city hosted the first United Nations conference that produced the UN Charter?",
+      "San Francisco.",
+      ""
+    ],
+    [
+      "What ocean did the 2004 Boxing Day tsunami travel across?",
+      "The Indian Ocean.",
+      ""
+    ],
+    [
+      "What nuclear power plant suffered a major accident in what is now Ukraine in 1986?",
+      "Chornobyl, also spelled Chernobyl.",
+      ""
+    ],
+    [
+      "What country hosted the 2010 FIFA World Cup, the first held in Africa?",
+      "South Africa.",
+      ""
+    ],
+    [
+      "What did Apollo 8 become the first crewed mission to orbit?",
+      "The Moon.",
+      ""
+    ],
+    [
+      "Which telescope was launched aboard the space shuttle Discovery in 1990?",
+      "The Hubble Space Telescope.",
+      ""
+    ],
+    [
+      "Which tunnel opened in 1994 to link Britain and France by rail?",
+      "The Channel Tunnel.",
+      ""
+    ],
+    [
+      "Which city hosted the 1992 Earth Summit?",
+      "Rio de Janeiro.",
+      ""
+    ],
+    [
+      "Which organization coordinates international public health within the UN system?",
+      "The World Health Organization.",
+      ""
+    ],
+    [
+      "What agreement created a framework for international trade rules in 1947 before the WTO existed?",
+      "The General Agreement on Tariffs and Trade, or GATT.",
+      ""
+    ],
+    [
+      "Which country did the United Kingdom hand Hong Kong over to in 1997?",
+      "China.",
+      ""
+    ],
+    [
+      "Which two countries united their national teams as a single Korea team in women’s ice hockey at the 2018 Winter Olympics?",
+      "North Korea and South Korea.",
+      ""
+    ],
+    [
+      "Which city hosted the 1964 Summer Olympics, the first Summer Games held in Asia?",
+      "Tokyo.",
+      ""
+    ],
+    [
+      "What ship carried the first expedition to reach the South Pole on its voyage to Antarctica?",
+      "The Fram.",
+      ""
+    ],
+    [
+      "Which Roman city was buried alongside Pompeii in the eruption of AD 79?",
+      "Herculaneum.",
+      ""
+    ],
+    [
+      "What organization did the Maastricht Treaty create?",
+      "The European Union.",
+      ""
+    ],
+    [
+      "Which country built the Three Gorges Dam on the Yangtze River?",
+      "China.",
+      ""
+    ],
+    [
+      "What were the two spacecraft launched in 1977 that carried Golden Records?",
+      "Voyager 1 and Voyager 2.",
+      ""
+    ],
+    [
+      "Which city was divided into Allied occupation sectors after World War II?",
+      "Berlin.",
+      ""
+    ],
+    [
+      "Which space shuttle mission joined the first two International Space Station modules?",
+      "Space shuttle mission STS-88.",
+      ""
+    ],
+    [
+      "Which international court began operating in 2002 to try individuals for crimes including genocide?",
+      "The International Criminal Court.",
+      ""
+    ],
+    [
+      "Which volcano erupted in Washington state on May 18, 1980?",
+      "Mount St. Helens.",
+      ""
+    ],
+    [
+      "Which disease was declared eradicated worldwide in 1980?",
+      "Smallpox.",
+      ""
+    ],
+    [
+      "Who became the first person to orbit Earth in 1961?",
+      "Yuri Gagarin.",
+      ""
+    ],
+    [
+      "Who became the first woman in space in 1963?",
+      "Valentina Tereshkova.",
+      ""
+    ],
+    [
+      "Which planet did Viking 1 successfully land on in 1976?",
+      "Mars.",
+      ""
+    ],
+    [
+      "What spacecraft flew past Neptune in 1989?",
+      "Voyager 2.",
+      ""
+    ],
+    [
+      "What ocean was Amelia Earhart crossing when she disappeared in 1937?",
+      "The Pacific Ocean.",
+      ""
+    ],
+    [
+      "What passenger airship caught fire at Lakehurst, New Jersey, in 1937?",
+      "The Hindenburg.",
+      ""
+    ],
+    [
+      "What kind of agreement was the 1918 armistice on the Western Front?",
+      "An agreement to stop fighting.",
+      ""
+    ],
+    [
+      "Which city hosted the 1900 world’s fair known as the Exposition Universelle?",
+      "Paris.",
+      ""
+    ],
+    [
+      "Which city hosted the 2000 Summer Olympics?",
+      "Sydney, Australia.",
+      ""
+    ],
+    [
+      "What event damaged much of San Francisco in April 1906 before fires spread across the city?",
+      "An earthquake.",
+      ""
+    ],
+    [
+      "What big international sports event did London host in 2012?",
+      "The Summer Olympics.",
+      ""
+    ],
+    [
+      "Which city hosted the Olympic Games in 2008 and the Winter Olympics in 2022?",
+      "Beijing.",
+      ""
+    ],
+    [
+      "Which ocean did Charles Lindbergh cross nonstop by airplane in 1927?",
+      "The Atlantic Ocean.",
+      ""
+    ],
+    [
+      "Which two countries sent the spacecraft that docked during the 1975 Apollo–Soyuz mission?",
+      "The United States and the Soviet Union.",
+      ""
+    ],
+    [
+      "Which famous liner was sunk off the coast of Ireland in 1915?",
+      "The Lusitania.",
+      ""
+    ],
+    [
+      "Which city hosted the international climate summit that produced the Kyoto Protocol?",
+      "Kyoto, Japan.",
+      ""
+    ],
+    [
+      "Which canal was transferred to Panamanian control at the end of 1999?",
+      "The Panama Canal.",
+      ""
+    ],
+    [
+      "Which city’s Notre-Dame cathedral suffered a major fire in 2019?",
+      "Paris.",
+      ""
     ]
   ],
   "Movies": [
@@ -724,6 +944,226 @@ const triviaBanks = {
       "What movie technique makes actors on a soundstage appear to be in a different place by replacing a colored backdrop?",
       "Chroma keying.",
       "Software can remove a green background and replace it with a skyline, a landscape, or a fictional setting."
+    ],
+    [
+      "What does a storyboard show before a film is shot?",
+      "A sequence of drawings planning the shots.",
+      ""
+    ],
+    [
+      "What does a film editor do with takes from a scene?",
+      "Selects and assembles them into a sequence.",
+      ""
+    ],
+    [
+      "What is a wide shot useful for showing?",
+      "The subject and the space around it.",
+      ""
+    ],
+    [
+      "What is an insert shot?",
+      "A close view of a specific detail within a scene.",
+      ""
+    ],
+    [
+      "What does a rack focus do within a shot?",
+      "Shifts sharp focus from one distance to another.",
+      ""
+    ],
+    [
+      "What is an overhead shot?",
+      "A view looking down from directly or nearly directly above.",
+      ""
+    ],
+    [
+      "What is an establishing shot often used for?",
+      "Showing where a scene takes place.",
+      ""
+    ],
+    [
+      "What kind of camera move is a pan?",
+      "A horizontal turn from a fixed position.",
+      ""
+    ],
+    [
+      "What kind of camera move is a tilt?",
+      "An up-or-down turn.",
+      ""
+    ],
+    [
+      "What is a dolly move?",
+      "Moving the camera itself on a wheeled platform or similar support.",
+      ""
+    ],
+    [
+      "What is a zoom?",
+      "A change in the lens’s focal length that changes the framing.",
+      ""
+    ],
+    [
+      "What does a gaffer lead on a film set?",
+      "The lighting crew.",
+      ""
+    ],
+    [
+      "Which film crew department traditionally provides camera supports and rigging?",
+      "The grip department.",
+      ""
+    ],
+    [
+      "What does a production designer shape?",
+      "The physical look of the film’s world.",
+      ""
+    ],
+    [
+      "What does a script supervisor track across takes?",
+      "Continuity and details needed for editing.",
+      ""
+    ],
+    [
+      "What is a stand-in used for on a film set?",
+      "Taking an actor’s position while the crew sets up lighting and camera.",
+      ""
+    ],
+    [
+      "What is a practical light in a scene?",
+      "A visible light source such as a lamp in the frame.",
+      ""
+    ],
+    [
+      "What is a sound bridge?",
+      "Sound that carries across a cut and connects two shots or scenes.",
+      ""
+    ],
+    [
+      "What is a freeze-frame?",
+      "A still frame held on screen to pause the apparent motion.",
+      ""
+    ],
+    [
+      "What is a dissolve between shots?",
+      "A transition in which one image fades as the next appears.",
+      ""
+    ],
+    [
+      "What is a film’s running time?",
+      "How long it takes to watch from start to finish.",
+      ""
+    ],
+    [
+      "What is an animatic?",
+      "A timed version of a storyboard, often with temporary sound.",
+      ""
+    ],
+    [
+      "What does a costume fitting check before filming?",
+      "How a costume fits, moves, and looks on the performer.",
+      ""
+    ],
+    [
+      "What is a test screening used for?",
+      "Gathering audience reactions before a film’s release.",
+      ""
+    ],
+    [
+      "What is an eyeline match?",
+      "A cut from someone looking to a view of what they appear to see.",
+      ""
+    ],
+    [
+      "What is shot–reverse shot often used to show?",
+      "Two sides of a conversation or interaction.",
+      ""
+    ],
+    [
+      "What is an over-the-shoulder shot?",
+      "A shot framed past one person’s shoulder toward another subject.",
+      ""
+    ],
+    [
+      "What is b-roll?",
+      "Supplemental footage such as scenery or details used alongside the main footage.",
+      ""
+    ],
+    [
+      "What does a shallow depth of field do to the background?",
+      "It can make the background blurry while the subject stays sharp.",
+      ""
+    ],
+    [
+      "What is a silhouette in a shot?",
+      "A subject seen mainly as a dark shape against a brighter background.",
+      ""
+    ],
+    [
+      "What is a take?",
+      "One recorded attempt at a shot or performance.",
+      ""
+    ],
+    [
+      "What is a blocking rehearsal used to plan?",
+      "Where performers stand and move during a scene.",
+      ""
+    ],
+    [
+      "What does second unit often shoot?",
+      "Additional footage, such as landscapes, action inserts, or establishing shots.",
+      ""
+    ],
+    [
+      "What is a location scout looking for?",
+      "Real places that fit the story and can accommodate filming.",
+      ""
+    ],
+    [
+      "What is a call sheet used for during production?",
+      "Telling cast and crew when and where to report and what is scheduled.",
+      ""
+    ],
+    [
+      "What is room tone?",
+      "A recording of the background sound of a space when nobody is speaking.",
+      ""
+    ],
+    [
+      "What is a boom microphone?",
+      "A microphone mounted on a long pole so it can be placed near the sound source.",
+      ""
+    ],
+    [
+      "What is a temporary music track in an edit?",
+      "Music used as a placeholder while editing.",
+      ""
+    ],
+    [
+      "What does color grading adjust?",
+      "The colors, brightness, and contrast of footage to shape its final look.",
+      ""
+    ],
+    [
+      "What is motion capture used to record?",
+      "A performer’s movements for use in digital animation.",
+      ""
+    ],
+    [
+      "What is a matte painting used for in film?",
+      "Creating or extending an environment beyond what was physically filmed.",
+      ""
+    ],
+    [
+      "What are subtitles usually used to show?",
+      "Written dialogue or its translation.",
+      ""
+    ],
+    [
+      "What does audio description add for a film viewer?",
+      "Spoken descriptions of important visual action.",
+      ""
+    ],
+    [
+      "What is an opening credits sequence used to identify?",
+      "Key people or companies involved in making the film.",
+      ""
     ]
   ],
   "Politics & Civics": [
@@ -806,6 +1246,226 @@ const triviaBanks = {
       "What do tariffs apply to?",
       "Goods crossing a border, usually imports.",
       "An import tariff adds a charge when a product enters a country. That can change what it costs to buy or sell."
+    ],
+    [
+      "What is a constitution?",
+      "A set of basic rules for how a government is organized and how it can use power.",
+      ""
+    ],
+    [
+      "What is a primary election often used to decide?",
+      "Which candidates will represent a party in a general election.",
+      ""
+    ],
+    [
+      "What is a constituency?",
+      "The people or area an elected official represents.",
+      ""
+    ],
+    [
+      "What is a quorum?",
+      "The minimum number of members needed to conduct official business.",
+      ""
+    ],
+    [
+      "What is a bipartisan proposal?",
+      "A proposal with support from two political parties.",
+      ""
+    ],
+    [
+      "What is a term of office?",
+      "The period for which an official is chosen to serve.",
+      ""
+    ],
+    [
+      "What is a cabinet in government?",
+      "A group of senior officials who advise or assist the head of government.",
+      ""
+    ],
+    [
+      "What is a public hearing?",
+      "A proceeding where officials receive testimony or comments in public.",
+      ""
+    ],
+    [
+      "What is a petition?",
+      "A written request that people can sign to show support.",
+      ""
+    ],
+    [
+      "What is a municipal government?",
+      "The government of a city or town.",
+      ""
+    ],
+    [
+      "What is an incumbent?",
+      "The person currently holding an office.",
+      ""
+    ],
+    [
+      "What is a ballot measure?",
+      "A proposal placed before voters for approval or rejection.",
+      ""
+    ],
+    [
+      "What is a legislative amendment?",
+      "A proposed change to legislation under consideration.",
+      ""
+    ],
+    [
+      "What is a budget deficit?",
+      "The amount by which spending exceeds revenue for a period.",
+      ""
+    ],
+    [
+      "What is a budget surplus?",
+      "The amount by which revenue exceeds spending for a period.",
+      ""
+    ],
+    [
+      "What does a legislative committee do?",
+      "Studies an assigned topic, holds hearings, or reviews bills.",
+      ""
+    ],
+    [
+      "What is a census used for when drawing election districts?",
+      "Providing population data.",
+      ""
+    ],
+    [
+      "What is diplomatic recognition?",
+      "A government’s formal acknowledgment of a state or government.",
+      ""
+    ],
+    [
+      "What is an embassy?",
+      "A country’s official diplomatic mission in another country.",
+      ""
+    ],
+    [
+      "What is a consul commonly responsible for?",
+      "Services such as helping citizens abroad and processing visas.",
+      ""
+    ],
+    [
+      "What is a public referendum’s main distinction from a vote for an elected official?",
+      "Voters decide a specific proposal rather than select a person to hold office.",
+      ""
+    ],
+    [
+      "What is political asylum generally intended to offer?",
+      "Protection for people who qualify because they face persecution.",
+      ""
+    ],
+    [
+      "What is a caretaker government?",
+      "A temporary administration that handles government business during a transition.",
+      ""
+    ],
+    [
+      "What is a conflict of interest for a public official?",
+      "A personal interest that can interfere with an official duty.",
+      ""
+    ],
+    [
+      "What does an elected representative do on behalf of constituents?",
+      "Participates in government decisions and represents their interests.",
+      ""
+    ],
+    [
+      "What is a voting district called in many parliamentary systems?",
+      "A constituency or riding, depending on the country.",
+      ""
+    ],
+    [
+      "What is a candidate’s platform?",
+      "The policies and goals the candidate says they would pursue.",
+      ""
+    ],
+    [
+      "What is a polling place?",
+      "A location where voters cast ballots in person.",
+      ""
+    ],
+    [
+      "What does voter turnout measure?",
+      "How many eligible or registered voters participate, depending on the measure.",
+      ""
+    ],
+    [
+      "What is redistricting?",
+      "Redrawing the boundaries of electoral districts.",
+      ""
+    ],
+    [
+      "What is a majority vote?",
+      "A vote with more than half of the relevant votes or members in favor.",
+      ""
+    ],
+    [
+      "What is a plurality in a vote?",
+      "More votes than any other option, even if the total is below half.",
+      ""
+    ],
+    [
+      "What is a supermajority?",
+      "A requirement greater than a simple majority, such as two-thirds.",
+      ""
+    ],
+    [
+      "What are legislative hearings used to gather?",
+      "Information and testimony about legislation or a public issue.",
+      ""
+    ],
+    [
+      "What is an executive agency?",
+      "A government organization that carries out laws or provides public services.",
+      ""
+    ],
+    [
+      "What is a regulation?",
+      "A rule issued by an authorized government body to implement or administer law.",
+      ""
+    ],
+    [
+      "What does government oversight involve?",
+      "Checking how public bodies use their authority and money.",
+      ""
+    ],
+    [
+      "What is a public audit used to examine?",
+      "Financial records, compliance, or performance involving public resources.",
+      ""
+    ],
+    [
+      "What does the term separation of powers mean?",
+      "Dividing government authority among institutions with different responsibilities.",
+      ""
+    ],
+    [
+      "What is a check and balance designed to limit?",
+      "The ability of one branch or institution to exercise unchecked power.",
+      ""
+    ],
+    [
+      "What is a political coalition?",
+      "Groups or parties cooperating toward a common political goal.",
+      ""
+    ],
+    [
+      "What does a legislature’s upper chamber refer to?",
+      "One of the two houses in some legislatures, such as the U.S. Senate.",
+      ""
+    ],
+    [
+      "What is a public consultation?",
+      "An effort to gather people’s views before making a public decision.",
+      ""
+    ],
+    [
+      "What is a treaty generally used to record?",
+      "An agreement between states or other parties with treaty-making authority.",
+      ""
     ]
   ],
   "Entertainment": [
@@ -888,6 +1548,226 @@ const triviaBanks = {
       "What is a leitmotif?",
       "A short musical idea associated with a character, place, or theme.",
       "When the tune returns, it can remind you of a character even before they appear."
+    ],
+    [
+      "What is a curtain call?",
+      "The performers return to acknowledge applause.",
+      ""
+    ],
+    [
+      "What is a dress rehearsal?",
+      "A rehearsal using the costumes and other production elements planned for the show.",
+      ""
+    ],
+    [
+      "What is a matinee?",
+      "A performance held in the daytime, often in the afternoon.",
+      ""
+    ],
+    [
+      "What is an intermission?",
+      "A break between parts of a performance.",
+      ""
+    ],
+    [
+      "What is an overture?",
+      "Music played at the beginning of certain stage works.",
+      ""
+    ],
+    [
+      "What is a libretto?",
+      "The text of an opera or similar musical work.",
+      ""
+    ],
+    [
+      "What is an aria?",
+      "A solo vocal piece, often heard in an opera.",
+      ""
+    ],
+    [
+      "What is an ensemble cast?",
+      "A cast in which several performers share significant roles.",
+      ""
+    ],
+    [
+      "What does a choreographer create?",
+      "Movements or dances for a performance.",
+      ""
+    ],
+    [
+      "What is a rehearsal mark used for in sheet music?",
+      "Helping musicians locate a specific place quickly.",
+      ""
+    ],
+    [
+      "What is syncopation?",
+      "Emphasis on parts of the beat where the listener might not expect it.",
+      ""
+    ],
+    [
+      "What is a duet?",
+      "A piece performed by two musicians, singers, or dancers.",
+      ""
+    ],
+    [
+      "What is a cappella singing?",
+      "Singing without instrumental accompaniment.",
+      ""
+    ],
+    [
+      "What is a cover version of a song?",
+      "A new performance or recording of a song previously performed or recorded by someone else.",
+      ""
+    ],
+    [
+      "What is a soundcheck?",
+      "A test of microphones, instruments, and speakers before a performance.",
+      ""
+    ],
+    [
+      "What is a voice actor’s main tool in animation?",
+      "Their voice.",
+      ""
+    ],
+    [
+      "What is a Foley-style sound effect used for in an audio drama?",
+      "Making actions audible, such as opening a door or walking on gravel.",
+      ""
+    ],
+    [
+      "What is puppetry?",
+      "Storytelling or performance using figures controlled by a performer.",
+      ""
+    ],
+    [
+      "What is a graphic novel?",
+      "A book-length work told largely through sequential pictures and text.",
+      ""
+    ],
+    [
+      "What is a touring production?",
+      "A show that travels to perform in multiple locations.",
+      ""
+    ],
+    [
+      "What is a residency in live entertainment?",
+      "A series of performances by an act at the same venue over a period.",
+      ""
+    ],
+    [
+      "What is a cold open?",
+      "A scene or sequence shown before the title or opening credits.",
+      ""
+    ],
+    [
+      "What is a pilot episode usually created to demonstrate?",
+      "How a proposed television series could work.",
+      ""
+    ],
+    [
+      "What is an audiobook narrator responsible for?",
+      "Performing the written text aloud for listeners.",
+      ""
+    ],
+    [
+      "What is a stage manager responsible for during a live show?",
+      "Coordinating backstage activity and calling cues.",
+      ""
+    ],
+    [
+      "What is a swing in musical theater?",
+      "A performer who learns several ensemble roles and can cover them as needed.",
+      ""
+    ],
+    [
+      "What is a theater prop?",
+      "An object used or handled during a performance.",
+      ""
+    ],
+    [
+      "What does a lighting cue tell a theater crew to do?",
+      "Make a planned lighting change at a particular moment.",
+      ""
+    ],
+    [
+      "What is an orchestra pit?",
+      "A space usually below the stage where musicians play.",
+      ""
+    ],
+    [
+      "What is a recital?",
+      "A performance featuring a soloist or a small group.",
+      ""
+    ],
+    [
+      "What is a musical motif?",
+      "A short recognizable musical idea that can return or develop.",
+      ""
+    ],
+    [
+      "What does a song’s chorus usually do?",
+      "Repeats a central part of the song.",
+      ""
+    ],
+    [
+      "What is a bridge in a song?",
+      "A section that contrasts with the main repeating parts.",
+      ""
+    ],
+    [
+      "What does it mean to transpose a song?",
+      "Move it to a different key while preserving the relationships between notes.",
+      ""
+    ],
+    [
+      "What is a medley?",
+      "Several songs or themes joined into one performance.",
+      ""
+    ],
+    [
+      "What does a conductor use a baton to communicate?",
+      "Timing, rhythm, and other musical cues.",
+      ""
+    ],
+    [
+      "What is a string quartet typically made up of?",
+      "Two violins, a viola, and a cello.",
+      ""
+    ],
+    [
+      "What is scat singing?",
+      "Using improvised syllables and sounds in place of conventional lyrics.",
+      ""
+    ],
+    [
+      "What is a stage monologue?",
+      "A sustained speech by one performer.",
+      ""
+    ],
+    [
+      "What is a comedy double act?",
+      "Two performers who work together as a comedy team.",
+      ""
+    ],
+    [
+      "What is a festival headliner?",
+      "A featured act given top billing.",
+      ""
+    ],
+    [
+      "What is a live album made from?",
+      "Recordings of performances in front of an audience.",
+      ""
+    ],
+    [
+      "What is a television spinoff?",
+      "A new series developed from an existing show’s character, setting, or premise.",
+      ""
+    ],
+    [
+      "What is a radio serial?",
+      "A story told in installments across multiple broadcasts.",
+      ""
     ]
   ],
   "Science & Nature": [
@@ -970,6 +1850,226 @@ const triviaBanks = {
       "Why does an echo take longer to return from a more distant wall?",
       "The sound has farther to travel there and back.",
       "The sound travels at roughly the same speed in the same air, so a longer trip takes more time."
+    ],
+    [
+      "Why does a mirror reverse the apparent direction of depth?",
+      "Its reflected image appears as far behind the mirror as the object is in front.",
+      ""
+    ],
+    [
+      "What makes a rainbow show different colors?",
+      "Light bends by different amounts as it passes through water droplets.",
+      ""
+    ],
+    [
+      "Why does a shadow change length during the day?",
+      "The Sun’s apparent height in the sky changes.",
+      ""
+    ],
+    [
+      "Which part of a plant cell usually contains chlorophyll?",
+      "The chloroplast.",
+      ""
+    ],
+    [
+      "What is evaporation?",
+      "A liquid changing to a gas at its surface.",
+      ""
+    ],
+    [
+      "Why can sweating help cool you down?",
+      "Evaporating sweat removes heat from your skin.",
+      ""
+    ],
+    [
+      "What does a thermometer measure?",
+      "Temperature.",
+      ""
+    ],
+    [
+      "What is a physical change that turns liquid water into solid water?",
+      "Freezing.",
+      ""
+    ],
+    [
+      "What force keeps planets in orbit around the Sun?",
+      "Gravity.",
+      ""
+    ],
+    [
+      "Why do we see changing phases of the Moon?",
+      "We see different portions of its sunlit half as it orbits Earth.",
+      ""
+    ],
+    [
+      "What alignment is needed for a solar eclipse?",
+      "The Moon passes between Earth and the Sun.",
+      ""
+    ],
+    [
+      "What do mushrooms release to help reproduce?",
+      "Spores.",
+      ""
+    ],
+    [
+      "What do decomposers do in an ecosystem?",
+      "Break down dead material and help return nutrients to the surroundings.",
+      ""
+    ],
+    [
+      "What are lichens made of?",
+      "A fungus living with photosynthetic partners such as algae or cyanobacteria.",
+      ""
+    ],
+    [
+      "Why does ice float on liquid water?",
+      "Ice is less dense than liquid water.",
+      ""
+    ],
+    [
+      "What gives a compass needle its direction?",
+      "Earth’s magnetic field.",
+      ""
+    ],
+    [
+      "What is an earthquake’s epicenter?",
+      "The point on Earth’s surface directly above where the earthquake starts.",
+      ""
+    ],
+    [
+      "What is a fossil?",
+      "Preserved evidence of past life.",
+      ""
+    ],
+    [
+      "How can researchers isolate the effect of one variable in an experiment?",
+      "A comparison between groups treated alike except for the factor being tested.",
+      ""
+    ],
+    [
+      "Why does food spoil more slowly in a refrigerator?",
+      "Low temperatures slow many microbes and reactions that spoil food.",
+      ""
+    ],
+    [
+      "What does insulation do in a house?",
+      "Slows the transfer of heat.",
+      ""
+    ],
+    [
+      "Why can a metal spoon feel colder than wood in the same room?",
+      "Metal carries heat away from your skin faster.",
+      ""
+    ],
+    [
+      "What is nocturnal activity?",
+      "Being active mainly at night.",
+      ""
+    ],
+    [
+      "What is a seed’s stored food used for?",
+      "Helping the seedling grow before it can make enough of its own food.",
+      ""
+    ],
+    [
+      "What organ pumps blood through most animals with a closed circulatory system?",
+      "The heart.",
+      ""
+    ],
+    [
+      "What substance in red blood cells carries most of the oxygen in human blood?",
+      "Hemoglobin.",
+      ""
+    ],
+    [
+      "Why can some seeds spread far from their parent plant?",
+      "Wind, water, or animals can carry them away.",
+      ""
+    ],
+    [
+      "What term describes an animal that eats both plants and animals?",
+      "Omnivore.",
+      ""
+    ],
+    [
+      "What is camouflage used for by animals?",
+      "Blending in to avoid detection or approach prey.",
+      ""
+    ],
+    [
+      "What kind of organism is a yeast?",
+      "A fungus.",
+      ""
+    ],
+    [
+      "What is pollination?",
+      "The transfer of pollen to a part of a plant where it can enable fertilization.",
+      ""
+    ],
+    [
+      "What is a food web?",
+      "A network of feeding relationships in an ecosystem.",
+      ""
+    ],
+    [
+      "What is a biome?",
+      "A broad ecological region with characteristic climate and communities.",
+      ""
+    ],
+    [
+      "Why can a tree lose water through its leaves?",
+      "Water vapor escapes through small openings called stomata.",
+      ""
+    ],
+    [
+      "What is magma called after it reaches Earth’s surface?",
+      "Lava.",
+      ""
+    ],
+    [
+      "What causes most ocean tides on Earth?",
+      "The Moon’s gravity, with an additional effect from the Sun.",
+      ""
+    ],
+    [
+      "What device records ground motion during an earthquake?",
+      "A seismometer.",
+      ""
+    ],
+    [
+      "What layer of the atmosphere contains most of the weather we experience?",
+      "The troposphere.",
+      ""
+    ],
+    [
+      "Why can you hear a distant echo after making a loud sound?",
+      "The sound traveled to a surface and bounced back.",
+      ""
+    ],
+    [
+      "What makes a substance a good electrical conductor?",
+      "Electric charge can move through it easily.",
+      ""
+    ],
+    [
+      "What does a prism do to white light that enters at an angle?",
+      "It can separate it into colors because each wavelength bends differently.",
+      ""
+    ],
+    [
+      "What is condensation?",
+      "A gas changing into a liquid.",
+      ""
+    ],
+    [
+      "What does a pH below 7 usually indicate in water at room temperature?",
+      "An acidic solution.",
+      ""
+    ],
+    [
+      "What is the main difference between weather and climate?",
+      "Weather describes conditions at a particular time, and climate describes patterns over many years.",
+      ""
     ]
   ],
   "Sports & Inventions": [
@@ -1052,6 +2152,226 @@ const triviaBanks = {
       "How many innings are scheduled in a standard Major League Baseball game?",
       "Nine innings.",
       "Each inning gives both teams a turn to bat, though the home team can skip its final turn if it is already ahead."
+    ],
+    [
+      "How many players are on the court for one basketball team during ordinary play?",
+      "Five.",
+      ""
+    ],
+    [
+      "What line marks the distance for a three-point shot in basketball?",
+      "The three-point arc and its corner segments.",
+      ""
+    ],
+    [
+      "What is the point that immediately wins a tennis match called?",
+      "Match point.",
+      ""
+    ],
+    [
+      "What happens when a baseball batter hits a fair ball out of the park over the fence?",
+      "A home run.",
+      ""
+    ],
+    [
+      "What is a relay race?",
+      "A race in which teammates each complete part of the course.",
+      ""
+    ],
+    [
+      "What does a decathlon combine?",
+      "Ten track-and-field events.",
+      ""
+    ],
+    [
+      "What tool measures elapsed time in a race?",
+      "A stopwatch or electronic timing system.",
+      ""
+    ],
+    [
+      "What is an assist in many team sports?",
+      "A contribution, usually a pass, that directly helps a teammate score.",
+      ""
+    ],
+    [
+      "What does a goalkeeper primarily defend?",
+      "The goal.",
+      ""
+    ],
+    [
+      "What is a hat trick in soccer?",
+      "Three goals by one player in a match.",
+      ""
+    ],
+    [
+      "What is a caddie’s role in golf?",
+      "Carrying clubs and helping a golfer make decisions.",
+      ""
+    ],
+    [
+      "What is a par in golf?",
+      "The expected number of strokes for a hole or course.",
+      ""
+    ],
+    [
+      "What is a microscope designed to do?",
+      "Make small objects or details easier to see.",
+      ""
+    ],
+    [
+      "What is a periscope designed to let you see?",
+      "An area that lies above or beyond an obstruction.",
+      ""
+    ],
+    [
+      "What is the purpose of gears in a clock?",
+      "Transmitting motion at the ratios needed to measure time.",
+      ""
+    ],
+    [
+      "What does a battery convert into electrical energy during discharge?",
+      "Chemical energy.",
+      ""
+    ],
+    [
+      "Why do ball bearings help a wheel turn more freely?",
+      "Rolling surfaces reduce friction compared with sliding surfaces.",
+      ""
+    ],
+    [
+      "What is a wrench designed to grip and turn?",
+      "A nut, bolt, or similar fastener.",
+      ""
+    ],
+    [
+      "What lets a refrigerator keep its inside cooler than the room?",
+      "A system that moves heat out of the interior.",
+      ""
+    ],
+    [
+      "What does a sewing machine’s needle carry through fabric?",
+      "Thread.",
+      ""
+    ],
+    [
+      "What does the spring in a retractable ballpoint pen help move?",
+      "The pen’s tip mechanism.",
+      ""
+    ],
+    [
+      "What simple machine is a seesaw an example of?",
+      "A lever.",
+      ""
+    ],
+    [
+      "What component lets a bicycle rider stop pedaling while the wheel keeps turning?",
+      "A freewheel or freehub.",
+      ""
+    ],
+    [
+      "What does a projector do with an image?",
+      "Directs light to display an enlarged image on a surface.",
+      ""
+    ],
+    [
+      "How many strikes ordinarily make a batter strike out in baseball?",
+      "Three.",
+      ""
+    ],
+    [
+      "What protective piece of equipment covers a catcher’s face in baseball?",
+      "A catcher’s mask.",
+      ""
+    ],
+    [
+      "What part of the soccer field is a penalty kick taken from?",
+      "The penalty mark.",
+      ""
+    ],
+    [
+      "What is a substitution in team sports?",
+      "Replacing a player with another eligible player.",
+      ""
+    ],
+    [
+      "What is overtime used for in games that require a winner?",
+      "Adding play after regulation to help decide a tie.",
+      ""
+    ],
+    [
+      "What is a sprint?",
+      "A race over a short distance at high speed.",
+      ""
+    ],
+    [
+      "What is a lap in a track race?",
+      "One full trip around the track.",
+      ""
+    ],
+    [
+      "What is a pool lane rope designed to do besides marking a lane?",
+      "Reduce waves passing between lanes.",
+      ""
+    ],
+    [
+      "Which sport uses a shuttlecock?",
+      "Badminton.",
+      ""
+    ],
+    [
+      "Which sport uses a foil, épée, or sabre?",
+      "Fencing.",
+      ""
+    ],
+    [
+      "What tool lets you measure atmospheric pressure?",
+      "A barometer.",
+      ""
+    ],
+    [
+      "What tool measures the speed of wind?",
+      "An anemometer.",
+      ""
+    ],
+    [
+      "What does a telescope help an observer do?",
+      "See faraway objects in greater detail.",
+      ""
+    ],
+    [
+      "What is a ratchet designed to allow?",
+      "Movement in one direction while limiting movement in the other.",
+      ""
+    ],
+    [
+      "What does a thermostat control?",
+      "Heating or cooling in response to temperature.",
+      ""
+    ],
+    [
+      "What is the purpose of shock absorbers on a vehicle?",
+      "Damping the oscillations of the suspension after bumps.",
+      ""
+    ],
+    [
+      "What does a funnel help direct?",
+      "Liquid or loose material into a small opening.",
+      ""
+    ],
+    [
+      "What lets a vacuum cleaner pick up dust?",
+      "Moving air drawn in by a pressure difference.",
+      ""
+    ],
+    [
+      "What does a lever pivot on?",
+      "A fulcrum.",
+      ""
+    ],
+    [
+      "What is a bicycle dynamo designed to generate?",
+      "Electricity as the wheel turns.",
+      ""
     ]
   ],
   "World History": [
@@ -1174,6 +2494,186 @@ const triviaBanks = {
       "What did wall graffiti in Pompeii reveal about politics just before Mount Vesuvius erupted?",
       "People were campaigning for a local election.",
       "Messages painted on walls show that Roman towns used public spaces to promote candidates."
+    ],
+    [
+      "What did the Marshall Plan finance after World War II?",
+      "Economic recovery in participating European countries.",
+      ""
+    ],
+    [
+      "What did the Good Friday Agreement help establish in Northern Ireland?",
+      "A power-sharing framework and arrangements for cooperation.",
+      ""
+    ],
+    [
+      "What did Poland’s 1989 Round Table negotiations help make possible?",
+      "Partly free elections and a transition away from communist rule.",
+      ""
+    ],
+    [
+      "What was a major effect of the 1804 declaration of Haitian independence?",
+      "It established Haiti as an independent state following a revolution against slavery and colonial rule.",
+      ""
+    ],
+    [
+      "What system did Russia abolish in 1861 under Alexander II?",
+      "Serfdom.",
+      ""
+    ],
+    [
+      "What did the 1863 U.S. Emancipation Proclamation declare about enslaved people in areas then in rebellion?",
+      "It declared them free, subject to the terms of the proclamation.",
+      ""
+    ],
+    [
+      "What did the abolition of the Corn Laws in Britain in 1846 remove?",
+      "Restrictions that protected domestic grain producers from cheaper imports.",
+      ""
+    ],
+    [
+      "Who signed the Treaty of Waitangi in 1840?",
+      "Representatives of the British Crown and many Māori chiefs. The English and Māori texts differ.",
+      ""
+    ],
+    [
+      "What international trade system did the World Trade Organization begin administering in 1995?",
+      "Agreements setting shared rules for trade among its members.",
+      ""
+    ],
+    [
+      "What policy did the 1973 Arab oil embargo use to pressure certain countries?",
+      "Restricting oil exports to targeted countries.",
+      ""
+    ],
+    [
+      "What did the Schuman Declaration propose pooling in 1950?",
+      "French and West German coal and steel production under a common authority open to other European countries.",
+      ""
+    ],
+    [
+      "What responsibilities did the 1948 creation of Britain’s National Health Service give the government?",
+      "Organizing a public health service intended to make care broadly available.",
+      ""
+    ],
+    [
+      "What did the 1947 partition of British India create?",
+      "The independent dominions of India and Pakistan.",
+      ""
+    ],
+    [
+      "What did the 1974 Carnation Revolution bring to an end in Portugal?",
+      "The authoritarian Estado Novo regime.",
+      ""
+    ],
+    [
+      "What agreement took effect in 1994 and reduced trade barriers across Canada, Mexico, and the United States?",
+      "The North American Free Trade Agreement, or NAFTA.",
+      ""
+    ],
+    [
+      "What did the 1911 Revolution bring to an end in China?",
+      "The Qing dynasty, China’s last imperial dynasty.",
+      ""
+    ],
+    [
+      "What did the 1921 Anglo-Irish Treaty lead to in most of Ireland?",
+      "Creation of the Irish Free State.",
+      ""
+    ],
+    [
+      "What did the 1989 Velvet Revolution bring about in Czechoslovakia?",
+      "The end of communist rule and a transition toward democracy.",
+      ""
+    ],
+    [
+      "What did Czechoslovakia split into in 1993?",
+      "The Czech Republic and Slovakia.",
+      ""
+    ],
+    [
+      "What did Greece return to in 1974 after the military junta fell?",
+      "Democratic government.",
+      ""
+    ],
+    [
+      "What did Spain’s 1978 Constitution establish as the form of government?",
+      "A parliamentary monarchy.",
+      ""
+    ],
+    [
+      "Which empire lost control of most of its American mainland colonies in the early 1800s?",
+      "Spain.",
+      ""
+    ],
+    [
+      "What did the 1803 Louisiana Purchase transfer to the United States?",
+      "A vast territory previously controlled by France.",
+      ""
+    ],
+    [
+      "What did Brazil declare in 1822?",
+      "Independence from Portugal.",
+      ""
+    ],
+    [
+      "What did the Indian Constitution establish when it took effect in 1950?",
+      "A republic governed under a written constitution.",
+      ""
+    ],
+    [
+      "What did the Salt March protest in British-ruled India?",
+      "British control and taxation of salt.",
+      ""
+    ],
+    [
+      "What changed when the Philippines gained independence in 1946?",
+      "It became an independent republic after a period of U.S. rule.",
+      ""
+    ],
+    [
+      "What system did the Soviet Union use to set industrial targets in its Five-Year Plans?",
+      "Central economic planning.",
+      ""
+    ],
+    [
+      "What did the introduction of the euro replace in participating countries?",
+      "Their national currencies for everyday payments.",
+      ""
+    ],
+    [
+      "What brought down the last German emperor in 1918?",
+      "Abdication during the revolution at the end of World War I.",
+      ""
+    ],
+    [
+      "What was the main purpose of the Zollverein among many German states?",
+      "To remove internal customs barriers and coordinate tariffs.",
+      ""
+    ],
+    [
+      "What did the 1871 unification of Germany establish?",
+      "The German Empire under Prussian leadership.",
+      ""
+    ],
+    [
+      "What kind of government did France’s 1789 revolution eventually overthrow?",
+      "The Bourbon monarchy.",
+      ""
+    ],
+    [
+      "Which country did Algeria gain independence from in 1962?",
+      "France.",
+      ""
+    ],
+    [
+      "What did the 1985 Schengen Agreement seek to reduce between participating European countries?",
+      "Checks at shared borders.",
+      ""
+    ],
+    [
+      "What did OPEC’s founding countries establish the organization to coordinate?",
+      "Petroleum policies among member countries.",
+      ""
     ]
   ]
 };
@@ -1181,7 +2681,7 @@ const triviaRows=[];
 const triviaSubjects=new Map();
 for(const [category,cards] of Object.entries(triviaBanks)){
     const rows=cards.map(([question,answer,explanation])=>{
-        plainNotes[question.trim().toLowerCase()]=explanation;
+        if (explanation) plainNotes[question.trim().toLowerCase()]=explanation;
         return [question,answer,category];
     });
     triviaRows.push(...rows);
@@ -1307,4 +2807,795 @@ const race = (() => {
     return {start};
 })();
 raceOpen.onclick = () => {race.start();raceDialog.showModal();};
+
+const expandedStudyDecks = new Map(Object.entries({
+  "Mythology": [
+    [
+      "Who is Athena in Greek mythology?",
+      "A goddess associated with wisdom and strategic warfare."
+    ],
+    [
+      "What is a phoenix in many later traditions?",
+      "A legendary bird associated with renewal and rebirth."
+    ],
+    [
+      "Who is Thor in Norse mythology?",
+      "A god associated with thunder."
+    ],
+    [
+      "What is Pegasus?",
+      "A winged horse in Greek mythology."
+    ],
+    [
+      "What is a griffin?",
+      "A legendary creature combining eagle and lion features."
+    ],
+    [
+      "Who is Anansi in Akan storytelling?",
+      "A trickster often portrayed as a spider."
+    ],
+    [
+      "Who is Amaterasu in Japanese tradition?",
+      "A sun kami central to Shinto mythology."
+    ],
+    [
+      "What is the Epic of Gilgamesh?",
+      "An ancient Mesopotamian epic concerning kingship, friendship and mortality."
+    ],
+    [
+      "Who is Cú Chulainn?",
+      "A hero of the Irish Ulster Cycle."
+    ],
+    [
+      "What is Ragnarök?",
+      "A sequence of catastrophic events and renewal in Norse mythology."
+    ],
+    [
+      "Who is Odin in Norse mythology?",
+      "A god associated with wisdom, poetry, magic and war."
+    ],
+    [
+      "What is Sleipnir in Norse mythology?",
+      "Odin’s eight-legged horse."
+    ],
+    [
+      "What is Cerberus in Greek mythology?",
+      "A dog guarding the underworld, commonly depicted with three heads."
+    ],
+    [
+      "In Greek mythology, who is associated with the sea and earthquakes?",
+      "Poseidon."
+    ],
+    [
+      "In Norse mythology, whose horse is Sleipnir?",
+      "Odin's."
+    ],
+    [
+      "What is a cosmogony?",
+      "An account of the origin of the cosmos."
+    ],
+    [
+      "What is a mythological motif?",
+      "A recurring narrative element or image."
+    ],
+    [
+      "Why distinguish myth from falsehood in scholarship?",
+      "Myth can denote a culturally significant traditional narrative, not a judgment about truth."
+    ],
+    [
+      "What is euhemerism?",
+      "Interpreting gods or mythical figures as derived from historical humans."
+    ],
+    [
+      "In Greek mythology, who flew using wings made with feathers and wax?",
+      "Daedalus and his son Icarus."
+    ],
+    [
+      "Which ancient Mesopotamian epic features Enkidu?",
+      "The Epic of Gilgamesh."
+    ],
+    [
+      "Why can different accounts of the same myth disagree?",
+      "Stories change through oral transmission, local traditions and literary adaptation."
+    ],
+    [
+      "What is a structuralist approach to myth?",
+      "Analyzing relationships and oppositions within narratives."
+    ],
+    [
+      "Why is provenance important in folklore research?",
+      "It identifies the source, context and transmission of a narrative."
+    ],
+    [
+      "Why avoid assuming similar myths share one origin?",
+      "Similar motifs can arise independently or through transmission; evidence is needed."
+    ],
+    [
+      "Why distinguish living sacred traditions from literary retellings?",
+      "Their cultural meanings, authority and appropriate treatment may differ."
+    ],
+    [
+      "Why does motif similarity alone not establish historical transmission?",
+      "Independent invention is possible; chronology and evidence of contact are also needed."
+    ],
+    [
+      "Why identify a specific community when discussing Indigenous sacred narratives?",
+      "Traditions differ, and communities may have distinct permissions and protocols."
+    ],
+    [
+      "Which Greek goddess searches for Persephone after she is taken to the underworld?",
+      "Demeter."
+    ],
+    [
+      "What did Ariadne give Theseus to help him find his way out of the Labyrinth?",
+      "A thread or ball of thread."
+    ],
+    [
+      "What part of the Minotaur resembled a bull in the usual Greek depiction?",
+      "Its head."
+    ],
+    [
+      "Why does Orpheus lose Eurydice again in a well-known version of the Greek myth?",
+      "He looks back before she reaches the world of the living."
+    ],
+    [
+      "Which Greek figure steals fire for humans?",
+      "Prometheus."
+    ],
+    [
+      "What task was Sisyphus condemned to repeat?",
+      "Rolling a stone uphill, only to have it roll back down."
+    ],
+    [
+      "What happened to things King Midas touched in the story of his wish?",
+      "They turned to gold."
+    ],
+    [
+      "Who devised the wings used by Icarus and his father to escape?",
+      "Daedalus."
+    ],
+    [
+      "Who kills Medusa in Greek mythology?",
+      "Perseus."
+    ],
+    [
+      "What power did Medusa’s gaze have in Greek myth?",
+      "It could turn people to stone."
+    ],
+    [
+      "Which Greek goddess is often depicted with a bow and linked to hunting?",
+      "Artemis."
+    ],
+    [
+      "Which Greek god is often shown carrying a lyre and linked with prophecy?",
+      "Apollo."
+    ],
+    [
+      "Which Greek god is associated with wine and theater?",
+      "Dionysus."
+    ],
+    [
+      "Which Greek god acts as a messenger and is often depicted with winged sandals?",
+      "Hermes."
+    ],
+    [
+      "Who is the Greek goddess associated with the hearth?",
+      "Hestia."
+    ],
+    [
+      "What name is given to the great tree that connects worlds in Norse mythology?",
+      "Yggdrasil."
+    ],
+    [
+      "Which Norse god guards the bridge associated with the gods’ realm?",
+      "Heimdall."
+    ],
+    [
+      "Which Norse god loses a hand when the gods bind the wolf Fenrir?",
+      "Týr."
+    ],
+    [
+      "What kind of creature is Fenrir in Norse tradition?",
+      "A giant wolf."
+    ],
+    [
+      "What are Odin’s two ravens called?",
+      "Huginn and Muninn."
+    ],
+    [
+      "What is the rainbow bridge in Norse mythology called?",
+      "Bifröst."
+    ],
+    [
+      "Which Norse goddess is associated with love and receives some of the fallen warriors in the sources?",
+      "Freyja."
+    ],
+    [
+      "Who is commonly called the trickster among the Norse gods?",
+      "Loki."
+    ],
+    [
+      "Which Egyptian god is often shown with a jackal-like head and associated with embalming?",
+      "Anubis."
+    ],
+    [
+      "Which Egyptian god is killed and restored in a myth involving Isis?",
+      "Osiris."
+    ],
+    [
+      "What was a person’s heart weighed against in Egyptian judgment scenes?",
+      "The feather of Ma’at."
+    ],
+    [
+      "Which Egyptian god is commonly represented as a falcon or falcon-headed figure?",
+      "Horus."
+    ],
+    [
+      "Which Egyptian goddess was the mother of Horus in the story of Osiris?",
+      "Isis."
+    ],
+    [
+      "Which legendary king is linked with a sword called Excalibur?",
+      "King Arthur."
+    ],
+    [
+      "What is the legendary object that Arthur’s knights are often said to seek?",
+      "The Holy Grail."
+    ],
+    [
+      "In Irish legend, what did Fionn mac Cumhaill taste to gain wisdom?",
+      "The Salmon of Knowledge."
+    ],
+    [
+      "Which feathered serpent deity is associated with the Aztecs?",
+      "Quetzalcoatl."
+    ]
+  ],
+  "Religion": [
+    [
+      "What is a sacred text?",
+      "A text regarded as sacred by a religious community."
+    ],
+    [
+      "What is a synagogue?",
+      "A Jewish place of worship and community gathering."
+    ],
+    [
+      "What is a mosque?",
+      "A Muslim place of worship."
+    ],
+    [
+      "What is Diwali?",
+      "A festival of lights observed in several religious traditions, with differing meanings."
+    ],
+    [
+      "What is Vesak?",
+      "A Buddhist observance commemorating events in the life of the Buddha."
+    ],
+    [
+      "What is the Guru Granth Sahib?",
+      "The central sacred scripture and eternal Guru in Sikhism."
+    ],
+    [
+      "What is Shinto?",
+      "A Japanese religious tradition centered on kami and ritual practices."
+    ],
+    [
+      "What is the Torah?",
+      "In its narrow sense, the first five books of the Hebrew Bible."
+    ],
+    [
+      "What is Ramadan?",
+      "The Islamic month of fasting, prayer and reflection."
+    ],
+    [
+      "What is the Christian Easter celebration about?",
+      "Christians commemorate the resurrection of Jesus."
+    ],
+    [
+      "What is a pilgrimage?",
+      "A journey to a place of religious or spiritual significance."
+    ],
+    [
+      "What is a ritual?",
+      "A patterned action that can carry religious or cultural meaning."
+    ],
+    [
+      "What is Ramadan in Islam?",
+      "A lunar month during which eligible Muslims observe fasting from dawn to sunset."
+    ],
+    [
+      "What is comparative religion?",
+      "The systematic study of similarities and differences among religious traditions."
+    ],
+    [
+      "What is monotheism?",
+      "Belief in one God."
+    ],
+    [
+      "What is the distinction between emic and etic approaches?",
+      "Emic approaches emphasize insider perspectives; etic approaches use external analytical categories."
+    ],
+    [
+      "What is textual criticism?",
+      "Comparing manuscript witnesses to investigate textual transmission and variants."
+    ],
+    [
+      "What are the Vedas?",
+      "Ancient sacred Sanskrit texts central to Hindu traditions."
+    ],
+    [
+      "What is the Torah in its narrow textual sense?",
+      "The first five books of the Hebrew Bible."
+    ],
+    [
+      "Why should scholars avoid treating a religion as internally uniform?",
+      "Beliefs and practices vary across communities, time and place."
+    ],
+    [
+      "Why distinguish theology from religious studies?",
+      "Theology often examines claims within a tradition; religious studies can analyze traditions without affirming those claims."
+    ],
+    [
+      "What is methodological agnosticism?",
+      "A research approach that brackets judgments about supernatural truth claims."
+    ],
+    [
+      "Why avoid treating a religion as homogeneous?",
+      "Practices and interpretations vary across communities, periods and individuals."
+    ],
+    [
+      "What is lived religion?",
+      "The study of how religion is practiced and experienced in everyday life."
+    ],
+    [
+      "What does an emic approach emphasize?",
+      "Understanding a tradition through participants' own categories and perspectives."
+    ],
+    [
+      "What is reflexivity in religious studies fieldwork?",
+      "Examining how the researcher's position and assumptions shape the research."
+    ],
+    [
+      "Why seek informed consent before recording a religious ritual?",
+      "To respect participants' autonomy and community restrictions on recording."
+    ],
+    [
+      "What is a gurdwara?",
+      "A Sikh place of worship and community gathering."
+    ],
+    [
+      "What is langar in the Sikh tradition?",
+      "A communal meal open to everyone."
+    ],
+    [
+      "Who is traditionally recognized as the first Sikh Guru?",
+      "Guru Nanak."
+    ],
+    [
+      "What is the Khalsa in Sikh tradition?",
+      "A community of initiated Sikhs."
+    ],
+    [
+      "What is the Qur’an?",
+      "The central sacred text of Islam."
+    ],
+    [
+      "What city do Muslims travel to for the Hajj pilgrimage?",
+      "Mecca."
+    ],
+    [
+      "What is a minaret?",
+      "A tower associated with a mosque, traditionally used for the call to prayer."
+    ],
+    [
+      "What does Eid al-Fitr mark?",
+      "The end of Ramadan."
+    ],
+    [
+      "What is zakat in Islam?",
+      "An obligation to give a prescribed share of qualifying wealth for charitable purposes."
+    ],
+    [
+      "What is a seder?",
+      "A ritual meal held during Passover."
+    ],
+    [
+      "What event does the Jewish festival of Passover recall?",
+      "The Exodus from Egypt in the biblical account."
+    ],
+    [
+      "What is Shabbat?",
+      "The Jewish weekly day of rest, observed from Friday evening to Saturday evening."
+    ],
+    [
+      "What is a menorah?",
+      "A Jewish lampstand with branches."
+    ],
+    [
+      "What is Yom Kippur?",
+      "The Jewish Day of Atonement."
+    ],
+    [
+      "What does a shofar traditionally consist of?",
+      "An animal horn, often a ram’s horn."
+    ],
+    [
+      "What is Advent in many Christian traditions?",
+      "A time of preparation for Christmas."
+    ],
+    [
+      "What is Lent in many Christian traditions?",
+      "A season of preparation leading up to Easter."
+    ],
+    [
+      "What does Pentecost commemorate in Christian tradition?",
+      "The coming of the Holy Spirit to Jesus’s followers."
+    ],
+    [
+      "What is a parable?",
+      "A short story used to teach a moral or spiritual point."
+    ],
+    [
+      "What is an icon in many Eastern Christian traditions?",
+      "A sacred image used in worship and prayer."
+    ],
+    [
+      "What is Holi?",
+      "A Hindu spring festival celebrated in different ways, often with colored powders."
+    ],
+    [
+      "What is a puja?",
+      "An act of worship or offering in traditions including Hinduism."
+    ],
+    [
+      "What is a mantra?",
+      "A sacred or meaningful sound, word, or phrase repeated in a practice such as prayer or meditation."
+    ],
+    [
+      "What is the Bhagavad Gita?",
+      "A Hindu scripture presented as a dialogue between Krishna and Arjuna."
+    ],
+    [
+      "Which religious tradition calls its liberated teachers Tirthankaras?",
+      "Jainism."
+    ],
+    [
+      "What does ahimsa mean in traditions such as Jainism?",
+      "Nonviolence or avoiding harm."
+    ],
+    [
+      "What is a stupa in Buddhism?",
+      "A monument that may hold relics or commemorate a sacred person or place."
+    ],
+    [
+      "What is a sangha in Buddhism?",
+      "A community of Buddhist practitioners, especially the monastic community in many contexts."
+    ],
+    [
+      "What are the Four Noble Truths concerned with?",
+      "Suffering or dissatisfaction, its cause, its cessation, and the path leading to its cessation."
+    ],
+    [
+      "In many Buddhist traditions, what is a mandala used to represent?",
+      "An ordered sacred space or cosmos used in ritual or meditation."
+    ],
+    [
+      "What kind of structure is a torii in Shinto practice?",
+      "A gate marking an entrance to a sacred area."
+    ],
+    [
+      "What are kami in Shinto traditions?",
+      "Sacred beings or presences associated with things such as natural places, ancestors, or shrines."
+    ],
+    [
+      "What does the term oral tradition mean in religious studies?",
+      "Passing stories, prayers, or teachings from person to person by speaking or performing them."
+    ]
+  ],
+  "Geography": [
+    [
+      "What is a continent?",
+      "One of Earth’s large land divisions."
+    ],
+    [
+      "Name the seven continents.",
+      "Africa, Antarctica, Asia, Australia, Europe, North America, South America."
+    ],
+    [
+      "What is the equator?",
+      "The imaginary line at 0° latitude."
+    ],
+    [
+      "What does latitude measure?",
+      "Position north or south of the equator, in degrees."
+    ],
+    [
+      "What does longitude measure?",
+      "Position east or west of the prime meridian, in degrees."
+    ],
+    [
+      "What is the prime meridian?",
+      "The reference line at 0° longitude."
+    ],
+    [
+      "What is the largest ocean?",
+      "The Pacific Ocean."
+    ],
+    [
+      "What is a peninsula?",
+      "Land surrounded by water on three sides."
+    ],
+    [
+      "What is an island?",
+      "Land surrounded by water."
+    ],
+    [
+      "What does a map scale show?",
+      "How distances on a map relate to real distances."
+    ],
+    [
+      "What is a watershed?",
+      "An area of land draining to a common outlet."
+    ],
+    [
+      "What is population density?",
+      "Population divided by land area."
+    ],
+    [
+      "What is a rain shadow?",
+      "A relatively dry area on the leeward side of a mountain range."
+    ],
+    [
+      "Which ocean lies between Africa and Australia?",
+      "Indian Ocean."
+    ],
+    [
+      "What does a map legend explain?",
+      "The meaning of map symbols and colors."
+    ],
+    [
+      "Which continent contains the Andes?",
+      "South America."
+    ],
+    [
+      "Why are many deserts found near 30 degrees latitude?",
+      "Descending dry air in atmospheric circulation suppresses rainfall."
+    ],
+    [
+      "Why do coastal areas often have milder temperatures?",
+      "Water heats and cools more slowly than land."
+    ],
+    [
+      "Why are earthquakes common around the Pacific Ring of Fire?",
+      "Many tectonic plate boundaries surround the Pacific."
+    ],
+    [
+      "What is the difference between latitude and longitude?",
+      "Latitude measures north or south of the equator; longitude measures east or west of the prime meridian."
+    ],
+    [
+      "Why can a map projection distort country sizes?",
+      "A curved surface cannot be flattened without distortion."
+    ],
+    [
+      "Why do latitude lines run parallel to the equator?",
+      "They identify angular distance north or south of the equator."
+    ],
+    [
+      "What is a drainage divide?",
+      "A boundary separating neighboring drainage basins."
+    ],
+    [
+      "How does the Coriolis effect influence winds?",
+      "Earth’s rotation deflects moving air right in the Northern Hemisphere and left in the Southern Hemisphere."
+    ],
+    [
+      "Why can rapid urbanization strain infrastructure?",
+      "Population growth may outpace housing, transport, water and sanitation capacity."
+    ],
+    [
+      "How does a demographic transition typically affect population growth?",
+      "Death rates fall before birth rates, accelerating growth temporarily; later falling birth rates slow growth."
+    ],
+    [
+      "What is an exclusive economic zone?",
+      "A maritime zone generally extending up to 200 nautical miles where a coastal state has specified resource rights."
+    ],
+    [
+      "How can ocean currents affect regional climate?",
+      "They redistribute heat, warming or cooling nearby coastal regions."
+    ],
+    [
+      "Why does a Mercator map exaggerate polar areas?",
+      "Its scale increases with distance from the equator."
+    ],
+    [
+      "What is spatial autocorrelation?",
+      "The degree to which nearby observations have related values."
+    ],
+    [
+      "What is the modifiable areal unit problem?",
+      "Statistical results can change with spatial aggregation scale or boundaries."
+    ],
+    [
+      "Why select a projected coordinate system before measuring planar area?",
+      "Angular coordinates do not directly provide consistent planar area units; an appropriate projection controls distortion."
+    ],
+    [
+      "What is an archipelago?",
+      "A group or chain of islands."
+    ],
+    [
+      "What is an isthmus?",
+      "A narrow strip of land connecting two larger land areas."
+    ],
+    [
+      "What is a strait?",
+      "A narrow waterway connecting larger bodies of water."
+    ],
+    [
+      "What is a river tributary?",
+      "A stream or river that flows into a larger stream or river."
+    ],
+    [
+      "What is the mouth of a river?",
+      "The place where a river flows into a sea, lake, or another body of water."
+    ],
+    [
+      "What forms a river delta?",
+      "Sediment deposited as a river slows where it enters a larger body of water."
+    ],
+    [
+      "What is a plateau?",
+      "A broad elevated area with a relatively level surface."
+    ],
+    [
+      "What is a fjord?",
+      "A long, narrow sea inlet formed in a glacial valley."
+    ],
+    [
+      "What is a floodplain?",
+      "Low ground next to a river that can flood when the river rises."
+    ],
+    [
+      "What is an estuary?",
+      "A coastal area where fresh river water mixes with seawater."
+    ],
+    [
+      "What is erosion?",
+      "The movement of weathered rock or soil by forces such as water, wind, or ice."
+    ],
+    [
+      "What is deposition in physical geography?",
+      "The laying down of sediment after it has been moved."
+    ],
+    [
+      "What is the difference between weathering and erosion?",
+      "Weathering breaks material down, and erosion moves it."
+    ],
+    [
+      "What do contour lines on a map connect?",
+      "Places at the same elevation."
+    ],
+    [
+      "What do close contour lines usually indicate?",
+      "A steep slope."
+    ],
+    [
+      "What does a globe represent that a flat world map has to distort?",
+      "Earth’s curved shape."
+    ],
+    [
+      "What do coordinates on a map identify?",
+      "The location of a point."
+    ],
+    [
+      "What ocean borders the western coast of South America?",
+      "The Pacific Ocean."
+    ],
+    [
+      "What sea lies between much of southern Europe and northern Africa?",
+      "The Mediterranean Sea."
+    ],
+    [
+      "Which mountain range is commonly used as part of the boundary between Europe and Asia?",
+      "The Ural Mountains."
+    ],
+    [
+      "Which river flows through Cairo?",
+      "The Nile."
+    ],
+    [
+      "Which river flows through Paris?",
+      "The Seine."
+    ],
+    [
+      "In which country is Mount Kilimanjaro?",
+      "Tanzania."
+    ],
+    [
+      "Which continent contains the Amazon River basin?",
+      "South America."
+    ],
+    [
+      "What country occupies most of the Arabian Peninsula?",
+      "Saudi Arabia."
+    ],
+    [
+      "What is a landlocked country?",
+      "A country with no coastline on an open sea or ocean."
+    ],
+    [
+      "What does urbanization measure when described as a population trend?",
+      "A rise in the share of people living in urban areas."
+    ],
+    [
+      "What is a megacity commonly defined as?",
+      "An urban area of at least 10 million people."
+    ]
+  ]
+}));
+Object.assign(fullNotes, {
+  "which greek goddess searches for persephone after she is taken to the underworld?": "The story connects a mother’s search with the seasonal cycle of growth and barrenness.",
+  "what did ariadne give theseus to help him find his way out of the labyrinth?": "The thread let Theseus retrace his steps through the maze after facing the Minotaur.",
+  "what part of the minotaur resembled a bull in the usual greek depiction?": "Greek and Roman art often shows the creature with a human body and a bull’s head.",
+  "why does orpheus lose eurydice again in a well-known version of the greek myth?": "The condition on their return makes a single moment of doubt central to the story.",
+  "which greek figure steals fire for humans?": "In the myth, giving humans fire brings them a powerful tool but provokes Zeus’s punishment.",
+  "what task was sisyphus condemned to repeat?": "His story gave us the word Sisyphean for a task that must be repeated without lasting progress.",
+  "what happened to things king midas touched in the story of his wish?": "The gift became a problem when he could no longer eat or drink normally.",
+  "who devised the wings used by icarus and his father to escape?": "The escape depends on the invention, but Icarus ignores the limits of the wings.",
+  "who kills medusa in greek mythology?": "In a well-known version, he uses a reflective shield to avoid looking at her directly.",
+  "what power did medusa’s gaze have in greek myth?": "That power explains why the hero has to devise a way to approach her without meeting her gaze.",
+  "which greek god is associated with wine and theater?": "Dramatic competitions in Athens formed part of festivals held in his honor.",
+  "what name is given to the great tree that connects worlds in norse mythology?": "The tree links different places in the Norse cosmos, making the world imaginable as a connected whole.",
+  "which norse god loses a hand when the gods bind the wolf fenrir?": "He places his hand in Fenrir’s mouth as a pledge, and the wolf bites it off when the gods secure the binding.",
+  "what are odin’s two ravens called?": "They fly across the world and report back to Odin, giving the god a way to learn what happens far away.",
+  "which egyptian god is killed and restored in a myth involving isis?": "Isis restores Osiris, who becomes associated with the realm of the dead.",
+  "what was a person’s heart weighed against in egyptian judgment scenes?": "Ma’at represents truth and order, so the scene uses a balance to picture moral judgment.",
+  "which legendary king is linked with a sword called excalibur?": "The stories were retold by writers over centuries, so the details of how Arthur gets the sword differ.",
+  "what is the legendary object that arthur’s knights are often said to seek?": "Medieval romances developed different accounts of the object and what finding it means.",
+  "in irish legend, what did fionn mac cumhaill taste to gain wisdom?": "In a well-known version he burns his thumb while cooking the salmon and tastes it by putting his thumb in his mouth.",
+  "which feathered serpent deity is associated with the aztecs?": "Feathered serpent figures appear in several Mesoamerican cultures, so names and stories vary across places and centuries.",
+  "what is langar in the sikh tradition?": "Preparing, serving, and sharing it puts the Sikh principles of service and equality into practice.",
+  "what is the khalsa in sikh tradition?": "Guru Gobind Singh established the Khalsa in 1699 as a community with a shared discipline and identity.",
+  "what is a menorah?": "The seven-branch Temple menorah and the nine-light Hanukkah lamp are related symbols with different uses.",
+  "what is the bhagavad gita?": "It forms part of the Mahabharata and discusses duty, action, and devotion."
+});
+const syncBeforeExpandedStudy = syncSubjects;
+syncSubjects = function() {
+    const selected = subject.value;
+    syncBeforeExpandedStudy();
+    for (const name of expandedStudyDecks.keys()) {
+        if (!Array.from(subject.options).some(option => option.value === name)) {
+            subject.add(new Option(name,name));
+        }
+    }
+    if (expandedStudyDecks.has(selected)) subject.value = selected;
+};
+const loadBeforeExpandedStudy = load;
+load = function() {
+    const name = subject.value;
+    if (expandedStudyDecks.has(name)) {
+        list = expandedStudyDecks.get(name).map(([question,answer]) => [question,answer,name]);
+        i=0;back=false;render();updatePet();
+        return;
+    }
+    loadBeforeExpandedStudy();
+    if (name === 'All subjects') {
+        const seen = new Set(list.map(row => row[0].trim().toLowerCase()));
+        for (const [category,rows] of expandedStudyDecks) {
+            for (const [question,answer] of rows) {
+                const key = question.trim().toLowerCase();
+                if (seen.has(key)) continue;
+                list.push([question,answer,category]);
+                seen.add(key);
+            }
+        }
+        render();
+    }
+};
+subject.onchange = load;
+level.onchange = () => {syncSubjects();load();};
+syncSubjects();load();
 </script></body></html>
