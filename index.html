@@ -51,8 +51,8 @@
 #party #fox .premiumCreature,#party #fox .creature{max-width:100%;max-height:100%;object-fit:contain;transform:none;animation:none}
 #partyMessage{align-self:start;margin:0;font-size:clamp(16px,4vw,24px)}
 
-</style></head><body><main><header><h1>Flip & Learn V8.18<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">Trivia Race · 3 players</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><details id="fullExplanation" class="fullExplanation" hidden><summary>Full explanation</summary><p id="fullExplanationText"></p></details><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
-  <h2 id="raceTitle">Trivia Race</h2>
+</style></head><body><main><header><h1>Flip & Learn V8.18<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">3 Player Trivia Challenge</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><details id="fullExplanation" class="fullExplanation" hidden><summary>Full explanation</summary><p id="fullExplanationText"></p></details><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button><button type="button" id="flipTutorialReplay" hidden>Play tutorial</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
+  <h2 id="raceTitle">3 Player Trivia Challenge</h2>
   <p>Take turns on one device. Say your answer before you reveal it. First to 20 correct answers wins.</p>
   <div id="raceAnimals"></div>
   <p id="raceTurn" role="status"></p>
@@ -611,7 +611,40 @@ const rewardControls=[rewardButton,wrongButton,level,subject,flip,...['prev','ne
 function lockReward(on){rewardControls.forEach(el=>el.disabled=on);}
 const originalTurn=turn;turn=function(){if(!celebrating)originalTurn();};card.onclick=flip.onclick=turn;
 const originalMove=move;move=function(n){if(!celebrating&&list.length)originalMove(n);};
-rewardButton.onclick=()=>{if(!back||celebrating||!list[i])return;celebrating=true;lockReward(true);const g=level.value,r=record(g),old=stage(r.correct.length),before=totalMastered(),k=key(),fresh=!r.correct.includes(k);if(fresh)r.correct.push(k);r.review=r.review.filter(x=>x!==k);save();updatePet();const n=r.correct.length,after=totalMastered(),unlocked=legendary.filter(x=>before<x[2]&&after>=x[2]);const fox=document.getElementById('fox');const newest=unlocked.at(-1), creature=newest?.[0]??g, count=newest?after-newest[2]:n;
+const celebrationChimes = [[523.25, 659.25, 783.99], [587.33, 739.99, 880], [659.25, 783.99, 1046.5], [783.99, 659.25, 880]];
+let celebrationChimeIndex = 0;
+let celebrationAudio;
+function playCelebrationChime() {
+    const Audio = window.AudioContext || window.webkitAudioContext;
+    if (!Audio) return;
+    try {
+        celebrationAudio ??= new Audio();
+        const audio = celebrationAudio;
+        const play = () => {
+            const start = audio.currentTime;
+            const chime = celebrationChimes[celebrationChimeIndex];
+            celebrationChimeIndex = (celebrationChimeIndex + 1) % celebrationChimes.length;
+            chime.forEach((frequency, index) => {
+                const time = start + index * 0.085;
+                const note = audio.createOscillator();
+                const volume = audio.createGain();
+                note.frequency.value = frequency;
+                volume.gain.setValueAtTime(0, time);
+                volume.gain.linearRampToValueAtTime(0.09, time + 0.015);
+                volume.gain.exponentialRampToValueAtTime(0.001, time + 0.18);
+                note.connect(volume);
+                volume.connect(audio.destination);
+                note.start(time);
+                note.stop(time + 0.19);
+            });
+        };
+        if (audio.state === 'running') play();
+        else audio.resume().then(play).catch(() => {});
+    } catch {
+        // Keep the celebration working when sound is unavailable.
+    }
+}
+rewardButton.onclick=()=>{if(!back||celebrating||!list[i])return;celebrating=true;playCelebrationChime();lockReward(true);const g=level.value,r=record(g),old=stage(r.correct.length),before=totalMastered(),k=key(),fresh=!r.correct.includes(k);if(fresh)r.correct.push(k);r.review=r.review.filter(x=>x!==k);save();updatePet();const n=r.correct.length,after=totalMastered(),unlocked=legendary.filter(x=>before<x[2]&&after>=x[2]);const fox=document.getElementById('fox');const newest=unlocked.at(-1), creature=newest?.[0]??g, count=newest?after-newest[2]:n;
 fox.dataset.pet=creature;fox.innerHTML=animal(creature,count);document.getElementById('partyMessage').textContent=[stage(n)>old?'Your animal has grown!':fresh?'Fantastic! +1 growth point':'Great practice! No extra growth point.',...unlocked.map(x=>x[1]+' unlocked!')].join(' · ');document.getElementById('party').hidden=false;showCelebration(fox,creature,stage(count));setTimeout(()=>{document.getElementById('party').hidden=true;fox.replaceChildren();celebrating=false;lockReward(false);move(1);},1900);};
 wrongButton.onclick=()=>{if(!back||celebrating||!list[i])return;const r=record(level.value),k=key();if(!r.correct.includes(k)&&!r.review.includes(k))r.review.push(k);save();updatePet();move(1);};
 save();updatePet();
@@ -7359,4 +7392,134 @@ load = function() {
 };
 subject.onchange=load;
 level.onchange=()=>{syncSubjects();load();};
-</script></body></html>
+</script><style>
+#flipTutorial{box-sizing:border-box;width:min(calc(100% - 32px),420px);padding:24px;border:1px solid #cedbd5;border-radius:12px;background:#fff;color:#173835;text-align:center}
+#flipTutorial::backdrop{background:#eef4f0}
+#flipTutorial .tutorialOpening{font-size:clamp(30px,8vw,46px);margin:42px 0}
+#flipTutorialStep[hidden]{display:none}
+#flipTutorial h2{margin:0 0 16px}
+#flipTutorialStep{display:grid;place-items:center;min-height:5em;margin:0 0 18px;font-size:1.15rem;line-height:1.4}
+#flipTutorialArt{height:176px;margin-bottom:12px}
+#flipTutorialArt img{width:176px;height:176px;object-fit:contain}
+#flipTutorialArt.tutorialRace{display:flex;align-items:center;justify-content:center;gap:8px}
+#flipTutorialArt.tutorialRace img,#flipTutorialArt.tutorialRace svg{width:30%;height:auto;max-height:135px;object-fit:contain;margin:0}
+#flipTutorialArt .tutorialLocked{box-sizing:border-box;width:140px;height:140px;margin:auto;display:grid;place-content:center;gap:8px;border:1px solid #cedbd5;border-radius:16px;background:#faf9ef}
+#flipTutorialArt .tutorialLocked span{font-size:42px}
+#flipTutorialArt [hidden]{display:none!important}
+#flipTutorialArt .celebrationClip{width:140px;height:140px}
+#flipTutorialStep.tutorialReward{display:block;min-height:0;margin:0 auto 16px;padding:9px 16px;width:fit-content;border-radius:10px;background:#f3c76b;color:#161b25;font-weight:700}
+#flipTutorialNote{margin:0 0 16px;padding:12px;border:1px solid #cedbd5;border-radius:8px;background:#faf9ef;text-align:left;line-height:1.45}
+#flipTutorialNote p{margin:8px 0 0}
+@media(prefers-reduced-motion:no-preference){#flipTutorialNote[open] p{animation:tutorialReveal .25s ease-out}@keyframes tutorialReveal{from{opacity:0;transform:translateY(4px)}}}
+#flipTutorialAnswer{margin:0 auto 16px;padding:8px 16px;border:1px solid #cedbd5;border-radius:8px;background:#eef4f0;color:#173835;font:inherit}
+#flipTutorialStart{min-height:44px;padding:8px 24px;border:0;border-radius:10px;background:#244e40;color:white;font:inherit;cursor:pointer}
+</style>
+<dialog id="flipTutorial" aria-labelledby="flipTutorialTitle">
+  <h2 id="flipTutorialTitle" class="tutorialOpening">FLIP AND LEARN</h2>
+  <div id="flipTutorialArt" hidden></div>
+  <p id="flipTutorialStep" aria-live="polite" hidden></p>
+  <button type="button" id="flipTutorialAnswer" hidden>Show answer</button>
+  <details id="flipTutorialNote" hidden>
+    <summary>Full explanation</summary>
+    <p>Subtract 7 from both sides to get 3x = 21. Then divide both sides by 3 to get x = 7.</p>
+  </details>
+  <button type="button" id="flipTutorialStart">Start now</button>
+</dialog>
+<script>
+(() => {
+    const key = 'flip-learn-tutorial-restored-seen';
+    const tutorial = document.getElementById('flipTutorial');
+    if (typeof tutorial.showModal !== 'function') return;
+    const step = document.getElementById('flipTutorialStep');
+    const start = document.getElementById('flipTutorialStart');
+    const art = document.getElementById('flipTutorialArt');
+    const title = document.getElementById('flipTutorialTitle');
+    const note = document.getElementById('flipTutorialNote');
+    const answer = document.getElementById('flipTutorialAnswer');
+    const revealAnswer = () => { step.textContent = 'Math · 25% of 80 is 20.'; answer.hidden = true; };
+    answer.addEventListener('click', revealAnswer);
+    const slides = [
+        { text: 'Study law, computer science and engineering at university and professional levels.', duration: 2900 },
+        { text: 'Grades 4–12 cover math, science, history, English and geography.', duration: 2400 },
+        { text: 'Choose a subject and level to begin.', duration: 1550 },
+        { text: 'Math · What is 25% of 80?', answerDemo: true, duration: 3000 },
+        { text: 'Solve 3x + 7 = 28. Answer: x = 7.', explanation: true, duration: 4400 },
+        { text: '3 Player Trivia Challenge · First to 20 correct wins.', race: true, duration: 2200 },
+        { text: 'I got it right!', creature: 6, count: 0, dance: true, duration: 2100 },
+        ...[0, 50, 150, 300].map(count => ({
+            text: stages[stage(count)] + ' fox · ' + count + ' correct',
+            creature: 6,
+            count,
+            duration: 1350,
+        })),
+        { text: 'Fully grown tiger · Try another grade to raise a different animal.', creature: 10, count: 300, duration: 1900 },
+        ...['dragon', 'griffin', 'hippogriff'].map(id => {
+            const [, name, goal] = legendary.find(entry => entry[0] === id);
+            return { text: (id === 'dragon' ? 'Unlock ' + name + ' at ' : 'Unlock at ') + goal.toLocaleString('en-US') + ' total mastered', creature: id, count: id === 'dragon' ? 300 : 0, duration: 1500 };
+        }),
+        { text: 'Explore world events, movies and entertainment in 3 Player Trivia Challenge. Take turns on one device.', race: true, duration: 2600 },
+    ];
+    let timer;
+    let noteTimer;
+    let next = 0;
+    const replay = document.getElementById('flipTutorialReplay');
+    function showNext() {
+        const slide = slides[next++];
+        if (!slide) { tutorial.close(); return; }
+        if (next === 1) {
+            title.textContent = 'Flip & Learn';
+            title.classList.remove('tutorialOpening');
+            step.hidden = false;
+        }
+        step.textContent = slide.text;
+        step.classList.toggle('tutorialReward', Boolean(slide.dance));
+        answer.hidden = !slide.answerDemo;
+        note.hidden = !slide.explanation;
+        note.open = false;
+        clearTimeout(noteTimer);
+        if (slide.answerDemo) noteTimer = setTimeout(revealAnswer, 1300);
+        if (slide.explanation) noteTimer = setTimeout(() => { note.open = true; }, 650);
+        art.classList.toggle('tutorialRace', Boolean(slide.race));
+        if (slide.race) {
+            art.innerHTML = [6, 10, 5].map(grade => animal(grade, 0)).join('');
+            art.hidden = false;
+        } else if (slide.creature === 'griffin' || slide.creature === 'hippogriff') {
+            art.innerHTML = '<div class="tutorialLocked"><span aria-hidden="true">🔒</span><strong>Locked</strong></div>';
+            art.hidden = false;
+        } else if (slide.count !== undefined) {
+            art.innerHTML = animal(slide.creature, slide.count);
+            art.hidden = false;
+            if (slide.dance) showCelebration(art, slide.creature, stage(slide.count));
+        }
+        timer = setTimeout(showNext, slide.duration);
+    }
+    function playTutorial() {
+        if (tutorial.open) return;
+        next = 0;
+        title.textContent = 'FLIP AND LEARN';
+        title.classList.add('tutorialOpening');
+        step.hidden = true;
+        answer.hidden = true;
+        note.hidden = true;
+        note.open = false;
+        art.hidden = true;
+        art.replaceChildren();
+        tutorial.showModal();
+        timer = setTimeout(showNext, 1500);
+    }
+    start.addEventListener('click', () => tutorial.close());
+    tutorial.addEventListener('close', () => {
+        clearTimeout(timer);
+        clearTimeout(noteTimer);
+        art.replaceChildren();
+        try { localStorage.setItem(key, '1'); } catch {}
+        document.getElementById('flip')?.focus();
+    });
+    replay.hidden = false;
+    replay.addEventListener('click', playTutorial);
+    let seen = false;
+    try { seen = Boolean(localStorage.getItem(key)); } catch {}
+    if (!seen) playTutorial();
+})();
+</script>
+</body></html>
