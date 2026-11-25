@@ -73,14 +73,14 @@ const plainNotes = Object.assign(Object.create(null), {"what is the basic unit o
 const workedExamples = [
     [/^(\d+) \+ (\d+) = \?$/, (a,b) => `Start at ${a} and count up ${b} more.`],
     [/^(\d+) × (\d+) = \?$/, (a,b) => `Think of ${b} equal groups with ${a} in each group. Add the groups to get ${a*b}.`],
-    [/^Solve (\d*)x \+ (\d+) = (\d+)\.$/, (a,b,c) => `Subtract ${b} from both sides to get ${a || ''}x = ${c-b}.${a && a !== '1' ? ` Then divide by ${a} to find x.` : ''}`],
+    [/^Solve (\d*)x \+ (\d+) = (\d+)\.$/, (a,b,c) => `Subtract ${b} from both sides to get ${a || ''}x = ${c-b}.${a && a !== '1' ? ` Then divide both sides by ${a} to get x = ${(c-b)/a}.` : ''}`],
     [/^Find the positive root of x² = (\d+)\.$/, a => `Find the positive number that gives ${a} when multiplied by itself. That’s ${Math.sqrt(a)} × ${Math.sqrt(a)}.`],
     [/^A rectangle is (\d+) cm long and (\d+) cm wide\./, (a,b) => `Picture ${b} rows of ${a} one-centimeter squares. Multiply the two counts to get the area.`],
     [/^What is (\d+)\/10 \+ (\d+)\/10\?$/, (a,b) => `Both amounts are already in tenths. Add ${a} and ${b}, and keep the answer in tenths.`],
     [/^Find (\d+)% of (\d+)\.$/, (a,b) => `Percent means out of 100. Divide ${b} by 100 to find 1%, then multiply by ${a}.`],
     [/^A \$(\d+) item is discounted (\d+)%\./, (a,b) => `You still pay ${100-b}% of the price. Multiply ${a} by (${100-b} ÷ 100).`],
     [/^Find the slope between \(0, (\d+)\) and \(2, (\d+)\)\./, (a,b) => `The line rises by ${b-a} as it moves 2 units right. Divide the rise by 2.`],
-    [/^Factor x² \+ (\d+)x \+ (\d+)\.$/, (sum,product,answer) => `Look for two numbers that add to ${sum} and multiply to ${product}. Those are the numbers beside x in ${answer}.`],
+    [/^Factor x² \+ (\d+)x \+ (\d+)\.$/, (sum,product,answer) => `Look for two numbers that add to ${sum} and multiply to ${product}. Use those two numbers as the constant terms in the factors: ${answer}.`],
     [/^Find the distance between \(0,0\) and \((\d+),(\d+)\)\./, (a,b) => `Use the horizontal and vertical distances as the short sides of a right triangle. Square ${a} and ${b}, add them, then take the square root.`],
     [/^Find the derivative of (\d+)x² \+ (\d+)x\./, (a,b) => `The rate of change of ${a}x² is ${2*a}x. The rate of change of ${b}x is the constant ${b}. Add those two rates.`],
     [/^Evaluate the integral of (\d+)x from 0 to (\d+)\./, (a,b) => `The graph is a straight line through zero. The area under it is a triangle with base ${b} and height ${a*b}. Multiply and divide by two.`],
@@ -204,6 +204,62 @@ const fullNotes = {
   "why can you sometimes see your breath on a cold day?": "The air you breathe out contains water vapor. Cooling that air can turn some vapor into droplets tiny enough to hang in the air. Those droplets scatter light, so you see a small cloud.",
   "what is a perfect score in ten-pin bowling?": "A regular strike gets 10 points plus the pins from the next two rolls. Striking all the way through makes each of the 10 frames worth 30. The two extra rolls in the last frame supply its bonus, so it takes 12 strikes."
 };
+Object.assign(fullNotes, {
+  "solve x ÷ 4 = 5.": "Multiply both sides by 4 to undo the division. That gives x = 20. Check by substituting: 20 ÷ 4 = 5.",
+  "solve x² − 5x + 6 = 0.": "Find two numbers that multiply to 6 and add to −5: −2 and −3. Rewrite the equation as (x − 2)(x − 3) = 0. For the product to be zero, at least one factor must be zero, so x = 2 or x = 3.",
+  "solve 2x + y = 10 and x − y = 2.": "Add the equations so +y and −y cancel. This gives 3x = 12, so x = 4. Substitute into x − y = 2 to get y = 2. Check the first equation: 2(4) + 2 = 10.",
+  "how do you check a solution?": "Put the proposed number in place of x in the original equation. For 2x + 3 = 11, try x = 4: the left side becomes 2 × 4 + 3 = 11, which matches the right side.",
+  "how do you add fractions with different denominators?": "The denominator tells you the size of each piece. Halves and thirds are different sizes, so rewrite both as sixths: 1/2 = 3/6 and 1/3 = 2/6. Add the five equal pieces to get 5/6.",
+  "how do you divide by a nonzero fraction?": "Division asks how many of the second amount fit in the first. Two quarter-cups fit in half a cup. Multiplying by the reciprocal gives the same result: 1/2 × 4 = 2.",
+  "how do you add decimals?": "Line up the decimal points so tenths are under tenths and hundredths are under hundredths. For 2.4 + 0.35, write 2.40 + 0.35 = 2.75.",
+  "how do you find 10% of a number?": "Ten percent means 10 out of 100, which is one tenth. For example, 10% of 80 is 80 ÷ 10 = 8.",
+  "how do you find average speed?": "Divide the total distance by the total time, including stops if they count in the trip. If you walk 120 meters in 60 seconds, your average speed is 2 meters per second.",
+  "how do you average readings?": "Add all readings, then divide by how many there are. The mean of 12, 15, and 18 is 45 ÷ 3 = 15. The result uses the same units as the readings.",
+  "why does the moon show phases?": "The Sun lights roughly half the Moon. As the Moon orbits Earth, our viewing angle changes. At full moon we see nearly all of the lit half, and at new moon it mostly faces away from us.",
+  "why do we see changing phases of the moon?": "The Sun lights roughly half the Moon. As the Moon orbits Earth, our viewing angle changes. At full moon we see nearly all of the lit half, and at new moon it mostly faces away from us.",
+  "why does ice float?": "When water freezes, its molecules form an open crystal structure. The same amount of water takes up more space, so ice has less mass per unit of volume than liquid water.",
+  "why does ice float on liquid water?": "When water freezes, its molecules form an open crystal structure. The same amount of water takes up more space, so ice has less mass per unit of volume than liquid water.",
+  "how do clouds form?": "As moist air rises and cools, it can reach a temperature where water vapor condenses onto tiny particles. A cloud is a collection of these droplets, ice crystals, or both.",
+  "why does the sky usually look blue during the day?": "Sunlight contains many colors. Air molecules scatter shorter wavelengths more strongly, so blue light reaches your eyes from many directions across the sky.",
+  "why is the sky usually blue during the day?": "Sunlight contains many colors. Air molecules scatter shorter wavelengths more strongly, so blue light reaches your eyes from many directions across the sky.",
+  "why can a hot-air balloon rise?": "Heating makes the air inside expand and become less dense. The surrounding air pushes upward on the balloon. It rises when that upward force exceeds the combined weight of the balloon, basket, passengers, and hot air.",
+  "why can a metal spoon feel colder than wood in the same room?": "The spoon and wood can start at the same temperature. Metal conducts heat away from your warmer skin faster, so your skin cools faster where it touches the spoon.",
+  "what is the difference between weathering and erosion?": "Water freezing in a rock crack can split the rock. That breakdown is weathering. When a stream carries the pieces downstream, that movement is erosion.",
+  "why can a map projection distort country sizes?": "Imagine trying to flatten an orange peel without stretching or tearing it. Mapmakers face a similar problem with Earth’s curved surface. Some projections preserve area while stretching shapes, and others preserve local shapes while changing relative sizes.",
+  "why compare independent historical sources?": "If a newspaper and a diary written independently describe the same event, agreement can strengthen a claim. Differences can reveal what each writer saw, missed, or wanted readers to believe.",
+  "why distinguish a primary source from a secondary source?": "A soldier’s wartime letter is direct evidence of what that person wrote and experienced. A later historian’s book draws on letters and other evidence to interpret the war. Both can help, but they answer different questions.",
+  "why can different accounts of the same myth disagree?": "Stories can change as they travel between communities or move from oral performance to writing. Two versions may emphasize different characters or endings because their storytellers had different audiences or purposes.",
+  "how does airborne lidar help archaeologists map sites in a forest?": "An aircraft sends laser pulses toward the ground and times their return. Some pulses pass through canopy gaps. Researchers can filter out many returns from leaves and branches to see ground features such as terraces or walls, then check those features on site."
+});
+Object.assign(fullNotes, {
+  "convert celsius to fahrenheit?": "Multiply the Celsius temperature by 9/5, then add 32. For example, 20°C × 9/5 = 36, and 36 + 32 = 68°F. The multiplication converts the size of each degree, and the addition accounts for the different zero points.",
+  "how many degrees in a triangle’s interior angles?": "In flat geometry, the three interior angles add to 180°. If two are 50° and 60°, the third is 180° − 50° − 60° = 70°.",
+  "simplify the ratio 6:9.": "Divide both terms by their greatest common factor, 3. Six red beads for every nine blue beads is the same mix as two red beads for every three blue beads.",
+  "find the slope through (2, 3) and (6, 11).": "Slope is the change in y divided by the change in x. From the first point to the second, y rises by 11 − 3 = 8 while x increases by 6 − 2 = 4. The slope is 8 ÷ 4 = 2.",
+  "find the hypotenuse of a right triangle with legs 9 and 12.": "The Pythagorean theorem applies because the triangle has a right angle. Square the legs and add: 9² + 12² = 81 + 144 = 225. Take the positive square root to get 15.",
+  "simplify (2x³)(4x²).": "Multiply the coefficients: 2 × 4 = 8. Because both powers have the same base x, add the exponents: x³ × x² = x⁵. The result is 8x⁵.",
+  "why do seasons occur?": "Earth’s axis is tilted. When your hemisphere tilts toward the Sun, it gets more direct sunlight and longer days. Six months later it tilts away and gets less direct sunlight and shorter days.",
+  "why does a shadow form?": "An opaque object blocks light traveling toward a surface. The part of the surface that receives less light appears darker. Moving the light or the object changes the shadow’s position and size.",
+  "why can sweating help cool you down?": "When sweat evaporates, it takes energy from your skin. In humid air, sweat evaporates more slowly, so the cooling effect is weaker.",
+  "why does a metal spoon feel colder than wood at the same temperature?": "Metal conducts heat better than wood. When you touch each material, the metal draws heat out of your warmer hand faster, so it feels colder even when both started at the same temperature.",
+  "how does natural selection change a population?": "If an inherited trait helps its carriers leave more offspring in a particular environment, that trait can become more common over generations. For example, camouflage may help certain insects survive long enough to reproduce.",
+  "why does increasing temperature often speed up a chemical reaction?": "Particles move faster at higher temperatures. More collisions have enough energy to overcome the reaction’s energy barrier, so successful collisions typically happen more often.",
+  "why does a satellite in orbit not simply fall to earth?": "Gravity keeps pulling the satellite toward Earth. The satellite also travels sideways fast enough that Earth’s surface curves away beneath it as it falls. Without drag or other disturbances, that continual free fall is an orbit.",
+  "why do coastal areas often have milder temperatures?": "Water changes temperature more slowly than land. Air moving off the ocean can cool nearby land on hot days and warm it on cooler days.",
+  "why are earthquakes common around the pacific ring of fire?": "Many tectonic plates meet around the Pacific. Where plates push past or under one another, locked sections can build up stress and then slip suddenly, releasing energy as an earthquake.",
+  "why does a mercator map exaggerate polar areas?": "The projection preserves local angles, which is useful for navigation, but its scale grows toward the poles. Greenland therefore looks disproportionately large compared with places near the equator.",
+  "what is the difference between denotation and connotation?": "Denotation is the literal meaning. Connotation is the feeling or association a word carries. Both “slim” and “skinny” can mean thin, but “slim” often sounds more positive.",
+  "why use parallel structure in technical instructions?": "Starting each step with the same grammatical form makes the sequence easier to scan. For example: “Open the file. Check the total. Save the result.”",
+  "why use a function?": "A function gives a reusable name to a task. For example, a function that converts Celsius to Fahrenheit can handle many temperatures without duplicating the conversion code.",
+  "why use descriptive variable names?": "A name like elapsedMinutes tells you both what the number represents and its unit. A name like n makes the reader infer those details from surrounding code.",
+  "why document design assumptions?": "A calculation tells you what follows from its inputs. Recording assumptions such as the expected load and support conditions helps someone see whether the conclusion still applies if those inputs change.",
+  "why perform a mesh convergence study?": "Run the same model on progressively finer meshes and compare an output you care about. If the output changes very little with further refinement, that suggests the mesh is fine enough for that output. The study alone cannot establish that the model represents reality.",
+  "why report measurement uncertainty?": "A reading such as 10.0 ± 0.2 cm conveys how precisely the length is known. Two readings that differ by a small amount may still agree within measurement uncertainty.",
+  "why distinguish confidence intervals from prediction intervals?": "A confidence interval can describe uncertainty about an average, such as mean house price at a given size. A prediction interval for one new house also accounts for variation from house to house and is typically wider.",
+  "why predefine a statistical analysis plan?": "Choosing outcomes and methods before seeing the results reduces the temptation to highlight whichever analysis looks most favorable afterward. Later exploratory analyses can still be useful when identified as exploratory.",
+  "what is the difference between ultimate and serviceability limit states?": "An ultimate limit state concerns failure, such as collapse or loss of stability. A serviceability limit state concerns ordinary use, such as a floor that vibrates uncomfortably even though it can safely carry the load.",
+  "what is the difference between np-hard and np-complete?": "An NP-hard problem is at least as hard as every problem in NP under the relevant reductions. An NP-complete problem is both NP-hard and in NP, so proposed solutions to its decision version can be verified in polynomial time."
+});
 function renderFullExplanation(id, row) {
     const disclosure = document.getElementById(id);
     const detail = row ? fullExplanationFor(row) : '';
@@ -2876,6 +2932,13 @@ const race = (() => {
                 [cards[i],cards[j]]=[cards[j],cards[i]];
             }
             return cards;
+        });
+        const seenQuestions = new Set();
+        deck = deck.filter(([question]) => {
+            const key = question.trim().toLowerCase();
+            if (seenQuestions.has(key)) return false;
+            seenQuestions.add(key);
+            return true;
         });
         turn=0;
         index=0;
