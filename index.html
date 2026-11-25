@@ -51,14 +51,20 @@
 #party #fox .premiumCreature,#party #fox .creature{max-width:100%;max-height:100%;object-fit:contain;transform:none;animation:none}
 #partyMessage{align-self:start;margin:0;font-size:clamp(16px,4vw,24px)}
 
-</style></head><body><main><header><h1>Flip & Learn V8.18<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">3 Player Trivia Challenge</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><details id="fullExplanation" class="fullExplanation" hidden><summary>Full explanation</summary><p id="fullExplanationText"></p></details><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button><button type="button" id="flipTutorialReplay" hidden>Play tutorial</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
+.learnMore {margin: .8rem 0 .25rem; text-align:left;}
+.learnMoreButton {margin:.5rem 0;}
+.learnMoreButton[aria-expanded="true"] {background:#244e40;color:white;border-color:#244e40;}
+.learnMoreButton[hidden], .learnMore[hidden] {display:none;}
+.learnMore > strong {display:block; margin:.6rem 0 .35rem;}
+.learnMore > p {white-space:pre-line; line-height:1.55;}
+</style></head><body><main><header><h1>Flip & Learn V8.18<span style="color:#c99452"> ✦</span></h1><span class="badge" id="grade">GRADES 5–6</span></header><p>Grow your knowledge. Raise your animal.</p><div class="selectors"><div><label for="subject">CHOOSE A SUBJECT</label><select id="subject"></select></div><div><label for="level">GRADE LEVEL</label><select id="level"><option value="4" >Grade 4</option><option value="5" >Grade 5</option><option value="6" selected>Grade 6</option><option value="7" >Grade 7</option><option value="8" >Grade 8</option><option value="9" >Grade 9</option><option value="10" >Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option><option value="13">University — Undergraduate</option><option value="14">University — Graduate</option><option value="15">Professional</option></select></div></div><section id="petPanel"><div id="petArt"></div><div class="petInfo"><strong id="petName"></strong><div id="petProgress"></div><progress id="growth" aria-label="Animal growth progress" max="50" value="0"></progress><button type="button" class="control" id="raceOpen">3 Player Trivia Challenge</button><button id="sanctuary">Animal sanctuary</button><button id="reviewMode">Review mistakes</button><div id="accuracy"></div></div></section><div class="meta"><span id="category"></span><span id="count"></span></div><button id="card" aria-label="Show answer"><span id="side"></span><span id="text"></span><span id="plainExplanation" hidden></span><span id="hint"></span></button><details id="fullExplanation" class="fullExplanation" hidden><summary>Full explanation</summary><p id="fullExplanationText"></p></details><button class="control learnMoreButton" type="button" id="fullExplanationMoreButton" aria-controls="fullExplanationMore" aria-expanded="false" hidden>Learn more</button><div class="learnMore" id="fullExplanationMore" hidden><strong id="fullExplanationMoreTitle"></strong><p id="fullExplanationMoreBody"></p></div><div class="nav"><button class="control" id="prev">← Previous</button><button class="control primary" id="flip">Show answer</button><button class="control" id="next">Next →</button></div><button id="reward" hidden>I got it right! ★</button><button id="wrong" hidden>Practice this again</button><footer><button id="shuffle">⇄ Shuffle cards</button><span>Tap to flip · Arrow keys to browse</span></footer><button hidden class="control" id="devOpen">Developer preview · artwork</button><button type="button" id="flipTutorialReplay" hidden>Play tutorial</button></main><dialog id="zoo"><h2>Your animal sanctuary</h2><div class="animals" id="zooList"></div><button class="control" id="closeZoo">Close</button></dialog><dialog id="dev"><h2>Character studio · V8</h2><p>Artwork library — 23 creatures and four growth stages each.</p><p>Preview only — learning progress is not changed.</p><label for="devPet">Animal</label><select id="devPet"></select><label for="devStage">Growth stage</label><select id="devStage"><option value="0">Baby</option><option value="50">Juvenile</option><option value="150">Young adult</option><option value="300">Fully grown</option></select><div id="devArt"></div><div id="devCaption" aria-live="polite"></div><button class="control" id="devDance">Play celebration</button> <button class="control" id="devGrow">Simulate growth</button> <button class="control" id="devAll">Show all 92</button><div id="devGrid" class="animals"></div><button class="control" id="devClose">Close preview</button></dialog><div id="party" hidden role="status"><div id="fox"></div><div id="partyMessage">Fantastic! ★</div></div><dialog id="triviaRace" aria-labelledby="raceTitle">
   <h2 id="raceTitle">3 Player Trivia Challenge</h2>
   <p>Take turns on one device. Say your answer before you reveal it. First to 20 correct answers wins.</p>
   <div id="raceAnimals"></div>
   <p id="raceTurn" role="status"></p>
   <section id="raceCard">
     <strong id="raceQuestion"></strong>
-    <div id="raceAnswer" hidden><p id="raceShortAnswer"></p><p id="raceExplanation"></p><details id="raceFullExplanation" class="fullExplanation" hidden><summary>Full explanation</summary><p id="raceFullExplanationText"></p></details></div>
+    <div id="raceAnswer" hidden><p id="raceShortAnswer"></p><p id="raceExplanation"></p><details id="raceFullExplanation" class="fullExplanation" hidden><summary>Full explanation</summary><p id="raceFullExplanationText"></p></details><button class="control learnMoreButton" type="button" id="raceFullExplanationMoreButton" aria-controls="raceFullExplanationMore" aria-expanded="false" hidden>Learn more</button><div class="learnMore" id="raceFullExplanationMore" hidden><strong id="raceFullExplanationMoreTitle"></strong><p id="raceFullExplanationMoreBody"></p></div></div>
   </section>
   <div class="raceButtons">
     <button type="button" id="raceReveal" class="control primary">Reveal answer</button>
@@ -71,29 +77,52 @@
 <script src="flip-v818-art.js"></script><script>
 const plainNotes = Object.assign(Object.create(null), {"what is the basic unit of living things?": "Think of a cell as a tiny living building block. Some living things are made of just one.", "what is an adaptation?": "For example, thick fur can help an animal stay warm in a cold habitat.", "what is an ecosystem?": "In a pond, fish, plants, and tiny living things interact with each other and depend on water and sunlight.", "what is a decomposer?": "Fungi can break down fallen leaves, returning nutrients to the soil.", "mass versus weight?": "You’d weigh less on the Moon because gravity pulls on you less there. Your mass stays the same.", "what is conduction?": "A metal spoon warms up where it touches hot soup, and heat spreads through the spoon.", "what is friction?": "Rub your palms together. The drag you feel as they slide past each other is friction.", "how do you find average speed?": "A trip of 60 miles in 2 hours works out to 30 miles per hour on average.", "what do balanced forces do?": "Two equally strong pulls on opposite ends of a rope cancel each other out.", "what does a simple circuit need?": "Think of the circuit as a loop. Opening a switch makes a gap so current can’t flow.", "what causes seasons?": "When your half of Earth tilts toward the Sun, daylight lasts longer and the sunlight hits more directly.", "why does the moon show phases?": "The Sun usually lights half the Moon. As the Moon moves around Earth, our view of that lit half changes.", "what is the periodic table?": "Think of it as a chart that puts elements with similar behavior in the same columns.", "what is a chemical symbol?": "The symbol works like a short name. For example, O is the symbol for oxygen.", "what is a variable in a scientific investigation?": "If you test how light affects a plant, the amount of light is a variable because you can change it.", "control group": "If one set of plants gets a new fertilizer, a set grown the usual way gives you something to compare it with.", "qualitative data": "A description like “the leaves turned yellow” tells you what you observed without measuring it with a number.", "trend": "If temperatures generally climb over a week, that’s a trend, even if one day is cooler.", "mean (average)": "Add the numbers and divide by how many you added. For 2, 4, and 6, that’s 12 divided by 3.", "how do clouds form?": "As moist air cools, some water vapor becomes tiny droplets or ice crystals. A cloud is a collection of those droplets or crystals.", "what is wind chill?": "Wind carries warmth away from your skin faster, so the same air temperature can feel colder.", "what is condensation?": "Think of the drops that form on the outside of a cold glass. Water vapor in the nearby air cools into liquid drops.", "what is an aquifer?": "Think of water filling the spaces in sand or cracks in rock below ground.", "what does dissolve mean?": "Stir sugar into water and its particles spread through the water, even after you can no longer see the grains.", "triangle area formula?": "A triangle takes up half the area of a rectangle with the same base and height.", "what does latitude measure?": "Think of latitude as how far up or down you are from the equator on a globe.", "what does longitude measure?": "Think of longitude as how far east or west you are from the line that passes through Greenwich, England.", "what does a map scale show?": "A scale might tell you that one centimeter on the map stands for one kilometer in real life.", "what is a primary source?": "A letter written by a person who witnessed an event is a primary source for their experience.", "what is a secondary source?": "A historian’s book explaining an event using old letters and records is a secondary source.", "what are checks and balances?": "For example, Congress can pass a bill and the president can veto it. Congress can override that veto with enough votes.", "what is a noun?": "In “The dog ran,” the word “dog” names an animal, so it’s a noun.", "what is a verb?": "In “The dog ran,” the word “ran” tells you what the dog did.", "what is an adjective?": "In “a red kite,” the word “red” tells you more about the kite.", "what is an adverb?": "In “She ran quickly,” the word “quickly” tells you how she ran.", "what is a complete sentence?": "“The dog barked” expresses a whole thought. It tells you who did something and what they did.", "what is a supporting detail?": "If the main idea is that walking is good exercise, a detail could explain how walking helps your heart.", "what is a theme?": "In a story about friends who make up after a fight, forgiveness could be the theme.", "what is a metaphor?": "“The classroom was a zoo” compares a noisy room to a zoo without saying “like” or “as.”", "what is personification?": "“The wind whispered” gives the wind something people do.", "what is textual evidence?": "If you say a character is nervous, you can point to a line that says her hands were shaking.", "solve 3x + 7 = 28.": "Take 7 from both sides to get 3x = 21. Divide by 3 to get x = 7.", "a $80 jacket is discounted 25%, then taxed 10%. final price?": "Take $20 off the $80 price. Then add 10% of the $60 sale price, which is $6.", "find the slope through (2, 3) and (6, 11).": "The line rises by 8 while moving 4 units right. Divide 8 by 4.", "a circle has radius 7 cm. what is its area?": "Multiply the radius by itself to get 49, then multiply by π.", "what is 3/4 divided by 2/5?": "Flip 2/5 to make 5/2, then multiply 3/4 by 5/2.", "two dice are rolled. probability of a sum of 7?": "Six of the 36 equally likely rolls add up to 7, from 1 + 6 through 6 + 1. Six out of 36 is one sixth.", "why does ice float on liquid water?": "Water molecules spread out into a more open pattern as they freeze. The same amount of water takes up more room as ice.", "what happens to acceleration if force doubles and mass stays constant?": "Think of giving the same cart twice as much push. Its speed changes twice as fast.", "how does natural selection change a population?": "If a trait helps more individuals leave offspring, those offspring can pass it on, making it more common over generations.", "why does a metal spoon feel colder than wood at the same temperature?": "Metal carries heat away from your skin faster, so your hand cools faster when it touches metal.", "why did the american colonists object to taxation without representation?": "The colonists were being taxed by a Parliament in which they had no elected voice.", "how did the printing press help spread the reformation?": "Printers could make many copies of a pamphlet, so the same argument could reach readers in many towns.", "how did industrialization encourage urbanization?": "When factories needed workers, people moved closer to those jobs. Cities grew around the factories.", "identify the literary device: the wind whispered through the trees.": "Whispering is something a person can do. The sentence gives that action to the wind.", "identify the dependent clause: although it rained, we played outside.": "“Although it rained” leaves you waiting to hear what happened despite the rain.", "what is the difference between denotation and connotation?": "“Cheap” and “inexpensive” can both mean low-priced. “Cheap” can also suggest poor quality.", "what is a rain shadow?": "Moist air often drops rain on one side of a mountain. Air reaching the other side is drier.", "why can a map projection distort country sizes?": "Try flattening an orange peel without tearing or stretching it. A map faces a similar problem when it flattens the globe.", "solve x² − 5x + 6 = 0.": "Factor the left side into (x − 2)(x − 3). The product is zero if either part is zero.", "find the hypotenuse of a right triangle with legs 9 and 12.": "Square the two shorter sides and add: 81 + 144 = 225. Then take the square root.", "simplify (2x³)(4x²).": "Multiply 2 and 4 to get 8. The two powers together have five copies of x, so write x⁵.", "solve 2x + y = 10 and x − y = 2.": "Add the equations to cancel y and get 3x = 12. Put x = 4 into either equation to get y = 2.", "what is the vertex of y = (x − 3)² + 2?": "At x = 3 the squared part is zero. The graph reaches its lowest point at y = 2.", "what is the difference between kinetic and potential energy?": "A bicycle rolling downhill has energy from its motion. At the top of the hill it has stored energy because of its height.", "why does a satellite in orbit not simply fall to earth?": "Gravity keeps pulling it down, but the satellite moves sideways fast enough that Earth curves away beneath its path.", "what is a false dilemma?": "“You’re either with us or against us” leaves out choices such as agreeing with only part of the plan.", "why can rapid urbanization strain infrastructure?": "A city can add new residents faster than it can build roads, housing, schools, or water systems.", "what is the first law for a closed system, with work positive out?": "Think of the system’s energy like a balance. Heat entering adds energy, and doing work on the outside uses some of that energy.", "what is the reynolds number for pipe flow?": "The number compares the tendency of moving fluid to keep moving with the effect of its internal friction.", "what is the significance of the biot number?": "It tells you whether heat moves through the object faster or slower than it exchanges heat with the surroundings.", "what is effective stress in saturated soil?": "In saturated soil, part of the load is carried by water in the pores. The rest is carried by contact between soil grains.", "what is the purpose of a load combination?": "A structure can face several loads at once. The combinations specify which ones to check together and how much weight to give each.", "what is the difference between ultimate and serviceability limit states?": "A floor can be strong enough to support everyone but still bounce enough to be uncomfortable.", "what does kirchhoff’s current law state?": "Picture a junction in a wire. Whatever current flows in must flow out.", "what is the nyquist sampling criterion for a bandlimited baseband signal?": "Taking too few measurements can make a fast-changing signal look like a slower one.", "what is mach number?": "Mach 2 means flying twice as fast as sound travels in the surrounding air.", "what is the steady-state mole balance for a species in a reactor?": "If the amount inside stays steady, whatever flows in or is made must balance whatever flows out or is used up.", "what does relative volatility quantify?": "If one substance enters the vapor much more readily than another, distillation can separate them more easily.", "what is the time complexity of binary search on a sorted array?": "Think of looking for a word in a sorted dictionary. Each comparison lets you discard about half of the pages still in play.", "what is a race condition?": "Two workers might both read the same account balance before either updates it. The final result can depend on whose update finishes last.", "what is a deadlock?": "Imagine two people each holding a key the other needs and both refusing to let go. Neither can proceed.", "what does the rank-nullity theorem state?": "Inputs that get sent to zero account for one part of the input space. The independent directions you can still reach account for the rest.", "what is the general solution of y′ = ky?": "This describes something whose rate of change stays proportional to how much is there, such as idealized growth at a fixed percentage.", "what is the role of atp synthase?": "Think of a tiny turbine. The flow of ions turns it and helps it make ATP, a molecule cells use for energy.", "what is genetic drift?": "If a storm randomly kills many individuals, the survivors may carry a different mix of genes just by chance.", "what is the purpose of a negative control?": "If a sample that should give no signal lights up anyway, you know the test may be reacting to something else.", "what is net present value?": "Future dollars are converted to today’s dollars so you can compare the costs and benefits on the same footing.", "what is marginal cost?": "If making the next loaf costs another $2, then $2 is the marginal cost for that loaf.", "what is opportunity cost?": "If you spend the afternoon working a shift, the time you would have spent at the beach is part of what you gave up, if that was your next best option.", "what is the difference between nominal and real interest rates?": "If your savings grow 5% while prices rise 3%, your buying power grows by roughly 2%.", "what is adverse selection?": "If buyers can’t tell good used cars from bad ones, they may offer too little to attract sellers of good cars.", "what is historiography?": "It asks how earlier historians explained an event and why their accounts may differ.", "what is spatial autocorrelation?": "When nearby places tend to have similar values, you may see clusters, like groups of nearby neighborhoods with similar rents.", "what is the modifiable areal unit problem?": "Redrawing district boundaries can change each district’s average even when nobody moves.", "what is a confidence interval in frequentist statistics?": "Imagine repeating the study again and again. A 95% method would make intervals that capture the true value about 95% of the time.", "what does judicial review mean in u.s. constitutional law?": "Courts can ask whether a law or government action fits the rules set by the Constitution.", "what is the distinction between procedural and substantive due process?": "One asks whether the government used a fair process. The other asks whether there are constitutional limits on the action itself.", "what is federalism?": "In the U.S., the federal and state governments share governing power. Some responsibilities belong mainly to one level.", "what are actus reus and mens rea?": "One term refers to what a person did. The other refers to the mental state the offense requires.", "why distinguish motive from intent?": "Intent is what a person meant to do. Motive is why they wanted to do it.", "what is an injunction?": "For example, a court could order someone to stop an action while a dispute is resolved.", "what distinguishes compensatory and punitive damages?": "One payment is meant to make up for a loss. The other is meant to punish especially serious misconduct.", "what is consideration under traditional u.s. common law?": "If one person promises to paint a fence and the other promises to pay, each promise is part of the exchange.", "what is an easement?": "Think of a driveway crossing one lot that a neighbor has the right to use.", "what is limited liability?": "An owner can generally lose what they invested without becoming personally responsible for every company debt.", "what is a fiduciary duty of loyalty?": "Someone entrusted with another person’s interests must put those interests ahead of their own in that role.", "what is the distinction between jurisdiction to prescribe and enforce?": "A country’s power to make a rule and its power to act on that rule in a particular place are separate questions.", "under the u.s. federal rules of evidence, what is hearsay?": "If someone repeats an out-of-court statement to prove the statement was true, that raises a hearsay question.", "what is subject-matter jurisdiction?": "Ask whether this court can hear this kind of case, such as a bankruptcy case.", "what is personal jurisdiction?": "Ask whether this court has authority over the person or organization involved.", "does u.s. copyright protect ideas themselves?": "Two writers can start from the same idea for a detective story. Copyright can protect the particular words each writer uses.", "what is the basic function of a trademark?": "A trademark helps shoppers recognize the source of a product, such as a brand name on a shoe.", "how does attorney-client privilege differ from professional confidentiality?": "The courtroom privilege covers certain confidential legal communications. The professional duty covers a wider range of information about the work.", "what is the distinction between emic and etic approaches?": "The emic view asks what a practice means to people within the tradition. The etic view applies an outside framework to study it.", "what is textual criticism?": "A scholar might compare copies of a text to work out where a word was added or changed over time.", "why avoid treating a religion as homogeneous?": "People within the same tradition may worship differently, speak different languages, or disagree about what a teaching means.", "what is lived religion?": "It looks at what people do in daily life, such as observing a holiday at home or sharing a meal after a service.", "what is a mythological motif?": "A repeated story element, such as a hero receiving a magic object, can appear in very different stories.", "what is euhemerism?": "A scholar might ask whether stories about a god grew out of stories about a real ruler.", "why is provenance important in folklore research?": "Knowing who told a story and where it was recorded gives clues about what it meant in that setting.", "why avoid assuming similar myths share one origin?": "People in different places can come up with similar stories independently. Similarity is a reason to investigate, not proof of contact.", "what is oral history?": "An interview with someone who remembers an event can preserve a firsthand account in their own words.", "why compare independent historical sources?": "If two witnesses recorded the same detail without copying each other, that detail has stronger support.", "what is an inference?": "If a character comes inside dripping wet and carrying an umbrella, you can infer it was raining.", "what is a watershed?": "Picture rain falling on different hillsides and all draining into the same river.", "what is population density?": "Divide the number of people by the area they live in. A million people in a small city means more people per square mile.", "what is pseudocode?": "You could write “ask for a name, then say hello” to plan the program before choosing any programming language.", "what is a pilgrimage?": "It’s a journey to a place that holds spiritual or religious meaning for the traveler.", "what was the silk road?": "Merchants used many linked routes to carry goods between regions. Ideas, languages, and beliefs traveled along those routes too.", "what is archival selection bias?": "If records about wealthy families survive more often, an archive can give you an uneven picture of who lived there.", "how should an historian handle contradictory eyewitness accounts?": "Compare what each witness could see, when they wrote their account, and what other evidence backs it up.", "what is dramatic irony?": "In a mystery, the audience might see a trap being set while the character walks toward it unaware.", "what is a dependent clause?": "“Because it rained” has a subject and verb, but you still need another part to finish the thought.", "what is a concessive argument?": "You can admit that a plan is expensive while still making the case that its benefits are worth the cost.", "what does a map legend explain?": "Think of it as the map’s key. A blue line might mean a stream and a dashed line might mean a trail.", "what is a drainage divide?": "Rain on one side of a ridge may drain into one river, while rain on the other side drains into a different river.", "why does a mercator map exaggerate polar areas?": "On this map, places near the poles are stretched much more than places near the equator.", "what is an isotope?": "Think of atoms of the same element with different numbers of neutrons. They keep the same number of protons.", "what is the role of ribosomes?": "Ribosomes read instructions and link amino acids together to make proteins.", "why predefine a statistical analysis plan?": "Deciding how you’ll compare results ahead of time reduces the temptation to choose a method just because it gives the result you wanted.", "what is a negative control?": "A sample expected to give no response helps you spot background noise or contamination.", "what is momentum in classical mechanics?": "A heavy cart moving at the same speed as a light cart has more momentum.", "why report measurement uncertainty?": "If a ruler only has marks every millimeter, the result should show the limits of how precisely you could read it.", "what is a loop used for?": "A loop can repeat the same instruction for each item in a list, like printing every student’s name.", "what is a python list index for the first element?": "Python starts counting positions at zero. In a list of names, names[0] picks the first name.", "what does linearizability require?": "Each operation should appear to take effect at one instant between when it starts and when it finishes.", "why use parameterized sql queries?": "The database receives the query and values separately. It treats input as data even if it contains characters used in SQL commands.", "what does an emic approach emphasize?": "It asks how a custom looks to the people who practice it and what meaning they give it.", "what is reflexivity in religious studies fieldwork?": "Researchers think about how their own assumptions and presence affect what people tell them and how they interpret it.", "why can different accounts of the same myth disagree?": "Stories can change as they’re retold in different places, time periods, and languages.", "why are triangles used in many truss structures?": "Push on a triangle with fixed side lengths and its angles stay put. A four-sided frame can skew without changing the lengths of its sides.", "what is a design constraint?": "A design might have to fit through a doorway, stay under a budget, or weigh less than a set amount.", "what is a factor of safety in a simple strength calculation?": "In a simple comparison, if capacity is twice the expected demand, the factor of safety is 2.", "what is fatigue failure?": "A paper clip can snap after you bend it back and forth repeatedly, even when one bend does little visible damage.", "what is a finite element convergence study?": "Divide the model into smaller pieces and solve again. Check whether the result you care about changes less as the pieces get smaller.", "why document design assumptions?": "If someone later changes the load, material, or conditions, they can check whether your reasoning still applies.", "what distinguishes binding from persuasive precedent?": "A court has to follow precedent that binds it. It can learn from decisions by other courts without being required to follow them.", "why check subsequent treatment of a judicial opinion?": "A later decision may have overturned or narrowed the rule you want to quote.", "what is the perimeter of a rectangle?": "Add one long side and one short side, then double that total to count all four sides.", "what is the slope of a nonvertical line?": "Think “rise over run.” If you go up 6 units while moving right 3 units, the slope is 2.", "what is the discriminant of ax² + bx + c = 0?": "Given real coefficients, its sign tells you whether there are two distinct real roots, one repeated real root, or no real roots.", "when is a square matrix invertible?": "A nonzero determinant means the transformation can be undone. A zero determinant means it has squashed some direction and lost information.", "what is uniform convergence of functions on a set?": "Once you go far enough in the sequence, every point meets the same error limit at once.", "why distinguish confidence intervals from prediction intervals?": "A confidence interval can estimate the average height of plants. A prediction interval for one future plant also has to allow for how much individual plants vary.", "can sound travel through empty space?": "Sound travels when particles bump or pull on their neighbors. Empty space has no particles to pass the vibration along.", "what is an algorithm?": "Think of a recipe. Follow its steps in order to make the dish.", "what is a variable?": "Think of a labeled box. A variable named score could start at 0 and later hold 10.", "what does an if statement do?": "A program might say “if the score reaches 10, play a sound.” Below 10 it skips that instruction.", "what is debugging?": "If a character jumps in the wrong direction, you can trace which instruction caused it and fix that instruction.", "python: print(3 + 4 * 2)": "Four times two is 8. Then add 3 to get 11.", "python: what is len(\"cat\")?": "Python counts one character for each of c, a, and t.", "what is a loop?": "A loop lets you say “clap three times” with one instruction for clapping.", "what is acceleration?": "A car accelerates when its speed or direction changes. Turning at a steady speed still changes its velocity.", "what happens to pressure when the same force acts on a smaller area?": "Think of a thumbtack. The same push is concentrated onto a much smaller area at the tip.", "python: list(range(3))": "range(3) starts at zero and stops just before 3.", "python: what is 17 % 5?": "Three groups of five make 15, leaving a remainder of 2.", "python: what is 5 > 3 and 2 > 4?": "The first comparison is true and the second is false. “And” needs both to be true.", "what is the relationship between frequency and period?": "Frequency tells you how many cycles fit in a second. Period tells you how long one cycle takes.", "python: print([2, 4, 6][1])": "Python counts positions from zero. Index 1 points to the second number.", "python: what does // do with integers?": "It rounds the quotient down. For example, 7 // 3 is 2 and −7 // 3 is −3.", "why use a function?": "You can put the steps for drawing a square in one function, then call it each time you need another square.", "what is kinetic energy?": "Doubling the speed gives an object four times as much energy of motion when its mass stays the same.", "python: print(sum(range(5)))": "range(5) gives 0 through 4. Adding those five numbers gives 10.", "what is an off-by-one error?": "A loop that runs four times when you meant it to run five has an off-by-one error.", "what is impulse?": "A longer push can change momentum more than a quick push of the same strength.", "what is centripetal acceleration?": "Even at a steady speed, a turning object changes direction. Its acceleration points toward the center of the circle.", "python: what is [x*x for x in range(4)]?": "Python goes through 0, 1, 2, and 3, and squares each number.", "javascript: what is 3 === \"3\"?": "Strict equality checks the type as well as the value. The first 3 is a number and the second is text.", "what is recursion?": "Think of counting down: say the current number, then call the same function with a smaller number until you reach zero.", "what is snell’s law?": "A light ray can bend when it passes from air into water. The rule relates the two angles to how light travels in each material.", "what is the ideal gas law?": "It connects pressure, space, temperature, and how much gas there is. In a sealed container of fixed size, warming the gas raises the pressure.", "python: what is the time complexity of scanning a list of n elements?": "If you have twice as many items, you have roughly twice as much work because you check each one.", "what is a stack?": "Think of a pile of plates. The plate you put on top last is the first one you take off.", "sql: what does where do?": "WHERE score > 80 keeps only the rows whose score is above 80.", "what is the energy of a photon?": "A higher-frequency photon, such as blue light compared with red light, carries more energy.", "what is a unit test?": "You could give an addition function 2 and 3 and check that it returns 5.", "what is the time-independent schrödinger equation?": "The equation finds quantum states with a definite energy. Applying the energy operator to such a state gives the same state multiplied by its energy.", "what is a hash collision?": "Think of different names being assigned the same locker number. The system still needs a way to tell them apart.", "what is a database transaction’s atomicity?": "In a transfer between accounts, the debit and credit must both go through or both be undone.", "what is a stable sort?": "If two students have the same score, a stable sort keeps them in the order they were listed.", "what does noether’s theorem relate?": "If the rules stay the same over time, energy is conserved. This is one example of the link between a symmetry and a conserved quantity.", "what is the bias-variance tradeoff?": "An overly simple model can miss a real pattern. An overly flexible one can learn quirks that disappear when it sees new data.", "why perform a mesh convergence study?": "Make the cells smaller and compare the result you care about. If it changes less each time, that suggests the grid is having less effect.", "how are independent standard uncertainties combined for a sum?": "For independent uncertainties of 3 and 4 units, square them, add to get 25, then take the square root to get 5.", "what does the courant number characterize?": "If something travels half a grid cell in one time step, the Courant number is 0.5.", "what is idempotency in an api operation?": "Pressing “mark as read” twice leaves the message in the same state as pressing it once.", "what is a circuit breaker in distributed software?": "If a service keeps failing, the caller can pause requests so the failures don’t tie up the rest of the system.", "square inches in 1 square foot?": "A one-foot square measures 12 inches on each side. Count 12 rows of 12 one-inch squares.", "ounce versus fluid ounce?": "The ounce on a bag of flour measures weight. The fluid ounce on a measuring cup measures how much space a liquid takes up.", "where are most metals?": "As a rule of thumb, look on the left or in the middle of the table for metals. Hydrogen is an exception on the left.", "prime number": "For example, 7 can only be divided evenly by 1 and 7, so it’s prime. Eight also divides evenly by 2 and 4.", "distributive property": "For 3 × (10 + 2), multiply each part by 3. Then add 30 and 6.", "do results prove a hypothesis forever?": "One result supports an idea under the conditions you tested. A later test with different conditions may give a different result.", "where is most fresh water stored?": "Most of Earth’s fresh water is frozen in glaciers and ice sheets rather than flowing in rivers and lakes.", "how do you multiply fractions?": "Multiply the two top numbers to count the parts, and the two bottom numbers to find the size of each part.", "what is 1/5 as a decimal?": "Divide 1 by 5. One fifth is the same as two tenths, so the decimal is 0.2.", "what is 50% as a fraction?": "Half of 100 is 50. So 50 out of 100 is the same share as 1 out of 2.", "what is 70% of 44?": "Find 10% by moving the decimal one place left, from 44 to 4.4. Seven groups of 4.4 make 30.8.", "a $40 item is 25% off. sale price?": "One quarter of $40 is $10. Take that amount off the price.", "what is an obtuse angle?": "Think of a door opened farther than a square corner, but less than a straight line.", "what are parallel lines?": "Railroad tracks are a useful picture: the two rails stay the same distance apart along a straight stretch.", "what is the prime meridian?": "This line is the starting point for measuring how far east or west a place is on a globe.", "what is an antonym?": "“Hot” and “cold” are antonyms because their meanings are opposite.", "what is a prefix?": "In “rewrite,” re- comes at the beginning and means “again.”", "what is a suffix?": "In “helpful,” -ful comes at the end and changes the word to mean “giving help.”", "what distinguishes dramatic irony from situational irony?": "Dramatic irony is knowing a character is walking into a trap. Situational irony is when the outcome itself goes against what you’d expect.", "why does increasing temperature often speed up a chemical reaction?": "Warmer particles move faster. More of their collisions have enough energy for the reaction to happen.", "how do meiosis and fertilization maintain chromosome number?": "Egg and sperm cells each carry half the usual number of chromosomes. Fertilization brings the two sets together.", "what is the ph of a solution with hydrogen ion concentration 10⁻³ m?": "The exponent is negative 3. The pH scale takes the negative of that base-10 logarithm, giving 3.", "what was the significance of brown v. board of education?": "The decision said separating children by race in public schools violated equal protection.", "what is a concessive clause?": "In “Although I was tired, I kept going,” the first part admits something that makes the second part surprising.", "what is the euler buckling load for a pinned-pinned column?": "A long thin column bends sideways under less compressive load than a shorter or stiffer one.", "what is darcy’s law for saturated flow?": "Water flows faster when there is a bigger drop in water head over the same distance, a wider flow area, or soil that lets it through more easily.", "what is the transfer function of an ideal rc low-pass filter?": "Slow changes mostly get through. Rapid changes are reduced because the capacitor takes time to charge and discharge.", "what is the condition for continuous-time asymptotic stability of a finite-dimensional lti state matrix?": "In the unforced system, the negative real parts mean that disturbances die away over time.", "what is dynamic pressure?": "It describes the pressure associated with the air’s motion. At the same density, doubling the speed gives four times the dynamic pressure.", "what is the prandtl number?": "It compares how quickly motion spreads through a fluid with how quickly heat spreads through it.", "what is focalization in narrative theory?": "Ask whose eyes or awareness guide the scene. Two characters might describe the same event very differently.", "what is intertextuality?": "A story can borrow a line or echo a scene from another work, adding meaning for readers who recognize the connection.", "a buyer accepts an offer but materially changes its terms in a common-law transaction. what is the usual effect?": "Changing an important term, such as the price, usually puts a new proposal on the table.", "what is the general purpose of expectation damages?": "The idea is to give the injured party the value they would have received if the agreement had been carried out.", "what are the usual elements of negligence?": "Ask four questions: Was care owed? Did someone fall short? Did that cause the problem? Was there legally recognized harm?", "a driver runs a red light but causes no injury. is ordinary negligence liability established solely by that fact?": "Breaking a traffic rule can show careless conduct. A negligence claim also generally needs harm that the conduct caused.", "what is comparative negligence?": "If both people contributed to the harm, a court may assign each a share of fault. The effect on payment depends on the rules that apply.", "what is customary international law?": "A repeated practice can count toward a rule when states follow it because they accept it as legally required or permitted.", "what does federal rule of evidence 403 permit?": "A judge can weigh what the evidence helps prove against risks such as unfair prejudice or confusion.", "what is summary judgment under federal civil procedure?": "If there is no real disagreement over facts that could change the result, the judge can decide the legal issue without a trial.", "what is a conflict of interest?": "For example, representing two clients who want opposite outcomes can make it hard to serve both loyally.", "what is comparative religion?": "A scholar could compare how different traditions mark coming-of-age ceremonies and ask what those practices mean in each community.", "why distinguish theology from religious studies?": "Theology may ask what a tradition teaches about God. Religious studies can ask how people interpret and practice those teachings in different settings.", "what is methodological agnosticism?": "A scholar can study what a belief means to people while setting aside whether the belief is true.", "why distinguish myth from falsehood in scholarship?": "In religious studies and folklore, the term can refer to a story that explains origins or expresses values important to a community.", "what is a structuralist approach to myth?": "This approach looks for patterns beneath the plot, such as repeated contrasts between nature and culture.", "why distinguish living sacred traditions from literary retellings?": "A story told within a religious community may have a ceremonial role or rules about who can share it. A published retelling can serve a different purpose.", "why select a projected coordinate system before measuring planar area?": "A flat map has to stretch parts of Earth. A projection designed to preserve area helps keep those stretches from changing area comparisons.", "why seek informed consent before recording a religious ritual?": "A person may agree to talk with a researcher without agreeing to be recorded. Asking first gives them a chance to set limits.", "why does motif similarity alone not establish historical transmission?": "Similar ideas can arise in different places. Dates and evidence of contact help test whether one story influenced another.", "why identify a specific community when discussing indigenous sacred narratives?": "One community’s rules for sharing a story may differ from another’s, even when the stories seem similar.", "why should historians corroborate primary sources?": "Two firsthand accounts can disagree or leave things out. Compare them with each other and with other evidence before drawing a conclusion.", "what is binary search’s worst-case time complexity on a sorted array?": "Think of looking for a word in a sorted dictionary. Each comparison lets you discard about half of the pages still in play.", "what is parameterized sql used for?": "The database receives the query and values separately. It treats input as data even if it contains characters used in SQL commands.", "what is the first law of thermodynamics with work positive out?": "Think of the system’s energy like a balance. Heat entering adds energy, and doing work on the outside uses some of that energy.", "what is consideration in common-law contract formation?": "If one person promises to paint a fence and the other promises to pay, each promise is part of the exchange."});
 const workedExamples = [
-    [/^(\d+) \+ (\d+) = \?$/, (a,b) => `Start at ${a} and count up ${b} more.`],
-    [/^(\d+) × (\d+) = \?$/, (a,b) => `Think of ${b} equal groups with ${a} in each group. Add the groups to get ${a*b}.`],
-    [/^Solve (\d*)x \+ (\d+) = (\d+)\.$/, (a,b,c) => `Subtract ${b} from both sides to get ${a || ''}x = ${c-b}.${a && a !== '1' ? ` Then divide both sides by ${a} to get x = ${(c-b)/a}.` : ''}`],
-    [/^Find the positive root of x² = (\d+)\.$/, a => `Find the positive number that gives ${a} when multiplied by itself. That’s ${Math.sqrt(a)} × ${Math.sqrt(a)}.`],
-    [/^A rectangle is (\d+) cm long and (\d+) cm wide\./, (a,b) => `Picture ${b} rows of ${a} one-centimeter squares. Multiply the two counts to get the area.`],
-    [/^What is (\d+)\/10 \+ (\d+)\/10\?$/, (a,b) => `Both amounts are already in tenths. Add ${a} and ${b}, and keep the answer in tenths.`],
-    [/^Find (\d+)% of (\d+)\.$/, (a,b) => `Percent means out of 100. Divide ${b} by 100 to find 1%, then multiply by ${a}.`],
-    [/^A \$(\d+) item is discounted (\d+)%\./, (a,b) => `You still pay ${100-b}% of the price. Multiply ${a} by (${100-b} ÷ 100).`],
-    [/^Find the slope between \(0, (\d+)\) and \(2, (\d+)\)\./, (a,b) => `The line rises by ${b-a} as it moves 2 units right. Divide the rise by 2.`],
-    [/^Factor x² \+ (\d+)x \+ (\d+)\.$/, (sum,product,answer) => `Look for two numbers that add to ${sum} and multiply to ${product}. Use those two numbers as the constant terms in the factors: ${answer}.`],
-    [/^Find the distance between \(0,0\) and \((\d+),(\d+)\)\./, (a,b) => `Use the horizontal and vertical distances as the short sides of a right triangle. Square ${a} and ${b}, add them, then take the square root.`],
-    [/^Find the derivative of (\d+)x² \+ (\d+)x\./, (a,b) => `The rate of change of ${a}x² is ${2*a}x. The rate of change of ${b}x is the constant ${b}. Add those two rates.`],
-    [/^Evaluate the integral of (\d+)x from 0 to (\d+)\./, (a,b) => `The graph is a straight line through zero. The area under it is a triangle with base ${b} and height ${a*b}. Multiply and divide by two.`],
-    [/^Find the eigenvalues of the diagonal matrix diag\((\d+), (\d+)\)\./, (a,b) => `The matrix scales the first coordinate by ${a} and the second by ${b}. Each coordinate axis keeps its direction, so those scale factors are the eigenvalues.`],
-    [/^A toy travels (\d+) meters in (\d+) seconds\./, (a,b) => `Spread ${a} meters evenly across ${b} seconds. That gives the average distance traveled each second.`],
-    [/^A (\d+) kg object accelerates at (\d+) m\/s²\./, (a,b) => `To find the overall push or pull, multiply the mass (${a} kg) by the acceleration (${b} m/s²).`],
-    [/^A (\d+) Ω ohmic resistor carries (\d+) A\./, (a,b) => `Multiply the current (${b} amps) by the resistance (${a} ohms) to find the voltage across the resistor.`],
-    [/^An ideal Carnot engine operates between (\d+) K and (\d+) K\./, (a,b) => `Divide the cold temperature (${b} K) by the hot temperature (${a} K). Subtract that fraction from 1 and express what remains as a percentage.`],
-    [/^A simply supported beam of span (\d+) m carries a central point load of (\d+) kN\./, (a,b) => `Each support carries half the load. At midspan, multiply one support’s share by half the span: (${b} ÷ 2) × (${a} ÷ 2).`],
-    [/^A (\d+) Ω resistor carries (\d+) A DC\./, (a,b) => `Square the current (${b} amps), then multiply by the resistance (${a} ohms). The result is the rate at which electrical energy becomes heat.`],
-    [/^Air density is 1\.2 kg\/m³ and airspeed is (\d+) m\/s\./, a => `Square the speed (${a} m/s), multiply by the air density (1.2 kg/m³), then take half.`],
-    [/^A feed contains (\d+) mol\/s of reactant A and undergoes (\d+)% conversion/, (a,b) => `Of every 100 moles fed in, ${b} are used. Multiply the feed rate, ${a} moles per second, by ${b} ÷ 100.`],
-    [/^Revenue is \$(\d+) and total cost is \$(\d+)\./, (a,b) => `Start with the money earned ($${a}) and subtract the money spent ($${b}). A negative result means a loss.`],
+    [/^(\d+) \+ (\d+) = \?$/, (a,b) => `Start at ${a} and count up ${b} more.`,
+     (a,b) => `Move one counter: ${a} + ${b} becomes ${a+1} + ${b-1}. Both arrangements contain ${a+b} counters.`],
+    [/^(\d+) × (\d+) = \?$/, (a,b) => `Think of ${b} equal groups with ${a} in each group. Add the groups to get ${a*b}.`,
+     (a,b) => `One more group of ${a} raises the total from ${a*b} to ${a*(b+1)}. Subtract that group to recover the original product.`],
+    [/^Solve (\d*)x \+ (\d+) = (\d+)\.$/, (a,b,c) => `Subtract ${b} from both sides to get ${a || ''}x = ${c-b}.${a && a !== '1' ? ` Then divide both sides by ${a} to get x = ${(c-b)/a}.` : ''}`,
+     (a,b,c) => `Try the number one above the solution. With x = ${(c-b)/(a||1)+1}, the left side becomes ${c+(a||1)}. It misses ${c} by exactly the coefficient of x.`],
+    [/^Find the positive root of x² = (\d+)\.$/, a => `Find the positive number that gives ${a} when multiplied by itself. That’s ${Math.sqrt(a)} × ${Math.sqrt(a)}.`,
+     a => `If the question asked for every real solution, you could include −${Math.sqrt(a)}: multiplying two negative numbers gives positive ${a}. The word “positive” picks one of the two roots.`],
+    [/^A rectangle is (\d+) cm long and (\d+) cm wide\./, (a,b) => `Picture ${b} rows of ${a} one-centimeter squares. Multiply the two counts to get the area.`,
+     (a,b) => `Lengthen the rectangle from ${a} to ${a+1} cm. One extra column holds ${b} squares, so the new area is ${(a+1)*b} cm².`],
+    [/^What is (\d+)\/10 \+ (\d+)\/10\?$/, (a,b) => `Both amounts are already in tenths. Add ${a} and ${b}, and keep the answer in tenths.`,
+     (a,b) => `Change tenths to hundredths: ${a*10}/100 + ${b*10}/100 = ${(a+b)*10}/100. Smaller pieces change the count, but cover exactly the same amount.`],
+    [/^Find (\d+)% of (\d+)\.$/, (a,b) => `Percent means out of 100. Divide ${b} by 100 to find 1%, then multiply by ${a}.`,
+     (a,b) => `One percentage point of ${b} is ${b/100}. Raising the rate from ${a}% to ${a+1}% therefore adds ${b/100} to the result.`],
+    [/^A \$(\d+) item is discounted (\d+)%\./, (a,b) => `You still pay ${100-b}% of the price. Multiply ${a} by (${100-b} ÷ 100).`,
+     (a,b) => `An extra 10% off the sale price of $${(a*(100-b)/100).toFixed(2)} would save another $${(a*(100-b)/1000).toFixed(2)}, because the second discount uses the reduced price.`],
+    [/^Find the slope between \(0, (\d+)\) and \(2, (\d+)\)\./, (a,b) => `The line rises by ${b-a} as it moves 2 units right. Divide the rise by 2.`,
+     (a,b) => `Keep moving along the same line. Another two units to the right changes the height by ${b-a} again, giving the point (4, ${2*b-a}).`],
+    [/^Factor x² \+ (\d+)x \+ (\d+)\.$/, (sum,product,answer) => `Look for two numbers that add to ${sum} and multiply to ${product}. Use those two numbers as the constant terms in the factors: ${answer}.`,
+     (a,b) => `At x = 1 the original polynomial equals 1 + ${a} + ${b} = ${1+a+b}. Your factors must give that value too. Expanding them checks the identity for every x.`],
+    [/^Find the distance between \(0,0\) and \((\d+),(\d+)\)\./, (a,b) => `Use the horizontal and vertical distances as the short sides of a right triangle. Square ${a} and ${b}, add them, then take the square root.`,
+     (a,b) => `Double both legs to ${2*a} and ${2*b}. The squared distance grows from ${a*a+b*b} to ${4*(a*a+b*b)}, so the distance itself doubles.`],
+    [/^Find the derivative of (\d+)x² \+ (\d+)x\./, (a,b) => `The rate of change of ${a}x² is ${2*a}x. The rate of change of ${b}x is the constant ${b}. Add those two rates.`,
+     (a,b) => `At x = 1 the tangent slope is ${2*a+b}. At x = 2 it is ${4*a+b}. Each extra unit of x adds ${2*a} to the slope.`],
+    [/^Evaluate the integral of (\d+)x from 0 to (\d+)\./, (a,b) => `The graph is a straight line through zero. The area under it is a triangle with base ${b} and height ${a*b}. Multiply and divide by two.`,
+     (a,b) => `Halfway across, x is ${b/2} and the line is only half its final height. The triangle to the left has one quarter of the full area: ${a*b*b/8} square units.`],
+    [/^Find the eigenvalues of the diagonal matrix diag\((\d+), (\d+)\)\./, (a,b) => `The matrix scales the first coordinate by ${a} and the second by ${b}. Each coordinate axis keeps its direction, so those scale factors are the eigenvalues.`,
+     (a,b) => `Apply this matrix to (1, 1). The result is (${a}, ${b}). ${a===b ? "The coordinates scale equally, so this vector also keeps its direction." : "The coordinates scale differently, so this diagonal vector changes direction."}`],
+    [/^A toy travels (\d+) meters in (\d+) seconds\./, (a,b) => `Spread ${a} meters evenly across ${b} seconds. That gives the average distance traveled each second.`,
+     (a,b) => `At the same average speed, traveling for ${2*b} seconds would cover ${2*a} meters. The average alone cannot tell you whether the toy paused along the way.`],
+    [/^A (\d+) kg object accelerates at (\d+) m\/s²\./, (a,b) => `To find the overall push or pull, multiply the mass (${a} kg) by the acceleration (${b} m/s²).`,
+     (a,b) => `Load the object until its mass is ${2*a} kg. The original net force of ${a*b} N would then produce an acceleration of ${b/2} m/s².`],
+    [/^A (\d+) Ω ohmic resistor carries (\d+) A\./, (a,b) => `Multiply the current (${b} amps) by the resistance (${a} ohms) to find the voltage across the resistor.`,
+     (a,b) => `If the current doubles to ${2*b} A while resistance stays at ${a} Ω, the required voltage rises from ${a*b} to ${2*a*b} V.`],
+    [/^An ideal Carnot engine operates between (\d+) K and (\d+) K\./, (a,b) => `Divide the cold temperature (${b} K) by the hot temperature (${a} K). Subtract that fraction from 1 and express what remains as a percentage.`,
+     (a,b) => `For every 100 J entering this ideal engine, about ${(100*b/a).toFixed(1)} J must leave on the cold side. The balance can become work.`],
+    [/^A simply supported beam of span (\d+) m carries a central point load of (\d+) kN\./, (a,b) => `Each support carries half the load. At midspan, multiply one support’s share by half the span: (${b} ÷ 2) × (${a} ÷ 2).`,
+     (a,b) => `Move an imaginary cut one quarter of the way along the span. The left reaction is ${b/2} kN and its lever arm is ${a/4} m. The moment there is ${a*b/8} kN·m, half the midspan value.`],
+    [/^A (\d+) Ω resistor carries (\d+) A DC\./, (a,b) => `Square the current (${b} amps), then multiply by the resistance (${a} ohms). The result is the rate at which electrical energy becomes heat.`,
+     (a,b) => `Keep the ${a} Ω resistor and double the current to ${2*b} A. Heating power rises from ${a*b*b} to ${4*a*b*b} W. Doubling current quadruples power.`],
+    [/^Air density is 1\.2 kg\/m³ and airspeed is (\d+) m\/s\./, a => `Square the speed (${a} m/s), multiply by the air density (1.2 kg/m³), then take half.`,
+     a => `At the same air density, doubling speed from ${a} to ${2*a} m/s raises dynamic pressure from ${Math.round(.6*a*a*10)/10} to ${Math.round(2.4*a*a*10)/10} Pa.`],
+    [/^A feed contains (\d+) mol\/s of reactant A and undergoes (\d+)% conversion/, (a,b) => `Of every 100 moles fed in, ${b} are used. Multiply the feed rate, ${a} moles per second, by ${b} ÷ 100.`,
+     (a,b) => `Of the ${a} mol/s entering, ${Number((a*(100-b)/100).toFixed(4))} mol/s of A leaves unreacted. Add the consumed and unreacted flows to recover the inlet flow.`],
+    [/^Revenue is \$(\d+) and total cost is \$(\d+)\./, (a,b) => `Start with the money earned ($${a}) and subtract the money spent ($${b}). A negative result means a loss.`,
+     (a,b) => `At a fixed cost of $${b}, break-even revenue is $${b}. From the current revenue of $${a}, every additional dollar of revenue adds a dollar to profit if costs stay fixed.`],
 ];
 
 const fullNotes = {
@@ -260,12 +289,904 @@ Object.assign(fullNotes, {
   "what is the difference between ultimate and serviceability limit states?": "An ultimate limit state concerns failure, such as collapse or loss of stability. A serviceability limit state concerns ordinary use, such as a floor that vibrates uncomfortably even though it can safely carry the load.",
   "what is the difference between np-hard and np-complete?": "An NP-hard problem is at least as hard as every problem in NP under the relevant reductions. An NP-complete problem is both NP-hard and in NP, so proposed solutions to its decision version can be verified in polynomial time."
 });
+const furtherReading = {
+  "what is a solution?": [
+    "Can an equation have more than one solution?",
+    "Imagine testing a key in a lock. A solution has to make the original statement true. In x × x = 9, both 3 and −3 work. In x + 1 = x, every number you try fails because adding one always changes it. Checking a number tells you whether it works. Finding every solution takes another step."
+  ],
+  "what is the main rule for solving equations?": [
+    "Why is algebra like keeping a balance?",
+    "Two identical bags and three loose counters balance eleven counters. Remove three counters from each pan. Now the two bags balance eight counters, so one bag holds four. Each move kept the same relationship true. This also explains a limit to the rule: multiplying both sides by zero erases the information you needed about the bags."
+  ],
+  "solve x + # = #": [
+    "Reconstruct a missing starting amount",
+    "A bus arrives with twelve passengers after five boarded at the last stop. Rewind the trip in your head. The five new riders step off, leaving the seven who were there before. Subtraction recovers the starting amount because it reverses the last change. If two more passengers had boarded instead, the starting number would have to be two smaller for the same final total."
+  ],
+  "solve x − # = #": [
+    "Work backward through a story",
+    "You gave a friend four stickers and counted nine left in your book. Draw nine dots for those stickers, then draw the four you remember giving away. The whole picture shows thirteen. The unknown in this problem stands for the original collection, so it makes sense that the answer is larger than the number you have now."
+  ],
+  "solve #x = #": [
+    "How can division reveal a hidden amount?",
+    "Three sealed envelopes contain equal amounts of money and hold eighteen dollars altogether. Deal eighteen dollar bills into three piles, one dollar at a time. Each pile ends with six. That conclusion depends on the envelopes being equal: if one could contain more, the same total could hide several different arrangements."
+  ],
+  "solve x ÷ # = #": [
+    "Follow one share back to the whole",
+    "Four friends split a pile of tokens evenly and each receives five. Draw each friend's share as a row of five dots. All four rows together reconstruct the original pile of twenty. Division broke the pile into equal shares. Multiplication lets you put those shares back together even if you never saw the original pile."
+  ],
+  "solve #x + # = #": [
+    "What does the number beside x actually do?",
+    "Picture identical sealed bags plus some loose marbles on a balance. The number beside x counts bags. The added number counts loose marbles. Remove the loose ones from both pans, then share the remaining marbles equally among the bags. If each bag gained one marble, the total would rise by exactly the number of bags. That gives you a second way to check what your equation means."
+  ],
+  "how do you check a solution?": [
+    "Why go back to the original question?",
+    "Imagine someone solves 4x + 3 = 19 but copies it as 4x + 3 = 23 halfway through. Their answer of 5 fits the copied line perfectly. Back in the original equation it gives 23 where 19 is needed. A check is most powerful when it uses evidence independent of the step that may contain the mistake."
+  ],
+  "what is a variable in algebra?": [
+    "When can the same letter change value?",
+    "In a recipe, let c mean the number of cups of rice. A rule using 2c cups of water describes many possible meals. Set c to 3 for one dinner, and every c in that calculation means 3. For tomorrow's smaller meal, set c to 1. A variable lets one relationship describe a whole family of situations."
+  ],
+  "convert celsius to fahrenheit?": [
+    "A change in temperature has its own conversion",
+    "From water's freezing point to its boiling point at standard pressure, Celsius counts 100 steps and Fahrenheit counts 180. Each Celsius step is therefore 1.8 Fahrenheit steps. If a room warms by 5°C, it warms by 9°F. The starting offset of 32 matters when naming the temperature, but it cancels when comparing two temperatures."
+  ],
+  "what is an equivalent fraction?": [
+    "Test fractions on a number line",
+    "Mark zero and one at opposite ends of a paper strip. Fold it in half, then into quarters, then into eighths. The first crease stays exactly where it was. You can now label it one half, two quarters or four eighths. Changing the unit changed how many pieces you counted while the distance from zero stayed fixed."
+  ],
+  "how do you add fractions with different denominators?": [
+    "Can different common denominators both work?",
+    "Add a quarter and a sixth of the same bar. Twelfths work because each quarter covers three twelfths and each sixth covers two. Twenty-fourths work too: six plus four gives ten twenty-fourths. Both lengths reach the same point, five twelfths. The least common denominator simply makes the pieces easier to count."
+  ],
+  "how do you divide by a nonzero fraction?": [
+    "Why can division give a bigger number?",
+    "You have three liters of juice and cups that each hold half a liter. One liter fills two cups, so three liters fill six. The six counts cups and the three counts liters. Dividing by a fraction can make the number larger because the unit you are counting has become smaller."
+  ],
+  "what is # as a fraction?": [
+    "See the same amount in money and time",
+    "Seventy-five cents buys three quarters of a dollar. On a clock, three quarters of an hour is 45 minutes. Both represent 0.75 of a whole, yet the counts differ because a dollar has 100 cents and an hour has 60 minutes. Always ask what counts as one whole before converting a fraction to a quantity."
+  ],
+  "how do you add decimals?": [
+    "Why do extra zeros on the right help?",
+    "Add 3.07 and 0.8 as money: three dollars seven cents plus eighty cents gives three dollars eighty-seven cents. Writing 0.80 shows the eight occupies the tenths column. If you lined up only the last digits, the eight would contribute eight cents. Keeping the units aligned prevents that tenfold error."
+  ],
+  "how many degrees in a triangle’s interior angles?": [
+    "Where does the straight angle come from?",
+    "Sketch a triangle on paper. Tear off its three corners and place their tips together so the angles sit side by side. Their outer edges make a straight line. It works for long skinny triangles too. You can use it backward: a right triangle spends 90° on one corner, leaving just 90° for the other two together."
+  ],
+  "what is #% as a fraction?": [
+    "Half depends on the whole",
+    "Half a small pizza and half a large pizza are both 50%, yet one serves more food. Percent describes a share of a specified whole. If two classes both achieve 50% attendance, a class of 20 has ten students present and a class of 30 has fifteen. The percentage alone cannot tell you the head count."
+  ],
+  "how do you find #% of a number?": [
+    "Use ten percent as a mental anchor",
+    "For a group of 70 people, ten percent is seven. Twenty percent is twice that, or fourteen. Five percent is half of seven, or 3.5 as a mathematical amount. That last result shows why context matters: an actual head count has to be whole, so an exact five percent is impossible in a group of seventy."
+  ],
+  "simplify the ratio #:#": [
+    "Keep the mixture the same at a different scale",
+    "A paint sample uses two scoops of red for every three of blue. Ten scoops in the same proportions means two batches, or four red and six blue. Adding one of each to the original gives three red and four blue, a different shade. To preserve a ratio, resize both quantities by the same factor."
+  ],
+  "what is an element?": [
+    "Why can graphite and diamond both be carbon?",
+    "Think of identical building pieces assembled into different structures. In graphite, carbon atoms form sheets that can slide past one another, which helps a pencil leave marks. In diamond, carbon atoms link in a rigid network. The element tells you which atoms are present. Their arrangement helps explain what a sample can do."
+  ],
+  "what is photosynthesis?": [
+    "Where does a growing tree get its wood?",
+    "A seedling can gain far more dry mass than the soil in its pot loses. Much of the carbon in new wood came through its leaves as carbon dioxide. Using light energy, the tree builds sugars and joins some of their building blocks into cellulose. A tree trunk holds carbon that was once moving through the air."
+  ],
+  "what is gravity?": [
+    "Would you have less mass on the Moon?",
+    "Imagine taking the same backpack from Earth to the Moon. Its contents and mass stay the same, but a spring scale pulls down less on the Moon because the Moon's gravity there is weaker. This is the distinction between how much matter you carry and the gravitational force on that matter, called weight."
+  ],
+  "what is friction?": [
+    "Why can a rug move with a box on it?",
+    "Pull a rug gently and a box on top may move with it. Friction between the surfaces accelerates the box forward while they stay in contact. Tug hard enough and the rug can slip beneath it. To reason about direction, ask which way the surfaces would slide relative to each other without friction."
+  ],
+  "how do you find average speed?": [
+    "Why averaging two speeds can mislead you",
+    "Walk one kilometer at 2 km/h and another at 6 km/h. The first part takes thirty minutes, the second ten. Two kilometers in forty minutes gives 3 km/h. The simple average of the speeds, 4, gives too much weight to the short fast stretch. The clock records how long you spend at each speed."
+  ],
+  "why does the moon show phases?": [
+    "Re-create a crescent Moon",
+    "In a dim room use a lamp as the Sun and hold a ball at arm's length at eye level. With the ball a little to the side of the lamp, you see a thin bright edge. Turn with the ball until the lamp is beside you. Now you see half the ball lit. The lamp stayed on throughout; your viewing angle changed."
+  ],
+  "why does ice float?": [
+    "What happens to a lake in winter?",
+    "Ice forming at a lake's surface stays there and makes a lid. The floating lid slows heat loss from the water underneath. This helps explain how a lake can have a frozen surface while fish still swim below it. Whether the whole lake freezes also depends on its depth, temperature and how long the cold lasts."
+  ],
+  "how do you average readings?": [
+    "What can an average hide?",
+    "Three rulers used to measure the same object give 10, 10 and 16 centimeters. Their average is 12, a reading nobody actually obtained. Before reporting it, check whether one person began at a broken end or used the wrong mark. Repetition helps with random variation, while a consistent error in the instrument can survive averaging."
+  ],
+  "how do clouds form?": [
+    "Why can you see a cloud but not the vapor that made it?",
+    "Invisible water vapor travels with the air. Once some of it becomes tiny liquid drops, light scatters from those drops toward your eyes. Fog is a chance to stand inside the same process near the ground. A cloud can be visible long before its drops grow large enough to fall as rain."
+  ],
+  "what is an orbit?": [
+    "Why do astronauts float in an orbiting spacecraft?",
+    "Imagine dropping a camera beside you while both of you fall. For a short time it seems to hover beside your hand. In orbit the spacecraft, camera and astronaut all fall around Earth together. The floor does not need to hold the astronaut up. That shared fall explains weightlessness even where Earth's gravity is still strong."
+  ],
+  "what is a primary source?": [
+    "What can a photograph actually prove?",
+    "A picture of a crowded rally can show that people gathered where the camera was pointed. It cannot by itself tell you how many stood outside the frame or why each person came. A historian looks for the photographer, date, location and original caption, then asks which parts of the claim the picture can support."
+  ],
+  "what is archaeology?": [
+    "Why draw an object before lifting it?",
+    "Suppose a coin lies on top of a collapsed floor, while another lies sealed beneath it. Both might look alike in a display case. Their positions tell different stories about which events happened first. Recording the layers and nearby objects preserves information that digging itself removes. A beautiful find can lose much of its meaning without that record."
+  ],
+  "what is a noun?": [
+    "Can the same word do two jobs?",
+    "In “We watched the dance,” dance names the event. In “We dance after school,” it describes what we do. Try putting “the” in front of a word and looking for the thing or idea the sentence names. Its job in that particular sentence is a better clue than the word's spelling alone."
+  ],
+  "what is a metaphor?": [
+    "What does the comparison invite you to notice?",
+    "Compare “Her memory was a library” with “Her memory was a sieve.” Both describe a memory through a familiar object, yet one suggests carefully stored knowledge and the other suggests things slipping away. When reading a metaphor, name the particular quality that carries across. A library's opening hours probably have nothing to do with the speaker's meaning."
+  ],
+  "what is a peninsula?": [
+    "How can geography change a journey?",
+    "Imagine two towns on opposite shores of a long peninsula, close enough to see each other's lights. A boat may have to sail around the tip, while a road can cross the land directly. That shape changes which routes are convenient. An island raises a different travel problem because every route off it must cross water or pass above or beneath it."
+  ],
+  "# + # = ?": [
+    "Can you move one without changing the total?",
+    "Lay out the two addends as piles of counters. Slide one counter from the second pile to the first. You changed both pile sizes, yet every counter is still on the table. This is why 29 + 6 can become 30 + 5. Making a round number can turn a difficult addition into one you already know."
+  ],
+  "a rectangle is # cm long and # cm wide# what is its area?": [
+    "Would a longer garden always give more planting space?",
+    "A 3-by-4 garden contains twelve square units. A 2-by-6 garden also contains twelve, although the second needs more fence. Covering the inside counts tiles; tracing the edge counts lengths. If both dimensions double, you can fit four copies of the original inside the new rectangle. That is why area changes faster than side length."
+  ],
+  "can sound travel through empty space?": [
+    "Why can you hear a tap through a desk?",
+    "An ear resting against a desk can pick up a gentle tap traveling through the solid. Its particles pass the disturbance along while staying close to their original positions. A radio message between spacecraft uses electromagnetic waves, which can cross empty space. A speaker at the far end then makes local air vibrate so someone hears sound."
+  ],
+  "a toy travels # meters in # seconds# average speed?": [
+    "Can the toy stop and still have that average?",
+    "Picture a video with the same starting and ending marks. In one take the toy rolls steadily. In another it pauses halfway and then speeds up to arrive at the same time. Both have the same trip average. To learn how its motion differed, mark its position at each second and compare the gaps."
+  ],
+  "what is an algorithm?": [
+    "How precise must an instruction be?",
+    "Tell someone to find the largest number on a page. A workable algorithm is to remember the first number, compare it with each remaining one and replace the remembered number whenever a larger one appears. Try it on a page of entirely negative numbers. Starting with the first entry matters: starting with zero could return a number absent from the page."
+  ],
+  "what is a sacred text?": [
+    "How is a sacred text used beyond reading?",
+    "A text might be heard in worship, sung from memory, studied with a teacher or discussed across generations. Imagine hearing a familiar passage spoken at a funeral and reading the same passage in a classroom. The words can stay the same while their purpose changes. Asking who uses a text, when and how helps explain its place in a community."
+  ],
+  "what is diwali?": [
+    "Why might two families explain Diwali differently?",
+    "In parts of India a Hindu family might tell of Rama's return to Ayodhya. A Jain family may commemorate Mahavira's attainment of liberation. Both might light lamps. Beginning with the shared sight of the lamps is useful, but asking the people lighting them what they commemorate reveals histories a photograph by itself could never tell."
+  ],
+  "what is vesak?": [
+    "What does awakening mean in this story?",
+    "In Buddhist tradition the Buddha's awakening involved insight into suffering, its causes and a path toward freedom from it. For a participant in Vesak, an act of generosity can put that teaching into practice. Giving food to someone makes the commemoration about a decision one can make today as well as events in the Buddha's life."
+  ],
+  "what is shinto?": [
+    "What might you notice at a shrine?",
+    "A visitor may pass beneath a torii gate and rinse hands before approaching the shrine. The gate marks entry into a sacred space, and cleansing prepares the visitor for the encounter. A particular grove or mountain can have religious importance through its association with kami. The place itself can therefore matter as much as the building."
+  ],
+  "who is athena in greek mythology?": [
+    "Why would a city choose an olive tree?",
+    "In the contest for Athens, the gift Athena offers can keep giving after the contest is over. Olives can feed a household, and their oil can light a lamp. Consider what that says about wisdom in a community dependent on a harvest. Athena also represents skilled work and strategy. In each role her power lies in knowing how to use what is available."
+  ],
+  "what is a phoenix in many later traditions?": [
+    "How can a story about death become a symbol of hope?",
+    "Different tellings describe the phoenix renewing itself or being succeeded by a young bird. Later readers often picture new life rising from ashes, the very material that seems to prove a fire has destroyed everything. That reversal explains why a writer might call a rebuilt city a phoenix. The comparison means more once you know what the bird survives."
+  ],
+  "who is thor in norse mythology?": [
+    "The day Thor went fishing for the edge of the world",
+    "Thor is the son of Odin and Jörð, the Earth, and the husband of Sif. In the stories he is the one gods and humans count on when a threat needs facing. He rides in a chariot drawn by two goats and carries Mjölnir, a hammer that returns to his hand. Miniature hammers worn as pendants give us a glimpse of how people carried his image into daily life.\n\nIn the Prose Edda, the giant Hymir rows out to fish with Thor. Hymir reaches the fishing grounds he knows, but Thor wants to go farther. He has brought an ox’s head as bait for Jörmungandr, the serpent so vast that its body circles the human world. When it bites, Thor braces himself so hard that his feet break through the boat. He hauls the serpent up and reaches for his hammer. Hymir cuts the line.\n\nWhy would Hymir do that? Imagine seeing the serpent’s jaws beside your little boat. Thor sees a chance to strike the world's enemy. Hymir sees a chance to get home alive. The same courage that makes Thor a protector also makes him a frightening person to share a boat with.\n\nStory source: Snorri Sturluson’s Prose Edda, Gylfaginning, the fishing trip with Hymir."
+  ],
+  "what is pegasus?": [
+    "Where did Pegasus come from?",
+    "In Hesiod's account, Pegasus springs forth when Perseus kills Medusa. Another hero, Bellerophon, later rides him against the Chimera. This makes the horse a link between stories that readers sometimes blend together. Ask two separate questions when tracing the legend: who was present at the horse's birth, and who needed his wings for a dangerous task?"
+  ],
+  "what is a griffin?": [
+    "Read an imaginary creature like an artist",
+    "Cover the lower half of a griffin in a picture. An eagle's head and beak suggest sharp sight and a strike from above. Cover the top and a lion's body suggests strength on land. Ancient artists used different combinations and poses. Seeing a griffin beside a doorway or treasure encourages a viewer to imagine a guardian powerful in two realms."
+  ],
+  "who is anansi in akan storytelling?": [
+    "How can a spider win a story?",
+    "In an Akan tale Anansi bargains with the sky god Nyame for the right to possess stories. The price involves capturing creatures stronger than himself. His advantage is his ability to imagine how each creature will respond to a trick. Listen for the turning point in a trickster tale: it often comes when a powerful character accepts the trickster's way of describing the situation."
+  ],
+  "who is amaterasu in japanese tradition?": [
+    "How do you persuade the sun to come back?",
+    "In the cave story the gods gather outside and make a commotion. Hearing laughter in a world she believes she has left dark, Amaterasu grows curious. A mirror helps draw her attention, and the gods bring light back into the world. The turning point is a collective performance: the other gods find a way to make the missing sun want to look out."
+  ],
+  "what is the epic of gilgamesh?": [
+    "What is left when a hero comes home empty-handed?",
+    "Gilgamesh begins as king of Uruk, a real city in ancient Mesopotamia. Friendship with Enkidu changes him; grief sends him looking for life without end. At the close of the standard Babylonian epic the reader's attention returns to Uruk's walls. After a journey seeking a private escape from death, the sight of something built for a city asks what a person can leave behind."
+  ],
+  "who is cú chulainn?": [
+    "How does a deed become a name?",
+    "Sétanta kills a guard dog that attacks him and then offers to take its place. From Culann's point of view, the loss is serious: the animal defended his household. Offering to guard it makes the young hero responsible for the consequences of his strength. Calling him Cú Chulainn, Culann's hound, keeps that promise alive each time someone says his name."
+  ],
+  "what is ragnarök?": [
+    "What can a hero do about a fate already foretold?",
+    "At Ragnarök, Thor fights the world serpent and kills it, then dies from its venom. Odin also falls. Knowing the predicted outcome shifts the listener's question from “Will they survive?” to “What will they choose to defend?” Some accounts then picture green earth rising again. Destruction and the possibility of a future belong to the same story."
+  ],
+  "why compare independent historical sources?": [
+    "Can three reports count as one witness?",
+    "Suppose three newspapers print the same account of a flood. If each copied a single reporter's story, all three might repeat the same wrong street name. Compare them with a resident's dated photograph or a river gauge record. Tracing where a claim came from tells you more about the strength of the evidence than counting how many times it appears."
+  ],
+  "what is population density?": [
+    "Could a dense city contain an empty park?",
+    "A city of 1,000 people on ten square kilometers averages 100 people per square kilometer. All 1,000 might live in apartment buildings on just one of those kilometers. A planner choosing a bus stop needs a neighborhood map as well as the citywide number. An average describes the whole area and can hide how differently its parts are used."
+  ],
+  "what is pseudocode?": [
+    "Try an instruction on paper before coding it",
+    "Write “If the box is empty, ask for a name. Otherwise greet the person.” Walk through it with a filled box, an empty box and a box containing only spaces. The last case forces a decision about what empty means. Working in ordinary language lets you settle that question before choosing a programming language's syntax."
+  ],
+  "who is odin in norse mythology?": [
+    "What kind of leader trades away an eye?",
+    "Odin seeks knowledge of things that could threaten the gods. At Mímir's well he sacrifices an eye for wisdom. His ravens also bring him news from far away. These stories make knowing the world a demanding task even for a god. Imagine ruling with less sight in exchange for deeper understanding. The bargain captures his willingness to pay a personal price."
+  ],
+  "what is sleipnir in norse mythology?": [
+    "Why does an eight-legged horse matter in a rescue?",
+    "After Baldr dies, Hermóðr rides Sleipnir toward the land of the dead to ask for his return. The same horse who belongs to Odin can carry another rider across boundaries an ordinary traveler could hardly cross. The rescue depends on getting there at all. Recognizing Sleipnir tells a listener that the journey is about to leave everyday geography behind."
+  ],
+  "what is cerberus in greek mythology?": [
+    "What does a guard at the underworld guard against?",
+    "Entering the land of the dead is only half of Heracles' task. He has to bring Cerberus back into daylight as proof, and the hound belongs at its post afterward. A gatekeeper gives the invisible boundary between life and death a face. Crossing it and returning becomes an extraordinary achievement even for a hero famous for physical strength."
+  ],
+  "what is a loop used for?": [
+    "When should a loop finish?",
+    "Imagine handing one card to each player in a row. Begin at the first player, deal once and move to the next. Stop when you reach the end. If there are zero players, you should deal zero cards. Trying that empty case is a quick way to catch a loop that always runs once before checking whether anyone is there."
+  ],
+  "in norse mythology, whose horse is sleipnir?": [
+    "Why would Odin lend his extraordinary horse?",
+    "In the story of Baldr's death, Hermóðr rides Odin's horse toward the realm of the dead. Asking who owns the horse and who rides it on this journey yields different answers. Tracking those relationships helps make sense of an unfamiliar cast: Odin supplies the means of travel, Hermóðr undertakes the ride, and Baldr is the person he hopes to bring back."
+  ],
+  "why are triangles used in many truss structures?": [
+    "Try the frame before and after bracing",
+    "Imagine four pencils joined into a square by loose pins. Push one corner sideways and the opposite corner can move while all four pencils keep their lengths. Pin a diagonal in place and the same move would have to stretch or shorten a pencil. Real trusses still need strong bars and joints; the triangular shape solves the distinct problem of the frame changing shape."
+  ],
+  "what organization was founded in # to help countries work together on peace and security?": [
+    "What can countries do together that one cannot do alone?",
+    "When fighting pushes people across a border, a neighboring country can offer shelter, but several governments may need to agree on aid routes, funding and access. The UN gives countries a standing place to discuss those decisions. Its members can disagree sharply. Creating a forum for cooperation and guaranteeing that cooperation will succeed are two different achievements."
+  ],
+  "what was the name of the first artificial satellite placed in earth orbit?": [
+    "What could anyone learn from a satellite's beep?",
+    "Sputnik's simple signal could be received far beyond the launch site. A listener who heard it pass overhead had evidence that a machine was crossing the sky repeatedly. Repeated observations could help track its orbit. A spacecraft therefore became a public demonstration of engineering capability in a contest between nations, even for listeners who never saw the launch."
+  ],
+  "what did the montreal protocol target?": [
+    "Why regulate chemicals together across borders?",
+    "A chemical released in one country can move through the atmosphere. By the time it contributes to ozone loss, tracing the damage back to one refrigerator or factory is impractical. Countries instead agreed to control production and use of particular substances. Long atmospheric lifetimes explain why stopping new releases can help even though recovery takes much longer."
+  ],
+  "what was the first feature-length film made entirely with computer animation?": [
+    "What does an animator actually move?",
+    "Imagine a toy tipping backward in surprise. An animator sets its starting pose, the instant it loses balance and the pose in which it catches itself. The computer can calculate frames between these positions. Tiny choices about how long it hesitates or where its eyes turn make it seem frightened or playful. Computing the pictures and deciding the performance are different jobs."
+  ],
+  "what is a foley artist’s job in a movie?": [
+    "Why might footsteps need a second performance?",
+    "Watch a character approach a door, hesitate and walk away. The steps tell a little story even if you close your eyes. A Foley performer can make the first steps brisk and the last one barely audible, then choose shoes and a surface that suit the room. Recording this separately lets the sound team preserve that performance under music or dialogue."
+  ],
+  "what do actors record during adr?": [
+    "How can the same sentence sound like two performances?",
+    "A whispered “I'm fine” can mean something very different from the same words delivered quickly and brightly. An actor replacing a line watches breathing, lip movement and emotional timing. The sound team then fits the new voice into the acoustic space of the shot. Perfectly clear words can still feel wrong if they sound like a different room or mood."
+  ],
+  "what is a match cut?": [
+    "What can a cut tell you without dialogue?",
+    "Picture a child launching a paper airplane. Cut as it crosses the frame to a passenger jet moving the same way. The movement carries your eye smoothly across the edit, while the change in scale might suggest a dream or many years passing. A match cut works because the viewer recognizes a connection and supplies meaning between the two images."
+  ],
+  "what is a veto?": [
+    "Can a veto change a bill before anyone casts it?",
+    "Imagine lawmakers expect a president to veto one provision in a larger bill. They may rewrite the provision to earn a signature, or keep it and seek enough votes to override. That choice changes the bill even if a veto never occurs. The power influences bargaining because the people drafting the law anticipate the next decision."
+  ],
+  "what is a coalition government?": [
+    "What can a small party gain by joining a coalition?",
+    "A party with a handful of seats may be just large enough to give a partner majority support. It might negotiate a place for public transit in the governing program, while agreeing to support a budget it would have written differently on its own. The coalition's program records a bargain about how several groups will govern together."
+  ],
+  "what is the purpose of a census?": [
+    "What happens if a neighborhood is undercounted?",
+    "Imagine many families sharing apartments but only some appearing in the count. A map based on that count could make the area look less crowded than it is. Decisions about representation or services can then rely on an incomplete picture. Reaching people whose housing or mailing address changes is part of making the numbers useful."
+  ],
+  "which u#s# city is most closely associated with the birth of jazz?": [
+    "What should you listen for in early New Orleans jazz?",
+    "Listen to a group playing the same tune twice. A lead instrument might carry the melody while other players answer it with different lines. They have to hear one another and keep a common pulse even as the details change. That interplay helps you hear how a tradition shaped by gatherings, parades and dance could make room for individual voices."
+  ],
+  "what is improvisation in theater?": [
+    "What does it mean to accept another actor's offer?",
+    "An actor mimes holding a dripping umbrella. Their partner could inspect the imaginary puddle and ask how it started raining indoors. That choice accepts the umbrella and adds a new problem for both to explore. If the partner pretends the umbrella never existed, the first actor has to rebuild the scene. Listening makes invention feel shared."
+  ],
+  "what is a reprise in a musical?": [
+    "How can a musical show a character has changed?",
+    "Imagine a song called “Home by Morning.” Early in the show it is a traveler's excited promise. Late in the show, someone waiting at home sings the same melody alone. Even familiar words now carry worry. A reprise uses the audience's memory of hearing a song before, so the contrast between scenes supplies some of the meaning."
+  ],
+  "how can one day on venus be longer than a venus year?": [
+    "Which clock would you use on Venus?",
+    "A distant star and the Sun provide different reference points. Mark the instant a star passes overhead and wait for it to return: that measures rotation relative to the stars. Mark two successive local noons and you also have to account for Venus moving around the Sun and spinning backward. Local noon returns about every 117 Earth days, explaining how two accurate answers about a Venus day can differ."
+  ],
+  "why is the sky usually blue during the day?": [
+    "Why does the sunset change color?",
+    "Look toward the horizon at sunset and the sunlight reaching you has crossed a longer stretch of air. More of the blue light has scattered out of that direct path. Much of the remaining light reaching you directly is red or orange. The color depends on where you look: scattered light from the sky and light arriving from the Sun follow different paths."
+  ],
+  "why can you sometimes see your breath on a cold day?": [
+    "Why does the little cloud vanish?",
+    "Warm breath mixes with cold outdoor air and tiny drops appear. As the cloud spreads through more surrounding air, the drops can evaporate again. The water remains in the air even after you lose sight of it. The same distinction explains how a bathroom mirror can collect liquid from air that looked clear a moment earlier."
+  ],
+  "why can a hot-air balloon rise?": [
+    "What limits how much a balloon can lift?",
+    "Picture two balloons of the same volume in the same surrounding air. Both displace the same amount of air and experience roughly the same buoyant force. Heating one allows some air to leave its open envelope, reducing the weight inside. Add passengers and the total weight rises again. Lift depends on the whole system, including the basket and its load."
+  ],
+  "why does salt help melt ice on roads?": [
+    "Why does salted ice make ice cream possible?",
+    "In an old hand-cranked ice-cream maker, ice and salt surround a separate container of cream. Salt lets ice and liquid water coexist at a lower temperature. Melting ice absorbs energy, and some comes from the cream, which cools and begins to freeze. The same property that keeps a road slushy can help freeze dessert in a neighboring container."
+  ],
+  "why can sweating help cool you down?": [
+    "Why can a fan help damp skin feel cooler?",
+    "A thin layer of humid air collects beside wet skin. Moving air can carry that layer away and bring in air able to take up more water. More water evaporates, carrying energy with it. If sweat drips straight onto the floor, that liquid has had little opportunity to cool the skin through evaporation."
+  ],
+  "why do we see changing phases of the moon?": [
+    "When does Earth's shadow actually darken the Moon?",
+    "At a lunar eclipse, Earth lines up between the Sun and the full Moon closely enough to cast a shadow on it. A normal crescent occurs at a different part of the orbit, when most of the lit half faces away from us. A lamp and a ball can show both arrangements. Move the ball around yourself and distinguish a change of viewing angle from blocking the lamp."
+  ],
+  "why does ice float on liquid water?": [
+    "Why does floating ice stick above the water?",
+    "A floating cube sinks just far enough for the weight of water it pushes aside to equal the cube's weight. Ice is only a little less dense than fresh water, so most of it must sink before this happens. A cork is much less dense and can float with more of its body showing. Floating is about balance as well as density."
+  ],
+  "why can a metal spoon feel colder than wood in the same room?": [
+    "Can a cold spoon ever feel warmer than wood?",
+    "Imagine both objects are comfortably warmer than your hand. Heat now flows into the hand, and the better conductor can feel warmer. A thermometer could still give the same reading for each. Touch is sensitive to how rapidly heat moves and which direction it moves, so comparing surfaces by touch can give a misleading temperature ranking."
+  ],
+  "where were the first modern olympic games held?": [
+    "Why distinguish Athens from Olympia?",
+    "Olympia was the sanctuary where ancient Greek competitors gathered. Athens hosted the modern revival in 1896. Putting the two names on a map makes the distinction memorable: one identifies the ancient festival, the other a modern city chosen to host an international event. Calling the Games a revival tells us organizers drew on earlier traditions while building a new competition."
+  ],
+  "what is a perfect score in ten-pin bowling?": [
+    "Why does a perfect game take twelve strikes?",
+    "Follow the first frame: its strike scores ten plus whatever happens on the next two deliveries. With two more strikes that is thirty. The tenth frame also needs two more deliveries to settle its value. Those last balls supply bonuses inside the tenth frame. You count twelve strikes while the scorecard still has only ten frames."
+  ],
+  "what problem does a bicycle’s gear system help solve?": [
+    "Why shift before a steep climb?",
+    "The hill requires work to raise the rider and bike to a higher elevation. A lower gear spreads that work across more pedal turns. Your legs push less hard per turn but turn more times over the same distance. Two riders reaching the same height have made the same gain in gravitational energy for the same total mass, regardless of the gear chosen."
+  ],
+  "what does a pulley help you do?": [
+    "Where does the easier pull come from?",
+    "Imagine a moving pulley supported by two vertical sections of the same ideal rope. Each section supports half the load. Raising the pulley one meter shortens both sections by one meter, so you pull two meters of rope. You have traded force for distance. Friction in the axle and rope makes a real system require more effort than this ideal model."
+  ],
+  "how did south africa’s # election change who could choose the national government?": [
+    "What changed when the electorate changed?",
+    "Under apartheid, the majority of South Africans had been excluded from choosing the national government on equal terms. In 1994, people who had lived under its laws could vote together for representatives who would shape the country's future. Nelson Mandela became president after the election. The vote changed who could exercise political power; changing unequal access to land, housing and jobs was a longer undertaking."
+  ],
+  "what changed when egypt nationalized the suez canal company in #?": [
+    "Why did control of a canal matter so much?",
+    "Trace a sea journey from the Mediterranean to the Indian Ocean. Passing through Suez lets a ship avoid going around southern Africa. That gives the operator of the canal both toll income and responsibility for a route other countries depend on. In 1956 an Egyptian decision about who should control a company therefore raised much larger questions about trade, national independence and foreign power."
+  ],
+  "what changed for women voters under new zealand’s # electoral act?": [
+    "Could a woman vote for another woman in 1893?",
+    "The new right let women in New Zealand choose parliamentary representatives. The separate right to stand for the House of Representatives came in 1919. Imagine marking a ballot in that first election while the law still barred you from putting your own name on it. Asking who can vote and who can stand reveals two different ways of participating in political life."
+  ],
+  "what familiar bread did vietnamese cooks adapt to make bánh mì?": [
+    "What can a sandwich tell you about history?",
+    "A baguette gives bánh mì its recognizable crust. Look inside a filled version and you might find pickled carrot and daikon, herbs, chili, pâté or other fillings. Recipes vary from vendor to vendor. Following the loaf traces a colonial encounter. Following the fillings shows the choices Vietnamese cooks made afterward, creating a food with a history of its own."
+  ],
+  "where did singapore move many street-food vendors in the #s?": [
+    "Why might changing a stall's location change a city?",
+    "A hawker with a street cart has to arrange water, waste disposal and room for customers at each site. A purpose-built centre can provide these for many stalls at once. Customers can also share a table while buying different meals. A policy about where vendors work can reshape whom neighbors meet and which family recipes find a regular audience."
+  ],
+  "which european traders are often credited with bringing a frying technique that influenced japanese tempura?": [
+    "How can cooks turn an imported technique into a local dish?",
+    "A method, such as dipping food in batter and frying it, can travel in a cook's memory. The ingredients available at the new port and the tastes of its customers can change what ends up on the plate. Tempura's story is useful because borrowing a technique and developing a distinctive Japanese cuisine can both be true."
+  ],
+  "what drink helped make coffeehouses places to meet and talk in türkiye?": [
+    "What does a small cup tell us about hospitality?",
+    "Finely ground coffee is heated in water and served with the grounds settling in the cup. Making it for a visitor gives the host time to attend to that person. In an Ottoman coffeehouse, the same drink gave people a reason to linger in company. The preparation helps explain how a traded ingredient became part of everyday conversation."
+  ],
+  "what did archaeologists find beneath petra’s treasury in jordan in #?": [
+    "What can an excavated burial tell us that a façade cannot?",
+    "Petra's Treasury is famous for its carved front. A burial beneath it invites a different set of questions: how was the space used, which objects lay with the dead, and what changed over time? Finding human remains establishes a burial context. Identifying particular individuals or proving exactly who commissioned the façade requires additional evidence."
+  ],
+  "why did an ancient city like petra need channels and reservoirs?": [
+    "How do you save water that arrives all at once?",
+    "A sudden downpour can send a great deal of water past a dry settlement in minutes. A channel directs some flow toward storage; a reservoir holds it for the long interval before the next rain. Both parts matter. A storage chamber without a way to fill it, or a channel with nowhere to keep the water, solves only half the problem."
+  ],
+  "what did laser mapping reveal about ancient maya settlements near el mirador in guatemala?": [
+    "Why map the road between two ancient sites?",
+    "A stone building tells us something happened at one place. A raised road makes archaeologists investigate movement between places as well: who traveled, what they carried, and who organized construction. A map supports the idea of connection. Excavation and dating help test whether the settlements and the route were actually in use at the same time."
+  ],
+  "how does airborne lidar help archaeologists map sites in a forest?": [
+    "Can a lidar image identify a building by itself?",
+    "A long straight ridge shows up in a map beneath tree cover. It could be an ancient road, a recent earthwork or a natural feature. Researchers compare its shape and surroundings, visit the site and look for materials they can date. The laser measures surfaces. Interpreting what people built on those surfaces requires several kinds of evidence."
+  ],
+  "what did wall graffiti in pompeii reveal about politics just before mount vesuvius erupted?": [
+    "Whose voice survives on a city wall?",
+    "A painted election notice in Pompeii can name a candidate and the people endorsing that person. It tells us what someone chose to display to passersby. It cannot count private votes or show whether everyone agreed. Compare the notice with a campaign poster today: both are evidence of public persuasion, even when the election result is unknown."
+  ],
+  "what is a cosmogony?": [
+    "What question does a creation story answer?",
+    "Some accounts begin with water, some with darkness, and others with beings already present. Look for the first distinction the story makes: sky separates from earth, land emerges, or light begins. That moment tells you what the teller considers necessary for an inhabitable world. Comparing two accounts starts with what each actually says about beginnings."
+  ],
+  "what is a mythological motif?": [
+    "How can the same motif do different work?",
+    "Imagine two tales featuring a forbidden door. In one, opening it frees a captive. In another, it breaks a promise and causes harm. The returning image is a motif, while the meaning comes from what the characters do and what follows. Spotting a shared image is a starting point for comparison rather than evidence that two tales teach the same lesson."
+  ],
+  "why can different accounts of the same myth disagree?": [
+    "What should you do when two tellings disagree?",
+    "Keep a short record of who told each version, where it was recorded and which detail differs. A storyteller performing for a local audience and a poet shaping a written work may have different reasons for choosing an ending. Labeling versions helps you describe the tradition accurately without combining incompatible details into a single supposed original."
+  ],
+  "which greek goddess searches for persephone after she is taken to the underworld?": [
+    "How does a family's loss become everyone's problem?",
+    "In the Homeric Hymn to Demeter, Persephone's disappearance makes her mother withhold the growth on which people depend. Hungry people cannot live or keep offering honors to the gods. A bargain over Persephone's return becomes urgent for the whole world. Seeing Demeter as the goddess of grain explains why grief in one family has such enormous consequences."
+  ],
+  "what did ariadne give theseus to help him find his way out of the labyrinth?": [
+    "Why is leaving a maze a different problem from entering it?",
+    "Theseus can move farther into the Labyrinth by choosing passages, even when he does not know where they lead. Finding the entrance again would require reversing every choice. Ariadne's thread records the route outside his memory. The victory therefore belongs partly to the person who anticipated the return journey before the hero entered."
+  ],
+  "what part of the minotaur resembled a bull in the usual greek depiction?": [
+    "Why put a monster in a maze?",
+    "In the Cretan story the Labyrinth conceals a creature with a bull's head and a human body. The tribute sent from Athens gives the monster political meaning too: one city can force another to send its young people into danger. Theseus confronting the Minotaur is both a close encounter with a monster and an attempt to end that obligation."
+  ],
+  "why does orpheus lose eurydice again in a well-known version of the greek myth?": [
+    "Why is looking back such a hard test?",
+    "Orpheus can lead Eurydice out of the underworld on condition that he trusts she is following. Turning to reassure himself is exactly the act that breaks the condition. Music had persuaded the rulers below to offer this chance, but musical skill cannot answer his last question. The story gives a familiar impulse, looking for someone you love, an irreversible consequence."
+  ],
+  "which greek figure steals fire for humans?": [
+    "Why is fire worth stealing?",
+    "Fire changes the range of things a human community can do. It can warm a shelter, cook food or let a craftsperson work materials in new ways. Prometheus takes divine fire for mortals, challenging Zeus's control over that advantage. Thinking of fire as a technology helps explain both the value of the gift and the severity of the punishment in the myth."
+  ],
+  "what task was sisyphus condemned to repeat?": [
+    "At what point does Sisyphus's punishment really hurt?",
+    "Imagine pushing the stone almost to the top and seeing it roll down just as success seems possible. A single hard climb might accomplish something. This task erases the result every time. A modern writer who calls a job Sisyphean is pointing to that repeated loss of progress, which is more specific than saying the work is tiring."
+  ],
+  "what happened to things king midas touched in the story of his wish?": [
+    "Why is Midas's wish so precisely disastrous?",
+    "In Ovid's telling, the power works even when Midas wants an ordinary meal. The wish contained no way to choose when the touch took effect. Gold can buy food in a market, but a piece of bread changed into gold cannot nourish its owner. The tale makes a puzzle out of the difference between having a valuable thing and being able to use it."
+  ],
+  "who devised the wings used by icarus and his father to escape?": [
+    "Why does Daedalus give Icarus flying instructions?",
+    "Daedalus builds wings to escape an island, but making flight possible is only part of his task. In Ovid's telling, he teaches his son to keep a middle course. Icarus rises too high and the wax softens. Reading the story through the father's eyes makes it about the limits of teaching too: he can make wings for another person, but he cannot steer them once they fly."
+  ],
+  "who kills medusa in greek mythology?": [
+    "How does Perseus turn a danger into an advantage?",
+    "A direct look at Medusa is deadly. A reflected view gives Perseus information while protecting him from her gaze. In many accounts her severed head retains its power, and it becomes associated with Athena's protective equipment. The same face that endangered the hero could appear on objects meant to frighten danger away."
+  ],
+  "what power did medusa’s gaze have in greek myth?": [
+    "Why would anyone display Medusa's face?",
+    "Imagine meeting those eyes on the outside of a shield. For its bearer the terrifying face looks outward, toward whatever might attack. Ancient artists often used the Medusa head as a protective image. Knowing about her gaze helps explain why a monster's face could be chosen to guard someone who carried it."
+  ],
+  "which greek god is associated with wine and theater?": [
+    "What links Dionysus to acting?",
+    "At festivals in ancient Athens, audiences gathered for plays performed in honor of Dionysus. Masks and choruses allowed performers to become other people and speak as a group. The theater was therefore also a civic and religious gathering. Asking who was in the audience and why they had assembled reveals something a modern reading of the script alone can miss."
+  ],
+  "what name is given to the great tree that connects worlds in norse mythology?": [
+    "What work does a world tree do in a story?",
+    "A tree has branches high above a person and roots extending into places they cannot see. Yggdrasil gives storytellers a way to connect distant realms with one living thing. Creatures live on it and threaten it. That makes order in the cosmos feel like something living under strain, rather than a fixed map drawn once and left alone."
+  ],
+  "which norse god loses a hand when the gods bind the wolf fenrir?": [
+    "Why is Týr the one who pays?",
+    "Fenrir suspects that the gods' apparently harmless binding is a trap. He demands someone's hand as a pledge before allowing the test. Týr accepts even though he knows the gods want to bind the wolf for good. His lost hand leaves the cost of the gods' security visible on one god's body. That makes trust as important to the tale as the magic binding."
+  ],
+  "what are odin’s two ravens called?": [
+    "Why give the ravens names?",
+    "Huginn and Muninn are commonly associated with thought and memory. Picture Odin waiting for them to return with news. Even a god known for wisdom needs ways to learn what happens outside his own sight. Naming the birds turns two invisible parts of knowing, thinking about experience and remembering it, into travelers who can leave and come back."
+  ],
+  "which egyptian god is killed and restored in a myth involving isis?": [
+    "Why does the restored Osiris rule among the dead?",
+    "In Egyptian tradition, Isis's efforts restore Osiris after his killing. His son Horus is associated with kingship among the living, while Osiris rules in the world of the dead. Restoration therefore establishes a relationship between generations and realms. It also helps explain why images of Osiris mattered in tombs and hopes for life after death."
+  ],
+  "what was a person’s heart weighed against in egyptian judgment scenes?": [
+    "How can a picture make an invisible judgment visible?",
+    "A scale is familiar: both pans must balance. In Egyptian judgment scenes it lets an artist show the heart being tested against Ma'at, the order and truth a person should uphold. A viewer can recognize the stakes from the objects and figures around the balance. The image gives a moral question a form that can be seen and weighed."
+  ],
+  "which legendary king is linked with a sword called excalibur?": [
+    "Is the sword in the stone always Excalibur?",
+    "Arthur's story comes from many writers. In Malory's account, pulling a sword from stone establishes his claim to rule. After that sword breaks, he receives Excalibur from the Lady of the Lake. Later retellings sometimes combine the swords. Naming the version you are reading explains how two familiar answers about Arthur can sound contradictory."
+  ],
+  "what is the legendary object that arthur’s knights are often said to seek?": [
+    "Why do different Grail stories ask different things of a knight?",
+    "In an early romance by Chrétien de Troyes, a mysterious procession leaves the young knight Perceval with a question he fails to ask. Later romances develop the Grail's Christian significance and make spiritual fitness central to the quest. Finding an object, understanding what one has seen and being worthy of it are three distinct tests a writer can build around the same quest."
+  ],
+  "in irish legend, what did fionn mac cumhaill taste to gain wisdom?": [
+    "Why is the burned thumb important?",
+    "Fionn is helping cook the salmon for a poet who expects to gain its wisdom. A blister of heat makes Fionn put his thumb in his mouth, so the helper tastes the fish first. The reversal comes from a small, believable reaction. In later tales the thumb can recall that first taste, letting one moment in his youth explain a lifelong gift."
+  ],
+  "which feathered serpent deity is associated with the aztecs?": [
+    "What does a feathered serpent bring together?",
+    "A serpent moves close to the earth, while feathers suggest a creature of the air. The combined image appears across places and periods in Mesoamerica. Quetzalcoatl is a Nahuatl name associated with the Aztec tradition. Seeing a similar figure at another site invites comparison, but its local language, date and context matter before giving it the same name or story."
+  ],
+  "what is langar in the sikh tradition?": [
+    "How can a meal express equality?",
+    "At a gurdwara, volunteers may chop vegetables, wash dishes or serve food to strangers. People eat together regardless of their wealth or religion. Imagine arriving with no money and receiving the same meal and place as a wealthy visitor. The way the meal is organized allows people to experience equality through an ordinary act of eating together."
+  ],
+  "what is the khalsa in sikh tradition?": [
+    "What is initiation for?",
+    "The Khalsa links individual religious commitment to membership in a community. Initiated Sikhs undertake a discipline that includes the Five Ks, articles of faith such as kesh, uncut hair, and the kara, a steel bracelet. An outward practice can be a daily reminder of a commitment. Sikh identity is broader than the group of people who have undergone this initiation."
+  ],
+  "what is a menorah?": [
+    "How can you tell two Jewish lamps apart?",
+    "Count the lights before interpreting an image. The ancient Temple lampstand had seven branches. A Hanukkah lamp has places for eight festival lights and a separate helper light used to light them. The change in the number of lights across the eight evenings makes the passage of the festival visible in a household window."
+  ],
+  "what is the bhagavad gita?": [
+    "Why does a philosophical conversation begin on a battlefield?",
+    "Arjuna sees relatives and teachers among those he is expected to fight. His skill with a bow cannot tell him what he ought to do. His dialogue with Krishna makes this conflict the starting point for teaching about duty, devotion and how to act without being ruled by the rewards of action. The setting gives an abstract question immediate human stakes."
+  ],
+  "why do coastal areas often have milder temperatures?": [
+    "Would a beach and an inland town cool equally fast?",
+    "Imagine a clear evening after a hot day. Dry ground can lose heat quickly, while the nearby sea stores energy deeper in a large moving body of water. Air arriving from the water can keep the shore warmer overnight. Wind direction matters: a coastal place receiving air from far inland may temporarily feel much more like its inland neighbors."
+  ],
+  "why are earthquakes common around the pacific ring of fire?": [
+    "Can scientists tell exactly when a fault will slip?",
+    "Plate motion is gradual, but friction can hold a section of fault in place while the surrounding rock deforms. A sudden slip releases some stored energy as seismic waves. Mapping where faults and past earthquakes occur helps identify areas of risk. Knowing that strain builds in a region is different from predicting the day a particular fault will move."
+  ],
+  "what is the difference between latitude and longitude?": [
+    "Why does longitude alone tell you so little?",
+    "Draw a line from pole to pole on a globe. Many places with very different climates share that longitude. Give a latitude too, and the crossing of the two lines locates a place. Near the poles, meridians crowd together, so one degree of longitude covers less ground than the same degree near the equator."
+  ],
+  "why can a map projection distort country sizes?": [
+    "Which map should you pick for comparing forests?",
+    "Suppose two shaded regions represent forest cover and you want to compare their areas by eye. An equal-area projection helps because the same amount of ink represents the same surface area across the map. A map designed for navigation might preserve local angles while enlarging high latitudes. Choosing the map is part of answering the question."
+  ],
+  "why does a mercator map exaggerate polar areas?": [
+    "Why did navigators find the Mercator map useful?",
+    "A course that maintains a constant compass bearing appears as a straight line on a Mercator chart. Stretching the map toward the poles helps make that possible. The shortest route on a globe can curve on the chart instead. For a traveler deciding the shortest distance and a navigator holding a bearing, the same straight line can answer different questions."
+  ],
+  "what is the difference between weathering and erosion?": [
+    "Follow a grain from hillside to riverbed",
+    "Rainwater enters a crack and repeated freezing helps loosen a piece of rock. A stream then carries the piece away. Later the current slows and the piece settles. The three moments have different names: weathering, erosion and deposition. One grain can pass through all three without changing what kind of mineral it is."
+  ],
+  "who is the plaintiff in a civil lawsuit?": [
+    "Who has to explain why the case belongs in court?",
+    "Imagine a customer says a paid delivery never arrived. In a civil case the customer who brings the claim is the plaintiff. The delivery company can dispute the facts or argue that the contract allowed what happened. Naming someone plaintiff identifies their role from the start. The evidence and applicable law determine who ultimately succeeds."
+  ],
+  "what does a civil complaint do?": [
+    "Why separate an allegation from a finding?",
+    "Read “the roof leaked after the repairs” in a complaint as a statement the plaintiff wants the court to consider. The contractor may answer that a later storm damaged a different section. The complaint identifies a dispute and a requested remedy. Documents, testimony and later rulings determine what can actually be established."
+  ],
+  "what is discovery in a lawsuit?": [
+    "How could a delivery date be investigated?",
+    "Both sides remember a shipment differently. A request for dated invoices, dispatch records or relevant messages can uncover evidence neither side could supply from memory alone. Discovery can narrow the argument before trial. Legal rules set limits on scope and protect certain information, so a request does not automatically entitle someone to everything another party holds."
+  ],
+  "what is a deposition?": [
+    "Why record a witness before trial?",
+    "A witness describes where a delivery truck stopped. Months later the location becomes important and memories have faded. A deposition preserves the exact earlier questions as well as the answers. If two statements differ, the surrounding wording can show whether the witness changed their account or was answering a different question."
+  ],
+  "what does an appeal ask a higher court to review?": [
+    "Why can an appeal succeed without a new witness?",
+    "Imagine a judge instructed a jury to use the wrong legal standard. The instruction itself appears in the trial record. A higher court can review what the jury was told and whether the error matters under the rules of review. A possible outcome is another trial. Winning that legal argument does not itself settle every disputed fact."
+  ],
+  "what is a statute of limitations?": [
+    "Why keep a timeline when studying a case?",
+    "A purchase, discovery of a defect and filing of a claim may occur years apart. A limitations rule can make one of those dates legally important. Different claims and jurisdictions use different starting rules and exceptions. A timeline helps identify the legal question; the dates alone cannot supply the governing rule."
+  ],
+  "what does a mediator do?": [
+    "What could neighbors settle that a yes-or-no ruling would miss?",
+    "Two neighbors argue about the use of a shared space. One needs quiet in the morning; the other needs access in the afternoon. A mediator can help bring those interests into the open so the parties design a schedule. The agreement gets its substance from the parties' choices, which is why listening can matter as much as proposing a solution."
+  ],
+  "what does an arbitrator do?": [
+    "Who chooses the outcome in arbitration?",
+    "In a dispute over a contract, the two sides might present the same documents they would use in negotiations. What changes is who decides. An arbitrator evaluates the submissions and issues an award. Whether the parties can seek review or must accept the award depends on the governing agreement and law. Reading the dispute clause helps explain the process."
+  ],
+  "what is an indictment in u#s# federal criminal law?": [
+    "Why have a charging decision and a trial?",
+    "A federal grand jury considers whether there is probable cause to charge. At a criminal trial, the prosecution faces the much higher burden of proving guilt beyond a reasonable doubt. These proceedings answer different questions at different stages. News that someone has been indicted tells you a charge has been issued and leaves the question of guilt open."
+  ],
+  "what is restitution in a criminal case generally meant to do?": [
+    "Where does the payment go?",
+    "Imagine a stolen instrument was damaged and its owner paid for repairs. Restitution can address a victim's qualifying loss, subject to the applicable law and the court's order. A criminal fine serves a different purpose and is generally paid to the government. Asking who receives a payment helps distinguish two orders that can both appear in the same sentence."
+  ],
+  "what is federalism?": [
+    "Why can two levels of government affect one school trip?",
+    "A class bus travels on roads subject to state traffic law, while federal standards may govern aspects of vehicle safety. Governments can act on different parts of one real-world situation. Federalism concerns how powers are assigned and interact. A map of state borders alone cannot tell you which level has authority over a particular decision."
+  ],
+  "what is the prosecution's burden at a criminal trial?": [
+    "What if one element of a charge is missing?",
+    "Suppose an offense requires both a prohibited act and a particular mental state. Proof that the act occurred may leave a reasonable doubt about intent. Jurors must apply the judge's instructions to each required element. Asking “What exactly must be proved?” is more precise than simply tallying the number of witnesses on each side."
+  ],
+  "what is an injunction?": [
+    "When could money arrive too late?",
+    "Imagine a dispute over a unique historic building scheduled for demolition. Money awarded later could not bring back the original structure. An injunction could address the threatened action itself if the legal requirements are met. This illustrates why courts distinguish an order about conduct from an award that compensates someone afterward."
+  ],
+  "what is comparative negligence?": [
+    "What does a share of responsibility do to an award?",
+    "Under a simple pure comparative-fault model, someone with $1,000 in damages and 20% responsibility could recover $800. The arithmetic reduces the loss by that person's share. Some jurisdictions use thresholds that can bar recovery at certain fault levels. The example shows how the calculation works under one rule and why the applicable rule matters."
+  ],
+  "what is an easement?": [
+    "What can a right of way actually permit?",
+    "A neighbor has a recorded right to cross a particular strip of land to reach a road. That can allow passage while leaving the owner in possession of the land. It need not permit storing a vehicle there or widening the route. The language and legal scope of the right answer questions that ownership of the surrounding land alone cannot."
+  ],
+  "what is limited liability?": [
+    "Why would a lender request a personal guarantee?",
+    "A company may owe a debt even though its owner normally has limited liability. A lender can ask the owner to make a separate personal promise to repay. If the owner agrees, that promise can create a personal obligation. Distinguishing the company's signature from a person's own undertaking helps explain how liability can change."
+  ],
+  "what is a treaty?": [
+    "What makes a river treaty useful?",
+    "Two countries depend on the same river. An upstream diversion can affect farms across the border. A treaty might specify how to measure flows, share records or settle disputes during drought. Agreeing on a measurement method matters: even countries that agree on a share can disagree about how much water actually passed a given point."
+  ],
+  "under the u#s# federal rules of evidence, what is hearsay?": [
+    "Can the same sentence serve two purposes in court?",
+    "A witness heard someone yell “The stairs are broken!” If offered to prove the stairs were broken, the statement raises a hearsay question. If offered only to show a listener received a warning, its significance can lie in the fact it was said. Purpose changes the analysis, and other evidence rules or exceptions can still affect admission."
+  ],
+  "what is subject-matter jurisdiction?": [
+    "Why ask about a court's power before hearing witnesses?",
+    "A dispute about a federal patent and a routine neighborhood contract dispute can raise different jurisdictional questions. The court must have legal authority over the kind of case before it can decide the merits. A party can have persuasive evidence and still need a different court. Choosing the proper forum and proving a claim are separate tasks."
+  ],
+  "what is the basic function of a trademark?": [
+    "Why can a familiar label matter before you taste a product?",
+    "Someone buying tea may use a name or symbol to recognize the same producer they liked last week. A confusingly similar package can interfere with that choice. Trademark analysis considers how the sign is used and whether consumers may be confused about source or affiliation. It does not turn every use of an ordinary word into the seller's property."
+  ],
+  "how does attorney-client privilege differ from professional confidentiality?": [
+    "Does copying a lawyer on an email make it privileged?",
+    "The answer depends on the purpose and circumstances of the communication. A routine scheduling note and a confidential request for legal advice play different roles even if sent to the same person. Professional confidentiality also governs how lawyers handle information about a representation. Asking who may disclose what, in which setting, helps separate the two issues."
+  ],
+  "what is the role of a jury in a u#s# criminal jury trial?": [
+    "Why does the jury receive instructions?",
+    "Jurors may have very different ideas about what everyday words mean. The judge explains the legal elements, burden of proof and rules to apply. Jurors then decide which testimony and other evidence they credit. This division lets citizens decide what happened while requiring them to measure the evidence against a common legal standard."
+  ],
+  "why distinguish a primary source from a secondary source?": [
+    "Can the same book be primary for one question and secondary for another?",
+    "A later textbook's account of an ancient battle interprets earlier evidence. If you ask how schools taught that battle in the year the textbook appeared, the very same page is direct evidence of that teaching. Start by stating your research question. The source's relationship to that question determines how you should use it."
+  ],
+  "what is the difference between denotation and connotation?": [
+    "How does a headline steer your interpretation?",
+    "“The group gathered” and “the crowd swarmed” might describe people arriving in the same place. The second choice borrows a suggestion of insects or uncontrolled motion. Replace the verb and reread the line. If your picture of the people changes while the reported action stays similar, you have found connotation at work."
+  ],
+  "what is the effect of an extended metaphor?": [
+    "How far can a comparison carry a poem?",
+    "Read “Her idea took root. She watered it with questions. By spring it shaded the whole room.” Root, water and shade each add something new about how an idea develops. Remove the middle sentence and the growth seems sudden. Following each part of an extended metaphor helps you explain what it contributes beyond decoration."
+  ],
+  "why use parallel structure in technical instructions?": [
+    "How can sentence structure prevent a missed step?",
+    "Compare “Measure the board, mark the cut, check the mark” with a list that hides the check inside a long description. Three matching verbs make three actions visible. A reader scanning quickly can see where each begins. Parallel structure is particularly valuable when a missed check would send later work in the wrong direction."
+  ],
+  "why does a shadow form?": [
+    "Why can the edge of a shadow look fuzzy?",
+    "A wide lamp sends light toward an object from many points. Near the edge of its shadow, part of the lamp is blocked and part is still visible, creating a region of partial shade. A tiny light source makes a sharper boundary. Changing the lamp's apparent size can change the softness even when the object stays still."
+  ],
+  "a # kg object accelerates at # m/s²# net force?": [
+    "What happens if two pushes partly cancel?",
+    "Imagine the same cart being pushed forward while friction pulls back. Add the forces with their directions before relating them to acceleration. A forward push of 12 newtons and a backward force of 3 leave 9 forward. If the forces match, the cart can keep moving steadily. A change of speed or direction reveals a net force."
+  ],
+  "what is a loop?": [
+    "How does a program know when to stop?",
+    "A countdown might start at three and display a number while it is greater than zero. Each repetition must reduce the number. Forget that change and the condition stays true forever. Testing the starting values zero and one reveals two common mistakes: running once too often and skipping the final intended action."
+  ],
+  "why use a function?": [
+    "What makes a function easy to reuse?",
+    "Imagine a function that takes a price and tax rate and returns the tax amount. A shop screen, invoice and test can each supply their own numbers. Putting a fixed price or the screen's formatting inside the calculation would tie it to one use. Clear inputs and an explicit result let you check the calculation independently."
+  ],
+  "what is the time complexity of binary search on a sorted array?": [
+    "How many questions does doubling a sorted list add?",
+    "Suppose a search has narrowed a sorted list to eight candidates. Halving leaves four, then two, then one. Starting with sixteen candidates adds one round of halving. That slow growth explains the logarithm. Sorting is essential: on an unordered list, seeing the middle value does not justify throwing away everything to one side."
+  ],
+  "what is a circuit breaker in distributed software?": [
+    "How can a brief pause help a service recover?",
+    "A checkout page depends on a slow recommendation service. If every visit keeps waiting and retrying, workers can pile up until checkout itself slows. A circuit breaker can temporarily skip recommendations and later allow a limited test request. A successful test can restore normal calls. The feature matters most when the optional part and the essential part can fail separately."
+  ],
+  "why use descriptive variable names?": [
+    "Can a variable name prevent a unit mistake?",
+    "Someone reads a value called duration and treats it as seconds, but it was recorded in milliseconds. A name like durationMilliseconds makes the necessary conversion visible where the value is used. A good name records a decision future readers would otherwise have to guess. Tests and unit-aware types can provide additional protection."
+  ],
+  "what is a design constraint?": [
+    "How do constraints differ from preferences?",
+    "A model boat must fit through a gate 20 centimeters wide. Blue paint is preferred, and shorter travel time is desirable. A fast blue boat measuring 22 centimeters fails the task before anyone compares performance. Separating mandatory limits from goals tells a designer which candidates are feasible and what to optimize among them."
+  ],
+  "why document design assumptions?": [
+    "Which change would make you redo a calculation?",
+    "A shelf model assumes a load spread evenly along its length. Later someone places all the weight at the middle. The total weight can stay the same while the bending pattern changes. Listing the original assumption gives the next engineer a concrete reason to revisit the calculation when the use changes."
+  ],
+  "what is effective stress in saturated soil?": [
+    "What can change while total stress stays fixed?",
+    "Suppose the total vertical stress at a point is 100 kPa and pore water pressure is 40 kPa. The grain skeleton carries an effective stress of 60 kPa. If pore pressure rises to 55 with total stress unchanged, effective stress falls to 45. Water conditions can therefore change grain contact forces even without a new surface load."
+  ],
+  "what is the reynolds number for pipe flow?": [
+    "Why can a small model flow differently from the full-size pipe?",
+    "The ratio depends on pipe diameter as well as speed, density and viscosity. In the same fluid, halving diameter while holding speed fixed halves Reynolds number. Doubling the speed would restore that ratio. Matching it can help compare flow regimes, although matching every other relevant condition is a separate matter."
+  ],
+  "what does kirchhoff’s current law state?": [
+    "Where would missing current have to go?",
+    "Draw a boundary around a wire junction. If charge kept entering faster than it left, charge inside would accumulate. In the usual lumped-circuit node model, currents must balance. Assign a positive sign to every current entering. A negative result for an unknown then tells you its actual direction is opposite your chosen arrow."
+  ],
+  "what is mach number?": [
+    "Why can two speeds in km/h describe the same Mach number?",
+    "Mach measures how quickly something moves relative to how quickly a pressure disturbance travels through the surrounding material. If the local sound speed were 300 m/s, an object at 150 m/s would be at Mach 0.5. In a medium with a different sound speed, matching Mach would require a different actual speed."
+  ],
+  "what is the arrhenius equation?": [
+    "What does the exponential in the Arrhenius equation tell us?",
+    "Imagine two reactions with similar frequency factors but different activation energies. At the same temperature, the larger energy barrier makes the exponential factor smaller. Raising temperature changes that factor, often substantially. Use absolute temperature in kelvins: the ratio of an energy barrier to thermal energy has physical meaning only with an absolute scale."
+  ],
+  "what is the difference between ultimate and serviceability limit states?": [
+    "Could a floor pass one design check and fail another?",
+    "A floor may have enough strength to support its design load yet vibrate enough under ordinary footsteps to disturb sensitive equipment. Strength checks address the risk of failure. Deflection and vibration checks address how people or equipment experience routine use. A design must satisfy the relevant criteria for both purposes."
+  ],
+  "an ideal carnot engine operates between # k and # k# find its maximum efficiency#": [
+    "Why is some heat rejected even in an ideal engine?",
+    "Imagine an engine taking 100 units of heat from a hot reservoir while cycling repeatedly back to its starting state. For hot and cold reservoirs at 600 K and 300 K, the ideal limit allows 50 units of work. The other 50 go to the cold side. Raising the hot temperature changes that limit; real losses can reduce the work still further."
+  ],
+  "a simply supported beam of span # m carries a central point load of # kn# find maximum bending moment#": [
+    "Why is the greatest bending in the middle here?",
+    "Imagine cutting the beam at a point between the left support and the load and examining the left piece. The support force acts at a distance from the cut. As the cut approaches the middle, that distance grows. Symmetry gives the same pattern from the other side. This argument depends on a central load and the specified supports."
+  ],
+  "a # ω resistor carries # a dc# find power dissipated#": [
+    "Why can a small rise in current make a large difference?",
+    "Power is energy transferred per second. At fixed resistance, doubling the current doubles the voltage drop as well, so power rises fourfold. A resistor releasing 2 joules each second at one current would release 8 each second at twice that current if its resistance stayed constant. Time then converts power into total energy."
+  ],
+  "air density is # kg/m³ and airspeed is # m/s# find dynamic pressure#": [
+    "What does dynamic pressure represent?",
+    "Each parcel of moving air carries kinetic energy. Half the density times the speed squared is that energy per unit volume, which has pressure units. At the same density, twice the speed gives four times the dynamic pressure. The actual force on a body also depends on its area, shape and orientation."
+  ],
+  "a feed contains # mol/s of reactant a and undergoes #% conversion of a# find a consumed per second#": [
+    "Where did the other reactant go?",
+    "Make a balance sheet for reactant A. If 100 moles enter per second and conversion is 40%, 40 moles of A react and 60 remain as A, assuming steady flow and no other streams. To find how much product is formed you also need the chemical equation and any competing reactions. Conversion answers the consumption question first."
+  ],
+  "# × # = ?": [
+    "Turn the array to discover another fact",
+    "Draw a rectangular array with one row for each group and one dot for each member of the group. Turn the paper a quarter turn. What were rows become columns, but every dot is still there. That is why changing the order of two factors gives the same total. Splitting a large array into smaller rectangles also lets you use multiplication facts you already know."
+  ],
+  "what is #/# + #/#?": [
+    "Why keep the denominator when the pieces match?",
+    "Mark a line in equal steps of one tenth. Start at the first fraction, then walk the number of steps named by the second numerator. Each step remains a tenth. Adding denominators would shrink your unit halfway through the walk. If you pass the mark for one whole, keep counting: a fraction can name a point beyond one."
+  ],
+  "find #% of #": [
+    "How do percent and quantity change together?",
+    "Imagine splitting the original quantity into one hundred equal shares. The percent counts how many shares you take. At the same percent, doubling the original quantity doubles the size of each share, so the result doubles too. At the same quantity, doubling the percent doubles the number of shares taken. These are two different changes with the same numerical effect."
+  ],
+  "find the slope through (#, #) and (#, #)#": [
+    "Could you use the points in reverse order?",
+    "Calculate the vertical and horizontal changes from the second point back to the first. Both differences reverse sign, so their ratio stays the same. Reversing the order for only one difference gives a false negative slope. Consistency in the direction of travel matters more than which point you choose to start from."
+  ],
+  "why do seasons occur?": [
+    "Why are seasons opposite across the equator?",
+    "In June the Northern Hemisphere leans toward the Sun while the Southern Hemisphere leans away. The whole planet is nearly the same distance from the Sun on that day, yet the two halves experience different seasons. Tilt changes both how concentrated sunlight is on the ground and how many hours it arrives each day."
+  ],
+  "how does natural selection change a population?": [
+    "Where must the variation come from?",
+    "Imagine beetles in the same population already vary in color, and coloration can be inherited. After the habitat changes, some become harder for predators to see and leave more offspring on average. Across generations the color distribution can shift. The individual beetles did not choose a color in response to need; the population changed through differences in reproduction."
+  ],
+  "why does a metal spoon feel colder than wood at the same temperature?": [
+    "What would a thermometer tell you?",
+    "Leave a metal spoon and wooden handle together in the room long enough to reach the same temperature. A thermometer can agree for both even as your hand reports a stronger chill from the metal. Your skin senses its own temperature changing as energy leaves it. That explains why the feeling can change when you keep holding the object."
+  ],
+  "a $# item is discounted #%# what is the sale price?": [
+    "Why don't two discounts simply add together?",
+    "Start a separate example with a $100 jacket. After a 20% discount it costs $80. A second 20% discount takes $16 off that new price, leaving $64. The total discount is 36%. A good check in any discount problem is to name the amount that represents 100% at each step."
+  ],
+  "find the slope between (#, #) and (#, #)#": [
+    "Read slope as a rate you could use",
+    "If the horizontal axis counts hours and the vertical axis counts liters, a slope of three means three more liters per extra hour along this line. A negative slope would describe a decrease. The vertical intercept tells you how many liters you started with. Two tanks can therefore fill at the same rate and still hold different amounts at noon."
+  ],
+  "solve x² − #x + # = #": [
+    "Why does factoring lead to two possible answers?",
+    "If two real numbers multiply to zero, at least one is zero. Apply that fact to the two factors separately and each factor offers a possible root. On a graph of the quadratic, each distinct real root marks a place where the curve meets the horizontal axis. A repeated factor can give just one distinct meeting place."
+  ],
+  "find the hypotenuse of a right triangle with legs # and #": [
+    "Why draw squares on the sides?",
+    "The Pythagorean theorem compares areas. For a 3-by-4 right triangle, the squares on the short sides contain nine and sixteen unit squares. Together they match the area of a square of side five. The square root returns you from area to length. The right angle is essential; with a different angle, the same two sides can enclose a different diagonal."
+  ],
+  "simplify (#x³)(#x²)#": [
+    "Why add the powers but multiply the coefficients?",
+    "Expand each power into copies of x. Multiplying a chain of three copies by a chain of two makes one chain of five. The ordinary numbers in front are separate factors, so they multiply in the usual way. Adding the two original terms instead would not join their chains of factors. That is why the operation between expressions matters."
+  ],
+  "solve #x + y = # and x − y = #": [
+    "What does it mean for two equations to share a solution?",
+    "Picture two clues to the same pair of numbers. A point can satisfy one equation while failing the other. Adding the equations can cancel an unknown, letting the other one emerge. On a graph, the ordered pair that passes both checks sits at the intersection of the two lines. Parallel distinct lines would give no shared point."
+  ],
+  "why does increasing temperature often speed up a chemical reaction?": [
+    "Why can a catalyst change the rate at the same temperature?",
+    "Temperature changes the distribution of molecular energies. A catalyst makes an alternative reaction pathway available with a lower activation barrier. A larger share of encounters can then lead to reaction even if the temperature stays fixed. The two changes can both speed a reaction while operating on different parts of the energy picture."
+  ],
+  "what is the difference between kinetic and potential energy?": [
+    "At what point does a swinging pendulum move fastest?",
+    "Release a pendulum from rest. As it descends, gravitational potential energy decreases and kinetic energy increases. Its speed is greatest near the bottom. Real swings slowly lose mechanical energy to air resistance and friction, transferring energy to the surroundings. Following the transfers explains why a real swing eventually needs another push."
+  ],
+  "why does a satellite in orbit not simply fall to earth?": [
+    "Why does the Moon keep missing Earth?",
+    "Over a short time, imagine its motion as a step sideways followed by a small inward bend caused by gravity. Repeat the process and the path curves around Earth. Removing the sideways speed would change the path drastically. Removing gravity would also change it: the Moon would tend to continue along a straight path instead of following the curve."
+  ],
+  "find the positive root of x² = #": [
+    "Why does the question say positive?",
+    "A square tile's area can tell you its side length. If its area is nine square units, its side is three units. In algebra, however, both 3 and −3 have square 9. Asking for the positive root selects the length-like answer. The square-root symbol itself denotes the nonnegative root of a nonnegative real number."
+  ],
+  "factor x² + #x + #": [
+    "What do the middle and last terms remember?",
+    "Multiply (x + 2)(x + 5) by making four products. They are x², 5x, 2x and 10. The middle terms combine to 7x because either factor can supply the x. The constant comes from multiplying the two ordinary numbers. Factoring works backward from these two clues; expansion checks whether the same pair really satisfies both."
+  ],
+  "what is kinetic energy?": [
+    "Where does a moving object's energy go when it stops?",
+    "A rolling cart slowing on a rough surface transfers energy to its wheels, the floor and the surroundings. Its kinetic energy decreases as its speed falls. Two carts with the same speed but different masses carry different amounts of energy. That is why a comparison of motion needs both the speed and the object being moved."
+  ],
+  "find the distance between (#,#) and (#,#)#": [
+    "Why is the straight route shorter than the street route?",
+    "Trace a route first horizontally and then vertically between two points. Those two displacements form the legs of a right triangle. Walking straight between the endpoints follows the hypotenuse. Squaring the components makes their signs irrelevant to the length. Traveling back to the start reverses direction but leaves the distance the same."
+  ],
+  "a # ω ohmic resistor carries # a# voltage?": [
+    "What does a volt tell you about charge moving through a resistor?",
+    "A potential difference of one volt corresponds to one joule of energy per coulomb of charge. For an ohmic resistor kept at the same resistance, more current requires proportionally more voltage. Changing the resistance changes that proportionality. A graph of voltage against current shows the resistance as the slope."
+  ],
+  "find the derivative of #x² + #x#": [
+    "What would the derivative predict a moment later?",
+    "A derivative describes the local slope. At a particular x, multiply that slope by a small change in x to estimate the change in the original function. For x² near x = 3, a step of 0.1 predicts about 0.6 growth. The actual change is 3.1² − 3² = 0.61. Curvature explains the small difference."
+  ],
+  "evaluate the integral of #x from # to #": [
+    "How can an integral convert a rate into a total?",
+    "Suppose speed increases linearly from zero while time passes. A strip of width one second and height measured in meters per second has area measured in meters. Adding thin strips gives distance. When the graph is a straight line from zero, its average height is half the final height, giving the triangle formula for the same accumulated total."
+  ],
+  "what is the difference between np-hard and np-complete?": [
+    "Why distinguish checking an answer from finding one?",
+    "For a graph route problem, someone might hand you a proposed route. Checking the listed connections and counting visits can be much easier than discovering a route from scratch. NP concerns efficient verification for decision problems. NP-hardness adds a separate requirement about reductions from other problems. Showing a short certificate alone establishes only the verification part."
+  ],
+  "what is the derivative of ln x for x > #?": [
+    "Why do equal percentage increases look alike on a log scale?",
+    "Moving from 1 to 2 adds the same amount to the natural log as moving from 10 to 20: both multiply the input by two. Yet adding one unit near 10 changes the log much less than adding one near 1. The slope 1/x captures this dependence on the starting size and helps explain why logs are useful for relative change."
+  ],
+  "find the eigenvalues of the diagonal matrix diag(#, #)#": [
+    "Which directions survive a diagonal transformation?",
+    "Draw a vector pointing along the horizontal axis, then apply the diagonal matrix. Only its horizontal coordinate is scaled, so the vector stays on that axis. The vertical axis works the same way. When both diagonal entries are equal, every nonzero direction is an eigenvector direction, even though the eigenvalue is repeated."
+  ],
+  "what is genetic drift?": [
+    "Can a neutral trait disappear?",
+    "Imagine drawing ten beads from a large jar containing two colors in equal proportions. You need not draw five of each. If the next generation is built only from that sample, its starting proportions differ by chance. The effect can be especially strong in small populations, even when neither color offers any survival or reproductive advantage."
+  ],
+  "what is opportunity cost?": [
+    "How many alternatives belong in the cost?",
+    "You have one free evening and can choose exactly one of three activities. The cost of choosing rehearsal includes giving up the most valuable available alternative. Adding the value of both other activities would overstate what you could have done with the same time. The relevant comparison is the best feasible choice you actually gave up."
+  ],
+  "what is the difference between nominal and real interest rates?": [
+    "Can a growing balance buy less?",
+    "In a simple example, a basket costs $100 today and $110 next year. Money growing from $100 to $105 buys less than one basket next year. The exact real growth factor is 1.05 ÷ 1.10, about 0.955. The example separates changes in the number of dollars from changes in what those dollars can buy."
+  ],
+  "revenue is $# and total cost is $# find profit#": [
+    "Why can more sales sometimes mean less profit?",
+    "A stall adds one sale worth $5. If fulfilling it adds $3 in costs, the sale contributes $2 toward profit. If fulfilling it adds $6, that extra sale reduces profit by $1 even though revenue rises. To interpret a total, identify the costs counted and the period over which both sales and costs were measured."
+  ],
+  "what is consideration under traditional u#s# common law?": [
+    "Why distinguish a bargain from a gift?",
+    "One person says, “I'll give you my old chair tomorrow.” Another says, “I'll give you the chair if you repair my gate.” In the second example the repair is requested in exchange for the chair. That relationship illustrates consideration. Courts can also consider other requirements or doctrines, so identifying an exchange answers just one part of a contract question."
+  ],
+  "why predefine a statistical analysis plan?": [
+    "What changes if a study examines twenty outcomes?",
+    "Even with no real effect, an unusual-looking result can appear among many comparisons. Naming the main outcome in advance lets a reader distinguish the prediction the study was designed to test from a pattern that attracted attention later. An unexpected pattern can still inspire a new study with its own advance prediction."
+  ],
+  "why perform a mesh convergence study?": [
+    "Can two fine meshes agree and still predict the wrong thing?",
+    "Imagine a model of a beam with a support mistakenly specified as fixed. Smaller elements can converge neatly toward the solution for that fixed support. A real hinged support permits motion the model excludes. Mesh refinement checks a numerical approximation. Comparing assumptions and measurements checks whether the modeled structure represents the physical one."
+  ],
+  "why report measurement uncertainty?": [
+    "What if two instruments share a calibration error?",
+    "Measuring the same rod several times may produce tightly clustered readings even when a shifted zero mark makes them all too large. Repetition estimates one source of variation. Calibration, resolution and setup can add others. An uncertainty statement is most informative when the reader knows which sources it includes and how the interval was constructed."
+  ],
+  "why distinguish confidence intervals from prediction intervals?": [
+    "Why can predicting one person be harder than estimating an average?",
+    "Suppose you estimate the average journey time for many travelers using the same route. More data can narrow uncertainty in that average. Tomorrow's individual traveler can still encounter a red light or rain. A prediction interval includes that person-to-person or trip-to-trip variability as well as uncertainty in the estimated average."
+  ],
+  "why does the sky usually look blue during the day?": [
+    "Where does sunset red come from?",
+    "Air molecules scatter short wavelengths of sunlight more strongly than long ones. Look away from the Sun during the day and some of the blue light reaching your eyes has scattered sideways. Near sunset, sunlight travels through a longer stretch of atmosphere. More of the shorter wavelengths scatter out of the direct beam, leaving it richer in reds and oranges. The same process helps explain both colors."
+  ]
+};
+
+function learnMoreFor([question]) {
+    const key = question.trim().toLowerCase().replace(/[0-9.]+/g, '#');
+    const lesson = furtherReading[key];
+    if (!lesson) return null;
+    for (const [pattern, , extend] of workedExamples) {
+        const match = question.match(pattern);
+        if (match) return [lesson[0], lesson[1] + '\n\n' + extend(...match.slice(1).map(Number))];
+    }
+    return lesson;
+}
+
+function setLearnMoreOpen(button, panel, open) {
+    panel.hidden = !open;
+    button.setAttribute('aria-expanded', String(open));
+}
+
+for (const id of ['fullExplanationMore', 'raceFullExplanationMore']) {
+    const panel = document.getElementById(id);
+    const button = document.getElementById(id + 'Button');
+    button.onclick = () => setLearnMoreOpen(button, panel, panel.hidden);
+}
+
 function renderFullExplanation(id, row) {
     const disclosure = document.getElementById(id);
+    const more = document.getElementById(id+'More');
     const detail = row ? fullExplanationFor(row) : '';
+    const lesson = detail ? learnMoreFor(row) : null;
     disclosure.open = false;
     disclosure.hidden = !detail;
+    const moreButton = document.getElementById(id+'MoreButton');
+    moreButton.hidden = !lesson;
+    setLearnMoreOpen(moreButton, more, false);
     document.getElementById(id+'Text').textContent = detail;
+    document.getElementById(id+'MoreTitle').textContent = lesson?.[0] || '';
+    document.getElementById(id+'MoreBody').textContent = lesson?.[1] || '';
 }
 
 function fullExplanationFor([question, answer]) {
@@ -7484,12 +8405,12 @@ level.onchange=()=>{syncSubjects();load();};
   <button type="button" id="flipTutorialAnswer" hidden>Show answer</button>
   <details id="flipTutorialNote" hidden>
     <summary>Full explanation</summary>
-    <p>Subtract 7 from both sides to get 3x = 21. Then divide both sides by 3 to get x = 7.</p>
-  </details>
+    <p>Subtract 7 from both sides to get 3x = 21. Then divide both sides by 3 to get x = 7.</p></details><button class="control learnMoreButton" type="button" id="flipTutorialMoreButton" aria-controls="flipTutorialMore" aria-expanded="false" hidden>Learn more</button><div class="learnMore" id="flipTutorialMore" hidden><p>If x were 8, the left side would be 3 × 8 + 7 = 31. Increasing x by one adds three to the total because there are three copies of x.</p></div>
   <button type="button" id="flipTutorialStart">Start now</button>
 </dialog>
 <script>
 (() => {
+    const tutorialSpeed = 1.6;
     const key = 'flip-learn-tutorial-restored-seen';
     const tutorial = document.getElementById('flipTutorial');
     if (typeof tutorial.showModal !== 'function') return;
@@ -7499,6 +8420,12 @@ level.onchange=()=>{syncSubjects();load();};
     const title = document.getElementById('flipTutorialTitle');
     const note = document.getElementById('flipTutorialNote');
     const answer = document.getElementById('flipTutorialAnswer');
+    const more = document.getElementById('flipTutorialMore');
+    const moreButton = document.getElementById('flipTutorialMoreButton');
+    moreButton.addEventListener('click', () => {
+        clearTimeout(noteTimer);
+        setLearnMoreOpen(moreButton, more, more.hidden);
+    });
     const revealAnswer = () => { step.textContent = 'Math · 25% of 80 is 20.'; answer.hidden = true; };
     answer.addEventListener('click', revealAnswer);
     const slides = [
@@ -7507,6 +8434,7 @@ level.onchange=()=>{syncSubjects();load();};
         { text: 'Choose a subject and level to begin.', duration: 1550 },
         { text: 'Math · What is 25% of 80?', answerDemo: true, duration: 3000 },
         { text: 'Solve 3x + 7 = 28. Answer: x = 7.', explanation: true, duration: 4400 },
+        { text: 'Want to go deeper? Open Learn more, or keep playing.', learnMore: true, duration: 6300 },
         { text: '3 Player Trivia Challenge · First to 20 correct wins.', race: true, duration: 2200 },
         { text: 'I got it right!', creature: 6, count: 0, dance: true, duration: 2100 },
         ...[0, 50, 150, 300].map(count => ({
@@ -7537,11 +8465,14 @@ level.onchange=()=>{syncSubjects();load();};
         step.textContent = slide.text;
         step.classList.toggle('tutorialReward', Boolean(slide.dance));
         answer.hidden = !slide.answerDemo;
-        note.hidden = !slide.explanation;
+        note.hidden = !(slide.explanation || slide.learnMore);
         note.open = false;
+        moreButton.hidden = !slide.learnMore;
+        setLearnMoreOpen(moreButton, more, false);
         clearTimeout(noteTimer);
-        if (slide.answerDemo) noteTimer = setTimeout(revealAnswer, 1300);
-        if (slide.explanation) noteTimer = setTimeout(() => { note.open = true; }, 650);
+        if (slide.answerDemo) noteTimer = setTimeout(revealAnswer, 1300 / tutorialSpeed);
+        if (slide.explanation) noteTimer = setTimeout(() => { note.open = true; }, 650 / tutorialSpeed);
+        if (slide.learnMore) noteTimer = setTimeout(() => moreButton.click(), 1400 / tutorialSpeed);
         art.classList.toggle('tutorialRace', Boolean(slide.race));
         if (slide.race) {
             art.innerHTML = [6, 10, 5].map(grade => animal(grade, 0)).join('');
@@ -7554,7 +8485,7 @@ level.onchange=()=>{syncSubjects();load();};
             art.hidden = false;
             if (slide.dance) showCelebration(art, slide.creature, stage(slide.count));
         }
-        timer = setTimeout(showNext, slide.duration);
+        timer = setTimeout(showNext, slide.duration / tutorialSpeed);
     }
     function playTutorial() {
         if (tutorial.open) return;
@@ -7565,10 +8496,12 @@ level.onchange=()=>{syncSubjects();load();};
         answer.hidden = true;
         note.hidden = true;
         note.open = false;
+        moreButton.hidden = true;
+        setLearnMoreOpen(moreButton, more, false);
         art.hidden = true;
         art.replaceChildren();
         tutorial.showModal();
-        timer = setTimeout(showNext, 1500);
+        timer = setTimeout(showNext, 1500 / tutorialSpeed);
     }
     start.addEventListener('click', () => tutorial.close());
     tutorial.addEventListener('close', () => {
